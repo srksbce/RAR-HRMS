@@ -33,6 +33,7 @@ import { SearchfilterPipe } from './searchfilter.pipe';
 import { DocumentComponent } from './document/document.component';
 
 import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 
 
@@ -70,6 +71,7 @@ import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.compon
    DocumentComponent,
 
    AddNewInvoiceComponent,
+     InvoiceComponent,
      
     
   
