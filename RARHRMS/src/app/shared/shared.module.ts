@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AmdbuttonsComponent } from './amdbuttons/amdbuttons.component';
 import { AuthenticHeaderComponent } from './authentic-header/authentic-header.component';
 import { AuthenticFooterComponent } from './authentic-footer/authentic-footer.component';
+import { SidebarempComponent } from './sidebaremp/sidebaremp.component';
 import { Navbar1Component } from './navbar1/navbar1.component';
 
 
@@ -20,12 +21,13 @@ import { Navbar1Component } from './navbar1/navbar1.component';
     AuthenticFooterComponent,
     NavbarComponent,
     AmdbuttonsComponent,
+    SidebarempComponent,
     Navbar1Component
   ],
   imports: [
     CommonModule,
     SharedRoutingModule
   ],
-  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent,AuthenticFooterComponent,AuthenticHeaderComponent,NavbarComponent],
+  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent,AuthenticFooterComponent,AuthenticHeaderComponent,NavbarComponent,SidebarempComponent],
 })
 export class SharedModule { }
