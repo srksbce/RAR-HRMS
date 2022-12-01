@@ -13,7 +13,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 
 const routes: Routes = [
   { path: '', component: AuthenticationLayoutComponent, children: AUTHENTICATION_ROUTES },
-  { path: '', component: AdminLayoutComponent, children: ADMIN_ROUTES },
+
   { path: 'admin', component: AdminLayoutComponent, children: ADMIN_ROUTES },
   {path:'emp',component:EmployeeLayoutComponent, children:EMPLOYEE_ROUTES},
   {path:'manager',component:ManagerLayoutComponent, children:MANAGER_ROUTES},
