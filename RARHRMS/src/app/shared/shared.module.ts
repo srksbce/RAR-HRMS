@@ -9,6 +9,7 @@ import { AmdbuttonsComponent } from './amdbuttons/amdbuttons.component';
 import { AuthenticHeaderComponent } from './authentic-header/authentic-header.component';
 import { AuthenticFooterComponent } from './authentic-footer/authentic-footer.component';
 import { SidebarempComponent } from './sidebaremp/sidebaremp.component';
+import { Navbar1Component } from './navbar1/navbar1.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SidebarempComponent } from './sidebaremp/sidebaremp.component';
     AuthenticFooterComponent,
     NavbarComponent,
     AmdbuttonsComponent,
-    SidebarempComponent
+    SidebarempComponent,
+    Navbar1Component
   ],
   imports: [
     CommonModule,
