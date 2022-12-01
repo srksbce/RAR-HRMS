@@ -24,6 +24,7 @@ import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.comp
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
+import { TemplateComponent } from './template/template.component';
 
 import { UserdataComponent } from './userdata/userdata.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
@@ -62,7 +63,9 @@ const routes: Routes = [
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
+
   {path:'addNewInvoices',component:AddNewInvoicesComponent},
+
   
 ];
 

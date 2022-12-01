@@ -8,6 +8,7 @@ import { RegistrationPageTwoComponent } from './registration-page-two/registrati
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { SecurityquestionsComponent } from './securityquestions/securityquestions.component';
 import { SignupComponent } from './signup/signup.component';
+import { TemplateComponent } from '../admin/template/template.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -16,8 +17,9 @@ const routes: Routes = [
   { path: 'securityquestions', component: SecurityquestionsComponent },
   { path: 'registrationpage3', component: RegistrationPageThreeComponent },
   { path: 'registrationpage2', component: RegistrationPageTwoComponent },
-  {path:'resetpassword',component:ResetpasswordComponent},
-  {path:'reg',component:RegisterComponent}
+  { path: 'resetpassword', component: ResetpasswordComponent },
+  { path: 'reg', component: RegisterComponent },
+  { path: 'temp', component: TemplateComponent }
 ];
 
 @NgModule({
