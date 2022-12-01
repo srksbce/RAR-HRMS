@@ -30,6 +30,7 @@ import { UserdataComponent } from './userdata/userdata.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
+import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 
 
 const routes: Routes = [
@@ -62,7 +63,9 @@ const routes: Routes = [
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
-  {path:'temp',component:TemplateComponent}
+
+  {path:'addNewInvoices',component:AddNewInvoicesComponent},
+
   
 ];
 
