@@ -18,6 +18,8 @@ import { TemplateComponent } from './admin/template/template.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,8 @@ import { TemplateComponent } from './admin/template/template.component';
     EmployeeComponent,
     ManagerLayoutComponent,
     EmployeeLayoutComponent,
+   
+    
     
 
 
