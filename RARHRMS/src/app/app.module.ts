@@ -28,7 +28,7 @@ import { TemplateComponent } from './admin/template/template.component';
     EmployeeComponent,
     ManagerLayoutComponent,
     EmployeeLayoutComponent,
-    TemplateComponent,
+    
 
 
   ],
