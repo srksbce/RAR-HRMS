@@ -1,39 +1,51 @@
-<div class="container" >
-    <h2 align="left" class="expression"  >Invoices      </h2>    
-    <div class="container" >
+<br>
+<br>
+<br>
+<div class="container ">
+    <div class="d-flex col-sm ">
+        
+        <h3 class="expression">Invoices </h3>
+        <a [routerLink]="['/admin/launchpage']" class=" ml-auto" routerLinkActive="router-link-active"   role="button"><h3>+ Add Invoice</h3></a>
+
+    </div>
+    <hr>
+
+    <br>
+
+    <div class="container">
         <div class="row">
-          <div class="col-sm">
-            <h3>Name: Ramu Srirangam </h3>
+            <div class="col-sm">
+                <h4>Name: Ramu Srirangam </h4>
             </div>
-          <div class="col-sm">
-            <h3>Employee ID: 1012 </h3>
-                </div>
-          <div class="col-sm">
-            <h3> Total Amount $840</h3>
-                </div>
+            <div class="col-sm">
+                <h4>Employee ID: 1012 </h4>
+            </div>
+            <div class="col-sm">
+                <h4> Total Amount $840</h4>
+            </div>
         </div>
-      </div>
-    
-      
-    
-      
+    </div>
+
+
+
+
     <div class="fixTableHead  shadow">
-      <table class="table auto-index">
-          <thead>
-              <tr>
-                <th>no</th> 
-                <th>Invoice no</th> 
-                <th>Invoice Date</th> 
+        <table class="table auto-index">
+            <thead>
+                <tr>
+                    <th>no</th>
+                    <th>Invoice no</th>
+                    <th>Invoice Date</th>
 
-                <th>Invoice Type</th>
-                <th>Amount</th>
-                <th>Attachment</th>
-                <th>Description</th>
-                <th>Status</th>
+                    <th>Invoice Type</th>
+                    <th>Amount</th>
+                    <th>Attachment</th>
+                    <th>Description</th>
+                    <th>Status</th>
 
-              </tr>
+                </tr>
             </thead>
-            
+
             <!-- <tbody>
               <tr *ngFor="let emp of Expensedata let i=index;">
                 <td>{{ i+1 }}</td>
@@ -43,8 +55,7 @@
                
                 <td><a href="https://www.freshbooks.com/wp-content/uploads/invoice-template-pdf-white.png">Click Here</a></td>
             </tbody> -->
-          
-      </table>
-    </div>
 
-    
+        </table>
+    </div>
+</div>
