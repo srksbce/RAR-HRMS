@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NewExpenseComponent } from './new-expense/new-expense.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
@@ -52,7 +53,7 @@ const routes: Routes = [
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
- 
+ {path:'new-expense',component:NewExpenseComponent},
   { path: 'managementexpenses', component: ManagementExpensesComponent },
   { path: 'newemp', component: NewempComponent },
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
