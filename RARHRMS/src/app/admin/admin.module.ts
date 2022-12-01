@@ -36,6 +36,7 @@ import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.compon
 import { InvoiceComponent } from './invoice/invoice.component';
 
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
+import { TemplateComponent } from './template/template.component';
 
 
 
@@ -76,6 +77,7 @@ import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.com
      InvoiceComponent,
 
      AddNewInvoicesComponent,
+     TemplateComponent
 
      
     

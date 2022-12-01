@@ -65,6 +65,7 @@ const routes: Routes = [
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
 
   {path:'addNewInvoices',component:AddNewInvoicesComponent},
+  {path: 'template' ,component:TemplateComponent}
 
   
 ];
