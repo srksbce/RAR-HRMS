@@ -37,6 +37,8 @@ import { InvoiceComponent } from './invoice/invoice.component';
 
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { TemplateComponent } from './template/template.component';
+import { MyreqsComponent } from './myreqs/myreqs.component';
+import { NewExpenseComponent } from './new-expense/new-expense.component';
 
 
 
@@ -78,7 +80,9 @@ import { TemplateComponent } from './template/template.component';
      InvoiceComponent,
 
      AddNewInvoicesComponent,
-     TemplateComponent
+     TemplateComponent,
+     MyreqsComponent,
+     NewExpenseComponent
 
      
     
