@@ -14,7 +14,6 @@ import { ManagerComponent } from './manager/manager/manager.component';
 import { EmployeeComponent } from './employee/employee/employee.component';
 import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.component';
 import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layout.component';
-import { NewExpenseComponent } from './admin/new-expense/new-expense.component';
 
 
 
@@ -28,7 +27,7 @@ import { NewExpenseComponent } from './admin/new-expense/new-expense.component';
     EmployeeComponent,
     ManagerLayoutComponent,
     EmployeeLayoutComponent,
-    NewExpenseComponent,
+
 
 
   ],

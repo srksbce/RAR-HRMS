@@ -14,7 +14,7 @@ import { EmployeeExpensedataComponent } from './employee-expensedata/employee-ex
 import { EmployeeComponent } from './employee/employee.component';
 import { JobTabComponent } from './job-tab/job-tab.component';
 import { JobUpdateComponent } from './job-update/job-update.component';
-
+import { InvoiceComponent } from './invoice/invoice.component';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
@@ -25,11 +25,13 @@ import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.comp
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
+import { TemplateComponent } from './template/template.component';
 
 import { UserdataComponent } from './userdata/userdata.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
+import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 
 
 const routes: Routes = [
@@ -54,6 +56,7 @@ const routes: Routes = [
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
  {path:'new-expense',component:NewExpenseComponent},
+ {path: 'invoice',component :InvoiceComponent},
   { path: 'managementexpenses', component: ManagementExpensesComponent },
   { path: 'newemp', component: NewempComponent },
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
@@ -62,6 +65,10 @@ const routes: Routes = [
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
+
+  {path:'addNewInvoices',component:AddNewInvoicesComponent},
+  {path: 'template' ,component:TemplateComponent}
+
   
 ];
 
