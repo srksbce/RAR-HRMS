@@ -34,7 +34,10 @@ import { DocumentComponent } from './document/document.component';
 
 import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
 import { InvoiceComponent } from './invoice/invoice.component';
+
+import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { TemplateComponent } from './template/template.component';
+
 
 
 
@@ -70,10 +73,12 @@ import { TemplateComponent } from './template/template.component';
     UserdetailsComponent, 
     SearchfilterPipe,
    DocumentComponent,
-
-   AddNewInvoiceComponent,
+    AddNewInvoiceComponent,
      InvoiceComponent,
+
+     AddNewInvoicesComponent,
      TemplateComponent
+
      
     
   
