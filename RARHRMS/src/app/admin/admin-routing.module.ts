@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NewExpenseComponent } from './new-expense/new-expense.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
@@ -31,6 +32,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
+import { MyreqsComponent } from './myreqs/myreqs.component';
 
 
 const routes: Routes = [
@@ -54,6 +56,7 @@ const routes: Routes = [
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
+ {path:'new-expense',component:NewExpenseComponent},
  {path: 'invoice',component :InvoiceComponent},
   { path: 'managementexpenses', component: ManagementExpensesComponent },
   { path: 'newemp', component: NewempComponent },
@@ -65,7 +68,8 @@ const routes: Routes = [
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
 
   {path:'addNewInvoices',component:AddNewInvoicesComponent},
-  {path: 'template' ,component:TemplateComponent}
+  {path: 'template' ,component:TemplateComponent},
+  {path: 'myreqs' ,component:MyreqsComponent}
 
   
 ];

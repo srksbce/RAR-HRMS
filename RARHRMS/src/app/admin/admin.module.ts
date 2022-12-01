@@ -38,6 +38,9 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { TemplateComponent } from './template/template.component';
 import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
+import { MyreqsComponent } from './myreqs/myreqs.component';
+import { NewExpenseComponent } from './new-expense/new-expense.component';
+
 
 
 
@@ -80,6 +83,8 @@ import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
      AddNewInvoicesComponent,
      TemplateComponent,
      EmployeeinfoComponent
+     MyreqsComponent,
+     NewExpenseComponent
 
      
     
