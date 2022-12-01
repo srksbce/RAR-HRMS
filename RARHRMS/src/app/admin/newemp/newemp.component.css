@@ -1,0 +1,48 @@
+.form-control{
+    width: 250px;
+    text-align: center;
+    margin-right: 0%;
+}
+.form-select{
+    width: 250px;
+    text-align:center;
+}
+.btn btn-primary {
+    margin: auto;   
+}
+h4{
+    text-align:left;
+    margin-left:5px;
+}
+span{
+    color: red;
+}
+#shadow{
+   border-radius: 25px;
+    
+}
+.col{
+    margin-left: auto;
+}
+#date{
+    margin-right: auto;
+}
+
+small{
+    color:red;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#buttons{
+    margin-left: 25px;
+
+}

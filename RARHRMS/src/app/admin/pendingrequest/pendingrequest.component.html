@@ -1,0 +1,46 @@
+<!--sticky head-->
+<div class="container-fluid d-flex bg-light flex c-bg">
+  <div class="container-fluid" style="width: fit-content">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="v1"></div>
+
+  <div class="container-fluid">
+    <app-amdbuttons> </app-amdbuttons><br />
+    <div class="container-fluid  ">
+      <div class="fixTableHead shadow hi">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Entity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr *ngFor="let emp of employees">
+              <ng-template [ngIf]="emp.status=='pending'">
+              <td>{{ emp.firstName }}</td>
+              <td>{{ emp.lastName }}</td>
+              <td>{{ emp.email}}</td>
+              <td>{{ emp.role }}</td>
+              <td>{{ emp.entity }}</td>
+              <td>
+                <button class="btn btn-primary "   (click)="viewdata(emp)"  >View</button>
+                <button class="btn btn-success me-2 ms-2" (click)="approved(emp.id)">Approve</button>
+                <button class="btn btn-danger" (click)="reject(emp.id)">Reject</button>
+              </td>
+            </ng-template>
+            </tr>
+      
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

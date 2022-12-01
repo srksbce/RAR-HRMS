@@ -1,0 +1,42 @@
+<strong><h1 align="center" >Operational Cost</h1></strong>
+<div class="container-fluid col-md-10">
+<div><a class="btn btn-primary" [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active"  role="button" button style="margin-left:20px">Back
+
+
+  
+</a></div>
+<br>
+<br>
+ 
+ 
+
+<div class="fixTableHead  shadow">
+    <table class="table">
+        <thead>
+            <tr>
+              <th> Employee Id</th> 
+              <th>First Name</th>
+              <th>Last Name </th>
+              <th>Total Operational Expenses </th>
+        
+              
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr *ngFor="let emp of employees" >
+          
+              <td>{{emp.employeeid}}</td>
+              <td>{{emp.firstname}}</td>
+              <td>{{emp.lastname}}</td>
+              <td>{{emp.totalexpenses | currency }}</td>
+              
+          
+            </tr>  
+      
+      
+          </tbody>
+        
+    </table>
+  </div>
+  </div> 

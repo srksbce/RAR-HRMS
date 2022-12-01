@@ -1,0 +1,79 @@
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start">
+        <div class="container" >
+            <div class="row gx-lg-5 align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1><b style="font-size: 55px;">ANALYZE</b></h1>
+                    <p>TODAY'S CHALLENGES</p>
+  
+                    <h1><b style="font-size: 55px;">ENVISION</b></h1>
+                    <P>TOMORROW'S INNOVATION</P>
+  
+  
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="card-body">
+                        <div class="shadow-lg p-5  bg-white rounded">
+                            <form name="Security" #Security="ngForm" (ngSubmit)="Security.valid && security(Security)">
+                              
+                              <div class="img" align="center">
+                                <img alt="" src="../assets/snadicon.png" />
+                             </div>
+                             <h3 style="margin:none;" align="center"><b>Security Questions</b></h3>
+                              <br>
+                              <div class="form-group">
+                                <label for="answer1">What is your favourite food/dish?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer"  name="#answer1" aria-label="#answer1" #answer1="ngModel" [(ngModel)]="SECURITY.answer1" required/>
+                                <small *ngIf="(answer1.touched && answer1.invalid) || (answer1.invalid && Security.submitted)"> Answer is required </small>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="answer2">Who is your childhood hero?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer" name="#answer2" aria-label="#answer2" #answer2="ngModel" [(ngModel)]="SECURITY.answer2" required/>
+                                <small *ngIf="(answer2.touched && answer2.invalid) || (answer2.invalid && Security.submitted)"> Answer is required </small >
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="answer3">What is the name of your favourite pet?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer" name="#answer3" aria-label="#answer2" #answer3="ngModel" [(ngModel)]="SECURITY.answer3" required/>
+                                <small *ngIf="(answer3.touched && answer3.invalid) || (answer3.invalid && Security.submitted)"> Answer is required </small >
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="answer4">In what city you were born?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer" name="#answer4" aria-label="#answer2" #answer4="ngModel" [(ngModel)]="SECURITY.answer4" required/>
+                                <small *ngIf="(answer4.touched && answer4.invalid) || (answer4.invalid && Security.submitted)"> Answer is required </small >
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="answer5">What is the name of your first school?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer" name="#answer5" aria-label="#answer2" #answer5="ngModel" [(ngModel)]="SECURITY.answer5" required/>
+                                <small *ngIf="(answer5.touched && answer5.invalid) || (answer5.invalid && Security.submitted)"> Answer is required </small >
+                            </div>
+                            <br>
+                               
+                            
+
+
+
+                              
+                
+
+                 <div style="display: flex;right: -23%;position: relative;">
+                    <div class="col-3">
+                        <input class="btn btn-primary " type="submit" value="Go Back" />
+                    </div>
+                    <div class="col-3">
+                        <input class="btn btn-primary " type="submit" value="Submit" />
+                    </div>
+                  </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  </section>

@@ -1,0 +1,89 @@
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start">
+        <div class="container" style="margin-top:5%;">
+            <div class="row gx-lg-5 align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1><b style="font-size: 55px;">ANALYZE</b></h1>
+                    <p>TODAY'S CHALLENGES</p>
+
+                    <h1><b style="font-size: 55px;">ENVISION</b></h1>
+                    <P>TOMORROW'S INNOVATION</P>
+                </div>
+                <div class="col-lg-5 mb-4 ">
+                    <div class="card-body  px-md-4">
+                        <div class="shadow-lg p-5 mb-7 bg-white rounded">
+
+                            <form name="LOGIN" #LOGIN="ngForm" (ngSubmit)="LOGIN.valid && login(LOGIN)">
+                                <div class="img">
+                                    <img alt="" src="../assets/snadicon.png" />
+                                </div>
+                                <h3><b>Login</b></h3>
+
+                                <div class="form-outline mb-2">
+                                    <label class="form-label" for="form2Example1"></label><i class="bi bi-person-circle" style="position: relative;right: -44%;top: 28px;"></i>
+                                    <input type="email" id="email" name="email" placeholder="Enter User Id"
+                                        #email="ngModel" [(ngModel)]="Login.email" class="form-control"
+                                        required />
+                                    <small
+                                        *ngIf="(email.touched && email.invalid) || (email.invalid && LOGIN.submitted)">
+                                        User id is
+                                        required</small>
+                                </div>
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                <div class="form-outline mb-2">
+                                    <label class="form-label" for="form2Example2"></label>
+                                    <span style="position: relative;right: -44%;top: 30px;" class="eyeicon"  (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye-fill':'bi bi-eye-slash-fill'"></i>
+                                    </span>
+                                    <input [type]="changetype?'password':'text'"id="password" placeholder="Enter Password" name="password" #password="ngModel"
+                                    [(ngModel)]="Login.password" 
+                                        class="form-control" required />
+                                       
+                                       
+                                        <small
+                                        *ngIf="(password.touched && password.invalid) || (password.invalid && LOGIN.submitted)">Password
+                                        is
+                                        required</small>
+                                </div>
+                                <div class="form-outline mb-2">
+                                    <label class="form-label" for="form2Example3"></label>
+                                    <select class="form-select" id="entity" name="entity" aria-label="Default select example" #entity="ngModel" [(ngModel)]="Login.entity" required>
+                                        <option >Select Entity</option>
+                                        <option *ngFor="let item of entities"> {{item.entity}} </option>
+                                       
+                                    </select>
+                                    <small *ngIf="(entity.touched && entity.invalid) || (entity.invalid && LOGIN.submitted)">Entity is required </small>
+                                </div>
+                                <br>
+                                <div class="row mb-2">
+                                    <div class="col d-flex justify-content-center">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="form2Example31" />
+                                            <label class="form-check-label" for="form2Example3"> Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a class="regis1" href="/forgotpassword"><b>Forgot
+                                            Password</b></a>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary btn-block mb-3 col-10">Login</button>
+
+                                <h4>Don't have an account? <a class="regis1" href="/reg"><b>Signup
+                                            Now</b></a></h4>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

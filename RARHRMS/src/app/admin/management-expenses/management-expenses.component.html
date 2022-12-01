@@ -1,0 +1,30 @@
+
+    <h2 class="header">Management Expenses</h2>
+    <br>
+    <div class="container-fluid col-md-10">
+    <button [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active" type="button" class="btn btn-primary">Back</button>
+    <br><br>
+    <div class="fixTableHead  shadow">
+    <table class="table">
+        <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>First Name</th> 
+              <th>Last Name</th>
+              <th>Total Management Expenses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mgt of management">
+              <td>{{mgt.employeeid}}</td>
+              <td>{{mgt.firstname}}</td>
+              <td>{{mgt.lastname}}</td>
+              <td>{{mgt.sum |currency}}</td>
+            </tr>
+          </tbody>
+    </table>
+  </div> 
+</div>
+  
+  
+  

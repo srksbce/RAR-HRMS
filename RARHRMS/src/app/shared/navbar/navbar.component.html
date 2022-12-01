@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<div class="container">
+  <div class="row flex-nowrap">
+    <div
+      class="d-flex flex-row align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+    >
+      <a
+        href="/"
+        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+      >
+      </a>
+
+      <ul 
+        class="nav nav-pills flex-row mb-sm-auto align-items-center align-items-sm-start"
+        id="menu"
+        style="height: fit-content; margin-bottom: 0px"
+      >
+        <li class="nav-item">
+          <div class="flex-container container-fluid">
+            <a routerLinkActive=" bg-light"
+              [routerLink]="['/admin/launchpage']"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <div class="move" >
+                <div style="order: 2;  display: flex">
+                  <i 
+                    class="bi bi-speedometer2"
+                    style="font-size: 145%; color: black"
+                  ></i
+                  ><span 
+                    class="ms-1 d-none d-sm-inline m-2"
+                    style="color: black"
+                    >Dashboard</span
+                  >
+                </div>
+              </div>
+            </a>
+            <div class="move">
+              <a
+                [routerLink]="['/admin/ldbpage']"
+                class="nav-link px-0 align-middle"
+              >
+                <i
+                  class="bi bi-box-arrow-in-down"
+                  style="font-size: 145%; color: black"
+                ></i>
+                <span class="ms-1 d-none d-sm-inline" style="color: black"
+                  >Load Data</span
+                ></a
+              >
+            </div>
+
+            <div class="move d-flex flex-column">
+              <a
+                [routerLink]="['/admin/amdpage']"
+                data-bs-toggle="collapse"
+                class="nav-link px-0 align-middle"
+              >
+                <i
+                  class="bi bi-person-bounding-box"
+                  style="font-size: 145%; color: black"
+                ></i>
+                <span class="ms-1 d-none d-sm-inline" style="color: black">
+                  Amend Details
+                </span>
+              </a>
+            </div>
+
+            <div class="move" style="display: flex">
+              <a
+                [routerLink]="['/admin/amdpage']"
+                data-bs-toggle="collapse"
+                class="nav-link px-0 align-middle"
+              >
+                <i
+                  class="fs-4 bi-grid"
+                  style="font-size: 145%; color: black"
+                ></i>
+                <span class="ms-1 d-none d-sm-inline" style="color: black"
+                  >Reporting Portal</span
+                >
+              </a>
+            </div>
+
+            <div class="down">
+              <a
+                [routerLink]="['/']"
+                data-bs-toggle="collapse"
+                class="nav-link px-0 align-middle"
+              >
+                <i
+                  class="bi-5 bi-box-arrow-right"
+                  style="font-size: 145%; color: black"
+                ></i
+                ><span class="ms-1 d-none d-sm-inline" style="color: black"
+                  >Logout</span
+                >
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

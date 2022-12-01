@@ -1,0 +1,38 @@
+/* #btn{
+    text-align: center;
+}
+#btn1{
+    margin-left: 87%;
+}
+#btn2{
+margin-left: 87%;
+}
+
+#save{
+   margin-left: 45%;
+}
+.fixTableHead shadow{
+    width: 30px;
+    length:30px;
+
+} */
+small{
+    color: red;
+}
+Span{
+    color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.btn btn-primary{
+   text-align: right;
+}

@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    margin-bottom: 30%;
+    background-color: rgb(84, 164, 238);
+
+}
+
+#shadow {
+    border-radius: 3%;
+    margin-left: -30%;
+    margin-right: -30%;
+
+}
+
+#buttons {
+    margin-left: 25px;
+}

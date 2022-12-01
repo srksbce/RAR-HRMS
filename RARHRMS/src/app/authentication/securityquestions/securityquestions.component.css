@@ -1,0 +1,42 @@
+form {
+    text-align: center;
+
+}
+
+.container{
+    margin-top: 5%;
+}
+
+#shadow{
+    border-radius: 3%;
+    
+    
+}
+#card{
+    margin-right: 10%;
+   
+}
+
+.question{
+    color: red;
+}
+
+.answer{
+    color: red;
+}
+
+#select{
+    text-align: center;
+}
+
+#Answer1{
+    text-align: center;
+}
+
+#Answer2{
+    text-align: center;
+}
+
+#Answer3{
+    text-align: center;
+}

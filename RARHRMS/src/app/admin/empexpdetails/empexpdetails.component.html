@@ -1,0 +1,45 @@
+<div class="container" >
+<h2 align="center" >Employee Expenses </h2>
+<input   [routerLink]="['/admin/employeeexpensedata']" type="submit" class="btn btn-primary" id="expense" value="Back" name="payroll"><br><br>
+
+<div class="container" >
+    <div class="row">
+      <div class="col-sm">
+        <h5>Name: {{employeeeexpense.firstname +" "+employeeeexpense.lastname}} </h5>
+        </div>
+      <div class="col-sm">
+        <h5>Employee ID: {{employeeeexpense.employeeid}}</h5>
+            </div>
+      <div class="col-sm">
+        <h5> Total Amount $ {{employeeeexpense.sum}}</h5>
+            </div>
+    </div>
+  </div>
+
+  
+
+  
+<div class="fixTableHead  shadow">
+  <table class="table auto-index">
+      <thead>
+          <tr>
+            <th>SNo</th> 
+            <th>Expense Date</th> 
+            <th>Expense Type</th>
+            <th>Amount</th>
+            <th>Invoice</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr *ngFor="let emp of Expensedata let i=index;">
+            <td>{{ i+1 }}</td>
+            <td>{{emp.expensedate}}</td>
+            <td>{{emp.expenses}}</td>
+            <td>{{emp.amount}}</td>
+           
+            <td><a href="https://www.freshbooks.com/wp-content/uploads/invoice-template-pdf-white.png">Click Here</a></td>
+        </tbody>
+      
+  </table>
+</div>

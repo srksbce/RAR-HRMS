@@ -1,0 +1,90 @@
+<form >
+    <br>
+    <h1 class="text-center">Add New Invoice</h1><br>
+    <button [routerLink]="['/document']" routerLinkActive="router-link-active" type="button" class="btn btn-primary"
+        style="margin-left: 19%;">Back</button>
+
+    <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
+        <div class=" shadow-lg p-4mb-2 bg-white rounded">
+
+            <div class="card-body py-3 px-md-2">
+
+                <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                        <label for="form2Example1" class="form-label">Invoice Number</label> <span>*</span>
+                        <input type="text" #invoicenumber="ngModel" class="form-control" id="number"
+                            placeholder="Invoice Number" name="number" [(ngModel)]="newinvoice.invoicenumber" required/>
+                        <small *ngIf="invoicenumber.touched &&invoicenumber.invalid" required="">Invoice Number is
+                            Mandatory</small>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="form2Example1" class="form-label">Invoice Date</label> <span>*</span>
+                        <input type="date" #invoicedate="ngModel" class="form-control" id="date" placeholder="Invoice Date"
+                            name="date" [(ngModel)]="newinvoice.invoicedate" required />
+                        <small *ngIf="invoicedate.touched &&invoicedate.invalid">Invoice Date is Mandatory</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <label class="form-label">Invoice Status</label> <span>*</span>
+                <select class="form-select" id="status" name="status" #invoicestatus="ngModel"
+                    aria-label="Default select example" [(ngModel)]="newinvoice.invoicestatus" required>
+                   
+                    <option>Choose Option</option>
+                    <option>New</option>
+                    <option>Inprogress</option>
+                    <option>Approved</option>
+                    <option>Rejected</option>
+                </select>
+                <small *ngIf="invoicestatus.touched &&invoicestatus.invalid">Invoice Status is Mandatory</small>
+            </div>
+            <div class="col-md-6 mb-4">
+                <label class="form-label">Expense Type</label> <span>*</span>
+                <select class="form-select" id="expensetype" name="expensetype" #expensetype="ngModel"
+                    aria-label="Default select example" [(ngModel)]="newinvoice. expensetype" required>
+                    
+                    <option>Choose Option</option>
+                    <option>Flight Expense</option>
+                    <option>Internet Expense</option>
+                    <option>Food Expense</option>
+                    <option>Hotel Expense</option>
+                </select>
+                <small *ngIf="expensetype.touched &&expensetype.invalid">Expense Type is Mandatory</small>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <label for="form2Example1" class="form-label">Invoice Amount</label> <span>*</span>
+                    <input type="numeric" class="form-control" id="number" placeholder="Invoice Amount" #invoiceamount="ngModel"
+                        name="number" [(ngModel)]="newinvoice.invoiceamount" required />
+                    <small *ngIf="invoiceamount.touched &&invoiceamount.invalid">Invoice Amount is Mandatory</small>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <label class="form-label">Currency</label> <span>*</span>
+                <select class="form-select" id="Currency" name="Currency" #currency="ngModel"
+                    aria-label="Default select example" [(ngModel)]="newinvoice.currency" required>
+                   
+                    <option>Choose Option</option>
+                    <option>Rupees</option>
+                    <option>Dollar</option>
+                    <option>Euro</option>
+                    <option>pounds</option>
+                </select>
+                <small *ngIf="currency.touched &&currency.invalid">Currency is Mandatory</small>
+            </div>
+            <div class="mb-3">
+                <input type="file" accept=".csv" id="file" placeholder="file" required />
+            </div>
+            <div class="button1">
+                <button type="submit" class="btn btn-primary btn-sm"
+                    style="position:relative;display: flex; right: -41%; top: -49px;">Upload</button>
+            </div><br>
+            <div class="button d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-primary btn-block" style="position:relative">Save</button>
+            </div>
+        </div>
+    </div>
+</form>

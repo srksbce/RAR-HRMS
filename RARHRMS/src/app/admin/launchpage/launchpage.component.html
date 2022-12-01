@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<div class="container-fluid d-flex bg-light flex c-bg">
+  <div class="container-fluid" style="width: fit-content">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="v1"></div>
+  <div class="container-fluid bg-light text-center d-flex flex-column c-bg">
+    <div class="row justify-content-evenly">
+      <div class="col-sm-12 col-md-5 m-2 text-start">
+        <div class="">
+          <h4>Welcome back,{{ loginuser.firstName }}</h4>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-5 m-2">
+        <div class="text-end">
+          <p>{{ loginuser.firstName }} {{ loginuser.lastName }}</p>
+          <p>{{ loginuser.role }}</p>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4 mt-4">
+        <a
+          [routerLink]="['/admin/activeemployeedata']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Active Employees</h5>
+            <strong>
+              <p class="p-2">
+                <i class="bi bi-person-circle" style="position: relative"></i>
+                {{ dashBoardData.activeEmployees }}
+              </p></strong
+            >
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-4 mt-4">
+        <a
+          [routerLink]="['/admin/employeeexpensedata']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Employee Expenses</h5>
+            <strong
+              ><p class="p-2">
+                {{ dashBoardData.EmpExpenses / 1000 | currency }} K
+              </p></strong
+            >
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-4 mt-4">
+        <a
+          [routerLink]="['/admin/receivables']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Outstanding Receivables</h5>
+            <strong
+              ><p class="p-2">
+                {{ dashBoardData.OReceivables / 1000 | currency }} K
+              </p></strong
+            >
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-12 col-md-4 mt-4">
+        <a
+          [routerLink]="['/admin/managementexpenses']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Management Expenses</h5>
+            <strong
+              ><p class="p-2">
+                {{ dashBoardData.MgmtExpenses / 1000 | currency }} K
+              </p></strong
+            >
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-4 mt-4">
+        <a
+          [routerLink]="['/admin/payrollexpenses']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Payroll &nbsp;Expenses</h5>
+            <strong
+              ><p class="p-2">
+                {{ dashBoardData.PayrollExp / 1000 | currency }} K
+              </p></strong
+            >
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-12 col-md-4 mt-4">
+        <a
+          [routerLink]="['/admin/operationalcost']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Operational Cost</h5>
+            <strong
+              ><p class="p-2">
+                {{ dashBoardData.operationalCount / 1000 | currency }} K
+              </p></strong
+            >
+          </div>
+        </a>
+      </div>
+      <br />
+      <br />
+      <div class="col-sm-10 col-10 mt-4 container-fluid justify-content-evenly">
+        <div class="progressbar p-4 text-center">
+          <h1>Progress Bar</h1>
+          <div class="chart-container">
+            <canvas id="MyChart">{{ chart }}</canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

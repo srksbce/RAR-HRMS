@@ -1,0 +1,146 @@
+<br>
+
+<button [routerLink]="['/admin/pendingrequest']" routerLinkActive="router-link-active" type="button"
+  class="btn btn-primary" id="buttons">Back</button><br><br>
+
+<section class="vh-200 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
+
+          <div class="card-body p-4 p-md-4">
+
+            <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">User Details</h1>
+
+            <form name="view" #view="ngForm">
+
+              <div class="row">
+
+                <div class="col">
+                  <label class="form-label" for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" class="form-control" disabled #firstName="ngModel"
+                    [(ngModel)]="viewdetails.firstName">
+                </div>
+
+                <div class="col">
+                  <label class="form-label" for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" disabled #lastName="ngModel"
+                    [(ngModel)]="viewdetails.lastName">
+
+                </div>
+
+                <div class="col">
+                  <label class="form-label" for="gender">Gender</label>
+                  <input type="text" class="form-control" id="gender" name="gender" disabled #gender="ngModel"
+                    [(ngModel)]="viewdetails.gender">
+                </div>
+
+              </div>
+
+
+              <br>
+
+
+              <div class="row">
+
+                <div class="col">
+                  <label class="form-label" for="address line 1">Address Line 1</label>
+                  <input type="text" class="form-control" id="address line 1" name="address line 1" disabled
+                    #address1="ngModel" [(ngModel)]="viewdetails.address1">
+                </div>
+
+                <div class="col">
+                  <label class="form-label" for="address line 2">Address Line 2</label>
+                  <input type="text" class="form-control" id="address line 2" name="address line 2" disabled
+                    #address2="ngModel" [(ngModel)]="viewdetails.address2">
+                </div>
+
+                <div class="col">
+                  <label class="form-label" for="city">City</label>
+                  <input type="text" class="form-control" id="city" name="city" disabled #city="ngModel"
+                    [(ngModel)]="viewdetails.city">
+                </div>
+
+              </div>
+
+              <br>
+
+              <div class="row">
+
+                <div class="col">
+                  <label class="form-label" for="zipcode">Zipcode</label>
+                  <input type="text" class="form-control" id="zipcode" name="zipcode" disabled #zipcode="ngModel"
+                    [(ngModel)]="viewdetails.zipcode">
+                </div>
+
+                <div class="col">
+                  <label class="form-label" for="state">State</label>
+                  <input type="text" class="form-control" id="state" name="state" disabled #state="ngModel"
+                    [(ngModel)]="viewdetails.state">
+                </div>
+
+                <div class="col">
+                  <label class="form-label" for="country">Country</label>
+                  <input type="text" class="form-control" id="country" name="country" disabled #country="ngModel"
+                    [(ngModel)]="viewdetails.country">
+                </div>
+
+              </div>
+
+
+              <br>
+
+
+              <div class="row">
+
+                <div class="col">
+                  <label class="form-label" for="role">Role</label>
+                  <input type="text" class="form-control" id="role" name="role" disabled #role="ngModel"
+                    [(ngModel)]="viewdetails.role">
+                </div>
+
+
+                <div class="col">
+                  <label class="form-label" for="entity">Entity</label>
+                  <input type="text" class="form-control" id="entity" name="entity" disabled #entity="ngModel"
+                    [(ngModel)]="viewdetails.entity">
+                </div>
+
+                <div class="col">
+                  <label class="form-label" for="company id">Company Id</label>
+                  <input type="text" class="form-control" id="" name="" disabled #companyid="ngModel"
+                    [(ngModel)]="viewdetails.CompanyId">
+
+                </div>
+
+              </div>
+
+              <br>
+
+              <div class="row">
+
+                <div class="col">
+                  <label class="form-label" for="role">Email Id</label>
+                  <input type="text" class="form-control" id="emailid" name="emailid" disabled #email id="ngModel"
+                    [(ngModel)]="viewdetails.email">
+                </div>
+
+                <div class="col">
+                  <label class="form-label" for="entity">Phone Number</label>
+                  <input type="text" class="form-control" id="phonenumber" name="phonenumber" disabled #entity="ngModel"
+                    [(ngModel)]="viewdetails.phoneNumber">
+                </div>
+
+              </div>
+
+            </form>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

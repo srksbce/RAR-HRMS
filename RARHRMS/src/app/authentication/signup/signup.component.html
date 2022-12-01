@@ -1,0 +1,131 @@
+<section class="">
+  <!-- Jumbotron -->
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start">
+      <div class="container" >
+          <div class="row gx-lg-5 align-items-center">
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                  <h1><b style="font-size: 55px;">ANALYZE</b></h1>
+                  <p >TODAY'S CHALLENGES</p>
+
+                  <h1><b style="font-size: 55px;margin: -6px;">ENVISION</b></h1>
+                  <P >TOMORROW'S INNOVATION</P>
+
+
+              </div>
+              <div class="col-lg-6 mb-4 ">
+                <div class="card-body  px-md-4">
+                    <div class="shadow-lg p-5 mb-7 bg-white rounded">
+                          <form  name="signup" #signup="ngForm" (ngSubmit)="signup.valid && register(signup) && !show">
+                            
+                            <div class="img" style="position:relative;left: 22%;">
+                              <img alt="" class="img" style="position: relative;display: flex;" src="../assets/snadicon.png" />
+                           </div>
+                           
+                            <h4 class="text-center"><b>Signup for Registration</b></h4>
+                            <div class="row">
+                              <div class="col-md-6 mb-4">
+              
+                                <div class="form-outline">
+                                  <label class="form-label" for="FirstName">First Name</label><span style="color: red;right: -3px;position: relative;">*</span>
+                                  <input type="text" id="firstName" class="form-control" name="firstName" #firstName="ngModel" placeholder="First Name" [(ngModel)]="Signup.firstName" required />
+                                  <small *ngIf="(firstName.touched && firstName.invalid) || (firstName.invalid && signup.submitted)">First Name is required </small>
+                                </div>
+                              </div>  
+                              <div class="col-md-6 mb-4">
+              
+                                <div class="form-outline">
+                                  <label class="form-label" for="lastName">Last Name</label><span style="color: red;right: -3px;position: relative;">*</span>
+                                  <input type="text" id="lastName" class="form-control" name="lastName" #lastName="ngModel" placeholder="Last Name"   [(ngModel)]="Signup.lastName" required/>
+                                  <small *ngIf="(lastName.touched && lastName.invalid) || (lastName.invalid && signup.submitted)">Last Name is required </small>
+                                </div>
+              
+                              </div>
+                            </div>
+              
+                            <div class="row">
+                              <div class="col-md-6 mb-4">
+              
+                                <div class="form-outline">
+                                  <label for="EmployeeId" class="form-label">Employee Id</label><span style="color: red;right: -3px;position: relative;">*</span>
+                                  <input type="text" class="form-control" id="idnumber" name="idnumber" #idnumber="ngModel" placeholder="Employee Id" [(ngModel)]="Signup.idnumber" required/>
+                                  <small *ngIf="(idnumber.touched && idnumber.invalid) || (idnumber.invalid && signup.submitted)">EmployeeId is required </small>
+                                </div>
+              
+                              </div>
+                              <div class="col-md-6 mb-4">
+              
+                                <div class="form-outline">
+                                  <label for="EmailId" class="form-label">Email Id</label> <span style="color: red;right: -3px;position: relative;">*</span>
+                                  <input type="mail" class="form-control" id="email" name="email" #email="ngModel" placeholder="Email Id" [(ngModel)]="Signup.email" required/>
+                                  <small *ngIf="(email.touched && email.invalid) || (email.invalid && signup.submitted)">EmailId is required </small>
+                                </div>
+              
+                              </div>
+                              
+                            </div>
+              
+                            <div class="row">
+                              <div class="col-md-6 mb-4">
+              
+                                <div class="form-outline">
+                                  <label for="PhoneNumber" class="form-label">Phone Number</label><span style="color: red;right: -3px;position: relative;">*</span>
+                                  <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" #phoneNumber="ngModel" placeholder="Phone Number" minlength="10" [(ngModel)]="Signup.phoneNumber" required />
+                                  <small *ngIf="(phoneNumber.touched && phoneNumber.invalid) || (phoneNumber.invalid && signup.submitted)">PhoneNumber is required </small>
+                                </div>
+              
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                <label class="form-label">Gender</label><span style="color: red;right: -3px;position: relative;">*</span>
+                                <select class="form-select" id="gender" name="gender" #gender="ngModel"  aria-label="Default select example" [(ngModel)]="Signup.gender" required>
+                                  <option value="1" >Choose option</option>
+                                  <option value="2">Male</option>
+                                  <option value="3">Female</option>
+                                  <option value="4">Other</option>
+                                </select>
+                                <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && signup.submitted)">Gender is required </small>
+              
+                              </div>
+                            </div>
+              
+                            <div class="row">
+                              <div class="col-md-6 mb-4">
+                                <label class="form-label">Select Entity</label><span style="color: red;right: -3px;position: relative;">*</span>
+                                <select class="form-select" id="entity" name="entity"  aria-label="Default select example" #entity="ngModel" [(ngModel)]="Signup.entity" required>
+                                  <option value="1" >Choose option</option>
+                                  <option value="2">HDFC</option>
+                                  <option value="3">AXIS</option>
+                                  <option value="4">AVERON</option>
+                                </select>
+                                <small *ngIf="(entity.touched && entity.invalid) || (entity.invalid && signup.submitted)">SelectEntity is required</small>
+              
+              
+                              </div>
+                              <div class="col-md-6 mb-4">
+              
+                                <div class="form-outline">
+                                  <label for="DateOfBirth" class="form-label">Date Of Birth</label><span style="color: red;right: -3px;position: relative;">*</span>
+                                  <input type="date" class="form-control" id="dateofBirth" name="dateofBirth" (change)="dobvalid(Signup.dateofBirth)" #dateofBirth="ngModel" placeholder="DateOfBirth"  [(ngModel)]="Signup.dateofBirth" required />
+                                  <small *ngIf="(dateofBirth.touched && dateofBirth.invalid) || (dateofBirth.invalid && signup.submitted)">DateOfBirth is required </small>
+                                  <small *ngIf="(show)" > age should be 18 -75 years</small>
+                                </div>
+                              </div>
+                              
+                            </div>
+              
+                            <div class="row">
+                              
+                            </div>
+              
+                            <div class="mt-4 pt-2">
+                              <input type="submit" class="btn btn-primary btn-block mb-3" value="Next"/>
+                            </div>
+              
+                          </form>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</section>

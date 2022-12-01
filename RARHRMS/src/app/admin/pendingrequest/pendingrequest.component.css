@@ -1,0 +1,133 @@
+ 
+/*fixed table head*/
+
+*{
+  box-sizing: border-box;
+}
+
+.fixTableHead {
+overflow-y: auto;
+height: 70vh;
+width: 100%;
+}
+
+.fixTableHead thead th {
+position: sticky;
+top: 0;
+
+}
+table {
+border-collapse: collapse;        
+width: 100%;
+background-color: white;
+vertical-align: baseline;
+text-align: center;
+}
+
+.shadow{
+  box-shadow: 0 2px 15px rgba(64,64,64,.7);
+  
+}
+
+  th:first-of-type {
+  border-top-left-radius: 10px;
+  }
+  th:last-of-type {
+  border-top-right-radius: 10px;
+  }
+
+
+  td {
+    padding: 8px 15px;
+    padding: 20px;
+    font-size: 18px;
+    border-top: 1px solid rgb(236, 235, 235);
+    }
+    th {
+      background-color: rgb(241, 224, 227);
+      padding: 20px;
+      font-size: 18px;
+    }
+
+
+.hi{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+
+
+
+
+
+/* custom button design
+.view{
+  color: white;
+  background-color: rgba(8,77,179,0.864);
+  border-radius:10px;
+  margin-right: 5px;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.approved{
+  color: white;
+  background-color: green;
+  border-radius:10px;
+  margin-right: 5px;
+  border: 1px solid white;
+  padding: 10px;
+}
+.reject{
+color: white;
+background-color: red;
+border-radius:10px;
+
+border: 1px solid white;
+padding: 10px;
+
+} */
+
+/* scrolled head table
+
+.table_content1{
+  width:100%;
+  border-spacing: 0;
+  text-align: center;
+
+}
+
+
+
+
+th{
+  background-color: rgb(223, 181, 188);
+  color: gray;
+  font-size: 18px;
+  padding: 20px;
+  fill-opacity: initial;
+}
+
+tbody{
+  font-size: 18px;
+  vertical-align: baseline;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 70vh;
+  overflow: auto;
+  }
+  .table-wrapper-scroll-y {
+  display: block;
+  } 
+
+  
+
+ 
+
+
+
+*/
+

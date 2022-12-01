@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<h2 class="header"> Active Employee Data</h2>
+<br />
+<div class="container-fluid col-md-10">
+  <div class="container-fluid">
+    <div class="row height d-flex justify-content-center align-items-center">
+      <div class="col-md-2">
+        <div class="form">
+          <i class="fa fa-search"></i>
+          <input   type="text"  [(ngModel)]="searchValue" class="form-control form-input"  placeholder="Search" id="search" name="search"
+ />
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br />
+<button
+  [routerLink]="['/admin/launchpage']"
+  routerLinkActive="router-link-active"
+  type="button"
+  class="btn btn-primary"
+>
+  Back
+</button>
+<button
+  [routerLink]="['/admin/newemp']"
+  routerLinkActive="router-link-active"
+  type="button"
+  class="btn btn-primary"
+  style="float: right"
+>
+  New Employee
+</button>
+<br />
+<br />
+<div class="fixTableHead shadow">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Employee Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let act of actemployees | searchfilter: searchValue" class="hover" (click)="select(act)"  >
+       
+        <td>{{ act.employeeid }}</td>
+        <td>{{ act.firstname }}</td>
+        <td>{{ act.lastname }}</td>
+        <td>{{ act.emailaddress }}</td>
+        <td>{{ act.contactnumber }}</td>
+        <td>{{ act.jobtitle }}</td>
+     
+      </tr>
+    </tbody>
+  </table>
+</div>

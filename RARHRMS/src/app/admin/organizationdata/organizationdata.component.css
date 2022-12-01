@@ -1,0 +1,115 @@
+*{
+
+   box-sizing: border-box;
+}
+
+
+.text_color{
+background-color: rgb(223, 181, 188);
+text-align: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+padding: 10px;
+font-weight: 700;
+}
+
+
+
+.Entities{
+   background-color: white;
+   border: 1px solid rgba(216, 193, 193, 0.644);
+   border-radius: 10px;
+   height: 70vh;
+  }
+
+.fixTableHead {
+  overflow-y: auto;
+  height: 59vh; 
+  width: 100%;
+  border-bottom-left-radius: 10px;
+}
+.fixTableHead thead th {
+position: sticky;
+top: 0;
+}
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+border-collapse: collapse;
+ width: 100%;
+background-color: white;
+vertical-align: baseline;
+text-align: center;
+height: 70vh;
+border-radius: 10px;
+}
+
+td {
+
+   font-size: 18px;
+   border-collapse: collapse;
+}
+th {
+   background-color: rgb(238, 229, 231);
+   padding: 10px;
+   font-size: 20px;
+   border-collapse: collapse;
+}
+
+td:empty {
+   border-left: 0;
+   border-right: 0;
+ }
+
+
+
+
+
+
+
+
+/*
+.container{
+   height: auto;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   border-radius: 10px;
+
+   }
+.Expenses{
+   display: inline-block;
+    height: 70vh;
+ background-color: white;
+ border-radius: 10px;
+ border: 1px solid rgba(216, 193, 193, 0.644);
+ overflow: hidden;
+
+}
+
+.Roles{
+ background-color: white;
+ border-radius: 10px;
+ border: 1px solid rgba(216, 193, 193, 0.644);
+
+}
+
+.sri1{
+ height: 59vh;
+}
+
+.sri1{
+   display: block;
+    height: 59vh;
+
+}
+
+
+.view{
+color: white;
+background-color: rgba(8,77,179,0.864);
+border-radius:10px;
+border: 1px solid white;
+}
+*/

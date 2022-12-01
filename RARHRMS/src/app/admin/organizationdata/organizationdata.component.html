@@ -1,0 +1,179 @@
+<div class="container-fluid d-flex bg-light flex c-bg">
+  <div class="container-fluid" style="width: fit-content">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="v1"></div>
+
+  <div class="container-fluid">
+    <app-amdbuttons> </app-amdbuttons><br />
+
+    <div class="container-fluid text-center d-flex flex-column justify-content-around " style="font-family:sanserif;" >
+      <div class="row justify-content-evenly">
+        <div class="col-md-3 my-2  ">
+          <div class="Entities ">
+            <h4 class="text_color">Entities</h4>
+            <div   class="col d-flex align-items-baseline justify-content-center " >
+              <form #EntityForm="ngForm" (ngSubmit)="postEntityData(EntityForm) ">
+              <div class="d-flex">
+              <input
+                type="text" ngModel required [(ngModel)]="entity.entity"
+                class="  form-control m-2"
+                placeholder=" Add Entity Name"
+                name="entity"
+              />
+              <button class=" m-2 btn btn-primary " >Add Entity</button>
+            </div>
+            </form>
+          </div>
+          <div class="fixTableHead">
+            <table>
+              <tbody   >
+          <tr  *ngFor="let en of  entities" style="height:px;">
+            <td  >
+              {{en.entity}}
+            </td>
+         </tr></tbody>
+            </table>
+          </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-3 my-2  ">
+          <div class="Entities ">
+            <h4 class="text_color">Roles</h4>
+            <div   class="col d-flex align-items-baseline justify-content-center " >
+              <form #RoleForm="ngForm" (ngSubmit)="postRoleData(RoleForm) ">
+                <div class="d-flex">
+                <input
+                  type="text" ngModel required [(ngModel)]="roles.roles"
+                  class="  form-control m-2"
+                  placeholder=" Add Role Name"
+                  name="roles"
+                />
+
+                <button class=" m-2 btn btn-primary ">Add Role</button>
+              </div>
+              </form>
+          </div>
+          <div class="fixTableHead">
+            <table >
+         <tbody >
+          <tr  *ngFor="let rl of  role"  style="height:50px;">
+            <td >
+              {{rl.roles}}
+            </td>
+         </tr>
+        </tbody>
+            </table>
+          </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-5 my-2  " style="overflow-y:true ;" >
+          <div class="Entities ">
+            <h4 class="text_color">Expenses</h4>
+            <div   class="col d-flex align-items-baseline  justify-content-center  " >
+              <form #expensesForm="ngForm" (ngSubmit)="postExpensesData(expensesForm)">
+              <div class="d-flex">
+              <input
+                type="text" ngModel required [(ngModel)]="exp.expenses"
+                class="  form-control m-2"
+                placeholder="Add Expense Name"
+                name="expenses"
+              />
+              <input
+                type="text" ngModel required [(ngModel)]="exp.expensecode"
+                class="  form-control m-2"
+                placeholder="Add Expense code"
+                name="expensecode"
+              />
+
+              <button class=" m-2 btn btn-primary ">Add Expense</button>
+            </div>
+            </form>
+          </div>
+
+         <div class="fixTableHead">
+            <table class="t-table" >
+         <thead>
+           <tr>
+             <th>Expenses</th>
+             <th>Expense Code</th>
+            </tr>
+         </thead>
+         <tbody >
+          <tr  *ngFor="let ex of expense" style="height:50px;">
+
+            <td >
+              {{ex.expenses}}
+            </td>
+            <td>
+              {{ex.expensecode}}
+            </td>
+
+         </tr>
+        </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+
+     <!--   <div class="col-md-5 my-2 sri">
+          <div class="Expenses sri1  ">
+             <h4 class="text_color">Expenses</h4>
+             <form #expensesForm="ngForm" (ngSubmit)="postExpensesData(expensesForm.value)">
+          <div
+            class="col-md-12 d-flex align-items-baseline m-3 "
+          >
+
+              <div class="d-flex">
+
+              <input
+                type="text" ngModel
+                class="  form-control"
+                placeholder=" Expense Name"
+                name="expenses"
+              />
+              <input
+                type="text" ngModel
+                class="  form-control"
+                placeholder="Expense code"
+                name="expensecode"
+              />
+            </div>
+
+            <div>
+              <button class="view p-1 ">Add Expense</button>
+            </div>
+          </div></form>
+            <div class="fixTableHead">
+              <table >
+
+           <thead>
+             <tr>
+               <th>expenses</th>
+               <th>expensecode</th>
+              </tr>
+           </thead>
+           <tbody >
+            <tr  *ngFor="let ex of expenses">
+              <ul >
+              <td >
+                <li >{{ex.expenses}} </li>
+              </td>
+              <td>
+                <li>{{ex.expensecode}} </li>
+              </td>
+            </ul>
+           </tr>
+          </tbody>
+              </table>
+            </div>
+          </div>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</div>

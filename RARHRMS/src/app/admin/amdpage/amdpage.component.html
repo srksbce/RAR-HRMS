@@ -1,0 +1,41 @@
+<div class="container-fluid d-flex bg-light flex c-bg">
+  <div class="container-fluid" style="width: fit-content">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="v1"></div>
+
+  <div class="container-fluid">
+    <app-amdbuttons> </app-amdbuttons><br />
+    <div class="shadow fixTableHead">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Entity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of tabledata">
+            <ng-template [ngIf]="item.status=='approved'"></ng-template>
+            <td >{{item.firstName}}</td>
+            <td >{{item.lastName}}</td>
+            <td >{{item.email}}</td>
+            <td >{{item.role}}</td> 
+            <td >{{item.entity}}</td>
+
+            <td><button  (click)="postUserData(item)" class="btn btn-primary"  [routerLink]="['/admin/userdetails']">Update</button>
+             
+            
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div> 
+  </div>
+</div>
