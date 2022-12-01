@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   
-  .fixTableHead {
+  /* .fixTableHead {
   overflow-y: auto;
   height: 62vh;
   width: 100%;
@@ -25,8 +25,8 @@
     box-shadow: 0 2px 15px rgba(64,64,64,.7);
     
   }
-  
-    th:first-of-type {
+   */
+    /* th:first-of-type {
     border-top-left-radius: 10px;
     }
     th:last-of-type {
@@ -51,12 +51,15 @@
       .header{
         text-align: center;
         text-transform: uppercase;
-    }
+    } */
   
    .data{
     text-align: justify;
    }
     
-   h4{
+   /* h4{
     text-align: center;
-   }
+   } */
+   /* styling {
+    float:right;
+   } */
