@@ -34,6 +34,7 @@ import { DocumentComponent } from './document/document.component';
 
 import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
 import { InvoiceComponent } from './invoice/invoice.component';
+import { TemplateComponent } from './template/template.component';
 
 
 
@@ -72,6 +73,7 @@ import { InvoiceComponent } from './invoice/invoice.component';
 
    AddNewInvoiceComponent,
      InvoiceComponent,
+     TemplateComponent
      
     
   
