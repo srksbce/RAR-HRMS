@@ -1,106 +1,79 @@
-<!DOCTYPE html>
-<div class="container">
+<div class="container-fluid">
   <div class="row flex-nowrap">
-    <div
-      class="d-flex flex-row align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
-    >
-      <a
-        href="/"
-        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-      >
-      </a>
-
-      <ul 
-        class="nav nav-pills flex-row mb-sm-auto align-items-center align-items-sm-start"
-        id="menu"
-        style="height: fit-content; margin-bottom: 0px"
-      >
-        <li class="nav-item">
-          <div class="flex-container container-fluid">
-            <a routerLinkActive=" bg-light"
-              [routerLink]="['/admin/launchpage']"
-              data-bs-toggle="collapse"
-              class="nav-link px-0 align-middle"
-            >
-              <div class="move" >
-                <div style="order: 2;  display: flex">
-                  <i 
-                    class="bi bi-speedometer2"
-                    style="font-size: 145%; color: black"
-                  ></i
-                  ><span 
-                    class="ms-1 d-none d-sm-inline m-2"
-                    style="color: black"
-                    >Dashboard</span
-                  >
-                </div>
-              </div>
-            </a>
-            <div class="move">
-              <a
-                [routerLink]="['/admin/ldbpage']"
-                class="nav-link px-0 align-middle"
-              >
-                <i
-                  class="bi bi-box-arrow-in-down"
-                  style="font-size: 145%; color: black"
-                ></i>
-                <span class="ms-1 d-none d-sm-inline" style="color: black"
-                  >Load Data</span
-                ></a
-              >
-            </div>
-
-            <div class="move d-flex flex-column">
-              <a
-                [routerLink]="['/admin/amdpage']"
-                data-bs-toggle="collapse"
-                class="nav-link px-0 align-middle"
-              >
-                <i
-                  class="bi bi-person-bounding-box"
-                  style="font-size: 145%; color: black"
-                ></i>
-                <span class="ms-1 d-none d-sm-inline" style="color: black">
-                  Amend Details
-                </span>
-              </a>
-            </div>
-
-            <div class="move" style="display: flex">
-              <a
-                [routerLink]="['/admin/amdpage']"
-                data-bs-toggle="collapse"
-                class="nav-link px-0 align-middle"
-              >
-                <i
-                  class="fs-4 bi-grid"
-                  style="font-size: 145%; color: black"
-                ></i>
-                <span class="ms-1 d-none d-sm-inline" style="color: black"
-                  >Reporting Portal</span
-                >
-              </a>
-            </div>
-
-            <div class="down">
-              <a
-                [routerLink]="['/']"
-                data-bs-toggle="collapse"
-                class="nav-link px-0 align-middle"
-              >
-                <i
-                  class="bi-5 bi-box-arrow-right"
-                  style="font-size: 145%; color: black"
-                ></i
-                ><span class="ms-1 d-none d-sm-inline" style="color: black"
-                  >Logout</span
-                >
-              </a>
-            </div>
+      <div class="col-auto col-md-2 col-xl-12 px-sm-2 px-0 bg-light">
+          <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+              <!-- <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                  <span class="fs-5 d-none d-sm-inline">Menu</span>
+              </a> -->
+              <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                  <li>
+                      <a [routerLink]="['/admin/launchpage']"
+                      routerLinkActive="router-link-active" data-bs-toggle="collapse" class="nav-link ">
+                          <i class="fs-4 bi bi-grid-fill"></i> <span class="ms-1 d-none d-sm-inline">My
+                              Organization</span> </a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link">
+                          <i class="fs-4 bi bi-info-square"></i> <span class="ms-1 d-none d-sm-inline">My
+                              Info</span></a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link">
+                          <i class="fs-4 bi bi-person"></i> <span class="ms-1 d-none d-sm-inline">People</span></a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link ">
+                          <i class="fs-4 bi bi-inbox-fill"></i> <span class="ms-1 d-none d-sm-inline">My
+                              Requests</span></a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link ">
+                          <i class="fs-4 bi bi-people-fill"></i> <span
+                              class="ms-1 d-none d-sm-inline">Hiring</span></a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link ">
+                          <i class="fs-4 bi bi-clipboard-data"></i> <span
+                              class="ms-1 d-none d-sm-inline">Reports</span></a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link ">
+                          <i class="fs-4 bi bi-file-earmark"></i> <span
+                              class="ms-1 d-none d-sm-inline">Files</span></a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link ">
+                          <i class="fs-4 bi bi-calendar2-week"></i> <span
+                              class="ms-1 d-none d-sm-inline">Timesheet</span></a>
+                  </li>
+              </ul>
+              <hr>
+              
           </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+      </div>
+      <!-- <div class="col py-3">
+          <div class="container-fluid col-md-10">
+
+                      <ul class="nav nav-tabs">
+                              <li class="nav-item">
+                                <a class="nav-link" href="/personaldata">Personal</a>
+                              </li>
+                          <li class="nav-item">
+
+                              <a class="nav-link">Job</a>
+
+                          </li>
+
+                          <li class="nav-item">
+
+                              <a class="nav-link">Document</a>
+
+                          </li>
+
+                      </ul>
+                      <br>
+
+                      <br>
+                  </div>
+              </div>
+          </div> -->
