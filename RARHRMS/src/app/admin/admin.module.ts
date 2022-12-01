@@ -33,8 +33,9 @@ import { SearchfilterPipe } from './searchfilter.pipe';
 import { DocumentComponent } from './document/document.component';
 
 import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
+import { MyrequestsComponent } from '../myrequests/myrequests.component';
 
-
+import { SuperuserComponent } from './superuser/superuser.component';
 
 
 
@@ -70,7 +71,8 @@ import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.compon
    DocumentComponent,
 
    AddNewInvoiceComponent,
-     
+     MyrequestsComponent,
+     SuperuserComponent
     
   
 

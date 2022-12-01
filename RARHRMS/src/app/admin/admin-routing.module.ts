@@ -24,11 +24,12 @@ import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.comp
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
-
+import { MyrequestsComponent } from '../myrequests/myrequests.component';
 import { UserdataComponent } from './userdata/userdata.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
+import { SuperuserComponent } from './superuser/superuser.component';
 
 
 const routes: Routes = [
@@ -61,7 +62,8 @@ const routes: Routes = [
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
-  
+  {path:'myreqs',component:MyrequestsComponent},
+  {path:'superuser',component:SuperuserComponent}
 ];
 
 @NgModule({

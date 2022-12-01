@@ -17,16 +17,19 @@ import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layo
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     AuthenticationLayoutComponent,
     AdminLayoutComponent,
-
+    
     ManagerComponent,
     EmployeeComponent,
     ManagerLayoutComponent,
     EmployeeLayoutComponent,
+  
+
 
 
   ],
