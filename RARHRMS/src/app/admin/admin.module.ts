@@ -40,6 +40,9 @@ import { TemplateComponent } from './template/template.component';
 import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { NewExpenseComponent } from './new-expense/new-expense.component';
+import { EmpPeopleComponent } from './emp-people/emp-people.component';
+import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.component';
+import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
 
 
 
@@ -84,7 +87,10 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
      TemplateComponent,
      EmployeeinfoComponent,
      MyreqsComponent,
-     NewExpenseComponent
+     NewExpenseComponent,
+     EmpPeopleComponent,
+     EmpMyrequestsComponent,
+     EmpTimesheetComponent
 
      
     
