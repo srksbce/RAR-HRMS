@@ -33,6 +33,10 @@ import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
+import { EmpPeopleComponent } from './emp-people/emp-people.component';
+import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.component';
+import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
+
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
 
@@ -71,6 +75,13 @@ const routes: Routes = [
   {path:'addNewInvoices',component:AddNewInvoicesComponent},
   {path: 'template' ,component:TemplateComponent},
   {path: 'myreqs' ,component:MyreqsComponent},
+  {path: 'emppeople' ,component:EmpPeopleComponent},
+  {path: 'empmyrequests' ,component:EmpMyrequestsComponent},
+  {path: 'emptimesheet' ,component:EmpTimesheetComponent},
+
+
+
+
   {path:'superuserinfo',component:SuperuserinfoComponent},
 {path:'superuserexpenses',component:SuperuserexpensesComponent}
   
