@@ -42,6 +42,7 @@ import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpense
 import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
 import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
 import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
+import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -64,8 +65,8 @@ const routes: Routes = [
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
- {path:'new-expense',component:NewExpenseComponent},
- {path: 'invoice',component :InvoiceComponent},
+  {path:'new-expense',component:NewExpenseComponent},
+  {path: 'invoice',component :InvoiceComponent},
   { path: 'managementexpenses', component: ManagementExpensesComponent },
   { path: 'newemp', component: NewempComponent },
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
@@ -85,15 +86,10 @@ const routes: Routes = [
   {path: 'emptimesheet' ,component:EmpTimesheetComponent},
   {path: 'empmyinvoices' ,component:EmpmyinvoicesComponent},
   {path: 'empmyexpenses' ,component:EmpmyexpensesComponent},
-
-
-  
-
-
-
-
+ 
+  {path:'superuserrequests',component:SuperuserrequestsComponent},
   {path:'superuserinfo',component:SuperuserinfoComponent},
-{path:'superuserexpenses',component:SuperuserexpensesComponent}
+  {path:'superuserexpenses',component:SuperuserexpensesComponent}
   
 ];
 
