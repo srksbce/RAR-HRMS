@@ -1,0 +1,94 @@
+<form name="MYEXPENSE">
+    <br>
+    <button  routerLinkActive="router-link-active" type="button" class="btn btn-primary"
+        style="margin-left: 22%;">Back</button>
+    <div class="px-5 py-8 px-md-6 col-md-6 text-center text-lg-start" style="margin-left:28%">
+        <div class=" shadow-lg p-4mb-3 bg-white rounded">
+
+            <div class="card-body py-2 px-md-4">
+
+
+                <div class="col-md-6 mb-6">
+
+                    <div class="form-outline">
+                        <label for="form2Example1" class="form-label"></label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 mb-4">
+                    <h2>New Expense </h2>
+
+                </div>
+
+                <span>
+                    <div class="col-md-3 mb-8">
+
+                        <div class="form-outline">
+                            <label for="form2Example3" class="form-label">Expense type*</label>
+                            <select class="form-select">
+                                <option>Flight Expenses</option>
+                                <option>Food Expenses</option>
+                                <option>Medical Expenses</option>
+                                <option>Visa Expenses</option>
+                                <option>Mobil Expenses</option>
+                                <option>Internet Expenses</option>
+                                <option>Other Expenses</option>
+                                <option>Travel Expenses</option>
+                                
+                            </select>
+
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="col-md-3 mb-8">
+
+                        <div class="form-outline">
+                            <label for="form2Example3" class="form-label">Amount*</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-4 mb-4">
+
+                        <div class="form-outline">
+                            <label for="form2Example4" class="form-label">Date & Time* </label>
+                            <input type="datetime-local" class="form-control">
+
+                        </div>
+
+                    </div>
+                </span>
+                <span>
+                    <div class="col-md-7 mb-4">
+
+                        <div class="form-outline">
+                            <label for="Description" class="form-label">Description*</label>
+                        </div>
+                        <div class="form-outline">
+                            <textarea class="form-control" id="textAreaExample" rows="7"
+                                placeholder="type here"></textarea>
+                            <label class="form-label" for="textAreaExample"></label>
+                        </div>
+
+
+                    </div>
+                </span>
+
+
+                <div class="mb-3">
+                    <label for="formFile" class="form-label"></label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="mt-4 pt-2">
+                    <input class="btn btn-primary " type="submit" value="save" style="width:105px;" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
