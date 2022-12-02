@@ -45,6 +45,8 @@ import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.componen
 import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
+import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
+import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
 
 
 
@@ -94,7 +96,9 @@ import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpense
      EmpMyrequestsComponent,
      EmpTimesheetComponent,
      SuperuserinfoComponent,
-     SuperuserexpensesComponent
+     SuperuserexpensesComponent,
+     EmpmyinvoicesComponent,
+     EmpmyexpensesComponent,
 
      
     

@@ -39,6 +39,9 @@ import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
 
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
+import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
+import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
+import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -71,6 +74,8 @@ const routes: Routes = [
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
+  {path:'empinfo',component:EmployeeinfoComponent},
+
 
   {path:'addNewInvoices',component:AddNewInvoicesComponent},
   {path: 'template' ,component:TemplateComponent},
@@ -78,6 +83,11 @@ const routes: Routes = [
   {path: 'emppeople' ,component:EmpPeopleComponent},
   {path: 'empmyrequests' ,component:EmpMyrequestsComponent},
   {path: 'emptimesheet' ,component:EmpTimesheetComponent},
+  {path: 'empmyinvoices' ,component:EmpmyinvoicesComponent},
+  {path: 'empmyexpenses' ,component:EmpmyexpensesComponent},
+
+
+  
 
 
 
