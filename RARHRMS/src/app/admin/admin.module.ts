@@ -43,6 +43,8 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
 import { EmpPeopleComponent } from './emp-people/emp-people.component';
 import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.component';
 import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
+import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
+import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
 
 
 
@@ -90,7 +92,9 @@ import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
      NewExpenseComponent,
      EmpPeopleComponent,
      EmpMyrequestsComponent,
-     EmpTimesheetComponent
+     EmpTimesheetComponent,
+     SuperuserinfoComponent,
+     SuperuserexpensesComponent
 
      
     
