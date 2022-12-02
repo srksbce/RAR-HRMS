@@ -1,36 +1,93 @@
-<div class="wrapper">
-    <div class="container-fluid col-md-10" style="position: relative;top: 70px;">
-        <div class="container-fluid">
-            <div class="card-body p-4 p-md-4">
+<br>
+<br>
+<br>
+<div class="container  fluid col-md-10">
+    <div class="container-fluid ">
 
-                <br>
+
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Expenses</h4>
                 <button [routerLink]="['/admin/new-expense']" type="button"
-                    style="position: relative;left: 83%;top: -49px;" class="btn btn-primary">+Add New</button><br>
+                    style="position: relative;left: 83%;" class="btn btn-primary">+Add New</button><br>
+</div>
+                    <hr>
 
+                   <br>
+                
+                    <div class="container">
+                
+                        <div class="row">
+                            <div class="col-sm">
+                                <h4>Name: Ramu Srirangam </h4>
+                            </div>
+                            <div class="col-sm">
+                                <h4>Employee ID: 1012 </h4>
+                            </div>
+                            <div class="col-sm">
+                                <h4> Total Amount $840</h4>
+                            </div>
+                        </div>
+                    </div>
                 <br>
-                <br>
+                
+                
+                
+                    <div class="fixTableHead  shadow">
 
-                <div class="fixTableHead shadow">
-                    <table class="table">
-                        <thead class="table-light">
-                            <tr>
-                                <th>No.</th>
-                                <th>Expense Date</th>
-                                <th> Expense Type</th>
-                                <th>Amount</th>
-                                <th>Invoice</th>
-                                <th>Status</th>
+                        <table class="table ">
+                            <thead class="table-light"></thead>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    
+                                    <th>Expense Date</th>
+                
+                                    <th>Expense Type</th>
+                                    <th>Amount</th>
+                                    <th>Invoice </th>
+                                   
+                                    <th>Status</th>
+                
+                                </tr>
+                            </thead>
 
-
-                            </tr>
-                        </thead>
+              
+                
+              
                         <tr>
-                            <td></td>
+                            <td>1</td>
+                            <td>12/11/21</td>
+                            <td>Travel</td>
+                            <td>$350</td>
+                            <td style="color: blue;"><i class="bi bi-paperclip" style="color: blue"></i>View</td>
+                            <td><i class="bi bi-dot" style="color:rgb(99, 134, 250);size: 100px  ;"></i>In Review</td>
                         </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>12/08/21</td>
+                            <td>Travel</td>
+                            <td>$490</td>
+                            <td style="color: blue;"><i class="bi bi-paperclip" style="color: blue"></i>View</td>
+                            <td><i class="bi bi-dot" style="color:darkgreen;size: 100px  ;"></i>Approved</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>12/08/21</td>
+                            <td>Other</td>
+                            <td>$50</td>
+                            <td style="color: blue;"><i class="bi bi-paperclip" style="color: blue"></i>View</td>
+                            <td><i class="bi bi-dot" style="color:red;size: 500px  ;"></i>Rejected</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>12/06/21</td>
+                            <td>Other</td>
+                            <td>-</td>
+                            <td style="color: blue;"><i class="bi bi-paperclip" style="color: blue"></i>View</td>
+                            <td><i class="bi bi-dot" style="color:navy;size: 100px  ;"></i>Draft</td>
+                        </tr>
+
+
                     </table>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        
