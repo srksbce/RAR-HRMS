@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
   
       <li class="nav-item">
-        <a class="nav-link collapsed"  href="users-profile.html">
+        <a class="nav-link collapsed" [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active">
           <i class="bi bi-grid"></i>
           <span>My Organization</span>
         </a>
@@ -14,25 +14,26 @@
       <!-- <li class="nav-heading">Pages</li> -->
   
       <li class="nav-item">
-        <a class="nav-link collapsed"  href="users-profile.html">
+        <a class="nav-link collapsed" [routerLink]="['/admin/superuserinfo']" routerLinkActive="router-link-active">
           <i class="bi bi-person"></i>
           <span>My Info</span>
         </a>
       </li><!-- End Profile Page Nav -->
-  
       <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/admin/superuserrequests']" routerLinkActive="router-link-active">
+          <i class="bi bi-envelope"></i>
+          <span>My Requests</span>
+        </a>
+      </li>
+  
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="pages-faq.html">
           <i class="bi bi-people-fill"></i>
           <span>People</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li> -->
   
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>My Requests</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
+      <!-- End Contact Page Nav -->
   
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-register.html">

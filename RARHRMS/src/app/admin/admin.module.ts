@@ -47,6 +47,7 @@ import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component'
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
 import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
 import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
+import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 
 
 
@@ -99,6 +100,7 @@ import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component'
      SuperuserexpensesComponent,
      EmpmyinvoicesComponent,
      EmpmyexpensesComponent,
+     SuperuserrequestsComponent,
 
      
     
