@@ -38,7 +38,8 @@ import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.componen
 import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
 
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
-import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
+
+import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -83,7 +84,8 @@ const routes: Routes = [
 
 
   {path:'superuserinfo',component:SuperuserinfoComponent},
-{path:'superuserexpenses',component:SuperuserexpensesComponent}
+
+{path:'superuserrequests',component:SuperuserrequestsComponent}
   
 ];
 
