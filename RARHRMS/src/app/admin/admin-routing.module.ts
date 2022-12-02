@@ -33,7 +33,8 @@ import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
-
+import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
+import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -69,8 +70,9 @@ const routes: Routes = [
 
   {path:'addNewInvoices',component:AddNewInvoicesComponent},
   {path: 'template' ,component:TemplateComponent},
-  {path: 'myreqs' ,component:MyreqsComponent}
-
+  {path: 'myreqs' ,component:MyreqsComponent},
+  {path:'superuserinfo',component:SuperuserinfoComponent},
+{path:'superuserexpenses',component:SuperuserexpensesComponent}
   
 ];
 

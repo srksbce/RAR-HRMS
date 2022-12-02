@@ -40,6 +40,8 @@ import { TemplateComponent } from './template/template.component';
 import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { NewExpenseComponent } from './new-expense/new-expense.component';
+import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
+import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
 
 
 
@@ -84,7 +86,9 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
      TemplateComponent,
      EmployeeinfoComponent,
      MyreqsComponent,
-     NewExpenseComponent
+     NewExpenseComponent,
+     SuperuserinfoComponent,
+     SuperuserexpensesComponent
 
      
     
