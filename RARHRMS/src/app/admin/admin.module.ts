@@ -56,6 +56,7 @@ import { SuperuserrequestsComponent } from './superuserrequests/superuserrequest
 
 
 
+
 @NgModule({
   declarations: [
     EmployeeComponent,
@@ -93,6 +94,7 @@ import { SuperuserrequestsComponent } from './superuserrequests/superuserrequest
      EmployeeinfoComponent,
      MyreqsComponent,
      NewExpenseComponent,
+    
      EmpPeopleComponent,
      EmpMyrequestsComponent,
      EmpTimesheetComponent,
