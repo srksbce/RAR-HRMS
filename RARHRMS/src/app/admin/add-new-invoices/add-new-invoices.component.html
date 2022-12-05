@@ -28,9 +28,9 @@
                 <div class="col-md-6 mb-4">
                     <h2>New invoice </h2>
 
-                </div>
+                 </div>
 
-                <span>
+                 <span>
                     <div class="col-md-3 mb-8">
 
                         <div class="form-outline">
@@ -75,8 +75,8 @@
 
                         
 
-                </span>
-                <span>
+                   </span>
+                   <span>
                     <div class="col-md-7 mb-4">
 
                         <div class="form-outline">
@@ -91,18 +91,29 @@
 
                     </div>
                     </span>
-
-
-                    <div class="mb-3">
-                    <label for="formFile" class="form-label"></label>
-                    <input class="form-control" type="file" id="formFile">
                 </div>
-                  
-                <div class="bt">
-                    <button type="submit" class="btn btn-primary" >save</button>
-                  </div>
-         </div>
+                
+                
+                    <div>
+
+                        <div class="mt-4 pt-2">
+                            <input class="btn btn-primary " type="submit" value="save" style="width:105px;" />
+                        </div>
+                            
+                        <angular-file-uploader
+                    [config]="afuConfig">
+                   
+                    
+                   </angular-file-uploader>
+                 
+                   
+                   
+                    
+                       
+           
+                 </div>
         </div>
     </div>
+  
 
 </form>

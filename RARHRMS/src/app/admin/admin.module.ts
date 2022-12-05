@@ -48,7 +48,7 @@ import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpense
 import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
 import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
-
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 
 
@@ -111,7 +111,8 @@ import { SuperuserrequestsComponent } from './superuserrequests/superuserrequest
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    AngularFileUploaderModule
     
 
   ]

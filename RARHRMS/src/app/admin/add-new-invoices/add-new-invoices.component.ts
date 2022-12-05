@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNewInvoicesComponent implements OnInit {
 
+
+  afuConfig = {
+    maxSize : 30,
+    multiple: false,
+    formatsAllowed: ".jpg,.png",
+    uploadAPI: {
+      url:"https://example-file-upload-api"
+    }
+};
+
   constructor() { }
 
   ngOnInit(): void {
