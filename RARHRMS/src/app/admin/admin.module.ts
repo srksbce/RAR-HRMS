@@ -56,6 +56,7 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
 
 
 
+
 @NgModule({
   declarations: [
     EmployeeComponent,
@@ -93,6 +94,7 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
      EmployeeinfoComponent,
      MyreqsComponent,
      NewExpenseComponent,
+    
      EmpPeopleComponent,
      EmpMyrequestsComponent,
      EmpTimesheetComponent,
