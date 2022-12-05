@@ -55,7 +55,12 @@
         font-size: 18px;
       }
       
-  
+  .rt {
+    text-align: end;
+  }
+  .full{
+    text-align: center;
+  }
   
   
   
