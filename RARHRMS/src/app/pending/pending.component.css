@@ -129,6 +129,26 @@
 i:hover{
   color:red;
 }
+.btn :hover{
+color: green;
+
+}
+.btn{
+  color: green;
+  background-color: green;
+  
+}
+.btn-danger{
+  background-color: red;
+ 
+}
+.container-fluid{
+ padding-right: 45px;
+ 
+}
+
+
+
 
 
 
