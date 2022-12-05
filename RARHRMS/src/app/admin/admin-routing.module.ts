@@ -82,7 +82,7 @@ const routes: Routes = [
   {path:'addNewInvoices',component:AddNewInvoicesComponent},
   {path: 'template' ,component:TemplateComponent},
   {path: 'myreqs' ,component:MyreqsComponent},
-  {path:'pending',component:PendingComponent}
+  {path:'pending',component:PendingComponent},
 
   {path: 'emppeople' ,component:EmpPeopleComponent},
   {path: 'empmyrequests' ,component:EmpMyrequestsComponent},
