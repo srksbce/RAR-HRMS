@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, NgForm, Validators } from '@angular/forms';
+import { Inewinvoices } from './add-new-invoices-model';
 
 @Component({
   selector: 'app-add-new-invoices',
@@ -6,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-new-invoices.component.css']
 })
 export class AddNewInvoicesComponent implements OnInit {
-
-
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+NEWINVOICES = {} as Inewinvoices;
   afuConfig = {
     maxSize : 30,
     multiple: false,
@@ -21,5 +23,7 @@ export class AddNewInvoicesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  NewINVOICES(f:NgForm){
+    console.log(this.NEWINVOICES);
+  }
 }
