@@ -33,6 +33,7 @@ import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
+import { PendingComponent } from '../pending/pending.component';
 
 
 const routes: Routes = [
@@ -69,7 +70,8 @@ const routes: Routes = [
 
   {path:'addNewInvoices',component:AddNewInvoicesComponent},
   {path: 'template' ,component:TemplateComponent},
-  {path: 'myreqs' ,component:MyreqsComponent}
+  {path: 'myreqs' ,component:MyreqsComponent},
+  {path:'pending',component:PendingComponent}
 
   
 ];

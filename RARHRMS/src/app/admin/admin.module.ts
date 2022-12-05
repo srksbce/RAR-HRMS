@@ -48,6 +48,7 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
 
 
 
+
 @NgModule({
   declarations: [
     EmployeeComponent,
@@ -84,7 +85,8 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
      TemplateComponent,
      EmployeeinfoComponent,
      MyreqsComponent,
-     NewExpenseComponent
+     NewExpenseComponent,
+    
 
      
     
