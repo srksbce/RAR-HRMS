@@ -40,6 +40,14 @@ import { TemplateComponent } from './template/template.component';
 import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { NewExpenseComponent } from './new-expense/new-expense.component';
+import { EmpPeopleComponent } from './emp-people/emp-people.component';
+import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.component';
+import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
+import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
+import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
+import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
+import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
+import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 
 
 
@@ -87,6 +95,14 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
      MyreqsComponent,
      NewExpenseComponent,
     
+     EmpPeopleComponent,
+     EmpMyrequestsComponent,
+     EmpTimesheetComponent,
+     SuperuserinfoComponent,
+     SuperuserexpensesComponent,
+     EmpmyinvoicesComponent,
+     EmpmyexpensesComponent,
+     SuperuserrequestsComponent,
 
      
     
