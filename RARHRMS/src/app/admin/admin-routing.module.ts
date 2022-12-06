@@ -44,6 +44,9 @@ import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component'
 import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
 import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
+import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.component';
+import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
+import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -92,7 +95,16 @@ const routes: Routes = [
  
   {path:'superuserrequests',component:SuperuserrequestsComponent},
   {path:'superuserinfo',component:SuperuserinfoComponent},
-  {path:'superuserexpenses',component:SuperuserexpensesComponent}
+  {path:'superuserexpenses',component:SuperuserexpensesComponent},
+
+  {path:'emppersonaldata',component:EmppersonaldataComponent},
+  {path:'empjobdata',component:EmpjobdataComponent},
+  {path:'empdocumentdata',component:EmpdocumentdataComponent}
+
+
+
+
+
   
 ];
 
