@@ -15,6 +15,8 @@ import { EmployeeComponent } from './employee/employee/employee.component';
 import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.component';
 import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layout.component';
 import { PendingComponent } from './pending/pending.component';
+import { SuperuserlayoutComponent } from './layouts/superuserlayout/superuserlayout.component';
+
 
 
 
@@ -29,7 +31,9 @@ import { PendingComponent } from './pending/pending.component';
     ManagerLayoutComponent,
     EmployeeLayoutComponent,
     PendingComponent,
-    ManagerLayoutComponent
+    ManagerLayoutComponent,
+    SuperuserlayoutComponent,
+ 
 
 
 

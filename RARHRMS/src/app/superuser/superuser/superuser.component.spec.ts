@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LaunchpageComponent } from './launchpage.component';
+import { SuperuserComponent } from './superuser.component';
 
-describe('LaunchpageComponent', () => {
-  let component: LaunchpageComponent;
-  let fixture: ComponentFixture<LaunchpageComponent>;
+describe('SuperuserComponent', () => {
+  let component: SuperuserComponent;
+  let fixture: ComponentFixture<SuperuserComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LaunchpageComponent ]
+      declarations: [ SuperuserComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LaunchpageComponent);
+    fixture = TestBed.createComponent(SuperuserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
