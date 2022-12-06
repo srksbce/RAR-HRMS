@@ -47,7 +47,7 @@ import { SuperuserrequestsComponent } from './superuserrequests/superuserrequest
 import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.component';
 import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
 import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
-import { ManagerComponent } from './manager/manager.component';
+import { ManagerComponent } from '../Manager/manager/manager.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -65,53 +65,53 @@ const routes: Routes = [
   { path: 'amdpage', component: AmdpageComponent },
   { path: 'payrollexpenses', component: PayrollexpensesComponent },
   { path: 'userdata', component: UserdataComponent },
-  {path: 'userdetails', component: UserdetailsComponent},
+  { path: 'userdetails', component: UserdetailsComponent },
   { path: 'empexpdetails', component: EmpexpdetailsComponent },
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
-  {path:'new-expense',component:NewExpenseComponent},
-  {path: 'invoice',component :InvoiceComponent},
+  { path: 'new-expense', component: NewExpenseComponent },
+  { path: 'invoice', component: InvoiceComponent },
   { path: 'managementexpenses', component: ManagementExpensesComponent },
   { path: 'newemp', component: NewempComponent },
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
   { path: 'compensationupdate', component: CompensationUpdateComponent },
   { path: 'jobtab', component: JobTabComponent },
-  {path:'job-update' ,component:JobUpdateComponent},
-  {path:'document',component:DocumentComponent},
-  {path:'addNewInvoice',component:AddNewInvoiceComponent},
-  {path:'empinfo',component:EmployeeinfoComponent},
+  { path: 'job-update', component: JobUpdateComponent },
+  { path: 'document', component: DocumentComponent },
+  { path: 'addNewInvoice', component: AddNewInvoiceComponent },
+  { path: 'empinfo', component: EmployeeinfoComponent },
 
 
-  {path:'addNewInvoices',component:AddNewInvoicesComponent},
-  {path: 'template' ,component:TemplateComponent},
-  {path: 'myreqs' ,component:MyreqsComponent},
-  {path:'pending',component:PendingComponent},
+  { path: 'addNewInvoices', component: AddNewInvoicesComponent },
+  { path: 'template', component: TemplateComponent },
+  { path: 'myreqs', component: MyreqsComponent },
+  { path: 'pending', component: PendingComponent },
 
-  {path: 'emppeople' ,component:EmpPeopleComponent},
-  {path: 'empmyrequests' ,component:EmpMyrequestsComponent},
-  {path: 'emptimesheet' ,component:EmpTimesheetComponent},
-  {path: 'empmyinvoices' ,component:EmpmyinvoicesComponent},
-  {path: 'empmyexpenses' ,component:EmpmyexpensesComponent},
- 
-  {path:'superuserrequests',component:SuperuserrequestsComponent},
-  {path:'superuserinfo',component:SuperuserinfoComponent},
-  {path:'superuserexpenses',component:SuperuserexpensesComponent},
+  { path: 'emppeople', component: EmpPeopleComponent },
+  { path: 'empmyrequests', component: EmpMyrequestsComponent },
+  { path: 'emptimesheet', component: EmpTimesheetComponent },
+  { path: 'empmyinvoices', component: EmpmyinvoicesComponent },
+  { path: 'empmyexpenses', component: EmpmyexpensesComponent },
 
-  {path:'emppersonaldata',component:EmppersonaldataComponent},
-  {path:'empjobdata',component:EmpjobdataComponent},
-  {path:'empdocumentdata',component:EmpdocumentdataComponent},
-  {path: 'manager' ,component:ManagerComponent}
+  { path: 'superuserrequests', component: SuperuserrequestsComponent },
+  { path: 'superuserinfo', component: SuperuserinfoComponent },
+  { path: 'superuserexpenses', component: SuperuserexpensesComponent },
 
-
+  { path: 'emppersonaldata', component: EmppersonaldataComponent },
+  { path: 'empjobdata', component: EmpjobdataComponent },
+  { path: 'empdocumentdata', component: EmpdocumentdataComponent },
+  { path: 'manager', component: ManagerComponent }
 
 
 
-  
+
+
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AdminRoutingModule {}
+export class AdminRoutingModule { }
