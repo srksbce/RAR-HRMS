@@ -13,7 +13,7 @@ import { PendingrequestComponent } from './pendingrequest/pendingrequest.compone
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
-import { PersonaldataComponent } from './personaldata/personaldata.component';
+
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
@@ -41,6 +41,8 @@ import { TemplateComponent } from './template/template.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { NewExpenseComponent } from './new-expense/new-expense.component';
 import { AngularFileUploaderModule } from 'angular-file-uploader';
+import { PersonaldataComponent } from './personaldata/personaldata.component';
+
 
 
 
@@ -51,10 +53,10 @@ import { AngularFileUploaderModule } from 'angular-file-uploader';
 
 @NgModule({
   declarations: [
-   
+
     DepartmentComponent,
     AdminDashboardComponent,
-   
+
     VisaupdateComponent,
     OrganizationdataComponent,
     PendingrequestComponent,
@@ -83,22 +85,23 @@ import { AngularFileUploaderModule } from 'angular-file-uploader';
 
     AddNewInvoicesComponent,
     TemplateComponent,
-    
+
     MyreqsComponent,
     NewExpenseComponent,
 
-    
 
 
 
-     AddNewInvoicesComponent,
-     TemplateComponent,
- 
-     MyreqsComponent,
-     NewExpenseComponent,
-    
 
-     
+    AddNewInvoicesComponent,
+    TemplateComponent,
+
+    MyreqsComponent,
+    NewExpenseComponent,
+
+
+
+
 
 
   ],
