@@ -29,6 +29,7 @@ import { PendingComponent } from './pending/pending.component';
     ManagerLayoutComponent,
     EmployeeLayoutComponent,
     PendingComponent,
+    ManagerLayoutComponent
 
 
 

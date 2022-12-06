@@ -56,7 +56,7 @@ import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
 import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
 
 import { AngularFileUploaderModule } from "angular-file-uploader";
-import { ManagerComponent } from './manager/manager.component';
+import { ManagerComponent } from '../Manager/manager/manager.component';
 
 
 
@@ -90,39 +90,39 @@ import { ManagerComponent } from './manager/manager.component';
     NewempComponent,
     ActiveemployeedataComponent,
     CompensationUpdateComponent,
-    JobTabComponent,  
-    UserdetailsComponent, 
+    JobTabComponent,
+    UserdetailsComponent,
     SearchfilterPipe,
-   DocumentComponent,
+    DocumentComponent,
     AddNewInvoiceComponent,
-     InvoiceComponent,
+    InvoiceComponent,
 
-     AddNewInvoicesComponent,
-     TemplateComponent,
-     EmployeeinfoComponent,
-     MyreqsComponent,
-     NewExpenseComponent,
-    
-     EmpPeopleComponent,
-     EmpMyrequestsComponent,
-     EmpTimesheetComponent,
-     SuperuserinfoComponent,
-     SuperuserexpensesComponent,
-   
-     ManagerinfoComponent,
-     ManagerrequestsComponent,
-     EmpmyinvoicesComponent,
-     EmpmyexpensesComponent,
-     SuperuserrequestsComponent,
-     EmppersonaldataComponent,
-     EmpjobdataComponent,
-     EmpdocumentdataComponent,
-     ManagerComponent
-     
+    AddNewInvoicesComponent,
+    TemplateComponent,
+    EmployeeinfoComponent,
+    MyreqsComponent,
+    NewExpenseComponent,
 
-     
-    
-  
+    EmpPeopleComponent,
+    EmpMyrequestsComponent,
+    EmpTimesheetComponent,
+    SuperuserinfoComponent,
+    SuperuserexpensesComponent,
+
+    ManagerinfoComponent,
+    ManagerrequestsComponent,
+    EmpmyinvoicesComponent,
+    EmpmyexpensesComponent,
+    SuperuserrequestsComponent,
+    EmppersonaldataComponent,
+    EmpjobdataComponent,
+    EmpdocumentdataComponent,
+    ManagerComponent
+
+
+
+
+
 
   ],
   imports: [
@@ -131,8 +131,8 @@ import { ManagerComponent } from './manager/manager.component';
     SharedModule,
     FormsModule,
     AngularFileUploaderModule
-    
-    
+
+
 
   ]
 })
