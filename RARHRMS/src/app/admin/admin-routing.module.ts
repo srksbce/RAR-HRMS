@@ -15,7 +15,7 @@ import { EmployeeExpensedataComponent } from './employee-expensedata/employee-ex
 import { JobTabComponent } from './job-tab/job-tab.component';
 import { JobUpdateComponent } from './job-update/job-update.component';
 import { InvoiceComponent } from './invoice/invoice.component';
-import { LaunchpageComponent } from './launchpage/launchpage.component';
+
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
 import { NewempComponent } from './newemp/newemp.component';
@@ -36,11 +36,7 @@ import { MyreqsComponent } from './myreqs/myreqs.component';
 import { PendingComponent } from '../pending/pending.component';
 
 
-import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
-import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
-import { EmpmyinvoicesComponent } from '../employee/empmyinvoices/empmyinvoices.component';
 
-import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 
 
 
@@ -48,7 +44,7 @@ const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
 
   { path: 'department', component: DepartmentComponent },
-  { path: 'launchpage', component: LaunchpageComponent },
+  
   { path: 'orgdata', component: OrganizationdataComponent },
   { path: 'pendingrequest', component: PendingrequestComponent },
   { path: 'education-update', component: EducationUpdateComponent },
@@ -83,15 +79,7 @@ const routes: Routes = [
   { path: 'myreqs', component: MyreqsComponent },
   { path: 'pending', component: PendingComponent },
 
-  {path: 'empmyinvoices' ,component:EmpmyinvoicesComponent},
- 
-  {path:'superuserrequests',component:SuperuserrequestsComponent},
-  {path:'superuserinfo',component:SuperuserinfoComponent},
-  {path:'superuserexpenses',component:SuperuserexpensesComponent},
-
-
-
-
+  
 
 
 

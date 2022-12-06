@@ -3,12 +3,14 @@ import { disableDebugTools } from '@angular/platform-browser';
 import Chart from 'chart.js/auto';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
+
 @Component({
-  selector: 'app-launchpage',
-  templateUrl: './launchpage.component.html',
-  styleUrls: ['./launchpage.component.css'],
+  selector: 'app-superuser',
+  templateUrl: './superuser.component.html',
+  styleUrls: ['./superuser.component.css']
 })
-export class LaunchpageComponent implements OnInit, OnDestroy {
+export class SuperuserComponent implements OnInit, OnDestroy  {
+
   loginuser: any;
   public chart: any;
 
@@ -94,3 +96,4 @@ export class LaunchpageComponent implements OnInit, OnDestroy {
     }
   }
 }
+
