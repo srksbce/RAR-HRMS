@@ -42,7 +42,7 @@ import { EmpmyinvoicesComponent } from '../employee/empmyinvoices/empmyinvoices.
 
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 
-import { ManagerComponent } from './manager/manager.component';
+
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -90,7 +90,7 @@ const routes: Routes = [
   {path:'superuserexpenses',component:SuperuserexpensesComponent},
 
 
-  {path: 'manager' ,component:ManagerComponent}
+
 
 
 
