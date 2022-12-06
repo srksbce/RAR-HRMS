@@ -7,6 +7,7 @@ import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.
 import { ADMIN_ROUTES } from './routing/admin-routing';
 import { AUTHENTICATION_ROUTES } from './routing/authentication-routing';
 import { EMPLOYEE_ROUTES } from './routing/employee-routing';
+import { MNG_ROUTES } from './routing/manager-routing';
 
 import { AmdbuttonsComponent } from './shared/amdbuttons/amdbuttons.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';

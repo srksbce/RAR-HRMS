@@ -60,13 +60,13 @@ const routes: Routes = [
   { path: 'amdpage', component: AmdpageComponent },
   { path: 'payrollexpenses', component: PayrollexpensesComponent },
   { path: 'userdata', component: UserdataComponent },
-  {path: 'userdetails', component: UserdetailsComponent},
+  { path: 'userdetails', component: UserdetailsComponent },
   { path: 'empexpdetails', component: EmpexpdetailsComponent },
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
-  {path:'new-expense',component:NewExpenseComponent},
-  {path: 'invoice',component :InvoiceComponent},
+  { path: 'new-expense', component: NewExpenseComponent },
+  { path: 'invoice', component: InvoiceComponent },
   { path: 'managementexpenses', component: ManagementExpensesComponent },
   { path: 'newemp', component: NewempComponent },
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
@@ -78,10 +78,10 @@ const routes: Routes = [
 
 
 
-  {path:'addNewInvoices',component:AddNewInvoicesComponent},
-  {path: 'template' ,component:TemplateComponent},
-  {path: 'myreqs' ,component:MyreqsComponent},
-  {path:'pending',component:PendingComponent},
+  { path: 'addNewInvoices', component: AddNewInvoicesComponent },
+  { path: 'template', component: TemplateComponent },
+  { path: 'myreqs', component: MyreqsComponent },
+  { path: 'pending', component: PendingComponent },
 
   {path: 'empmyinvoices' ,component:EmpmyinvoicesComponent},
  
@@ -96,11 +96,10 @@ const routes: Routes = [
 
 
 
-  
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AdminRoutingModule {}
+export class AdminRoutingModule { }

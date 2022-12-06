@@ -52,7 +52,7 @@ import { SuperuserrequestsComponent } from './superuserrequests/superuserrequest
 
 
 import { AngularFileUploaderModule } from "angular-file-uploader";
-import { ManagerComponent } from './manager/manager.component';
+import { ManagerComponent } from '../Manager/manager/manager.component';
 
 
 
@@ -86,12 +86,32 @@ import { ManagerComponent } from './manager/manager.component';
     NewempComponent,
     ActiveemployeedataComponent,
     CompensationUpdateComponent,
-    JobTabComponent,  
-    UserdetailsComponent, 
+    JobTabComponent,
+    UserdetailsComponent,
     SearchfilterPipe,
-   DocumentComponent,
+    DocumentComponent,
     AddNewInvoiceComponent,
-     InvoiceComponent,
+    InvoiceComponent,
+
+    AddNewInvoicesComponent,
+    TemplateComponent,
+    
+    MyreqsComponent,
+    NewExpenseComponent,
+
+    SuperuserinfoComponent,
+    SuperuserexpensesComponent,
+
+    ManagerinfoComponent,
+    ManagerrequestsComponent,
+    EmpmyinvoicesComponent,
+  
+    SuperuserrequestsComponent,
+   
+    ManagerComponent,
+
+
+
 
      AddNewInvoicesComponent,
      TemplateComponent,
@@ -112,9 +132,6 @@ import { ManagerComponent } from './manager/manager.component';
      ManagerComponent
      
 
-     
-    
-  
 
   ],
   imports: [
@@ -123,8 +140,8 @@ import { ManagerComponent } from './manager/manager.component';
     SharedModule,
     FormsModule,
     AngularFileUploaderModule
-    
-    
+
+
 
   ]
 })
