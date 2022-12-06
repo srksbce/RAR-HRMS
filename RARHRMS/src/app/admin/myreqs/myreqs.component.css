@@ -47,6 +47,7 @@ table {
     font-size: 18px;
     border-top: 1px solid rgb(236, 235, 235);
     left: 20%;
+   
     }
 
 
@@ -68,78 +69,58 @@ table {
   text-align: center;
  }
 
+ .dot {
+
+  height: 12px;
+
+  width: 12px;
+
+  background-color: rgb(135, 151, 236);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+}
+.greendot {
+
+  height: 8px;
+
+  width: 8px;
+
+  background-color: green;
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+}
  
+.reddot {
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+  height: 8px;
 
+  width: 8px;
 
-  /* ---------------------------------------------------
-    SIDEBAR STYLE
------------------------------------------------------ */
+  background-color: red;
 
-.wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-  height: fit-content;
+  border-radius: 50%;
+
+  display: inline-block;
+
 }
 
-#sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  background:  whitesmoke;
-  /* color: #fff; */
-  transition: all 0.3s;
-  padding: 10px;
-  color:black;
-  height: 815px;
+.navydot {
+
+  height: 8px;
+
+  width: 8px;
+
+  background-color: navy;
+
+  border-radius: 50%;
+
+  display: inline-block;
+
 }
-
-#sidebar.active {
-  margin-left: -250px;
- 
-}
-
-
-
-#sidebar span.components {
-  padding: 20px 0;
-  border-bottom: 1px solid  #d4cbcbec;
-}
-
-#sidebar span {
-  /* color: rgb(10, 10, 10); */
-  padding: 0px;
-  font-size: 1.1em;
-  display: block;
-  cursor: pointer;
- 
-}
-
-
-
-
-#sidebar  div:hover {
-  color: #fd0000;
-  background:  rgba(99, 166, 233, 0.418);
-}
-
-#sidebar div:hover{
-  transition: all 0.3s linear;
-  transform: scale(1.1);
-  color:blue;
-}
-/* span :hover  { */
-  .ms-2  :hover{
- color:red;
-}
-i:hover{
-  color:red;
-}
-
-
-
-@import "~bootstrap-icons/font/bootstrap-icons.css"
-
-
 
