@@ -91,12 +91,11 @@
                 </span>
 
 
-                <div class="mb-3">
-                    <label for="f3ormFile" class="form-label"></label>
-                    <input class="form-control" type="file" id="formFile" name=" file" #file="ngModel"
-                    aria-label="Default select example" [(ngModel)]="NEWEXPENSE. file" required >
-                    <small *ngIf=" file.touched && file.invalid">File is Mandatory</small>
-                </div>
+                <angular-file-uploader
+                [config]="afuConfig">
+               
+                
+               </angular-file-uploader>
 
                 <div class="mt-4 pt-2">
                     <input class="btn btn-primary " type="submit" value="save" style="width:105px;" />
