@@ -1,4 +1,4 @@
-<form name="MYEXPENSE">
+<form name="newexpense" #newexpense="ngForm"(ngSubmit)="newexpense.valid && Newexp(newexpense)">
     <br>
     <button  type="button" [routerLink]="['/admin/myreqs']" class="btn btn-primary"
         style="margin-left: 22%;
@@ -29,8 +29,9 @@
                     <div class="col-md-3 mb-8">
 
                         <div class="form-outline">
-                            <label for="form2Example3" class="form-label">Expense type*</label>
-                            <select class="form-select">
+                            <label for="form2Example3" class="form-label" >Expense type</label><span>*</span>
+                            <select class="form-select" name="Expensetype" #Expensetype="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWEXPENSE.Expensetype" required>
                                 <option>Flight Expenses</option>
                                 <option>Food Expenses</option>
                                 <option>Medical Expenses</option>
@@ -41,7 +42,7 @@
                                 <option>Travel Expenses</option>
                                 
                             </select>
-
+                            <small *ngIf="Expensetype.touched &&Expensetype.invalid">Expensetype is Mandatory</small>
                         </div>
 
                     </div>
@@ -49,16 +50,22 @@
                     <div class="col-md-3 mb-8">
 
                         <div class="form-outline">
-                            <label for="form2Example3" class="form-label">Amount*</label>
-                            <input type="text" class="form-control">
+                            <label for="Amount" class="form-label">Amount</label><span>*</span>
+                            <input type="text" class="form-control" name="Amount" aria-label="Amount" #Amount="ngModel"[(ngModel)]="NEWEXPENSE.Amount" required>
+                            <small
+                      *ngIf="(Amount.touched && Amount.invalid) || (Amount.invalid && newexpense.submitted)">Amount
+                      is Mandatory </small>
                         </div>
                     </div>
                     <br>
                     <div class="col-md-4 mb-4">
 
                         <div class="form-outline">
-                            <label for="form2Example4" class="form-label">Date & Time* </label>
-                            <input type="datetime-local" class="form-control">
+                            <label for="form2Example4" class="form-label">Date & Time </label><span>*</span>
+                            <input type="datetime-local" class="form-control" name="Datetime" aria-label="Datetime" #Datetime="ngModel"[(ngModel)]="NEWEXPENSE.Datetime" required>
+                            <small
+                      *ngIf="(Datetime.touched && Datetime.invalid) || (Datetime.invalid && newexpense.submitted)">
+                      Mandatory </small>
 
                         </div>
 
@@ -68,12 +75,15 @@
                     <div class="col-md-7 mb-4">
 
                         <div class="form-outline">
-                            <label for="Description" class="form-label">Description*</label>
+                            <label for="Description" class="form-label">Description</label><span>*</span>
                         </div>
                         <div class="form-outline">
                             <textarea class="form-control" id="textAreaExample" rows="7"
-                                placeholder="type here"></textarea>
+                                placeholder="type here" name="Description" #Description="ngModel"
+                                aria-label="Default select example" [(ngModel)]="NEWEXPENSE.Description" required></textarea>
                             <label class="form-label" for="textAreaExample"></label>
+    
+                            <small *ngIf="Description.touched &&Description.invalid">Description is Mandatory</small>
                         </div>
 
 
@@ -83,7 +93,9 @@
 
                 <div class="mb-3">
                     <label for="f3ormFile" class="form-label"></label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="formFile" name=" file" #file="ngModel"
+                    aria-label="Default select example" [(ngModel)]="NEWEXPENSE. file" required >
+                    <small *ngIf=" file.touched && file.invalid">File is Mandatory</small>
                 </div>
 
                 <div class="mt-4 pt-2">

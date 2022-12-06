@@ -52,6 +52,7 @@ import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.comp
 import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
 import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
 
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 
 
@@ -109,6 +110,7 @@ import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.comp
      EmppersonaldataComponent,
      EmpjobdataComponent,
      EmpdocumentdataComponent,
+     
 
      
     
@@ -119,7 +121,9 @@ import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.comp
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    AngularFileUploaderModule
+    
     
 
   ]
