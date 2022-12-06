@@ -23,8 +23,10 @@ const routes: Routes = [
   { path: 'amdbuttons', component: AmdbuttonsComponent },
   {path:'navbar',component: NavbarComponent},
   {path:'manager',component:ManagerLayoutComponent,children:MNG_ROUTES},
-  {path:'superuser',component:SuperuserlayoutComponent,children:SUP_ROUTES}
+  {path:'superuser',component:SuperuserlayoutComponent,children:SUP_ROUTES},
 
+  {path:'navbar',component: NavbarComponent}
+  
 
 ];
 

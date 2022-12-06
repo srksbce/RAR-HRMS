@@ -11,7 +11,7 @@ import { DocumentComponent } from './document/document.component';
 import { EducationUpdateComponent } from './education-update/education-update.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
-import { EmployeeComponent } from './employee/employee.component';
+
 import { JobTabComponent } from './job-tab/job-tab.component';
 import { JobUpdateComponent } from './job-update/job-update.component';
 import { InvoiceComponent } from './invoice/invoice.component';
@@ -34,25 +34,15 @@ import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { PendingComponent } from '../pending/pending.component';
-import { EmpPeopleComponent } from './emp-people/emp-people.component';
-import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.component';
-import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
 
 
-import { SuperuserexpensesComponent } from '../superuser/superuserexpenses/superuserexpenses.component';
-import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
-import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
-import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
 
-import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.component';
-import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
-import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
-import { ManagerComponent } from '../Manager/manager/manager.component';
-import { SuperuserComponent } from '../superuser/superuser/superuser.component';
+
+
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
-  { path: 'employee', component: EmployeeComponent },
+
   { path: 'department', component: DepartmentComponent },
   
   { path: 'orgdata', component: OrganizationdataComponent },
@@ -78,10 +68,10 @@ const routes: Routes = [
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
   { path: 'compensationupdate', component: CompensationUpdateComponent },
   { path: 'jobtab', component: JobTabComponent },
-  { path: 'job-update', component: JobUpdateComponent },
-  { path: 'document', component: DocumentComponent },
-  { path: 'addNewInvoice', component: AddNewInvoiceComponent },
-  { path: 'empinfo', component: EmployeeinfoComponent },
+  {path:'job-update' ,component:JobUpdateComponent},
+  {path:'document',component:DocumentComponent},
+  {path:'addNewInvoice',component:AddNewInvoiceComponent},
+
 
 
   { path: 'addNewInvoices', component: AddNewInvoicesComponent },
@@ -89,21 +79,7 @@ const routes: Routes = [
   { path: 'myreqs', component: MyreqsComponent },
   { path: 'pending', component: PendingComponent },
 
-  { path: 'emppeople', component: EmpPeopleComponent },
-  { path: 'empmyrequests', component: EmpMyrequestsComponent },
-  { path: 'emptimesheet', component: EmpTimesheetComponent },
-  { path: 'empmyinvoices', component: EmpmyinvoicesComponent },
-  { path: 'empmyexpenses', component: EmpmyexpensesComponent },
-
-  { path: 'superuserexpenses', component: SuperuserexpensesComponent },
-
-  { path: 'emppersonaldata', component: EmppersonaldataComponent },
-  { path: 'empjobdata', component: EmpjobdataComponent },
-  { path: 'empdocumentdata', component: EmpdocumentdataComponent },
-  { path: 'manager', component: ManagerComponent },
-  {path:'superuser',component:SuperuserComponent}
-
-
+  
 
 
 
