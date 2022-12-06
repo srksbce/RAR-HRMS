@@ -45,10 +45,18 @@ import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.componen
 import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
+
+import { ManagerinfoComponent } from './managerinfo/managerinfo.component';
+import { ManagerrequestsComponent } from './managerrequests/managerrequests.component';
 import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
 import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
+import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.component';
+import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
+import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
+
 import { AngularFileUploaderModule } from "angular-file-uploader";
+import { ManagerComponent } from '../Manager/manager/manager.component';
 
 
 
@@ -82,32 +90,39 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
     NewempComponent,
     ActiveemployeedataComponent,
     CompensationUpdateComponent,
-    JobTabComponent,  
-    UserdetailsComponent, 
+    JobTabComponent,
+    UserdetailsComponent,
     SearchfilterPipe,
-   DocumentComponent,
+    DocumentComponent,
     AddNewInvoiceComponent,
-     InvoiceComponent,
+    InvoiceComponent,
 
-     AddNewInvoicesComponent,
-     TemplateComponent,
-     EmployeeinfoComponent,
-     MyreqsComponent,
-     NewExpenseComponent,
-    
-     EmpPeopleComponent,
-     EmpMyrequestsComponent,
-     EmpTimesheetComponent,
-     SuperuserinfoComponent,
-     SuperuserexpensesComponent,
-     EmpmyinvoicesComponent,
-     EmpmyexpensesComponent,
-     SuperuserrequestsComponent,
-     
+    AddNewInvoicesComponent,
+    TemplateComponent,
+    EmployeeinfoComponent,
+    MyreqsComponent,
+    NewExpenseComponent,
 
-     
-    
-  
+    EmpPeopleComponent,
+    EmpMyrequestsComponent,
+    EmpTimesheetComponent,
+    SuperuserinfoComponent,
+    SuperuserexpensesComponent,
+
+    ManagerinfoComponent,
+    ManagerrequestsComponent,
+    EmpmyinvoicesComponent,
+    EmpmyexpensesComponent,
+    SuperuserrequestsComponent,
+    EmppersonaldataComponent,
+    EmpjobdataComponent,
+    EmpdocumentdataComponent,
+    ManagerComponent
+
+
+
+
+
 
   ],
   imports: [
@@ -116,8 +131,8 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
     SharedModule,
     FormsModule,
     AngularFileUploaderModule
-    
-    
+
+
 
   ]
 })
