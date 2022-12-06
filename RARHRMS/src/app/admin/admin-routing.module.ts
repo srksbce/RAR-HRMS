@@ -47,6 +47,7 @@ import { SuperuserrequestsComponent } from './superuserrequests/superuserrequest
 import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.component';
 import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
 import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
+import { ManagerComponent } from './manager/manager.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -99,7 +100,8 @@ const routes: Routes = [
 
   {path:'emppersonaldata',component:EmppersonaldataComponent},
   {path:'empjobdata',component:EmpjobdataComponent},
-  {path:'empdocumentdata',component:EmpdocumentdataComponent}
+  {path:'empdocumentdata',component:EmpdocumentdataComponent},
+  {path: 'manager' ,component:ManagerComponent}
 
 
 
