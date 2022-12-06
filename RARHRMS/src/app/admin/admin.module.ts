@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
-import { EmployeeComponent } from './employee/employee.component';
+
 import { DepartmentComponent } from './department/department.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { SharedModule } from '../shared/shared.module';
@@ -37,23 +37,19 @@ import { InvoiceComponent } from './invoice/invoice.component';
 
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { TemplateComponent } from './template/template.component';
-import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
+
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { NewExpenseComponent } from './new-expense/new-expense.component';
-import { EmpPeopleComponent } from './emp-people/emp-people.component';
-import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.component';
-import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
+
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
 
 import { ManagerinfoComponent } from './managerinfo/managerinfo.component';
 import { ManagerrequestsComponent } from './managerrequests/managerrequests.component';
-import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
-import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
+import { EmpmyinvoicesComponent } from '../employee/empmyinvoices/empmyinvoices.component';
+
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
-import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.component';
-import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
-import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
+
 
 import { AngularFileUploaderModule } from "angular-file-uploader";
 import { ManagerComponent } from './manager/manager.component';
@@ -67,7 +63,7 @@ import { ManagerComponent } from './manager/manager.component';
 
 @NgModule({
   declarations: [
-    EmployeeComponent,
+   
     DepartmentComponent,
     AdminDashboardComponent,
     LaunchpageComponent,
@@ -99,24 +95,20 @@ import { ManagerComponent } from './manager/manager.component';
 
      AddNewInvoicesComponent,
      TemplateComponent,
-     EmployeeinfoComponent,
+ 
      MyreqsComponent,
      NewExpenseComponent,
     
-     EmpPeopleComponent,
-     EmpMyrequestsComponent,
-     EmpTimesheetComponent,
+
      SuperuserinfoComponent,
      SuperuserexpensesComponent,
    
      ManagerinfoComponent,
      ManagerrequestsComponent,
      EmpmyinvoicesComponent,
-     EmpmyexpensesComponent,
+
      SuperuserrequestsComponent,
-     EmppersonaldataComponent,
-     EmpjobdataComponent,
-     EmpdocumentdataComponent,
+
      ManagerComponent
      
 

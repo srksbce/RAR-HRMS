@@ -19,6 +19,7 @@ const routes: Routes = [
   
   { path: 'amdbuttons', component: AmdbuttonsComponent },
   {path:'navbar',component: NavbarComponent}
+  
 
 ];
 
