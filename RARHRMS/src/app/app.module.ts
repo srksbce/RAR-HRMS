@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { ManagerComponent } from './manager/manager/manager.component';
+
 import { EmployeeComponent } from './employee/employee/employee.component';
 import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.component';
 import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layout.component';
@@ -23,7 +23,7 @@ import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layo
     AuthenticationLayoutComponent,
     AdminLayoutComponent,
 
-    ManagerComponent,
+   
     EmployeeComponent,
     ManagerLayoutComponent,
     EmployeeLayoutComponent,
