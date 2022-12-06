@@ -48,6 +48,7 @@ table {
     border-top: 1px solid rgb(236, 235, 235);
     left: 20%;
    
+   
     }
 
 
@@ -71,11 +72,10 @@ table {
 
  .dot {
 
-  height: 12px;
+  height: 4px;
+  width: 4px;
 
-  width: 12px;
-
-  background-color: rgb(135, 151, 236);
+  background-color:skyblue;
 
   border-radius: 50%;
 
@@ -84,9 +84,9 @@ table {
 }
 .greendot {
 
-  height: 8px;
+  height: 4px;
 
-  width: 8px;
+  width: 4px;
 
   background-color: green;
 
@@ -98,9 +98,9 @@ table {
  
 .reddot {
 
-  height: 8px;
+  height: 4px;
 
-  width: 8px;
+  width: 4px;
 
   background-color: red;
 
@@ -112,15 +112,16 @@ table {
 
 .navydot {
 
-  height: 8px;
+  height: 4px;
 
-  width: 8px;
+  width: 4px;
 
   background-color: navy;
 
   border-radius: 50%;
 
   display: inline-block;
+
 
 }
 

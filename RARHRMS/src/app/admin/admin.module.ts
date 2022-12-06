@@ -57,6 +57,7 @@ import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.comp
 
 import { AngularFileUploaderModule } from "angular-file-uploader";
 import { ManagerComponent } from '../Manager/manager/manager.component';
+import { TimesheetComponent } from './timesheet/timesheet.component';
 
 
 
@@ -117,7 +118,8 @@ import { ManagerComponent } from '../Manager/manager/manager.component';
     EmppersonaldataComponent,
     EmpjobdataComponent,
     EmpdocumentdataComponent,
-    ManagerComponent
+    ManagerComponent,
+    TimesheetComponent
 
 
 

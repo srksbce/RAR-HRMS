@@ -48,6 +48,7 @@ import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.comp
 import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
 import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
 import { ManagerComponent } from '../Manager/manager/manager.component';
+import { TimesheetComponent } from './timesheet/timesheet.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -101,7 +102,8 @@ const routes: Routes = [
   { path: 'emppersonaldata', component: EmppersonaldataComponent },
   { path: 'empjobdata', component: EmpjobdataComponent },
   { path: 'empdocumentdata', component: EmpdocumentdataComponent },
-  { path: 'manager', component: ManagerComponent }
+  { path: 'manager', component: ManagerComponent },
+  {path:'timesheet',component:TimesheetComponent}
 
 
 
