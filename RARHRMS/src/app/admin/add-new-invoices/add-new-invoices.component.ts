@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, NgForm, Validators } from '@angular/forms';
 import { Inewinvoices } from './add-new-invoices-model';
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 @Component({
   selector: 'app-add-new-invoices',
