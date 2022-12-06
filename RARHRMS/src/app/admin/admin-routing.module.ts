@@ -40,9 +40,7 @@ import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
 
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
-<<<<<<< HEAD
-import { ManagerComponent } from './manager/manager.component';
-=======
+
 import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
 import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
 import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
@@ -50,7 +48,6 @@ import { SuperuserrequestsComponent } from './superuserrequests/superuserrequest
 import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.component';
 import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
 import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
->>>>>>> 5959f03be944f612815f7d2e12fb654ce7f1b21d
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -94,17 +91,14 @@ const routes: Routes = [
   {path: 'emppeople' ,component:EmpPeopleComponent},
   {path: 'empmyrequests' ,component:EmpMyrequestsComponent},
   {path: 'emptimesheet' ,component:EmpTimesheetComponent},
-<<<<<<< HEAD
-  {path: 'manager',component:ManagerComponent},
+  
 
 
 
-=======
   {path: 'empmyinvoices' ,component:EmpmyinvoicesComponent},
   {path: 'empmyexpenses' ,component:EmpmyexpensesComponent},
  
   {path:'superuserrequests',component:SuperuserrequestsComponent},
->>>>>>> 5959f03be944f612815f7d2e12fb654ce7f1b21d
   {path:'superuserinfo',component:SuperuserinfoComponent},
   {path:'superuserexpenses',component:SuperuserexpensesComponent},
 
