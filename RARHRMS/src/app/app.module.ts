@@ -11,7 +11,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
-import { EmployeeComponent } from './employee/employee/employee.component';
 import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.component';
 import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layout.component';
 import { PendingComponent } from './pending/pending.component';
@@ -25,7 +24,7 @@ import { PendingComponent } from './pending/pending.component';
     AdminLayoutComponent,
 
    
-    EmployeeComponent,
+
     ManagerLayoutComponent,
     EmployeeLayoutComponent,
     PendingComponent,

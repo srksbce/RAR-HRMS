@@ -19,8 +19,8 @@ const routes: Routes = [
   {path:'emp',component:EmployeeLayoutComponent, children:EMPLOYEE_ROUTES},
   
   { path: 'amdbuttons', component: AmdbuttonsComponent },
-  {path:'navbar',component: NavbarComponent},
-  {path:'manager',component:ManagerLayoutComponent,children:MNG_ROUTES}
+  {path:'navbar',component: NavbarComponent}
+  
 
 ];
 
