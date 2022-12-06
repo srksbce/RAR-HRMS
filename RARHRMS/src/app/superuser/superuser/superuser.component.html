@@ -1,0 +1,155 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>My Organization</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">My Organization</li>
+            </ol>
+        </nav>
+    </div>
+
+    <section class="section dashboard">
+        <div class="row">
+
+            <div class="col-xxl-4  col-md-6">
+                <div class="card info-card sales-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Active Employee Data</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="bi-person-circle"></i>
+                            </div>
+                            <a  routerLinkActive="router-link-active">
+                                <div class="">
+                                    <h5>Active Employees</h5>
+                                    <strong>
+                                        <p>{{ dashBoardData.activeEmployees }}</p>
+                                    </strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xxl-4  col-md-6">
+                <div class="card info-card sales-card">
+                    <div class="card-body">
+                        <h5 class="card-title">My Expenses</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="bi-person-circle"></i>
+                            </div>
+                            <a  routerLinkActive="router-link-active">
+                                <div class="">
+                                    <h5>My Expenses</h5>
+                                    <!-- <strong>
+                                        <p> {{ dashBoardData.EmpExpenses / 1000 | currency }} K</p>
+                                    </strong> -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xxl-4 col-md-6">
+                <div class="card info-card sales-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Outstanding Receivables</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="bi-person-circle"></i>
+                            </div>
+                            <a  routerLinkActive="router-link-active">
+                                <div class="">
+                                    <h5>Receivables</h5>
+                                    <!-- <strong>
+                                        <p>{{ dashBoardData.OReceivables / 1000 | currency }} K</p>
+                                    </strong> -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-4  col-md-6">
+                <div class="card info-card sales-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Management Expenses</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="bi-person-circle"></i>
+                            </div>
+                            <a  routerLinkActive="router-link-active">
+                                <div class="">
+                                    <h5>Management Expenses</h5>
+                                    <!-- <strong>
+                                        <p>{{ dashBoardData.MgmtExpenses / 1000 | currency }} K</p>
+                                    </strong> -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-4  col-md-6">
+                <div class="card info-card sales-card">
+                    <div class="card-body">
+                        <h5 class="card-title">PayRoll Expenses</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="bi-person-circle"></i>
+                            </div>
+                            <a  routerLinkActive="router-link-active">
+                                <div class="">
+                                    <h5>Payroll Expenses</h5>
+                                    <!-- <strong>
+                                        <p>{{ dashBoardData.PayrollExp / 1000 | currency }} K</p>
+                                    </strong> -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-4  col-md-6">
+                <div class="card info-card sales-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Operational Cost</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="bi-person-circle"></i>
+                            </div>
+                            <a  routerLinkActive="router-link-active">
+                                <div class="">
+                                    <strong>
+                                        <h5>Operational Cost</h5>
+                                    </strong>
+                                    <!-- <strong>
+                                        <p>{{ dashBoardData.operationalCount / 1000 | currency }} K</p>
+                                    </strong> -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-10 col-10 mt-4 container-fluid justify-content-evenly">
+                <div class="progressbar p-4 text-center">
+                    <h2>Progress Bar</h2>
+                    <div class="chart-container">
+                        <canvas id="MyChart">{{ chart }}</canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
