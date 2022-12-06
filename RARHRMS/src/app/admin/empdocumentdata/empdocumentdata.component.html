@@ -1,6 +1,4 @@
-
 <app-sidebaremp></app-sidebaremp>
-
 <div class="container-fluid col-md-10" style="position: relative;top: 67px;left: 13%;">
 
     <div class="container-fluid">
@@ -11,26 +9,24 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link active" aria-current="page" style="cursor:pointer ;">Personal</a>
+                    <a class="nav-link active"  [routerLink]="['/admin/personaldata']" routerLinkActive="router-link-active"
+                    
+                     aria-current="page" style="cursor:pointer ;">Personal</a>
 
                 </li>
 
                 <li class="nav-item">
 
-                    <a class="nav-link" style="cursor:pointer ;">Job</a>
+                    <a class="nav-link" [routerLink]="['/admin/jobtab']" style="cursor:pointer ;">Job</a>
 
                 </li>
 
                 <li class="nav-item">
 
-                    <a class="nav-link" style="cursor:pointer ;">Document</a>
+                    <a class="nav-link" [routerLink]="['/admin/jobtab']" style="cursor:pointer ;">Document</a>
 
                 </li>
-                <li class="nav-item">
-
-                    <a class="nav-link" style="cursor:pointer ;">Expenses</a>
-
-                </li>
+                
 
             </ul>
 
@@ -38,8 +34,8 @@
 
             
 
-          
-
+            
             <br>
 
             <br>
+

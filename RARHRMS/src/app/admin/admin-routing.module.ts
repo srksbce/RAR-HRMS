@@ -33,13 +33,24 @@ import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
+import { PendingComponent } from '../pending/pending.component';
 import { EmpPeopleComponent } from './emp-people/emp-people.component';
 import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.component';
 import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
 
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
+<<<<<<< HEAD
 import { ManagerComponent } from './manager/manager.component';
+=======
+import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
+import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
+import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
+import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
+import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.component';
+import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
+import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
+>>>>>>> 5959f03be944f612815f7d2e12fb654ce7f1b21d
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -62,8 +73,8 @@ const routes: Routes = [
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
- {path:'new-expense',component:NewExpenseComponent},
- {path: 'invoice',component :InvoiceComponent},
+  {path:'new-expense',component:NewExpenseComponent},
+  {path: 'invoice',component :InvoiceComponent},
   { path: 'managementexpenses', component: ManagementExpensesComponent },
   { path: 'newemp', component: NewempComponent },
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
@@ -72,19 +83,39 @@ const routes: Routes = [
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
+  {path:'empinfo',component:EmployeeinfoComponent},
+
 
   {path:'addNewInvoices',component:AddNewInvoicesComponent},
   {path: 'template' ,component:TemplateComponent},
   {path: 'myreqs' ,component:MyreqsComponent},
+  {path:'pending',component:PendingComponent},
+
   {path: 'emppeople' ,component:EmpPeopleComponent},
   {path: 'empmyrequests' ,component:EmpMyrequestsComponent},
   {path: 'emptimesheet' ,component:EmpTimesheetComponent},
+<<<<<<< HEAD
   {path: 'manager',component:ManagerComponent},
 
 
 
+=======
+  {path: 'empmyinvoices' ,component:EmpmyinvoicesComponent},
+  {path: 'empmyexpenses' ,component:EmpmyexpensesComponent},
+ 
+  {path:'superuserrequests',component:SuperuserrequestsComponent},
+>>>>>>> 5959f03be944f612815f7d2e12fb654ce7f1b21d
   {path:'superuserinfo',component:SuperuserinfoComponent},
-{path:'superuserexpenses',component:SuperuserexpensesComponent}
+  {path:'superuserexpenses',component:SuperuserexpensesComponent},
+
+  {path:'emppersonaldata',component:EmppersonaldataComponent},
+  {path:'empjobdata',component:EmpjobdataComponent},
+  {path:'empdocumentdata',component:EmpdocumentdataComponent}
+
+
+
+
+
   
 ];
 
