@@ -45,6 +45,20 @@ import { EmpMyrequestsComponent } from './emp-myrequests/emp-myrequests.componen
 import { EmpTimesheetComponent } from './emp-timesheet/emp-timesheet.component';
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
+<<<<<<< HEAD
+import { ManagerComponent } from './manager/manager.component';
+import { ManagerinfoComponent } from './managerinfo/managerinfo.component';
+import { ManagerrequestsComponent } from './managerrequests/managerrequests.component';
+=======
+import { EmpmyinvoicesComponent } from './empmyinvoices/empmyinvoices.component';
+import { EmpmyexpensesComponent } from './empmyexpenses/empmyexpenses.component';
+import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
+import { EmppersonaldataComponent } from './emppersonaldata/emppersonaldata.component';
+import { EmpjobdataComponent } from './empjobdata/empjobdata.component';
+import { EmpdocumentdataComponent } from './empdocumentdata/empdocumentdata.component';
+
+import { AngularFileUploaderModule } from "angular-file-uploader";
+>>>>>>> 5959f03be944f612815f7d2e12fb654ce7f1b21d
 
 
 
@@ -90,11 +104,25 @@ import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpense
      EmployeeinfoComponent,
      MyreqsComponent,
      NewExpenseComponent,
+    
      EmpPeopleComponent,
      EmpMyrequestsComponent,
      EmpTimesheetComponent,
      SuperuserinfoComponent,
-     SuperuserexpensesComponent
+     SuperuserexpensesComponent,
+<<<<<<< HEAD
+     ManagerComponent,
+     ManagerinfoComponent,
+     ManagerrequestsComponent
+=======
+     EmpmyinvoicesComponent,
+     EmpmyexpensesComponent,
+     SuperuserrequestsComponent,
+     EmppersonaldataComponent,
+     EmpjobdataComponent,
+     EmpdocumentdataComponent,
+     
+>>>>>>> 5959f03be944f612815f7d2e12fb654ce7f1b21d
 
      
     
@@ -105,7 +133,9 @@ import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpense
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    AngularFileUploaderModule
+    
     
 
   ]
