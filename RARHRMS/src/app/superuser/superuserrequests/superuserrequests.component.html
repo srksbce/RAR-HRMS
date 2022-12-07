@@ -1,93 +1,111 @@
+
 <div class="container-fluid col-md-10">
 
     <div class="container-fluid" style="position: relative;top: 67px;left: 10%;">
         <div class="card-body p-4 p-md-4">
-            <ul class="nav nav-tabs">
 
-                <li class="nav-item">
-                    <a class="nav-link">My Expenses</a>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Expenses"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">Expenses</button>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/superuser/superuserinvoice']" routerLinkActive="router-link-active">My Invoices</a>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Invoices"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">Invoices</button>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">Pending Approvals</a>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Pending Approvals"
+                        type="button" role="tab" aria-controls="contact" aria-selected="false">Pending
+                        Approvals</button>
                 </li>
-
             </ul>
-        </div>
-        <br>
+            <div class="tab-content pt-2" id="myTabContent">
+                <div class="tab-pane fade show active" id="Expense" role="tabpanel" aria-labelledby="Expense-tab">
+                    <div class="container  fluid col-md-10">
+                        <div class="container-fluid ">
+                            
+                
+                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Expenses</h5>
+                            <button type="button" style="position: relative;left: 83%;" class="btn btn-primary">+Add
+                                New</button><br>
+                        </div>
+                        <hr>
+                        <div class="container">
 
-        <div class="container  fluid col-md-10">
-            <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <h5>Name: Ramu Srirangam </h5>
+                                </div>
+                                <div class="col-sm">
+                                    <h5>Employee ID: 1012 </h5>
+                                </div>
+                                <div class="col-sm">
+                                    <h5> Total Amount $840</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-body">
 
-                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Expenses</h5>
-                <button type="button" style="position: relative;left: 83%;" class="btn btn-primary">+Add New</button><br>
-            </div>
-            <hr>
-            <div class="container">
+                            <table class="table table-borderless datatable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Expense Date</th>
+                                        <th scope="col">Expense Type</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Invoice</th>
+                                        <th scope="col">status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
 
-                <div class="row">
-                    <div class="col-sm">
-                        <h5>Name: Ramu Srirangam </h5>
-                    </div>
-                    <div class="col-sm">
-                        <h5>Employee ID: 1012 </h5>
-                    </div>
-                    <div class="col-sm">
-                        <h5> Total Amount $840</h5>
+                                        <td>1</td>
+                                        <td><a href="#">2/12/2020</a></td>
+                                        <td>Maintenance</td>
+                                        <td>$350</td>
+                                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                        <td><span class="badge bg-success">In Review</span></td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>1</td>
+                                        <td><a href="#">2/12/2020</a></td>
+                                        <td>Maintenance</td>
+                                        <td>$350</td>
+                                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                        <td><span class="badge bg-success">In Review</span></td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>1</td>
+                                        <td><a href="#">2/12/2020</a></td>
+                                        <td>Maintenance</td>
+                                        <td>$350</td>
+                                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                        <td><span class="badge bg-success">In Review</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="#">2/12/2020</a></td>
+                                        <td>Maintenance</td>
+                                        <td>$350</td>
+                                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                        <td><span class="badge bg-danger">Rejected</span></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="fixTableHead  shadow">
-
-                <table class="table ">
-                    <thead class="table-light"></thead>
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Expense Date</th>
-                            <th>Expense Type</th>
-                            <th>Amount</th>
-                            <th>Invoice </th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tr style="inline-size: 20%;">
-                        <td>1</td>
-                        <td>12/11/21</td>
-                        <td>Travel</td>
-                        <td>$350</td>
-                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
-                        <td><span class="dot"></span> In Review</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>12/08/21</td>
-                        <td>Travel</td>
-                        <td>$490</td>
-                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
-                        <td> <span class="greendot"></span>Approved</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>12/08/21</td>
-                        <td>Other</td>
-                        <td>$50</td>
-                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
-                        <td><span class="reddot"></span>Rejected</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>12/06/21</td>
-                        <td>Other</td>
-                        <td>-</td>
-                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
-                        <td><span class="navydot"></span>Draft</td>
-                    </tr>
-
-
-                </table>
-            </div>
+            
         </div>
+        
+    </div>
+</div>
+   
