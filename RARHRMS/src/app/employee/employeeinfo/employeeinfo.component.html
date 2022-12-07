@@ -1,40 +1,483 @@
-
 <div class="container-fluid col-md-10" style="position: relative;top: 67px;left: 13%;">
+   -
 
+        <div class="card">
+          <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+
+            <img src="/assets/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <h2>Kevin Anderson</h2>
+            <h3>Web Designer</h3>
+            <div class="social-links mt-2">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+            
+          </div>
+        </div>
+
+     
     <div class="container-fluid">
 
         <div class="card-body p-4 p-md-4">
 
-            <ul class="nav nav-tabs">
-
-                <li class="nav-item">
-
-                    <a class="nav-link active" [routerLink]="['/emp/emppersonaldata']" routerLinkActive="router-link-active"
-                    
-                     aria-current="page" style="cursor:pointer ;">Personal</a>
-
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Personal"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">Personal</button>
                 </li>
-
-                <li class="nav-item">
-
-                    <a class="nav-link" [routerLink]="['/emp/empjobdata']"  style="cursor:pointer ;">Job</a>
-
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Job" type="button"
+                        role="tab" aria-controls="profile" aria-selected="false">Job</button>
                 </li>
-
-                <li class="nav-item">
-
-                    <a class="nav-link"  style="cursor:pointer ;">Document</a>
-
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Document"
+                        type="button" role="tab" aria-controls="contact" aria-selected="false">Document</button>
                 </li>
-                
-
             </ul>
 
+            <!-- Personal tab -->
+            <div class="tab-content pt-2" id="myTabContent">
+                <div class="tab-pane fade show active" id="Personal" role="tabpanel" aria-labelledby="home-tab">
+                    <link rel="stylesheet" type="text/css"
+                        href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+                    <section class="vh-200 gradient-custom">
+                        <div class="container py-5 h-100">
+                            <div class="row justify-content-center align-items-center h-50">
+                                <div class="col-12 col-lg-9 col-xl-9">
+                                    <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
+
+                                        <div class="card-body p-4 p-md-4">
+
+                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h4>
+                                            <div class="fixTableHead">
+                                                <form name="Personal">
+                                                    <div class="row">
+
+                                                        <div class="col">
+                                                            <label class="form-label" for="employeeid">Employee
+                                                                Id</label><span>*</span>
+                                                            <input type="text" class="form-control" placeholder="203356"
+                                                                name="employeeid" aria-label="EmployeeId" required />
+
+                                                        </div>
+
+
+                                                        <div class="col">
+                                                            <label class="form-label"
+                                                                for="status">Status</label><span>*</span>
+                                                            <input class="form-control" id="status" name="status"
+                                                                required>
+                                                        </div>
+
+
+                                                        <div class="col">
+                                                            <label class="form-label" for="firstname">First
+                                                                Name</label><span>*</span>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="firstname" name="firstname"
+                                                                aria-label="firstname" required />
+
+                                                        </div>
+
+                                                    </div>
+
+
+
+
+                                                    <br>
+
+
+                                                    <div class="row">
+
+                                                        <div class="col">
+                                                            <label class="form-label" for="lastname">Last
+                                                                Name</label><span>*</span>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="lastname" name="lastname"
+                                                                aria-label="Last Name" required />
+
+                                                        </div>
+
+
+                                                        <div class="col">
+                                                            <label class="form-label" for="fullname">Full
+                                                                Name</label><span>*</span>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="fullname" name="fullname"
+                                                                aria-label="Full Name" required />
+
+                                                        </div>
+
+
+                                                        <div class="col">
+                                                            <label for="dateofbirth" class="form-label">Date Of
+                                                                Birth</label>
+                                                            <input type="date" class="form-control" id="dateofbirth"
+                                                                name="dateofbirth" required />
+
+                                                        </div>
+
+                                                    </div>
+
+
+
+                                                    <br>
+
+
+
+                                                    <div class="row">
+
+                                                        <div class="col-4">
+                                                            <label class="form-label"
+                                                                for="ssn">SSN</label><span>*</span>
+                                                            <input type="text" class="form-control" placeholder="ssn"
+                                                                name="ssn" aria-label="ssn" required />
+
+                                                        </div>
+
+
+                                                        <div class="col-4">
+                                                            <label class="form-label" for="taxfilenumber">Tax File
+                                                                Number</label><span>*</span>
+                                                            <input type="number" class="form-control"
+                                                                placeholder="246880" name="taxfilenumber"
+                                                                aria-label="taxfilenumber" required />
+
+                                                        </div>
+
+
+                                                    </div>
+
+
+                                                    <hr>
+
+                                                    <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h4>
+                                                    <div class="fixTableHead">
+
+
+                                                        <div class="form-group">
+                                                            <label for="#Address1">Address-1</label><span>*</span>
+                                                            <input type="text" class="form-control" id="#addressline1"
+                                                                placeholder="addressline1" name="#addressline1"
+                                                                aria-label="#addressline1" required />
+
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Address2">Address-2</label><span>*</span>
+                                                            <input type="text" class="form-control" id="addressline2"
+                                                                placeholder="addressline2" name="#addressline2"
+                                                                aria-label="#addressline2" required />
+
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="CITY1">City</label><span>*</span>
+                                                                <input type="text" class="form-control" id="city"
+                                                                    name="city" aria-label="city" required />
+
+                                                            </div>
+                                                            <div class="form-group col-md-4">
+                                                                <label for="state">State</label><span>*</span>
+                                                                <input id="state" class="form-control" id="state"
+                                                                    name="state" required>
+                                                            </div>
+                                                            <div class="form-group col-md-2">
+                                                                <label for="zipcode">Zip code</label><span>*</span>
+                                                                <input type="number" name="zipCode" class="form-control"
+                                                                    placeholder="zipCode" aria-label="zipcode"
+                                                                    required />
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <hr>
+                                                    <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Contact Details</h4>
+                                                    <div class="row">
+
+                                                        <div class="col">
+                                                            <label class="form-label" for="contactnumber">Phone
+                                                                Number</label><span>*</span>
+                                                            <input type="number" class="form-control"
+                                                                name="contactnumber" aria-label="contactnumber"
+                                                                pattern="[0-9]{10}" required />
+
+
+
+                                                            <div class="col">
+                                                                <label class="form-label"
+                                                                    for="emergencynumber">Emergency phone
+                                                                    number</label><span>*</span>
+                                                                <input type="number" class="form-control"
+                                                                    name="emergencynumber" aria-label="emergencynumber"
+                                                                    pattern="[0-9]{10}" required />
+
+                                                            </div>
+
+
+                                                            <div class="col">
+                                                                <label class="form-label"
+                                                                    for="emailaddress">Email-Id</label><span>*</span>
+                                                                <input type="text" class="form-control"
+                                                                    name="emailaddress" aria-label="emailaddress"
+                                                                    pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                                                    required />
+
+                                                            </div>
+                                                            <br>
+                                                            <br>
+                                                            <div class="mt-2 pt-1" id="btn">
+                                                                <button type="submit"
+                                                                    style="display: flex;position: relative;left: 40%;"
+                                                                    class="btn btn-primary">Update</button>
+                                                            </div>
+
+                                                        </div>
+                                                        <br>
+                                                        <br>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                            <hr>
+                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Educational Information</h4>
+                                            <button type="button" style="position: relative;left: 83%;top: -49px;"
+                                                class="btn btn-primary">+Add
+                                                New</button><br>
+                                            <br>
+                                            <br>
+                                            <div class="table-bordered">
+
+                                                <table class="table ">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th>Degree</th>
+                                                            <th>University</th>
+                                                            <th>Specialization</th>
+                                                            <th>Grade/Score</th>
+                                                            <th>Degree StartDate</th>
+                                                            <th>Degree EndDate</th>
+
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+
+                                                        <td></td>
+
+                                                        <td></td>
+
+                                                        <td></td>
+                                                        <td></td>
+
+
+                                                    </tr>
+
+
+
+                                                </table>
+
+
+                                            </div>
+                                            <hr><br>
+
+                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h4>
+                                            <button style="position: relative;left: 83%;top: -49px;" type="button"
+                                                class="btn btn-primary">+Add New</button><br>
+
+                                            <br>
+                                            <br>
+                                            <div class="table-bordered">
+
+                                                <table class="table ">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th>Date</th>
+                                                            <th>Visa status</th>
+                                                            <th>Issued Country</th>
+                                                            <th>Issued Date</th>
+                                                            <th>Expiry Date</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+
+                                                        <td></td>
+
+                                                        <td></td>
+
+                                                        <td></td>
+                                                        <td></td>
+
+
+
+                                                    </tr>
+
+                                                </table>
+
+                                            </div>
+                                            <hr>
+                                            <br>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+
+                <!-- JOB TAB -->
+
+                <div class="tab-pane fade" id="Job" role="tabpanel" aria-labelledby="profile-tab">
+                    <link rel="stylesheet" type="text/css"
+                        href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+                    <form name="jobTab">
+                        <section class="vh-200 gradient-custom">
+                            <div class="container py-5 h-100">
+                                <div class="row justify-content-center align-items-center h-50">
+                                    <div class="col-12 col-lg-9 col-xl-9">
+                                        <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
+
+                                            <div class="card-body p-4 p-md-4">
+
+                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Hire Date</h4><input type="date"
+                                                    name="startdate" id="startdate" class="form-control"
+                                                    style="width: 50%;margin-bottom: 5;" required>
+                                                <br>
+                                                <br>
+                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Status</h4>
+
+                                                <div class="table-bordered">
+                                                    <table class="table">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <th>Effective Date</th>
+                                                                <th>Employment Status</th>
+                                                                <th>Comment</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr>
+                                                            <td><input type="date" class="form-control"
+                                                                    name="effectivedate" id="effectivedate"><br></td>
+                                                            <td><input type="text" class="form-control"
+                                                                    name="employementstatus" id="employementstatus">
+                                                            </td>
+                                                            <td><input type="text" class="form-control" name="comment"
+                                                                    id="comment"></td>
+                                                        </tr>
+
+
+
+                                                    </table>
+
+                                                    <button type="button" class="btn  btn-primary"
+                                                        style="position: relative;left: 45%; margin-top: -2%;">+Update</button>
+                                                </div>
+
+                                                <br>
+                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Job Details</h4>
+                                                <button [routerLink]="['/job-update']"
+                                                    style="position: relative;left: 83%;top: -36px;" type="button"
+                                                    class="btn btn-primary">+Add new</button>
+                                                <div class="table-bordered">
+                                                    <table class="table">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <th>Effective Date</th>
+                                                                <th>Location</th>
+                                                                <th>Client Name</th>
+                                                                <th>Job Title</th>
+                                                                <th>Reports To</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <br>
+                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h4>
+                                                <button [routerLink]="['/compensationupdate']"
+                                                    style="position: relative;left: 83%;top: -36px;" type="submit"
+                                                    class="btn btn-primary">+Add new</button>
+                                                <div class="table-bordered">
+                                                    <table class="table">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <th>Effective Date</th>
+                                                                <th>Pay Schedule</th>
+                                                                <th>Pay Type</th>
+                                                                <th>Pay Rate</th>
+                                                                <th>Over Time</th>
+                                                                <th>Over Time Rate</th>
+                                                                <th>Change Reason </th>
+                                                                <th>Comment</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+
+
+                                                        </tr>
+                                                    </table>
+
+                                                </div>
+                                                <br>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+                    </form>
+                </div>
+                <!-- Document Tab -->
+
+                <div class="tab-pane fade" id="Document" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="container-fluid col-md-10">
+                        
+                    </div>
+                </div>
+            </div>
             <br>
 
-            
 
-            
+
+
             <br>
 
             <br>
