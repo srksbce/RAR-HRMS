@@ -28,7 +28,7 @@ table {
 
 .shadow{
 
-               box-shadow: 0 2px 15px rgba(64,64,64,.7);
+               box-shadow: 0 2px 15px rgba(212, 212, 212, 0.7);
         }
 
   th:first-of-type {
@@ -57,10 +57,7 @@ table {
       padding: 20px;
       font-size: 18px;
     }
-    .header{
-      text-align: center;
-      text-transform: uppercase;
-  }
+   
 
  .data{
   text-align: justify;
@@ -70,58 +67,7 @@ table {
   text-align: center;
  }
 
- .dot {
-
-  height: 4px;
-  width: 4px;
-
-  background-color:skyblue;
-
-  border-radius: 50%;
-
-  display: inline-block;
-
-}
-.greendot {
-
-  height: 4px;
-
-  width: 4px;
-
-  background-color: green;
-
-  border-radius: 50%;
-
-  display: inline-block;
-
-}
- 
-.reddot {
-
-  height: 4px;
-
-  width: 4px;
-
-  background-color: red;
-
-  border-radius: 50%;
-
-  display: inline-block;
-
-}
-
-.navydot {
-
-  height: 4px;
-
-  width: 4px;
-
-  background-color: navy;
-
-  border-radius: 50%;
-
-  display: inline-block;
-
-
-}
+ .badge{
+color: white;
+ }
 
