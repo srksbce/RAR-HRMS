@@ -35,7 +35,7 @@ import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.com
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { PendingComponent } from '../pending/pending.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
-
+import { TimesheetComponent } from './timesheet/timesheet.component';
 
 
 
@@ -72,7 +72,7 @@ const routes: Routes = [
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
-  
+  {path:'timesheet',component:TimesheetComponent},
 
 
 
