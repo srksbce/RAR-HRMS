@@ -23,7 +23,7 @@ import { OperationalCostComponent } from './operational-cost/operational-cost.co
 import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
-import { PersonaldataComponent } from './personaldata/personaldata.component';
+
 import { ReceivablesComponent } from './receivables/receivables.component';
 import { TemplateComponent } from './template/template.component';
 
@@ -34,7 +34,8 @@ import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { PendingComponent } from '../pending/pending.component';
-
+import { PersonaldataComponent } from './personaldata/personaldata.component';
+import { TimesheetComponent } from './timesheet/timesheet.component';
 
 
 
@@ -71,6 +72,7 @@ const routes: Routes = [
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
+  {path:'timesheet',component:TimesheetComponent},
 
 
 

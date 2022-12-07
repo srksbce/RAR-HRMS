@@ -1,0 +1,70 @@
+<br>
+<br>
+<br>
+<div class="container ">
+    <div class="d-flex col-sm">
+
+        <h3 class="expression">Invoices </h3>
+        <a [routerLink]="['/admin/addNewInvoices']" class=" ml-auto" routerLinkActive="router-link-active"
+            role="button">
+            <h3>+ Add Invoice</h3>
+        </a>
+
+    </div>
+    <hr>
+
+    <br>
+
+    <div class="container ">
+
+        <div class="row  ">
+            <div class="col-sm ">
+                <h4>Name: Ramu Srirangam </h4>
+            </div>
+            <div class="col-sm full">
+                <h4>Employee ID: 1012 </h4>
+            </div>
+            <div class="col rt">
+                <h4> Total Amount $840</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixTableHead  shadow">
+        <table class="table auto-index">
+            <thead>
+                <tr>
+                    <th>no</th>
+                    <th>Invoice no</th>
+                    <th>Invoice Date</th>
+
+                    <th>Invoice Type</th>
+                    <th>Amount</th>
+                    <th>Attachment</th>
+                    <th>Status</th>
+
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>104</td>
+                    <td>2/12/2020</td>
+                    <td>Maintenance</td>
+                    <td>$350</td>
+                    <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                    <td><span class="dot"></span> In Review</td>
+                </tr>
+            </thead>
+
+            <!-- <tbody>
+              <tr *ngFor="let emp of Expensedata let i=index;">
+                <td>{{ i+1 }}</td>
+                <td>{{emp.expensedate}}</td>
+                <td>{{emp.expenses}}</td>
+                <td>{{emp.amount}}</td>
+               
+                <td><a href="https://www.freshbooks.com/wp-content/uploads/invoice-template-pdf-white.png">Click Here</a></td>
+            </tbody> -->
+
+        </table>
+    </div>
+</div>
