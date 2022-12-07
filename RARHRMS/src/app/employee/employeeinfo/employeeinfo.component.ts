@@ -21,9 +21,6 @@ export class EmployeeinfoComponent implements OnInit {
   empdata = [] as any;
   subscription !: Subscription;
   personalData = [] as any;
-
-  
-  
   jobData=[] as any;
   compensationData=[] as any;
 
@@ -37,8 +34,7 @@ export class EmployeeinfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.empdata = JSON.parse(localStorage.getItem("personaldata") || '{}')
-    console.log(this.empdata)
-
+    console.log(this.empdata);
     this.getEducationData();
     this.getvisainformation();
 
@@ -103,8 +99,38 @@ export class EmployeeinfoComponent implements OnInit {
     })
   }
   ngOnDestroy(): void {
+    this.empdata = JSON.parse(localStorage.getItem("personaldata") || '{}')
+    console.log(this.empdata)
+
+    this.getjobData();
+    this.getcompensationData();
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
+  }
+  getcompensationData(){
+    let sdata = {
+      "employeeid": parseInt(this.empdata.employeeid)
+    }
+    console.log(sdata)
+    this.subscription = this.http.postdata("getcompensation", sdata).subscribe({
+      next:(data:any)=>{
+        console.log(data);
+        this.compensationData= data
+      }
+    })
+  }
+  getjobData(){
+    let sdata = {
+      "employeeid": parseInt(this.empdata.employeeid)
+    }
+    console.log(sdata)
+    this.subscription = this.http.postdata("getjobinformation", sdata).subscribe({
+      next:(data:any)=>{
+        console.log(data);
+        this.jobData= data
+      }
+    })
+
   }
 }
