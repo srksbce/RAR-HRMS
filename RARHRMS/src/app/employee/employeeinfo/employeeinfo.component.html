@@ -1,23 +1,40 @@
 <div class="container-fluid col-md-10" style="position: relative;top: 67px;left: 13%;">
-   -
+    -
 
-        <div class="card">
-          <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-
+    <div class="card" style="display:flex ; flex-direction:row">
+        <div class="card-body ">
             <img src="/assets/profile-img.jpg" alt="Profile" class="rounded-circle">
             <h2>Kevin Anderson</h2>
             <h3>Web Designer</h3>
-            <div class="social-links mt-2">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-            
-          </div>
         </div>
+        <div class="row" style="    display: contents;">
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative">
+                <i class="fas fa-cubes fa-3x text-primary mb-4"></i>
+                <label class="form-label" for="emailaddress">Job Type</label><br> <label>Full Time</label><br>
+                <label class="form-label" for="emailaddress">Location</label><br><label>Hyderabad</label><br>
+                <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
+            </div>
 
-     
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative">
+                <i class="fas fa-layer-group fa-3x text-primary mb-4"></i>
+                <label class="form-label" for="emailaddress">Phone</label><br><label>907239865</label><br>
+                <label class="form-label"
+                    for="emailaddress">Email-Id</label><br><label>User@snaddevelopers.com</label><br>
+                <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-0 position-relative">
+                <i class="fas fa-image fa-3x text-primary mb-4"></i>
+                <label class="form-label" for="emailaddress">Reporting To</label><br><label>Satya
+                    Kishore</label><br><label>Manager</label><br>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
     <div class="container-fluid">
 
         <div class="card-body p-4 p-md-4">
@@ -52,15 +69,20 @@
 
                                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h4>
                                             <div class="fixTableHead">
-                                                <form name="Personal">
+                                                <form name="Personal" #Personal="ngForm"
+                                                    (ngSubmit)="Personal.valid && personal(Personal)">
                                                     <div class="row">
 
                                                         <div class="col">
                                                             <label class="form-label" for="employeeid">Employee
                                                                 Id</label><span>*</span>
                                                             <input type="text" class="form-control" placeholder="203356"
-                                                                name="employeeid" aria-label="EmployeeId" required />
-
+                                                                name="employeeid" aria-label="EmployeeId"
+                                                                #employeeid="ngModel" [(ngModel)]="empdata.employeeid"
+                                                                required />
+                                                            <small
+                                                                *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Personal.submitted)">EmployeeId
+                                                                is required </small>
                                                         </div>
 
 
@@ -68,7 +90,10 @@
                                                             <label class="form-label"
                                                                 for="status">Status</label><span>*</span>
                                                             <input class="form-control" id="status" name="status"
-                                                                required>
+                                                                #status="ngModel" [(ngModel)]="empdata.status" required>
+                                                            <small
+                                                                *ngIf="(status.touched && status.invalid) || (status.invalid && Personal.submitted)">Status
+                                                                is required </small>
                                                         </div>
 
 
@@ -77,8 +102,11 @@
                                                                 Name</label><span>*</span>
                                                             <input type="text" class="form-control"
                                                                 placeholder="firstname" name="firstname"
-                                                                aria-label="firstname" required />
-
+                                                                aria-label="firstname" #firstname="ngModel"
+                                                                [(ngModel)]="empdata.firstname" required />
+                                                            <small
+                                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">firstName
+                                                                is required </small>
                                                         </div>
 
                                                     </div>
@@ -96,8 +124,11 @@
                                                                 Name</label><span>*</span>
                                                             <input type="text" class="form-control"
                                                                 placeholder="lastname" name="lastname"
-                                                                aria-label="Last Name" required />
-
+                                                                aria-label="Last Name" #lastname="ngModel"
+                                                                [(ngModel)]="empdata.lastname" required />
+                                                            <small
+                                                                *ngIf="(lastname.touched && lastname.invalid) || (lastname.invalid && Personal.submitted)">Last
+                                                                Name is required </small>
                                                         </div>
 
 
@@ -106,8 +137,11 @@
                                                                 Name</label><span>*</span>
                                                             <input type="text" class="form-control"
                                                                 placeholder="fullname" name="fullname"
-                                                                aria-label="Full Name" required />
-
+                                                                aria-label="Full Name" #fullname="ngModel"
+                                                                [(ngModel)]="empdata.fullname" required />
+                                                            <small
+                                                                *ngIf="(fullname.touched && fullname.invalid) || (fullname.invalid && Personal.submitted)">Full
+                                                                Name is required </small>
                                                         </div>
 
 
@@ -115,7 +149,11 @@
                                                             <label for="dateofbirth" class="form-label">Date Of
                                                                 Birth</label>
                                                             <input type="date" class="form-control" id="dateofbirth"
-                                                                name="dateofbirth" required />
+                                                                name="dateofbirth" #dateofbirth="ngModel"
+                                                                [(ngModel)]="empdata.dateofbirth" required />
+                                                            <small
+                                                                *ngIf="(dateofbirth.touched && dateofbirth.invalid) || (dateofbirth.invalid && Personal.submitted)">Date
+                                                                Of Birth is required </small>
 
                                                         </div>
 
@@ -133,8 +171,12 @@
                                                             <label class="form-label"
                                                                 for="ssn">SSN</label><span>*</span>
                                                             <input type="text" class="form-control" placeholder="ssn"
-                                                                name="ssn" aria-label="ssn" required />
-
+                                                                name="ssn" aria-label="ssn" #ssn="ngModel"
+                                                                [(ngModel)]="empdata.ssn" required />
+                                                            <small
+                                                                *ngIf="(ssn.touched && ssn.invalid) || (ssn.invalid && Personal.submitted)">SSN
+                                                                Name is
+                                                                required </small>
                                                         </div>
 
 
@@ -143,8 +185,11 @@
                                                                 Number</label><span>*</span>
                                                             <input type="number" class="form-control"
                                                                 placeholder="246880" name="taxfilenumber"
-                                                                aria-label="taxfilenumber" required />
-
+                                                                aria-label="taxfilenumber" #taxfilenumber="ngModel"
+                                                                [(ngModel)]="empdata.taxfilenumber" required />
+                                                            <small
+                                                                *ngIf="(taxfilenumber.touched && taxfilenumber.invalid) || (taxfilenumber.invalid && Personal.submitted)">Tax
+                                                                File Number Name is required </small>
                                                         </div>
 
 
@@ -161,34 +206,51 @@
                                                             <label for="#Address1">Address-1</label><span>*</span>
                                                             <input type="text" class="form-control" id="#addressline1"
                                                                 placeholder="addressline1" name="#addressline1"
-                                                                aria-label="#addressline1" required />
-
+                                                                aria-label="#addressline1" #addressline1="ngModel"
+                                                                [(ngModel)]="empdata.addressline1" required />
+                                                            <small
+                                                                *ngIf="(addressline1.touched && addressline1.invalid) || (addressline1.invalid && Personal.submitted)">
+                                                                Address-1 is required </small>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="Address2">Address-2</label><span>*</span>
                                                             <input type="text" class="form-control" id="addressline2"
                                                                 placeholder="addressline2" name="#addressline2"
-                                                                aria-label="#addressline2" required />
-
+                                                                aria-label="#addressline2" #addressline2="ngModel"
+                                                                [(ngModel)]="empdata.addressline2" required />
+                                                            <small
+                                                                *ngIf="(addressline2.touched && addressline2.invalid) || (addressline2.invalid && Personal.submitted)">
+                                                                Address-2 is required </small>
                                                         </div>
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="CITY1">City</label><span>*</span>
                                                                 <input type="text" class="form-control" id="city"
-                                                                    name="city" aria-label="city" required />
-
+                                                                    name="city" aria-label="city" #city="ngModel"
+                                                                    [(ngModel)]="empdata.city" required />
+                                                                <small
+                                                                    *ngIf="(city.touched && city.invalid) || (city.invalid && Personal.submitted)">
+                                                                    City is required </small>
                                                             </div>
                                                             <div class="form-group col-md-4">
                                                                 <label for="state">State</label><span>*</span>
-                                                                <input id="state" class="form-control" id="state"
-                                                                    name="state" required>
+                                                                <input id="state" class="form-control" #state="ngModel"
+                                                                    id="state" name="state" [(ngModel)]="empdata.state"
+                                                                    required>
+                                                                    <small
+                                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">
+                                                                     is required </small>
                                                             </div>
                                                             <div class="form-group col-md-2">
                                                                 <label for="zipcode">Zip code</label><span>*</span>
                                                                 <input type="number" name="zipCode" class="form-control"
                                                                     placeholder="zipCode" aria-label="zipcode"
+                                                                    #zipcode="ngModel" [(ngModel)]="empdata.zipcode"
                                                                     required />
-
+                                                                <small
+                                                                    *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Personal.submitted)">ZipCode
+                                                                    is
+                                                                    required </small>
                                                             </div>
                                                         </div>
 
@@ -203,50 +265,61 @@
                                                                 Number</label><span>*</span>
                                                             <input type="number" class="form-control"
                                                                 name="contactnumber" aria-label="contactnumber"
-                                                                pattern="[0-9]{10}" required />
+                                                                pattern="[0-9]{10}" #contactnumber="ngModel"
+                                                                [(ngModel)]="empdata.contactnumber" required />
+                                                            <small
+                                                                *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
+                                                                phone number is required </small>
+                                                        </div>
 
 
+                                                        <div class="col">
+                                                            <label class="form-label" for="emergencynumber">Emergency
+                                                                phone number</label><span>*</span>
+                                                            <input type="number" class="form-control"
+                                                                name="emergencynumber" aria-label="emergencynumber"
+                                                                pattern="[0-9]{10}" #emergencynumber="ngModel"
+                                                                [(ngModel)]="empdata.emergencynumber" required />
+                                                            <small
+                                                                *ngIf="(emergencynumber.touched && emergencynumber.invalid) || (emergencynumber.invalid && Personal.submitted)">emergency
+                                                                phone number is required </small>
+                                                        </div>
 
-                                                            <div class="col">
-                                                                <label class="form-label"
-                                                                    for="emergencynumber">Emergency phone
-                                                                    number</label><span>*</span>
-                                                                <input type="number" class="form-control"
-                                                                    name="emergencynumber" aria-label="emergencynumber"
-                                                                    pattern="[0-9]{10}" required />
 
-                                                            </div>
-
-
-                                                            <div class="col">
-                                                                <label class="form-label"
-                                                                    for="emailaddress">Email-Id</label><span>*</span>
-                                                                <input type="text" class="form-control"
-                                                                    name="emailaddress" aria-label="emailaddress"
-                                                                    pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                                                                    required />
-
-                                                            </div>
-                                                            <br>
-                                                            <br>
-                                                            <div class="mt-2 pt-1" id="btn">
-                                                                <button type="submit"
-                                                                    style="display: flex;position: relative;left: 40%;"
-                                                                    class="btn btn-primary">Update</button>
-                                                            </div>
-
+                                                        <div class="col">
+                                                            <label class="form-label"
+                                                                for="emailaddress">Email-Id</label><span>*</span>
+                                                            <input type="text" class="form-control" name="emailaddress"
+                                                                aria-label="emailaddress"
+                                                                pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                                                #emailaddress="ngModel"
+                                                                [(ngModel)]="empdata.emailaddress" required />
+                                                            <small
+                                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">email
+                                                                id
+                                                                is required </small>
                                                         </div>
                                                         <br>
                                                         <br>
+                                                        <div class="mt-2 pt-1" id="btn">
+                                                            <button type="submit"
+                                                                style="display: flex;position: relative;left: 40%;"
+                                                                class="btn btn-primary"
+                                                                (click)="personaltab()">Update</button>
+                                                        </div>
+
                                                     </div>
+                                                    <br>
+                                                    <br>
+
 
                                                 </form>
                                             </div>
                                             <hr>
                                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Educational Information</h4>
-                                            <button type="button" style="position: relative;left: 83%;top: -49px;"
-                                                class="btn btn-primary">+Add
-                                                New</button><br>
+                                            <button [routerLink]="['/education-update']" type="button"
+                                                style="position: relative;left: 83%;top: -49px;"
+                                                class="btn btn-primary">+Add New</button><br>
                                             <br>
                                             <br>
                                             <div class="table-bordered">
@@ -264,16 +337,16 @@
                                                         </tr>
                                                     </thead>
 
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
+                                                    <tr *ngFor="let ed of educationData">
+                                                        <td>{{ed.highestdegree}}</td>
+                                                        <td>{{ed.university}}</td>
 
-                                                        <td></td>
+                                                        <td>{{ed.specialization}}</td>
 
-                                                        <td></td>
+                                                        <td>{{ed.gpa}}</td>
 
-                                                        <td></td>
-                                                        <td></td>
+                                                        <td>{{ed.degreestartdate}}</td>
+                                                        <td>{{ed.degreeenddate}}</td>
 
 
                                                     </tr>
@@ -287,7 +360,8 @@
                                             <hr><br>
 
                                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h4>
-                                            <button style="position: relative;left: 83%;top: -49px;" type="button"
+                                            <button [routerLink]="['/visaupdate']"
+                                                style="position: relative;left: 83%;top: -49px;" type="button"
                                                 class="btn btn-primary">+Add New</button><br>
 
                                             <br>
@@ -306,16 +380,16 @@
                                                         </tr>
                                                     </thead>
 
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
+                                                    <tr *ngFor="let vi of visaData">
+                                                        <td>{{vi.date}}</td>
+                                                        <td>{{vi.visastatus}}</td>
 
-                                                        <td></td>
+                                                        <td>{{vi.issuingcountry}}</td>
 
-                                                        <td></td>
+                                                        <td>{{vi.issueddate}}</td>
 
-                                                        <td></td>
-                                                        <td></td>
+                                                        <td>{{vi.expirationdate}}</td>
+                                                        <td>{{vi.status}}</td>
 
 
 
@@ -349,7 +423,7 @@
                 <div class="tab-pane fade" id="Job" role="tabpanel" aria-labelledby="profile-tab">
                     <link rel="stylesheet" type="text/css"
                         href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
-                    <form name="jobTab">
+                    <form name="Personal" #Personal="ngForm" (ngSubmit)="Personal.valid && personal(Personal)">
                         <section class="vh-200 gradient-custom">
                             <div class="container py-5 h-100">
                                 <div class="row justify-content-center align-items-center h-50">
@@ -359,8 +433,13 @@
                                             <div class="card-body p-4 p-md-4">
 
                                                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Hire Date</h4><input type="date"
+                                                    #startdate="ngModel" [(ngModel)]="empdata.startdate"
                                                     name="startdate" id="startdate" class="form-control"
                                                     style="width: 50%;margin-bottom: 5;" required>
+                                                <small
+                                                    *ngIf="(startdate.touched && startdate.invalid) || (startdate.invalid && Personal.submitted)">Hire
+                                                    date
+                                                    is required </small>
                                                 <br>
                                                 <br>
                                                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Status</h4>
@@ -377,12 +456,30 @@
 
                                                         <tr>
                                                             <td><input type="date" class="form-control"
-                                                                    name="effectivedate" id="effectivedate"><br></td>
-                                                            <td><input type="text" class="form-control"
-                                                                    name="employementstatus" id="employementstatus">
+                                                                    #effectivedate="ngModel"
+                                                                    [(ngModel)]="empdata.effectivedate"
+                                                                    name="effectivedate" id="effectivedate"><br>
+                                                                <small
+                                                                    *ngIf="(effectivedate.touched && effectivedate.invalid) || (effectivedate.invalid && Personal.submitted)">Effective
+                                                                    date
+                                                                    is required </small>
                                                             </td>
-                                                            <td><input type="text" class="form-control" name="comment"
-                                                                    id="comment"></td>
+                                                            <td><input type="text" class="form-control"
+                                                                    #employementstatus="ngModel"
+                                                                    [(ngModel)]="empdata.employementstatus"
+                                                                    name="employementstatus" id="employementstatus">
+                                                                <small
+                                                                    *ngIf="(employementstatus.touched && employementstatus.invalid) || (employementstatus.invalid && Personal.submitted)">Employement
+                                                                    Status
+                                                                    is required </small>
+                                                            </td>
+                                                            <td><input type="text" class="form-control"
+                                                                    #comment="ngModel" [(ngModel)]="empdata.comment"
+                                                                    name="comment" id="comment">
+                                                                <small
+                                                                    *ngIf="(comment.touched && comment.invalid) || (comment.invalid && Personal.submitted)">Comment
+                                                                    is required </small>
+                                                            </td>
                                                         </tr>
 
 
@@ -409,12 +506,12 @@
                                                                 <th>Reports To</th>
                                                             </tr>
                                                         </thead>
-                                                        <tr>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
+                                                        <tr *ngFor="let item of jobData">
+                                                            <td>{{item.jobeffectivedate}}</td>
+                                                            <td>{{item.location}}</td>
+                                                            <td>{{item.clientname}}</td>
+                                                            <td>{{item.jobtitle}}</td>
+                                                            <td>{{item.reportsto}}</td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -437,17 +534,15 @@
                                                                 <th>Comment</th>
                                                             </tr>
                                                         </thead>
-                                                        <tr>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-
-
+                                                        <tr *ngFor="let item of compensationData">
+                                                            <td>{{item.compensationeffectivedate}}</td>
+                                                            <td>{{item.payschedule}}</td>
+                                                            <td>{{item.paytype}}</td>
+                                                            <td>{{item.payrate}}</td>
+                                                            <td>{{item.overtime}}</td>
+                                                            <td>{{item.overtimerate}}</td>
+                                                            <td>{{item.changereason}}</td>
+                                                            <td>{{item.comment}}</td>
                                                         </tr>
                                                     </table>
 
@@ -469,7 +564,7 @@
 
                 <div class="tab-pane fade" id="Document" role="tabpanel" aria-labelledby="contact-tab">
                     <div class="container-fluid col-md-10">
-                        
+
                     </div>
                 </div>
             </div>
