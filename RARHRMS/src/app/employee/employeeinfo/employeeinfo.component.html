@@ -67,8 +67,8 @@
                                     <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
 
                                         <div class="card-body p-4 p-md-4">
-
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h4>
+                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Personal</h4>
+                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h5>
                                             <div class="fixTableHead">
                                                 <form name="Personal" #Personal="ngForm"
                                                     (ngSubmit)="Personal.valid && personal(Personal)">
@@ -82,7 +82,8 @@
                                                                 #employeeid="ngModel" [(ngModel)]="empdata.employeeid"
                                                                 required />
                                                             <small
-                                                                *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Personal.submitted)">EmployeeId
+                                                                *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Personal.submitted)">Employee
+                                                                Id
                                                                 is required </small>
                                                         </div>
 
@@ -107,11 +108,14 @@
                                                                 <option>Female</option>
 
                                                             </select>
+                                                            <small
+                                                                *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Personal.submitted)">Gender
+                                                                is required </small>
                                                         </div>
                                                         <div class="col-2">
                                                             <label class="form-label">Title*</label>
                                                             <select class="form-select" id="title" name="title"
-                                                                #gender="ngModel" aria-label="Default select example"
+                                                                #title="ngModel" aria-label="Default select example"
                                                                 [(ngModel)]="empdata.title" required>
                                                                 <option di>Select</option>
                                                                 <option>Mr</option>
@@ -119,6 +123,9 @@
                                                                 <option>Mrs</option>
 
                                                             </select>
+                                                            <small
+                                                                *ngIf="(title.touched && title.invalid) || (title.invalid && Personal.submitted)">Title
+                                                                is required </small>
                                                         </div>
                                                         <br>
                                                         <div class="col">
@@ -129,7 +136,8 @@
                                                                 aria-label="firstname" #firstname="ngModel"
                                                                 [(ngModel)]="empdata.firstname" required />
                                                             <small
-                                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">firstName
+                                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">First
+                                                                Name
                                                                 is required </small>
                                                         </div>
 
@@ -184,7 +192,7 @@
                                                                 [(ngModel)]="empdata.ssn" required />
                                                             <small
                                                                 *ngIf="(ssn.touched && ssn.invalid) || (ssn.invalid && Personal.submitted)">SSN
-                                                                Name is
+                                                                is
                                                                 required </small>
                                                         </div>
 
@@ -198,7 +206,7 @@
                                                                 [(ngModel)]="empdata.taxfilenumber" required />
                                                             <small
                                                                 *ngIf="(taxfilenumber.touched && taxfilenumber.invalid) || (taxfilenumber.invalid && Personal.submitted)">Tax
-                                                                File Number Name is required </small>
+                                                                File Number is required </small>
                                                         </div>
 
 
@@ -207,7 +215,7 @@
 
                                                     <hr>
 
-                                                    <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h4>
+                                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h5>
                                                     <div class="fixTableHead">
 
 
@@ -247,20 +255,23 @@
                                                                     id="state" name="state" [(ngModel)]="empdata.state"
                                                                     required>
                                                                 <small
-                                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">
+                                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">State
                                                                     is required </small>
                                                             </div>
                                                             <div class="col-2">
                                                                 <label class="form-label">Country*</label>
-                                                                <select class="form-select" id="title" name="title"
-                                                                    #gender="ngModel"
+                                                                <select class="form-select" id="country" name="country"
+                                                                    #country="ngModel"
                                                                     aria-label="Default select example"
-                                                                    [(ngModel)]="empdata.title" required>
+                                                                    [(ngModel)]="empdata.country" required>
                                                                     <option di>Select</option>
                                                                     <option>India</option>
                                                                     <option>US</option>
 
                                                                 </select>
+                                                                <small
+                                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">Country
+                                                                    is required </small>
                                                             </div>
                                                             <div class="form-group col-md-2">
                                                                 <label for="zipcode">Zip code</label><span>*</span>
@@ -269,7 +280,8 @@
                                                                     #zipcode="ngModel" [(ngModel)]="empdata.zipcode"
                                                                     required />
                                                                 <small
-                                                                    *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Personal.submitted)">ZipCode
+                                                                    *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Personal.submitted)">Zip
+                                                                    Code
                                                                     is
                                                                     required </small>
                                                             </div>
@@ -278,7 +290,7 @@
                                                     </div>
 
                                                     <hr>
-                                                    <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Contact Details</h4>
+                                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Contact Details</h5>
                                                     <div class="row">
 
                                                         <div class="col">
@@ -290,7 +302,7 @@
                                                                 [(ngModel)]="empdata.contactnumber" required />
                                                             <small
                                                                 *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
-                                                                phone number is required </small>
+                                                                Phone number is required </small>
                                                         </div>
 
                                                         <div class="col">
@@ -302,15 +314,15 @@
                                                                 #emailaddress="ngModel"
                                                                 [(ngModel)]="empdata.emailaddress" required />
                                                             <small
-                                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">email
+                                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">Email
                                                                 id
                                                                 is required </small>
                                                         </div>
                                                     </div>
                                                     <hr>
                                                     <br>
-                                                    <h4 class="mb-4 pb-2 pb-md-0 mb-md-3"> Emergency Contact Details
-                                                    </h4>
+                                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3"> Emergency Contact Details
+                                                    </h5>
                                                     <div class="row">
 
                                                         <div class="col">
@@ -346,14 +358,14 @@
                                                                 [(ngModel)]="empdata.contactnumber" required />
                                                             <small
                                                                 *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
-                                                                phone number is required </small>
+                                                                Phone Number is required </small>
                                                         </div>
 
                                                         <div class="col-2">
                                                             <label class="form-label">Relationship*</label>
-                                                            <select class="form-select" id="title" name="title"
+                                                            <select class="form-select" id="gender" name="gender"
                                                                 #gender="ngModel" aria-label="Default select example"
-                                                                [(ngModel)]="empdata.title" required>
+                                                                [(ngModel)]="empdata.gender" required>
                                                                 <option di>Select</option>
                                                                 <option>Father</option>
                                                                 <option>Mother</option>
@@ -362,8 +374,10 @@
                                                                 <option>Husband</option>
                                                                 <option>Wife</option>
                                                                 <option>Friend</option>
-
                                                             </select>
+                                                            <small
+                                                                *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Personal.submitted)">
+                                                                Relationship is required </small>
                                                         </div>
                                                     </div>
                                                     <br>
@@ -372,7 +386,7 @@
                                                 </form>
                                             </div>
                                             <hr>
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h4>
+                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h5>
 
                                             <a [routerLink]="['/education-update']" class=" ml-auto"
                                                 routerLinkActive="router-link-active" role="button"
@@ -407,7 +421,7 @@
                                                 </table>
                                             </div>
                                             <hr>
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h4>
+                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h5>
                                             <!-- <button [routerLink]="['/visaupdate']"
                                                             style="position: relative;left: 83%;top: -49px;" type="button"
                                                             class="btn btn-primary">+Add New</button><br> -->
@@ -449,7 +463,7 @@
                                             <hr>
                                             <br>
                                             <hr>
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h4>
+                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h5>
 
                                             <a [routerLink]="['/visaupdate']" class=" ml-auto"
                                                 routerLinkActive="router-link-active" role="button"
@@ -542,7 +556,7 @@
                                                     style="position: relative;left: 83%;top: -45px;">
 
 
-                                                    <h5> <i class="bi bi-pencil"></i> update</h5>
+                                                    <h5> <i class="bi bi-pencil"></i>Update</h5>
 
 
                                                 </a>
@@ -589,7 +603,7 @@
                                                     style="position: relative;left: 83%;top: -45px;">
 
 
-                                                    <h5> <i class="bi bi-pencil"></i> update</h5>
+                                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
 
 
                                                 </a>
@@ -632,7 +646,7 @@
                                                     style="position: relative;left: 83%;top: -45px;">
 
 
-                                                    <h5> <i class="bi bi-pencil"></i> update</h5>
+                                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
 
 
                                                 </a>
@@ -679,7 +693,7 @@
                                                     style="position: relative;left: 83%;top: -45px;">
 
 
-                                                    <h5> <i class="bi bi-pencil"></i> update</h5>
+                                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
 
 
                                                 </a>
