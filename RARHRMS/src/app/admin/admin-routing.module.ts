@@ -36,6 +36,7 @@ import { MyreqsComponent } from './myreqs/myreqs.component';
 import { PendingComponent } from '../pending/pending.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
+import { AccessLevelsComponent } from './access-levels/access-levels.component';
 
 
 
@@ -80,7 +81,7 @@ const routes: Routes = [
   { path: 'template', component: TemplateComponent },
   { path: 'myreqs', component: MyreqsComponent },
   { path: 'pending', component: PendingComponent },
-
+{path:'access-levels',component:AccessLevelsComponent}
   
 
 
