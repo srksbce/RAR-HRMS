@@ -393,7 +393,7 @@
                                                             <th>Degree EndDate</th>
                                                         </tr>
                                                     </thead>
-                                                   <tr *ngFor="let ed of educationData">
+                                                    <tr *ngFor="let ed of educationData">
                                                         <td>{{ed.highestdegree}}</td>
                                                         <td>{{ed.university}}</td>
 
@@ -403,7 +403,7 @@
                                                         <td>{{ed.degreestartdate}}</td>
                                                         <td>{{ed.degreeenddate}}</td>
                                                     </tr>
-                                                    
+
                                                 </table>
                                             </div>
                                             <hr>
@@ -514,215 +514,208 @@
                                             <div class="card-body p-4 p-md-4">
                                                 <h3 class="mb-4 pb-2 pb-md-0 mb-md-3">Job</h3>
                                                 <p>customize fields</p>
-                                                
+
                                                 <hr>
 
-                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Date of joining</h4><input type="date"
-                                                    #startdate="ngModel" [(ngModel)]="empdata.startdate"
+                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Date of joining</h4><input
+                                                    type="date" #startdate="ngModel" [(ngModel)]="empdata.startdate"
                                                     name="startdate" id="startdate" class="form-control"
                                                     style="width: 30%;margin-bottom: 5;" required>
                                                 <small
                                                     *ngIf="(startdate.touched && startdate.invalid) || (startdate.invalid && Personal.submitted)">Hire
                                                     date
                                                     is required </small>
-                                                
+
                                                 <hr>
                                                 <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Status</h5>
-                                                
+
                                                 <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                    routerLinkActive="router-link-active" role="button"
+                                                    style="position: relative;left: 83%;top: -45px;">
 
-                                                routerLinkActive="router-link-active" role="button"
 
-                                                style="position: relative;left: 83%;top: -45px;" >
-                                             
+                                                    <h5> <i class="bi bi-pencil"></i> update</h5>
 
-                                                <h5 > <i class="bi bi-pencil"></i> update</h5>
-                                               
 
-                                            </a>
-                                            <div class="table-bordered">
+                                                </a>
+                                                <div class="table-bordered">
 
-                                                <table class="table">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Date of joining</th>
-                                                            <th>Probation end date</th>
-                                                            <th>Probation status</th>
-                                                            <th>Notice period</th>
-                                                            <th>Background status</th>
-                                                            <th>Comments</th>
+                                                    <table class="table">
+                                                        <thead class="bg-light">
+                                                            <tr>
+                                                                <th>Date of joining</th>
+                                                                <th>Probation end date</th>
+                                                                <th>Probation status</th>
+                                                                <th>Notice period</th>
+                                                                <th>Background status</th>
+                                                                <th>Comments</th>
+
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr *ngFor="let ed of educationData">
+                                                            <td>{{ed.highestdegree}}</td>
+                                                            <td>{{ed.university}}</td>
+
+                                                            <td>{{ed.specialization}}</td>
+
+                                                            <td>{{ed.gpa}}</td>
+
+                                                            <td>{{ed.degreestartdate}}</td>
+                                                            <td>{{ed.degreeenddate}}</td>
+
 
                                                         </tr>
-                                                    </thead>
-
-                                                    <tr *ngFor="let ed of educationData">
-                                                        <td>{{ed.highestdegree}}</td>
-                                                        <td>{{ed.university}}</td>
-
-                                                        <td>{{ed.specialization}}</td>
-
-                                                        <td>{{ed.gpa}}</td>
-
-                                                        <td>{{ed.degreestartdate}}</td>
-                                                        <td>{{ed.degreeenddate}}</td>
-
-
-                                                    </tr>
 
 
 
-                                                </table>
+                                                    </table>
 
 
-                                            </div>
+                                                </div>
                                                 <hr>
-                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment  Status</h5>
-                                                
+                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Status</h5>
+
                                                 <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                    routerLinkActive="router-link-active" role="button"
+                                                    style="position: relative;left: 83%;top: -45px;">
 
-                                                routerLinkActive="router-link-active" role="button"
 
-                                                style="position: relative;left: 83%;top: -45px;" >
-                                             
+                                                    <h5> <i class="bi bi-pencil"></i> update</h5>
 
-                                                <h5 > <i class="bi bi-pencil"></i> update</h5>
-                                               
 
-                                            </a>
-                                            <div class="table-bordered">
+                                                </a>
+                                                <div class="table-bordered">
 
-                                                <table class="table ">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Effective Date</th>
-                                                            <th>Employment status</th>
-                                                            <th>Comments</th>
+                                                    <table class="table ">
+                                                        <thead class="bg-light">
+                                                            <tr>
+                                                                <th>Effective Date</th>
+                                                                <th>Employment status</th>
+                                                                <th>Comments</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr *ngFor="let ed of educationData">
+                                                            <td>{{ed.highestdegree}}</td>
+                                                            <td>{{ed.university}}</td>
+
+                                                            <td>{{ed.specialization}}</td>
+
+                                                            <td>{{ed.gpa}}</td>
+
+                                                            <td>{{ed.degreestartdate}}</td>
+                                                            <td>{{ed.degreeenddate}}</td>
+
+
                                                         </tr>
-                                                    </thead>
-
-                                                    <tr *ngFor="let ed of educationData">
-                                                        <td>{{ed.highestdegree}}</td>
-                                                        <td>{{ed.university}}</td>
-
-                                                        <td>{{ed.specialization}}</td>
-
-                                                        <td>{{ed.gpa}}</td>
-
-                                                        <td>{{ed.degreestartdate}}</td>
-                                                        <td>{{ed.degreeenddate}}</td>
-
-
-                                                    </tr>
 
 
 
-                                                </table>
+                                                    </table>
 
 
-                                            </div>
+                                                </div>
                                                 <hr>
                                                 <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Job details</h5>
-                                                
+
                                                 <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                    routerLinkActive="router-link-active" role="button"
+                                                    style="position: relative;left: 83%;top: -45px;">
 
-                                                routerLinkActive="router-link-active" role="button"
 
-                                                style="position: relative;left: 83%;top: -45px;" >
-                                             
+                                                    <h5> <i class="bi bi-pencil"></i> update</h5>
 
-                                                <h5 > <i class="bi bi-pencil"></i> update</h5>
-                                               
 
-                                            </a>
-                                            <div class="table-bordered">
+                                                </a>
+                                                <div class="table-bordered">
 
-                                                <table class="table ">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Effective Date</th>
-                                                            <th>Location</th>
-                                                            <th>Client Name</th>
-                                                            <th>Department</th>
-                                                            <th>Job title</th>
-                                                            <th>Reports to</th>
+                                                    <table class="table ">
+                                                        <thead class="bg-light">
+                                                            <tr>
+                                                                <th>Effective Date</th>
+                                                                <th>Location</th>
+                                                                <th>Client Name</th>
+                                                                <th>Department</th>
+                                                                <th>Job title</th>
+                                                                <th>Reports to</th>
+
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr *ngFor="let ed of educationData">
+                                                            <td>{{ed.highestdegree}}</td>
+                                                            <td>{{ed.university}}</td>
+
+                                                            <td>{{ed.specialization}}</td>
+
+                                                            <td>{{ed.gpa}}</td>
+
+                                                            <td>{{ed.degreestartdate}}</td>
+                                                            <td>{{ed.degreeenddate}}</td>
+
 
                                                         </tr>
-                                                    </thead>
-
-                                                    <tr *ngFor="let ed of educationData">
-                                                        <td>{{ed.highestdegree}}</td>
-                                                        <td>{{ed.university}}</td>
-
-                                                        <td>{{ed.specialization}}</td>
-
-                                                        <td>{{ed.gpa}}</td>
-
-                                                        <td>{{ed.degreestartdate}}</td>
-                                                        <td>{{ed.degreeenddate}}</td>
-
-
-                                                    </tr>
 
 
 
-                                                </table>
+                                                    </table>
 
 
-                                            </div>
+                                                </div>
                                                 <hr>
                                                 <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h5>
-                                                
+
                                                 <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                    routerLinkActive="router-link-active" role="button"
+                                                    style="position: relative;left: 83%;top: -45px;">
 
-                                                routerLinkActive="router-link-active" role="button"
 
-                                                style="position: relative;left: 83%;top: -45px;" >
-                                             
+                                                    <h5> <i class="bi bi-pencil"></i> update</h5>
 
-                                                <h5 > <i class="bi bi-pencil"></i> update</h5>
-                                               
 
-                                            </a>
-                                            <div class="table-bordered">
+                                                </a>
+                                                <div class="table-bordered">
 
-                                                <table class="table ">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Effective Date</th>
-                                                            <th>Frequency</th>
-                                                            <th>Pay Type</th>
-                                                            <th>Amount</th>
-                                                            <th>Overtime</th>
-                                                            <th>Overtime Rate</th>
-                                                            <th>change Reason</th>
-                                                            <th>Comment</th>
+                                                    <table class="table ">
+                                                        <thead class="bg-light">
+                                                            <tr>
+                                                                <th>Effective Date</th>
+                                                                <th>Frequency</th>
+                                                                <th>Pay Type</th>
+                                                                <th>Amount</th>
+                                                                <th>Overtime</th>
+                                                                <th>Overtime Rate</th>
+                                                                <th>change Reason</th>
+                                                                <th>Comment</th>
+
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr *ngFor="let ed of educationData">
+                                                            <td>{{ed.highestdegree}}</td>
+                                                            <td>{{ed.university}}</td>
+
+                                                            <td>{{ed.specialization}}</td>
+
+                                                            <td>{{ed.gpa}}</td>
+
+                                                            <td>{{ed.degreestartdate}}</td>
+                                                            <td>{{ed.degreeenddate}}</td>
+
 
                                                         </tr>
-                                                    </thead>
-
-                                                    <tr *ngFor="let ed of educationData">
-                                                        <td>{{ed.highestdegree}}</td>
-                                                        <td>{{ed.university}}</td>
-
-                                                        <td>{{ed.specialization}}</td>
-
-                                                        <td>{{ed.gpa}}</td>
-
-                                                        <td>{{ed.degreestartdate}}</td>
-                                                        <td>{{ed.degreeenddate}}</td>
-
-
-                                                    </tr>
 
 
 
-                                                </table>
-                                                
+                                                    </table>
 
 
-                                            </div>
+
+                                                </div>
                                                 <hr>
-                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3" style="font-weight: bold;">Direct Reports</h5>
+                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3" style="font-weight: bold;">Direct
+                                                    Reports</h5>
 
                                             </div>
                                         </div>
