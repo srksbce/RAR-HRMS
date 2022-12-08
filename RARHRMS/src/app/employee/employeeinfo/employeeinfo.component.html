@@ -1,7 +1,7 @@
-<div class="container-fluid col-md-10" style="position: relative;top: 67px;left: 13%;">
+<div class="container" style="position: relative;top: 67px;left: 13%;">
     -
 
-    <div class="card" style="display:flex ; flex-direction:row">
+    <div class="container" style="display:flex ">
         <div class="card-body ">
             <img src="/assets/profile-img.jpg" alt="Profile" class="rounded-circle">
             <h2>Kevin Anderson</h2>
@@ -10,22 +10,23 @@
         <div class="row" style="    display: contents;">
             <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative">
                 <i class="fas fa-cubes fa-3x text-primary mb-4"></i>
-                <label class="form-label" for="emailaddress">Job Type</label><br> <label>Full Time</label><br>
-                <label class="form-label" for="emailaddress">Location</label><br><label>Hyderabad</label><br>
+                <label class="form-label" for="emailaddress"><b>Job Type</b></label><br>
+                <h6>Full Time</h6><br>
+                <label class="form-label" for="emailaddress"><b>Location</b></label><br><label>Hyderabad</label><br>
                 <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative">
                 <i class="fas fa-layer-group fa-3x text-primary mb-4"></i>
-                <label class="form-label" for="emailaddress">Phone</label><br><label>907239865</label><br>
+                <label class="form-label" for="emailaddress"><b>Phone</b></label><br><label>907239865</label><br>
                 <label class="form-label"
-                    for="emailaddress">Email-Id</label><br><label>User@snaddevelopers.com</label><br>
+                    for="emailaddress"><b>Email-Id</b></label><br><label>User@snaddevelopers.com</label><br>
                 <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-5 mb-md-0 position-relative">
                 <i class="fas fa-image fa-3x text-primary mb-4"></i>
-                <label class="form-label" for="emailaddress">Reporting To</label><br><label>Satya
+                <label class="form-label" for="emailaddress"><b>Reporting To</b></label><br><label>Satya
                     Kishore</label><br><label>Manager</label><br>
 
             </div>
@@ -62,7 +63,7 @@
                     <section class="vh-200 gradient-custom">
                         <div class="container py-5 h-100">
                             <div class="row justify-content-center align-items-center h-50">
-                                <div class="col-12 col-lg-9 col-xl-9">
+                                <div class="col-12 col-lg-9 col-xl-9" style="width:100%">
                                     <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
 
                                         <div class="card-body p-4 p-md-4">
@@ -86,7 +87,7 @@
                                                         </div>
 
 
-                                                        <div class="col">
+                                                        <div class="col-2">
                                                             <label class="form-label"
                                                                 for="status">Status</label><span>*</span>
                                                             <input class="form-control" id="status" name="status"
@@ -96,7 +97,30 @@
                                                                 is required </small>
                                                         </div>
 
+                                                        <div class="col-2">
+                                                            <label class="form-label">Gender*</label>
+                                                            <select class="form-select" id="gender" name="gender"
+                                                                #gender="ngModel" aria-label="Default select example"
+                                                                [(ngModel)]="empdata.gender" required>
+                                                                <option di>Select</option>
+                                                                <option>Male</option>
+                                                                <option>Female</option>
 
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <label class="form-label">Title*</label>
+                                                            <select class="form-select" id="title" name="title"
+                                                                #gender="ngModel" aria-label="Default select example"
+                                                                [(ngModel)]="empdata.title" required>
+                                                                <option di>Select</option>
+                                                                <option>Mr</option>
+                                                                <option>Ms</option>
+                                                                <option>Mrs</option>
+
+                                                            </select>
+                                                        </div>
+                                                        <br>
                                                         <div class="col">
                                                             <label class="form-label" for="firstname">First
                                                                 Name</label><span>*</span>
@@ -111,11 +135,7 @@
 
                                                     </div>
 
-
-
-
                                                     <br>
-
 
                                                     <div class="row">
 
@@ -132,17 +152,7 @@
                                                         </div>
 
 
-                                                        <div class="col">
-                                                            <label class="form-label" for="fullname">Full
-                                                                Name</label><span>*</span>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="fullname" name="fullname"
-                                                                aria-label="Full Name" #fullname="ngModel"
-                                                                [(ngModel)]="empdata.fullname" required />
-                                                            <small
-                                                                *ngIf="(fullname.touched && fullname.invalid) || (fullname.invalid && Personal.submitted)">Full
-                                                                Name is required </small>
-                                                        </div>
+
 
 
                                                         <div class="col">
@@ -157,17 +167,16 @@
 
                                                         </div>
 
-                                                    </div>
 
 
 
-                                                    <br>
+
+                                                        <br>
 
 
 
-                                                    <div class="row">
 
-                                                        <div class="col-4">
+                                                        <div class="col">
                                                             <label class="form-label"
                                                                 for="ssn">SSN</label><span>*</span>
                                                             <input type="text" class="form-control" placeholder="ssn"
@@ -180,7 +189,7 @@
                                                         </div>
 
 
-                                                        <div class="col-4">
+                                                        <div class="col">
                                                             <label class="form-label" for="taxfilenumber">Tax File
                                                                 Number</label><span>*</span>
                                                             <input type="number" class="form-control"
@@ -203,7 +212,7 @@
 
 
                                                         <div class="form-group">
-                                                            <label for="#Address1">Address-1</label><span>*</span>
+                                                            <label for="#Address1">Address Line-1</label><span>*</span>
                                                             <input type="text" class="form-control" id="#addressline1"
                                                                 placeholder="addressline1" name="#addressline1"
                                                                 aria-label="#addressline1" #addressline1="ngModel"
@@ -213,7 +222,7 @@
                                                                 Address-1 is required </small>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="Address2">Address-2</label><span>*</span>
+                                                            <label for="Address2">Address Line-2</label><span>*</span>
                                                             <input type="text" class="form-control" id="addressline2"
                                                                 placeholder="addressline2" name="#addressline2"
                                                                 aria-label="#addressline2" #addressline2="ngModel"
@@ -223,7 +232,7 @@
                                                                 Address-2 is required </small>
                                                         </div>
                                                         <div class="form-row">
-                                                            <div class="form-group col-md-6">
+                                                            <div class="form-group col-md-4">
                                                                 <label for="CITY1">City</label><span>*</span>
                                                                 <input type="text" class="form-control" id="city"
                                                                     name="city" aria-label="city" #city="ngModel"
@@ -237,9 +246,21 @@
                                                                 <input id="state" class="form-control" #state="ngModel"
                                                                     id="state" name="state" [(ngModel)]="empdata.state"
                                                                     required>
-                                                                    <small
+                                                                <small
                                                                     *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">
-                                                                     is required </small>
+                                                                    is required </small>
+                                                            </div>
+                                                            <div class="col-2">
+                                                                <label class="form-label">Country*</label>
+                                                                <select class="form-select" id="title" name="title"
+                                                                    #gender="ngModel"
+                                                                    aria-label="Default select example"
+                                                                    [(ngModel)]="empdata.title" required>
+                                                                    <option di>Select</option>
+                                                                    <option>India</option>
+                                                                    <option>US</option>
+
+                                                                </select>
                                                             </div>
                                                             <div class="form-group col-md-2">
                                                                 <label for="zipcode">Zip code</label><span>*</span>
@@ -272,20 +293,6 @@
                                                                 phone number is required </small>
                                                         </div>
 
-
-                                                        <div class="col">
-                                                            <label class="form-label" for="emergencynumber">Emergency
-                                                                phone number</label><span>*</span>
-                                                            <input type="number" class="form-control"
-                                                                name="emergencynumber" aria-label="emergencynumber"
-                                                                pattern="[0-9]{10}" #emergencynumber="ngModel"
-                                                                [(ngModel)]="empdata.emergencynumber" required />
-                                                            <small
-                                                                *ngIf="(emergencynumber.touched && emergencynumber.invalid) || (emergencynumber.invalid && Personal.submitted)">emergency
-                                                                phone number is required </small>
-                                                        </div>
-
-
                                                         <div class="col">
                                                             <label class="form-label"
                                                                 for="emailaddress">Email-Id</label><span>*</span>
@@ -299,29 +306,80 @@
                                                                 id
                                                                 is required </small>
                                                         </div>
-                                                        <br>
-                                                        <br>
-                                                        <div class="mt-2 pt-1" id="btn">
-                                                            <button type="submit"
-                                                                style="display: flex;position: relative;left: 40%;"
-                                                                class="btn btn-primary"
-                                                                (click)="personaltab()">Update</button>
+                                                    </div>
+                                                    <hr>
+                                                    <br>
+                                                    <h4 class="mb-4 pb-2 pb-md-0 mb-md-3"> Emergency Contact Details
+                                                    </h4>
+                                                    <div class="row">
+
+                                                        <div class="col">
+                                                            <label class="form-label" for="name">
+                                                                Name</label><span>*</span>
+                                                            <input type="text" class="form-control" placeholder="name"
+                                                                name="name" aria-label="name" #firstname="ngModel"
+                                                                [(ngModel)]="empdata.firstname" required />
+                                                            <small
+                                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">Name
+                                                                is required </small>
                                                         </div>
 
+                                                        <div class="col">
+                                                            <label class="form-label"
+                                                                for="emailaddress">Email-Id</label><span>*</span>
+                                                            <input type="text" class="form-control" name="emailaddress"
+                                                                aria-label="emailaddress"
+                                                                pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                                                #emailaddress="ngModel"
+                                                                [(ngModel)]="empdata.emailaddress" required />
+                                                            <small
+                                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">Email
+                                                                id
+                                                                is required </small>
+                                                        </div>
+                                                        <div class="col">
+                                                            <label class="form-label" for="contactnumber">Phone
+                                                                Number</label><span>*</span>
+                                                            <input type="number" class="form-control"
+                                                                name="contactnumber" aria-label="contactnumber"
+                                                                pattern="[0-9]{10}" #contactnumber="ngModel"
+                                                                [(ngModel)]="empdata.contactnumber" required />
+                                                            <small
+                                                                *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
+                                                                phone number is required </small>
+                                                        </div>
+
+                                                        <div class="col-2">
+                                                            <label class="form-label">Relationship*</label>
+                                                            <select class="form-select" id="title" name="title"
+                                                                #gender="ngModel" aria-label="Default select example"
+                                                                [(ngModel)]="empdata.title" required>
+                                                                <option di>Select</option>
+                                                                <option>Father</option>
+                                                                <option>Mother</option>
+                                                                <option>Brother</option>
+                                                                <option>Sister</option>
+                                                                <option>Husband</option>
+                                                                <option>Wife</option>
+                                                                <option>Friend</option>
+
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                     <br>
                                                     <br>
 
-
                                                 </form>
                                             </div>
                                             <hr>
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Educational Information</h4>
-                                            <button [routerLink]="['/education-update']" type="button"
-                                                style="position: relative;left: 83%;top: -49px;"
-                                                class="btn btn-primary">+Add New</button><br>
-                                            <br>
-                                            <br>
+                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h4>
+
+                                            <a [routerLink]="['/education-update']" class=" ml-auto"
+                                                routerLinkActive="router-link-active" role="button"
+                                                style="position: relative;left: 83%;top: -49px;">
+                                                <h5>+Add New</h5>
+                                            </a>
+
                                             <div class="table-bordered">
 
                                                 <table class="table ">
@@ -333,46 +391,40 @@
                                                             <th>Grade/Score</th>
                                                             <th>Degree StartDate</th>
                                                             <th>Degree EndDate</th>
-
                                                         </tr>
                                                     </thead>
-
-                                                    <tr *ngFor="let ed of educationData">
+                                                   <tr *ngFor="let ed of educationData">
                                                         <td>{{ed.highestdegree}}</td>
                                                         <td>{{ed.university}}</td>
 
                                                         <td>{{ed.specialization}}</td>
-
                                                         <td>{{ed.gpa}}</td>
 
                                                         <td>{{ed.degreestartdate}}</td>
                                                         <td>{{ed.degreeenddate}}</td>
-
-
                                                     </tr>
-
-
-
+                                                    
                                                 </table>
-
-
                                             </div>
-                                            <hr><br>
-
+                                            <hr>
                                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h4>
-                                            <button [routerLink]="['/visaupdate']"
-                                                style="position: relative;left: 83%;top: -49px;" type="button"
-                                                class="btn btn-primary">+Add New</button><br>
+                                            <!-- <button [routerLink]="['/visaupdate']"
+                                                            style="position: relative;left: 83%;top: -49px;" type="button"
+                                                            class="btn btn-primary">+Add New</button><br> -->
 
-                                            <br>
-                                            <br>
+                                            <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                routerLinkActive="router-link-active" role="button"
+                                                style="position: relative;left: 83%;top: -49px;">
+                                                <h5>+Add New</h5>
+                                            </a>
+
                                             <div class="table-bordered">
 
                                                 <table class="table ">
                                                     <thead class="bg-light">
                                                         <tr>
                                                             <th>Date</th>
-                                                            <th>Visa status</th>
+                                                            <th>Visa Type</th>
                                                             <th>Issued Country</th>
                                                             <th>Issued Date</th>
                                                             <th>Expiry Date</th>
@@ -390,24 +442,53 @@
 
                                                         <td>{{vi.expirationdate}}</td>
                                                         <td>{{vi.status}}</td>
-
-
-
                                                     </tr>
 
                                                 </table>
-
                                             </div>
                                             <hr>
                                             <br>
+                                            <hr>
+                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h4>
+
+                                            <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                routerLinkActive="router-link-active" role="button"
+                                                style="position: relative;left: 83%;top: -49px;">
+                                                <h5><i class=" bi-pencil-fill"></i>&nbsp;Update</h5>
+                                            </a>
+
+                                            <div class="table-bordered">
+
+                                                <table class="table ">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th>Bank Name</th>
+                                                            <th>IFSC Code</th>
+                                                            <th>Account Number</th>
+                                                            <th>Account Name</th>
+                                                            <th>Proof</th>
+
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tr *ngFor="let vi of visaData">
+                                                        <td>{{vi.date}}</td>
+                                                        <td>{{vi.visastatus}}</td>
+
+                                                        <td>{{vi.issuingcountry}}</td>
+
+                                                        <td>{{vi.issueddate}}</td>
+
+                                                        <td>{{vi.expirationdate}}</td>
+                                                        <td>{{vi.status}}</td>
+                                                    </tr>
+
+                                                </table>
+                                            </div>
+                                            <hr>
 
                                         </div>
                                     </div>
-
-
-
-
-
 
 
                                 </div>
@@ -427,7 +508,7 @@
                         <section class="vh-200 gradient-custom">
                             <div class="container py-5 h-100">
                                 <div class="row justify-content-center align-items-center h-50">
-                                    <div class="col-12 col-lg-9 col-xl-9">
+                                    <div class="col-12 col-lg-9 col-xl-9" style="width:100%">
                                         <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
 
                                             <div class="card-body p-4 p-md-4">
