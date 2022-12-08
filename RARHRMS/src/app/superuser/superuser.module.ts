@@ -8,6 +8,7 @@ import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component'
 import { SuperuserinvoiceComponent } from './superuserinvoice/superuserinvoice.component';
 import { SuppersonaldataComponent } from './suppersonaldata/suppersonaldata.component';
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { SuperuserrequestsComponent } from './superuserrequests/superuserrequest
   imports: [
     CommonModule,
     SuperuserRoutingModule,
-    
+    FormsModule
   ]
 })
 export class SuperuserModule { }
