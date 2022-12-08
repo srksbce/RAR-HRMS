@@ -42,6 +42,7 @@ import { MyreqsComponent } from './myreqs/myreqs.component';
 import { NewExpenseComponent } from './new-expense/new-expense.component';
 import { AngularFileUploaderModule } from 'angular-file-uploader';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
+import { AccessLevelsComponent } from './access-levels/access-levels.component';
 
 
 
@@ -98,6 +99,7 @@ import { PersonaldataComponent } from './personaldata/personaldata.component';
 
     MyreqsComponent,
     NewExpenseComponent,
+    AccessLevelsComponent,
 
 
 
