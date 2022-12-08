@@ -1,0 +1,39 @@
+table {
+    border-collapse: collapse;        
+    width: 100%;
+    background-color: white;
+    vertical-align: baseline;
+    text-align: center;
+}
+
+.shadow{
+
+           box-shadow: 0 2px 15px rgba(212, 212, 212, 0.7);
+    }
+
+th:first-of-type {
+                 
+                      border-top-left-radius: 10px;
+               }
+
+th:last-of-type {
+              border-top-right-radius: 10px;
+              }
+
+
+td {
+padding: 8px 10px;
+ padding: 20px;
+font-size: 18px;
+border-top: 1px solid rgb(236, 235, 235);
+left: 20%;
+
+
+}
+
+
+th {
+  background-color: rgba(208, 210, 212, 0.418);
+  padding: 10px;
+  font-size: 18px;
+}
