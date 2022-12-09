@@ -32,6 +32,6 @@ import { NavbarsetComponent } from './navbarset/navbarset.component';
     CommonModule,
     SharedRoutingModule
   ],
-  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent,AuthenticFooterComponent,AuthenticHeaderComponent,NavbarComponent,SidebarempComponent, Navbar1Component,NavbarsetComponent],
+  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent,AuthenticFooterComponent,AuthenticHeaderComponent,NavbarComponent,SidebarempComponent, Navbar1Component,NavbarsetComponent,LoginComponent],
 })
 export class SharedModule { }
