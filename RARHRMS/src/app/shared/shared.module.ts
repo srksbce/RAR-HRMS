@@ -10,6 +10,8 @@ import { AuthenticHeaderComponent } from './authentic-header/authentic-header.co
 import { AuthenticFooterComponent } from './authentic-footer/authentic-footer.component';
 import { SidebarempComponent } from './sidebaremp/sidebaremp.component';
 import { Navbar1Component } from './navbar1/navbar1.component';
+import { LoginComponent } from './login/login.component';
+import { NavbarsetComponent } from './navbarset/navbarset.component';
 
 
 @NgModule({
@@ -22,12 +24,14 @@ import { Navbar1Component } from './navbar1/navbar1.component';
     NavbarComponent,
     AmdbuttonsComponent,
     SidebarempComponent,
-    Navbar1Component
+    Navbar1Component,
+    LoginComponent,
+    NavbarsetComponent
   ],
   imports: [
     CommonModule,
     SharedRoutingModule
   ],
-  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent,AuthenticFooterComponent,AuthenticHeaderComponent,NavbarComponent,SidebarempComponent, Navbar1Component],
+  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent,AuthenticFooterComponent,AuthenticHeaderComponent,NavbarComponent,SidebarempComponent, Navbar1Component,NavbarsetComponent],
 })
 export class SharedModule { }
