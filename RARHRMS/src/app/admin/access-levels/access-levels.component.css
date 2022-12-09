@@ -35,6 +35,7 @@ background-color: white;
 vertical-align: center;
 text-align: center;
 padding-left: 19px;
+height: 20px;
 
 
 
@@ -75,4 +76,8 @@ font-size: 18px;
 
 .data{
 text-align: justify;
+}
+
+.navbar-nav {
+  margin-left: auto;
 }
