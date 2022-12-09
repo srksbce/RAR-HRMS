@@ -1,11 +1,10 @@
 <div class="container" style="position: relative;top: 67px;left: 13%;">
-    -
-
+    
     <div class="container" style="display:flex ">
         <div class="card-body ">
             <img src="/assets/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <h2>Kevin Anderson</h2>
-            <h3>Web Designer</h3>
+            <h5>Kevin Anderson</h5>
+            <h5>Web Designer</h5>
         </div>
         <div class="row" style="    display: contents;">
             <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative">
@@ -67,8 +66,8 @@
                                     <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
 
                                         <div class="card-body p-4 p-md-4">
-
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h4>
+                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Personal</h4>
+                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h5>
                                             <div class="fixTableHead">
                                                 <form name="Personal" #Personal="ngForm"
                                                     (ngSubmit)="Personal.valid && personal(Personal)">
@@ -82,7 +81,8 @@
                                                                 #employeeid="ngModel" [(ngModel)]="empdata.employeeid"
                                                                 required />
                                                             <small
-                                                                *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Personal.submitted)">EmployeeId
+                                                                *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Personal.submitted)">Employee
+                                                                Id
                                                                 is required </small>
                                                         </div>
 
@@ -107,11 +107,14 @@
                                                                 <option>Female</option>
 
                                                             </select>
+                                                            <small
+                                                                *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Personal.submitted)">Gender
+                                                                is required </small>
                                                         </div>
                                                         <div class="col-2">
                                                             <label class="form-label">Title*</label>
                                                             <select class="form-select" id="title" name="title"
-                                                                #gender="ngModel" aria-label="Default select example"
+                                                                #title="ngModel" aria-label="Default select example"
                                                                 [(ngModel)]="empdata.title" required>
                                                                 <option di>Select</option>
                                                                 <option>Mr</option>
@@ -119,6 +122,9 @@
                                                                 <option>Mrs</option>
 
                                                             </select>
+                                                            <small
+                                                                *ngIf="(title.touched && title.invalid) || (title.invalid && Personal.submitted)">Title
+                                                                is required </small>
                                                         </div>
                                                         <br>
                                                         <div class="col">
@@ -129,7 +135,8 @@
                                                                 aria-label="firstname" #firstname="ngModel"
                                                                 [(ngModel)]="empdata.firstname" required />
                                                             <small
-                                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">firstName
+                                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">First
+                                                                Name
                                                                 is required </small>
                                                         </div>
 
@@ -184,7 +191,7 @@
                                                                 [(ngModel)]="empdata.ssn" required />
                                                             <small
                                                                 *ngIf="(ssn.touched && ssn.invalid) || (ssn.invalid && Personal.submitted)">SSN
-                                                                Name is
+                                                                is
                                                                 required </small>
                                                         </div>
 
@@ -198,7 +205,7 @@
                                                                 [(ngModel)]="empdata.taxfilenumber" required />
                                                             <small
                                                                 *ngIf="(taxfilenumber.touched && taxfilenumber.invalid) || (taxfilenumber.invalid && Personal.submitted)">Tax
-                                                                File Number Name is required </small>
+                                                                File Number is required </small>
                                                         </div>
 
 
@@ -207,7 +214,7 @@
 
                                                     <hr>
 
-                                                    <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h4>
+                                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h5>
                                                     <div class="fixTableHead">
 
 
@@ -247,20 +254,23 @@
                                                                     id="state" name="state" [(ngModel)]="empdata.state"
                                                                     required>
                                                                 <small
-                                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">
+                                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">State
                                                                     is required </small>
                                                             </div>
                                                             <div class="col-2">
                                                                 <label class="form-label">Country*</label>
-                                                                <select class="form-select" id="title" name="title"
-                                                                    #gender="ngModel"
+                                                                <select class="form-select" id="country" name="country"
+                                                                    #country="ngModel"
                                                                     aria-label="Default select example"
-                                                                    [(ngModel)]="empdata.title" required>
+                                                                    [(ngModel)]="empdata.country" required>
                                                                     <option di>Select</option>
                                                                     <option>India</option>
                                                                     <option>US</option>
 
                                                                 </select>
+                                                                <small
+                                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">Country
+                                                                    is required </small>
                                                             </div>
                                                             <div class="form-group col-md-2">
                                                                 <label for="zipcode">Zip code</label><span>*</span>
@@ -269,7 +279,8 @@
                                                                     #zipcode="ngModel" [(ngModel)]="empdata.zipcode"
                                                                     required />
                                                                 <small
-                                                                    *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Personal.submitted)">ZipCode
+                                                                    *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Personal.submitted)">Zip
+                                                                    Code
                                                                     is
                                                                     required </small>
                                                             </div>
@@ -278,7 +289,7 @@
                                                     </div>
 
                                                     <hr>
-                                                    <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Contact Details</h4>
+                                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Contact Details</h5>
                                                     <div class="row">
 
                                                         <div class="col">
@@ -290,7 +301,7 @@
                                                                 [(ngModel)]="empdata.contactnumber" required />
                                                             <small
                                                                 *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
-                                                                phone number is required </small>
+                                                                Phone number is required </small>
                                                         </div>
 
                                                         <div class="col">
@@ -302,15 +313,15 @@
                                                                 #emailaddress="ngModel"
                                                                 [(ngModel)]="empdata.emailaddress" required />
                                                             <small
-                                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">email
+                                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">Email
                                                                 id
                                                                 is required </small>
                                                         </div>
                                                     </div>
                                                     <hr>
                                                     <br>
-                                                    <h4 class="mb-4 pb-2 pb-md-0 mb-md-3"> Emergency Contact Details
-                                                    </h4>
+                                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3"> Emergency Contact Details
+                                                    </h5>
                                                     <div class="row">
 
                                                         <div class="col">
@@ -346,14 +357,14 @@
                                                                 [(ngModel)]="empdata.contactnumber" required />
                                                             <small
                                                                 *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
-                                                                phone number is required </small>
+                                                                Phone Number is required </small>
                                                         </div>
 
                                                         <div class="col-2">
                                                             <label class="form-label">Relationship*</label>
-                                                            <select class="form-select" id="title" name="title"
+                                                            <select class="form-select" id="gender" name="gender"
                                                                 #gender="ngModel" aria-label="Default select example"
-                                                                [(ngModel)]="empdata.title" required>
+                                                                [(ngModel)]="empdata.gender" required>
                                                                 <option di>Select</option>
                                                                 <option>Father</option>
                                                                 <option>Mother</option>
@@ -362,8 +373,10 @@
                                                                 <option>Husband</option>
                                                                 <option>Wife</option>
                                                                 <option>Friend</option>
-
                                                             </select>
+                                                            <small
+                                                                *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Personal.submitted)">
+                                                                Relationship is required </small>
                                                         </div>
                                                     </div>
                                                     <br>
@@ -372,7 +385,7 @@
                                                 </form>
                                             </div>
                                             <hr>
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h4>
+                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h5>
 
                                             <a [routerLink]="['/education-update']" class=" ml-auto"
                                                 routerLinkActive="router-link-active" role="button"
@@ -393,7 +406,7 @@
                                                             <th>Degree EndDate</th>
                                                         </tr>
                                                     </thead>
-                                                   <tr *ngFor="let ed of educationData">
+                                                    <tr *ngFor="let ed of educationData">
                                                         <td>{{ed.highestdegree}}</td>
                                                         <td>{{ed.university}}</td>
 
@@ -403,11 +416,11 @@
                                                         <td>{{ed.degreestartdate}}</td>
                                                         <td>{{ed.degreeenddate}}</td>
                                                     </tr>
-                                                    
+
                                                 </table>
                                             </div>
                                             <hr>
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h4>
+                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h5>
                                             <!-- <button [routerLink]="['/visaupdate']"
                                                             style="position: relative;left: 83%;top: -49px;" type="button"
                                                             class="btn btn-primary">+Add New</button><br> -->
@@ -449,7 +462,7 @@
                                             <hr>
                                             <br>
                                             <hr>
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h4>
+                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h5>
 
                                             <a [routerLink]="['/visaupdate']" class=" ml-auto"
                                                 routerLinkActive="router-link-active" role="button"
@@ -512,124 +525,218 @@
                                         <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
 
                                             <div class="card-body p-4 p-md-4">
+                                                <h3 class="mb-4 pb-2 pb-md-0 mb-md-3">Job</h3>
+                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                    routerLinkActive="router-link-active" role="button"
+                                                    style="position: relative;left: 83%;top: -45px;">
 
-                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Hire Date</h4><input type="date"
-                                                    #startdate="ngModel" [(ngModel)]="empdata.startdate"
+
+                                                    <h5><i class="bi bi-text-right"></i> Customized fields</h5>
+
+
+                                                </a>
+
+                                                <hr>
+
+                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Date of joining</h4><input
+                                                    type="date" #startdate="ngModel" [(ngModel)]="empdata.startdate"
                                                     name="startdate" id="startdate" class="form-control"
-                                                    style="width: 50%;margin-bottom: 5;" required>
+                                                    style="width: 30%;margin-bottom: 5;" required>
                                                 <small
                                                     *ngIf="(startdate.touched && startdate.invalid) || (startdate.invalid && Personal.submitted)">Hire
                                                     date
                                                     is required </small>
-                                                <br>
-                                                <br>
-                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Status</h4>
 
+                                                <hr>
+                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Status</h5>
+
+                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                    routerLinkActive="router-link-active" role="button"
+                                                    style="position: relative;left: 83%;top: -45px;">
+
+
+                                                    <h5> <i class="bi bi-pencil"></i>Update</h5>
+
+
+                                                </a>
                                                 <div class="table-bordered">
+
                                                     <table class="table">
-                                                        <thead class="table-light">
+                                                        <thead class="bg-light">
                                                             <tr>
-                                                                <th>Effective Date</th>
-                                                                <th>Employment Status</th>
-                                                                <th>Comment</th>
+                                                                <th>Date of joining</th>
+                                                                <th>Probation end date</th>
+                                                                <th>Probation status</th>
+                                                                <th>Notice period</th>
+                                                                <th>Background status</th>
+                                                                <th>Comments</th>
+
                                                             </tr>
                                                         </thead>
 
-                                                        <tr>
-                                                            <td><input type="date" class="form-control"
-                                                                    #effectivedate="ngModel"
-                                                                    [(ngModel)]="empdata.effectivedate"
-                                                                    name="effectivedate" id="effectivedate"><br>
-                                                                <small
-                                                                    *ngIf="(effectivedate.touched && effectivedate.invalid) || (effectivedate.invalid && Personal.submitted)">Effective
-                                                                    date
-                                                                    is required </small>
-                                                            </td>
-                                                            <td><input type="text" class="form-control"
-                                                                    #employementstatus="ngModel"
-                                                                    [(ngModel)]="empdata.employementstatus"
-                                                                    name="employementstatus" id="employementstatus">
-                                                                <small
-                                                                    *ngIf="(employementstatus.touched && employementstatus.invalid) || (employementstatus.invalid && Personal.submitted)">Employement
-                                                                    Status
-                                                                    is required </small>
-                                                            </td>
-                                                            <td><input type="text" class="form-control"
-                                                                    #comment="ngModel" [(ngModel)]="empdata.comment"
-                                                                    name="comment" id="comment">
-                                                                <small
-                                                                    *ngIf="(comment.touched && comment.invalid) || (comment.invalid && Personal.submitted)">Comment
-                                                                    is required </small>
-                                                            </td>
+                                                        <tr *ngFor="let ed of educationData">
+                                                            <td>{{ed.highestdegree}}</td>
+                                                            <td>{{ed.university}}</td>
+
+                                                            <td>{{ed.specialization}}</td>
+
+                                                            <td>{{ed.gpa}}</td>
+
+                                                            <td>{{ed.degreestartdate}}</td>
+                                                            <td>{{ed.degreeenddate}}</td>
+
+
                                                         </tr>
 
 
 
                                                     </table>
 
-                                                    <button type="button" class="btn  btn-primary"
-                                                        style="position: relative;left: 45%; margin-top: -2%;">+Update</button>
-                                                </div>
 
-                                                <br>
-                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Job Details</h4>
-                                                <button [routerLink]="['/job-update']"
-                                                    style="position: relative;left: 83%;top: -36px;" type="button"
-                                                    class="btn btn-primary">+Add new</button>
+                                                </div>
+                                                <hr>
+                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Status</h5>
+
+                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                    routerLinkActive="router-link-active" role="button"
+                                                    style="position: relative;left: 83%;top: -45px;">
+
+
+                                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                                </a>
                                                 <div class="table-bordered">
-                                                    <table class="table">
-                                                        <thead class="table-light">
+
+                                                    <table class="table ">
+                                                        <thead class="bg-light">
+                                                            <tr>
+                                                                <th>Effective Date</th>
+                                                                <th>Employment status</th>
+                                                                <th>Comments</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr *ngFor="let ed of educationData">
+                                                            <td>{{ed.highestdegree}}</td>
+                                                            <td>{{ed.university}}</td>
+
+                                                            <td>{{ed.specialization}}</td>
+
+                                                            <td>{{ed.gpa}}</td>
+
+                                                            <td>{{ed.degreestartdate}}</td>
+                                                            <td>{{ed.degreeenddate}}</td>
+
+
+                                                        </tr>
+
+
+
+                                                    </table>
+
+
+                                                </div>
+                                                <hr>
+                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Job details</h5>
+
+                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                    routerLinkActive="router-link-active" role="button"
+                                                    style="position: relative;left: 83%;top: -45px;">
+
+
+                                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                                </a>
+                                                <div class="table-bordered">
+
+                                                    <table class="table ">
+                                                        <thead class="bg-light">
                                                             <tr>
                                                                 <th>Effective Date</th>
                                                                 <th>Location</th>
                                                                 <th>Client Name</th>
-                                                                <th>Job Title</th>
-                                                                <th>Reports To</th>
+                                                                <th>Department</th>
+                                                                <th>Job title</th>
+                                                                <th>Reports to</th>
+
                                                             </tr>
                                                         </thead>
-                                                        <tr *ngFor="let item of jobData">
-                                                            <td>{{item.jobeffectivedate}}</td>
-                                                            <td>{{item.location}}</td>
-                                                            <td>{{item.clientname}}</td>
-                                                            <td>{{item.jobtitle}}</td>
-                                                            <td>{{item.reportsto}}</td>
+
+                                                        <tr *ngFor="let ed of educationData">
+                                                            <td>{{ed.highestdegree}}</td>
+                                                            <td>{{ed.university}}</td>
+
+                                                            <td>{{ed.specialization}}</td>
+
+                                                            <td>{{ed.gpa}}</td>
+
+                                                            <td>{{ed.degreestartdate}}</td>
+                                                            <td>{{ed.degreeenddate}}</td>
+
+
                                                         </tr>
+
+
+
                                                     </table>
+
+
                                                 </div>
-                                                <br>
-                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h4>
-                                                <button [routerLink]="['/compensationupdate']"
-                                                    style="position: relative;left: 83%;top: -36px;" type="submit"
-                                                    class="btn btn-primary">+Add new</button>
+                                                <hr>
+                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h5>
+
+                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                                    routerLinkActive="router-link-active" role="button"
+                                                    style="position: relative;left: 83%;top: -45px;">
+
+
+                                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                                </a>
                                                 <div class="table-bordered">
-                                                    <table class="table">
-                                                        <thead class="table-light">
+
+                                                    <table class="table ">
+                                                        <thead class="bg-light">
                                                             <tr>
                                                                 <th>Effective Date</th>
-                                                                <th>Pay Schedule</th>
+                                                                <th>Frequency</th>
                                                                 <th>Pay Type</th>
-                                                                <th>Pay Rate</th>
-                                                                <th>Over Time</th>
-                                                                <th>Over Time Rate</th>
-                                                                <th>Change Reason </th>
+                                                                <th>Amount</th>
+                                                                <th>Overtime</th>
+                                                                <th>Overtime Rate</th>
+                                                                <th>change Reason</th>
                                                                 <th>Comment</th>
+
                                                             </tr>
                                                         </thead>
-                                                        <tr *ngFor="let item of compensationData">
-                                                            <td>{{item.compensationeffectivedate}}</td>
-                                                            <td>{{item.payschedule}}</td>
-                                                            <td>{{item.paytype}}</td>
-                                                            <td>{{item.payrate}}</td>
-                                                            <td>{{item.overtime}}</td>
-                                                            <td>{{item.overtimerate}}</td>
-                                                            <td>{{item.changereason}}</td>
-                                                            <td>{{item.comment}}</td>
+
+                                                        <tr *ngFor="let ed of educationData">
+                                                            <td>{{ed.highestdegree}}</td>
+                                                            <td>{{ed.university}}</td>
+
+                                                            <td>{{ed.specialization}}</td>
+
+                                                            <td>{{ed.gpa}}</td>
+
+                                                            <td>{{ed.degreestartdate}}</td>
+                                                            <td>{{ed.degreeenddate}}</td>
+
+
                                                         </tr>
+
+
+
                                                     </table>
 
-                                                </div>
-                                                <br>
 
+
+                                                </div>
+                                                <hr>
+                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3" style="font-weight: bold;">Direct
+                                                    Reports</h5>
 
                                             </div>
                                         </div>
@@ -650,10 +757,5 @@
                 </div>
             </div>
             <br>
-
-
-
-
             <br>
-
             <br>
