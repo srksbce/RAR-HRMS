@@ -12,6 +12,7 @@ import { MNG_ROUTES } from './routing/manager-routing';
 import { SUP_ROUTES } from './routing/superuser-routing';
 
 import { AmdbuttonsComponent } from './shared/amdbuttons/amdbuttons.component';
+import { LoginComponent } from './shared/login/login.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'manager',component:ManagerLayoutComponent,children:MNG_ROUTES},
   {path:'superuser',component:SuperuserlayoutComponent,children:SUP_ROUTES},
 
-  {path:'navbar',component: NavbarComponent}
+  {path:'navbar',component: NavbarComponent},
+  {path:'login',component:LoginComponent}
   
 
 ];
