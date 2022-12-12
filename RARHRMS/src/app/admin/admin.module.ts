@@ -43,6 +43,7 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
 
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AccessLevelsComponent } from './access-levels/access-levels.component';
+import {  AngularFileUploaderModule } from 'angular-file-uploader';
 
 
 
@@ -112,7 +113,7 @@ import { AccessLevelsComponent } from './access-levels/access-levels.component';
     AdminRoutingModule,
     SharedModule,
     FormsModule,
-    
+  AngularFileUploaderModule
     
 
 
