@@ -40,7 +40,7 @@ import { TemplateComponent } from './template/template.component';
 
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { NewExpenseComponent } from './new-expense/new-expense.component';
-import { AngularFileUploaderModule } from 'angular-file-uploader';
+
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AccessLevelsComponent } from './access-levels/access-levels.component';
 
@@ -112,7 +112,8 @@ import { AccessLevelsComponent } from './access-levels/access-levels.component';
     AdminRoutingModule,
     SharedModule,
     FormsModule,
-    AngularFileUploaderModule
+    
+    
 
 
 
