@@ -65,7 +65,7 @@
                             <input type="date" class="form-control" name="Datetime" aria-label="Datetime" #Datetime="ngModel"[(ngModel)]="NEWEXPENSE.Datetime" required>
                             <small
                       *ngIf="(Datetime.touched && Datetime.invalid) || (Datetime.invalid && newexpense.submitted)">
-                      Mandatory </small>
+                       Date is required</small>
 
                         </div>
 

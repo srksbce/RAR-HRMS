@@ -140,10 +140,13 @@ color: green;
 }
 .btn-danger{
   background-color: red;
+  color: aliceblue;
+
  
 }
 .container-fluid{
- padding-right: 45px;
+ padding: 10px;
+ 
  
 }
 
