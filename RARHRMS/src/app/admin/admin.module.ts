@@ -82,7 +82,7 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
 
      AddNewInvoicesComponent,
      TemplateComponent,
-     EmployeeinfoComponent
+     EmployeeinfoComponent,
      MyreqsComponent,
      NewExpenseComponent
 
