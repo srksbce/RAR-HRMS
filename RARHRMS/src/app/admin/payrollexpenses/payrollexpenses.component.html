@@ -1,30 +1,32 @@
-<div class="container" >
+<div class="container">
   <h1>Payroll Expenses</h1>
-  <input [routerLink]="['/admin/launchpage']" type="submit" class="btn btn-primary" id="expense" value="Back" name="payroll"><br><br>
+  <input [routerLink]="['/admin/launchpage']" type="submit" class="btn btn-primary" id="expense" value="Back"
+    name="payroll"><br><br>
   <div class="container-fluid col-md-10">
-<div class="fixTableHead hi shadow ">
-  <table class="table" >
-      <thead>
-          <tr>
-            <th> Employee Id</th> 
-            <th> First Name</th>
-            <th> Last Name</th>
-            <th> Total Payroll Expenses</th>
-          </tr>
-        </thead>
+    <div class="card">
+      <div class="card-body">
 
-        <tbody>
-          <tr *ngFor="let emp of payrollexpense">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th> Employee Id</th>
+              <th> First Name</th>
+              <th> Last Name</th>
+              <th> Total Payroll Expenses</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let emp of payrollexpense">
               <td>{{emp.employeeid}}</td>
               <td>{{emp.firstname}}</td>
               <td>{{emp.lastname}}</td>
               <td>{{emp.sum |currency}}</td>
-          </tr>
-      </tbody>
-      
-  </table>
-</div> 
-</div>
-</div>
+            </tr>
+          </tbody>
 
-
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

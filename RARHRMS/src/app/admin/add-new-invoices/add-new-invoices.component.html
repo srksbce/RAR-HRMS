@@ -2,13 +2,14 @@
 <br>
 
 
-<form name="newinvoices"#newinvoices="ngForm"(ngSubmit)="newinvoices.valid &&  NewINVOICES(newinvoices)">
+<form name="newinvoices" #newinvoices="ngForm" (ngSubmit)="newinvoices.valid &&  NewINVOICES(newinvoices)">
     <br>
-    <div><a class="btn btn-primary" [routerLink]="['/admin/invoice']" routerLinkActive="router-link-active"  role="button" button style="margin-left:20px">Back
+    <div><a class="btn btn-primary" [routerLink]="['/admin/invoice']" routerLinkActive="router-link-active"
+            role="button" button style="margin-left:20px">Back
 
 
-  
-    </a></div>
+
+        </a></div>
     <div class="px-5 py-8 px-md-6 col-md-6 text-center text-lg-start" style="margin-left:28%">
         <div class=" shadow-lg p-4mb-2 bg-white rounded">
 
@@ -28,15 +29,15 @@
                 <div class="col-md-6 mb-4">
                     <h2>New invoice </h2>
 
-                 </div>
+                </div>
 
-                 <span>
+                <span>
                     <div class="col-md-3 mb-8">
 
                         <div class="form-outline">
                             <label for="form2Example3" class="form-label">Invoice type</label><span>*</span>
-                            <select class="form-select"name="Invoicetype" #Invoicetype="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicetype" required>
+                            <select class="form-select" name="Invoicetype" #Invoicetype="ngModel"
+                                aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicetype" required>
                                 <option>Travel Expense</option>
                                 <option>Food Expense</option>
                                 <option>Health Expense</option>
@@ -53,8 +54,9 @@
                         <div class="form-outline">
                             <label for="form2Example3" class="form-label">Invoice Number</label><span>*</span>
                             <input type="text" class="form-control" name=" Invoicedate" #Invoicenumber="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicenumber" required >
-                            <small *ngIf="Invoicenumber.touched &&Invoicenumber.invalid">Invoicenumber is Mandatory</small>
+                                aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicenumber" required>
+                            <small *ngIf="Invoicenumber.touched &&Invoicenumber.invalid">Invoicenumber is
+                                Mandatory</small>
                         </div>
                     </div>
                     <br>
@@ -62,8 +64,8 @@
 
                         <div class="form-outline">
                             <label for="form2Example4" class="form-label">Invoice Date* </label><span>*</span>
-                            <input type="date"class="form-control" name="Invoicedate" #Invoicedate="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicedate" required>
+                            <input type="date" class="form-control" name="Invoicedate" #Invoicedate="ngModel"
+                                aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicedate" required>
                             <small *ngIf="Invoicedate.touched &&Invoicedate.invalid"> Mandatory</small>
                         </div>
 
@@ -74,54 +76,53 @@
                         <div class="form-outline">
                             <label for="form2Example3" class="form-label">Amount</label><span>*</span>
                             <input type="text" class="form-control" name="Amount" #Amount="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Amount" required>
+                                aria-label="Default select example" [(ngModel)]="NEWINVOICES.Amount" required>
                             <small *ngIf="Amount.touched &&Amount.invalid">Amount Mandatory</small>
                         </div>
                     </div>
 
-                        
 
-                   </span>
-                   <span>
+
+                </span>
+                <span>
                     <div class="col-md-7 mb-4">
 
                         <div class="form-outline">
                             <label for="Description" class="form-label">Description</label><span>*</span>
                         </div>
                         <div class="form-outline">
-                            <textarea class="form-control" id="textAreaExample" rows="7"
-                                placeholder="type here" name="Description" #Description="ngModel"
-                                aria-label="Default select example" [(ngModel)]="NEWINVOICES.Description" required></textarea>
+                            <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
+                                name="Description" #Description="ngModel" aria-label="Default select example"
+                                [(ngModel)]="NEWINVOICES.Description" required></textarea>
                             <label class="form-label" for="textAreaExample"></label>
                             <small *ngIf="Description.touched &&Description.invalid">Description is Mandatory</small>
                         </div>
 
 
                     </div>
-                    </span>
+                </span>
+            </div>
+
+
+            <div>
+
+                <div class="mt-4 pt-2">
+                    <input class="btn btn-primary " type="submit" value="save" style="width:105px;" />
                 </div>
-                
-                
-                    <div>
 
-                        <div class="mt-4 pt-2">
-                            <input class="btn btn-primary " type="submit" value="save" style="width:105px;" />
-                        </div>
+                <angular-file-uploader [config]="afuConfig">
 
-                        <angular-file-uploader
-                    [config]="afuConfig">
-                   
-                    
-                   </angular-file-uploader>
-                  
-                   
-                   
-                    
-                       
-           
-                 </div>
+
+                </angular-file-uploader>
+
+
+
+
+
+
+            </div>
         </div>
     </div>
-  
+
 
 </form>

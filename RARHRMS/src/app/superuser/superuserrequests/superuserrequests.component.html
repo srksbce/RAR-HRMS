@@ -24,8 +24,8 @@
                         <div class="d-flex col-sm ">
 
                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Expenses</h4>
-                            <a [routerLink]="['/admin/']" class=" ml-auto"
-                                routerLinkActive="router-link-active" role="button">
+                            <a [routerLink]="['/admin/']" class=" ml-auto" routerLinkActive="router-link-active"
+                                role="button">
                                 <h5>+ Add Expense</h5>
                             </a>
                             <br>
@@ -49,59 +49,64 @@
                             </div>
                         </div>
                         <br>
-                        <div class="card-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
 
-                            <table class="table table-borderless datatable">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
+                                            <th>Expense Date</th>
 
-                                        <th>Expense Date</th>
+                                            <th>Expense Type</th>
+                                            <th>Amount</th>
+                                            <th>Invoice </th>
 
-                                        <th>Expense Type</th>
-                                        <th>Amount</th>
-                                        <th>Invoice </th>
+                                            <th>Status</th>
 
-                                        <th>Status</th>
-
-                                    </tr>
-                                </thead>
-
-                                <tr>
-                                    <td>1</td>
-                                    <td>12/11/21</td>
-                                    <td>Travel</td>
-                                    <td>$350</td>
-                                    <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
-                                    <td> <span class="badge bg-info text-dark" style="color: white;">In Review</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>12/08/21</td>
-                                    <td>Travel</td>
-                                    <td>$490</td>
-                                    <td><a href="\assets\classic-white-750px.png"><i
-                                                class="bi bi-paperclip"></i>View</a></td>
-                                    <td><span class="badge bg-success">Approved</span></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>12/08/21</td>
-                                    <td>Other</td>
-                                    <td>$50</td>
-                                    <td><a href="\assets\1669449398.webp"><i class="bi bi-paperclip"></i>View</a></td>
-                                    <td><span class="badge bg-danger">Rejected</span></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>12/06/21</td>
-                                    <td>Other</td>
-                                    <td>-</td>
-                                    <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
-                                    <td><span class="badge bg-dark">Draft</span></td>
-                                </tr>
-                            </table>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>12/11/21</td>
+                                            <td>Travel</td>
+                                            <td>$350</td>
+                                            <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                            <td> <span class="badge bg-info text-dark" style="color: white;">In
+                                                    Review</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>12/08/21</td>
+                                            <td>Travel</td>
+                                            <td>$490</td>
+                                            <td><a href="\assets\classic-white-750px.png"><i
+                                                        class="bi bi-paperclip"></i>View</a></td>
+                                            <td><span class="badge bg-success">Approved</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>12/08/21</td>
+                                            <td>Other</td>
+                                            <td>$50</td>
+                                            <td><a href="\assets\1669449398.webp"><i
+                                                        class="bi bi-paperclip"></i>View</a>
+                                            </td>
+                                            <td><span class="badge bg-danger">Rejected</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>12/06/21</td>
+                                            <td>Other</td>
+                                            <td>-</td>
+                                            <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                            <td><span class="badge bg-dark">Draft</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,8 +115,8 @@
                         <div class="d-flex col-sm">
 
                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Invoices</h4>
-                            <a [routerLink]="['/admin/']" class=" ml-auto"
-                                routerLinkActive="router-link-active" role="button">
+                            <a [routerLink]="['/admin/']" class=" ml-auto" routerLinkActive="router-link-active"
+                                role="button">
                                 <h5>+ Add Invoice</h5>
                             </a>
 
@@ -132,69 +137,73 @@
                             </div>
                         </div>
                         <br>
-                        <div class="card-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>no</th>
+                                            <th>Invoice no</th>
+                                            <th>Invoice Date</th>
 
-                            <table class="table table-borderless datatable">
-                                <thead>
-                                    <tr>
-                                        <th>no</th>
-                                        <th>Invoice no</th>
-                                        <th>Invoice Date</th>
+                                            <th>Invoice Type</th>
+                                            <th>Amount</th>
+                                            <th>Attachment</th>
+                                            <th>Status</th>
 
-                                        <th>Invoice Type</th>
-                                        <th>Amount</th>
-                                        <th>Attachment</th>
-                                        <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>104</td>
+                                            <td>2/12/2021</td>
+                                            <td>Maintenance</td>
+                                            <td>$350</td>
+                                            <td><a href="\assets\invoice-pdf-white.webp"><i
+                                                        class="bi bi-paperclip"></i>View</a>
+                                            </td>
+                                            <td><span class="badge bg-primary">In Review</span></td>
+                                        </tr>
 
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>104</td>
-                                        <td>2/12/2021</td>
-                                        <td>Maintenance</td>
-                                        <td>$350</td>
-                                        <td><a href="\assets\invoice-pdf-white.webp"><i
-                                                    class="bi bi-paperclip"></i>View</a>
-                                        </td>
-                                        <td><span class="badge bg-primary">In Review</span></td>
-                                    </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>103</td>
+                                            <td>11/08/2021</td>
+                                            <td>Transport</td>
+                                            <td>$490</td>
+                                            <td><a href="\assets\tax-invoice.jpg"><i
+                                                        class="bi bi-paperclip"></i>View</a>
+                                            </td>
+                                            <td><span class="badge bg-danger">Rejected</span></td>
+                                        </tr>
 
-                                    <tr>
-                                        <td>2</td>
-                                        <td>103</td>
-                                        <td>11/08/2021</td>
-                                        <td>Transport</td>
-                                        <td>$490</td>
-                                        <td><a href="\assets\tax-invoice.jpg"><i class="bi bi-paperclip"></i>View</a>
-                                        </td>
-                                        <td><span class="badge bg-danger">Rejected</span></td>
-                                    </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>102</td>
+                                            <td>02/07/2021</td>
+                                            <td>Event</td>
+                                            <td>$50</td>
+                                            <td><a href="\assets\classic-white-750px.png"><i
+                                                        class="bi bi-paperclip"></i>View</a></td>
+                                            <td><span class="badge bg-success">Approved</span></td>
+                                        </tr>
 
-                                    <tr>
-                                        <td>3</td>
-                                        <td>102</td>
-                                        <td>02/07/2021</td>
-                                        <td>Event</td>
-                                        <td>$50</td>
-                                        <td><a href="\assets\classic-white-750px.png"><i
-                                                    class="bi bi-paperclip"></i>View</a></td>
-                                        <td><span class="badge bg-success">Approved</span></td>
-                                    </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>101</td>
+                                            <td>04/05/2021</td>
+                                            <td>Event</td>
+                                            <td>$90</td>
+                                            <td><a href="\assets\1669449398.webp"><i
+                                                        class="bi bi-paperclip"></i>View</a>
+                                            </td>
+                                            <!-- <td><span class="dotjky"></span> Draft</td> -->
+                                            <td><span class="badge bg-dark">Draft</span></td>
+                                        </tr>
+                                    </tbody>
 
-                                    <tr>
-                                        <td>4</td>
-                                        <td>101</td>
-                                        <td>04/05/2021</td>
-                                        <td>Event</td>
-                                        <td>$90</td>
-                                        <td><a href="\assets\1669449398.webp"><i class="bi bi-paperclip"></i>View</a>
-                                        </td>
-                                        <!-- <td><span class="dotjky"></span> Draft</td> -->
-                                        <td><span class="badge bg-dark">Draft</span></td>
-                                    </tr>
-                                </thead>
-
-                                <!-- <tbody>
+                                    <!-- <tbody>
                                       <tr *ngFor="let emp of Expensedata let i=index;">
                                         <td>{{ i+1 }}</td>
                                         <td>{{emp.expensedate}}</td>
@@ -204,7 +213,8 @@
                                         <td><a href="https://www.freshbooks.com/wp-content/uploads/invoice-template-pdf-white.png">Click Here</a></td>
                                     </tbody> -->
 
-                            </table>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -219,7 +229,7 @@
                             </a> -->
 
                         </div>
-                        
+
                         <hr>
                         <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Type</h5>
                         <div class="col-md-2 mb-6">
@@ -238,45 +248,52 @@
                         </div>
                         <br>
 
-                        <div class="card-body">
+                        <div class="card">
+                            <div class="card-body">
 
-                            <table class="table table-borderless datatable">
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th> Date</th>
-                                        <th> Employee Name</th>
-                                        <th>Employee Id</th>
-                                        <th>Amount</th>
-                                        <th>Invoice</th>
-                                        <th>Action</th>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th> Date</th>
+                                            <th> Employee Name</th>
+                                            <th>Employee Id</th>
+                                            <th>Amount</th>
+                                            <th>Invoice</th>
+                                            <th>Action</th>
 
 
-                                    </tr>
-                                </thead>
-                                <tr>
-                                    <td>1</td>
-                                    <td>12/11/21</td>
-                                    <td>Ashwini</td>
-                                    <td>03502</td>
-                                    <td>$450</td>
-                                    <td style="color: blue;"><i class="bi bi-paperclip" style="color: blue"></i>View
-                                    </td>
-                                    <td>
-                                        <span class="badge bg-success">Approved</span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>12/11/21</td>
-                                    <td>Rohini</td>
-                                    <td>03503</td>
-                                    <td>$550</td>
-                                    <td style="color: blue;"><i class="bi bi-paperclip" style="color: blue"></i>View
-                                    </td>
-                                    <td><span class="badge bg-success">Approved</span></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>12/11/21</td>
+                                            <td>Ashwini</td>
+                                            <td>03502</td>
+                                            <td>$450</td>
+                                            <td style="color: blue;"><i class="bi bi-paperclip"
+                                                    style="color: blue"></i>View
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-success">Approved</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>12/11/21</td>
+                                            <td>Rohini</td>
+                                            <td>03503</td>
+                                            <td>$550</td>
+                                            <td style="color: blue;"><i class="bi bi-paperclip"
+                                                    style="color: blue"></i>View
+                                            </td>
+                                            <td><span class="badge bg-success">Approved</span></td>
 
-                                </tr>
-                            </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
