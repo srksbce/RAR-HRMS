@@ -1,18 +1,18 @@
-<form name="Visa" #Visa="ngForm" (ngSubmit)="Visa.valid && visaupdate(Visa)">
-    <h1 class="text-center">Add Visa Information</h1>
-    <button [routerLink]="['/personaldata']" routerLinkActive="router-link-active" button type="button" class="btn btn-primary" style="margin-left: 12%;">Back</button>
+<form name="Visa" #Visa="ngForm" (ngSubmit)="Visa.valid && visaupdate(Visa)"><br>
+    <h2 class="text-center" style="position: relative;bottom: -55px;">Add Visa Information</h2>
+    <a [routerLink]="['/superuser/superuserinfo']" class=" ml-auto"
+    routerLinkActive="router-link-active" role="button"
+    style="position: relative;left: 20%;bottom: -45px;">
+    <h5><i class="bi bi-arrow-left-short"></i>Back</h5>
+</a>
+<br>
+<br>
     <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
         <div class=" shadow-lg p-4
          mb-2 bg-white rounded">
             <div class="card-body py-3 px-md-2">
-                <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <label for="Date" class="form-label">Date</label><span style="color: red;right: -3px;position: relative;">*</span>
-                      <input type="date" class="form-control" id="date" name="date" #date="ngModel" placeholder="Date"  [(ngModel)]="VISA.date" required />
-                      <small *ngIf="(date.touched && date.invalid) || (date.invalid && Visa.submitted)">*Date is required </small>
-                    </div>
-                  </div>
-                <div class="col-md-6 mb-4">
+                
+                <div class="col-md-6">
                     <label class="form-label">Visa Type</label><span style="color: red;right: -3px;position: relative;">*</span>
                     <select class="form-select" id="visastatus" name="visastatus" aria-label="Default select example" #visastatus="ngModel" [(ngModel)]="VISA.visastatus" required>
                         <option>Choose Option</option>
@@ -23,6 +23,7 @@
                         <option value="L1A">L1A</option>
                         <option value="L2A">L2A</option>
                         <option value="permanent">Permanent Resident </option>
+                        <option value="L2A">TN1</option>
                     </select>
                     <small *ngIf="(visastatus.touched && visastatus.invalid) || (visastatus.invalid && Visa.submitted)">*Visa Type is required </small>
                 </div>
@@ -182,9 +183,18 @@
                             <small *ngIf="(expirationdate.touched && expirationdate.invalid) || (expirationdate.invalid && Visa.submitted)">*Expiration Date is required </small>
                         </div>
                     </div>
+                    
+                    <!-- <div class="col-md-6 mb-4">
+                        <label for="Notes" class="form-label">Notes</label><span style="color: red;right: -3px;position: relative;">*</span>
+                        <textarea class="form-control" id="textAreaExample" rows="3"
+                            placeholder="type here" name="Description" #notes="ngModel"
+                            aria-label="Default select example" [(ngModel)]="VISA.notes" required></textarea>
+                        <label class="form-label" for="textAreaExample"></label>
+                        <small *ngIf="(notes.touched && notes.invalid) || (notes.invalid && Visa.submitted)">*Expiration Date is required </small>
+                    </div> -->
                     <div class="mt-4 pt-2">
 
-                        <button  type="submit" class="btn btn-primary" style="margin-left: 45%;">Add Details</button><br>
+                        <button  type="submit" class="btn btn-primary" style="margin-left:45%;">Add Details</button><br>
                     </div>    
             </div>
         </div>
