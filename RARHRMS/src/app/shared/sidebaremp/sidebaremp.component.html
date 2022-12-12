@@ -1,5 +1,7 @@
 <aside id="sidebar" class="sidebar">
 
+
+
     <ul class="sidebar-nav" id="sidebar-nav">
   
   
@@ -7,28 +9,28 @@
       <!-- <li class="nav-heading">Pages</li> -->
   
       <li class="nav-item">
-        <a class="nav-link collapsed" href="/src/app/admin/employeeinfo">
+        <a class="nav-link collapsed"  [routerLink]="['/emp/empmyinfo']" routerLinkActive="router-link-active">
           <i class="bi bi-person"></i>
           <span>My Info</span>
         </a>
       </li><!-- End Profile Page Nav -->
   
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
+        <a class="nav-link collapsed" [routerLink]="['/emp/emppeople']" routerLinkActive="router-link-active">
           <i class="bi bi-people-fill"></i>
           <span>People</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
   
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
+        <a class="nav-link collapsed" [routerLink]="['/emp/empmyrequests']" routerLinkActive="router-link-active">
           <i class="bi bi-envelope"></i>
           <span>My Requests</span>
         </a>
       </li><!-- End Contact Page Nav -->
   
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
+        <a class="nav-link collapsed" [routerLink]="['/emp/emptimesheet']" routerLinkActive="router-link-active">
           <i class="bi bi-calendar2-week"></i>
           <span>Timesheet</span>
         </a>

@@ -1,3 +1,3 @@
-export const MANAGER_ROUTES = [
-    { path: '', loadChildren: () => import("../manager/manager/manager.module").then(x => x.ManagerModule) }
+export const MNG_ROUTES = [
+    { path: '', loadChildren: () => import("../Manager/manager/manager.module").then(x => x.ManagerModule) }
 ];

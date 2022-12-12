@@ -11,11 +11,11 @@ import { DocumentComponent } from './document/document.component';
 import { EducationUpdateComponent } from './education-update/education-update.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
-import { EmployeeComponent } from './employee/employee.component';
+
 import { JobTabComponent } from './job-tab/job-tab.component';
 import { JobUpdateComponent } from './job-update/job-update.component';
 import { InvoiceComponent } from './invoice/invoice.component';
-import { LaunchpageComponent } from './launchpage/launchpage.component';
+
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
 import { NewempComponent } from './newemp/newemp.component';
@@ -23,23 +23,30 @@ import { OperationalCostComponent } from './operational-cost/operational-cost.co
 import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
-import { PersonaldataComponent } from './personaldata/personaldata.component';
+
 import { ReceivablesComponent } from './receivables/receivables.component';
 import { TemplateComponent } from './template/template.component';
 
 import { UserdataComponent } from './userdata/userdata.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
-import { VisaupdateComponent } from './visaupdate/visaupdate.component';
+import { VisaupdateComponent } from '../superuser/visaupdate/visaupdate.component';
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
+import { PendingComponent } from '../pending/pending.component';
+import { PersonaldataComponent } from './personaldata/personaldata.component';
+import { TimesheetComponent } from './timesheet/timesheet.component';
+import { AccessLevelsComponent } from './access-levels/access-levels.component';
+
+
+
 
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
-  { path: 'employee', component: EmployeeComponent },
+
   { path: 'department', component: DepartmentComponent },
-  { path: 'launchpage', component: LaunchpageComponent },
+  
   { path: 'orgdata', component: OrganizationdataComponent },
   { path: 'pendingrequest', component: PendingrequestComponent },
   { path: 'education-update', component: EducationUpdateComponent },
@@ -51,13 +58,13 @@ const routes: Routes = [
   { path: 'amdpage', component: AmdpageComponent },
   { path: 'payrollexpenses', component: PayrollexpensesComponent },
   { path: 'userdata', component: UserdataComponent },
-  {path: 'userdetails', component: UserdetailsComponent},
+  { path: 'userdetails', component: UserdetailsComponent },
   { path: 'empexpdetails', component: EmpexpdetailsComponent },
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
- {path:'new-expense',component:NewExpenseComponent},
- {path: 'invoice',component :InvoiceComponent},
+  { path: 'new-expense', component: NewExpenseComponent },
+  { path: 'invoice', component: InvoiceComponent },
   { path: 'managementexpenses', component: ManagementExpensesComponent },
   { path: 'newemp', component: NewempComponent },
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
@@ -66,16 +73,24 @@ const routes: Routes = [
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
   {path:'addNewInvoice',component:AddNewInvoiceComponent},
+  {path:'timesheet',component:TimesheetComponent},
 
-  {path:'addNewInvoices',component:AddNewInvoicesComponent},
-  {path: 'template' ,component:TemplateComponent},
-  {path: 'myreqs' ,component:MyreqsComponent}
 
+
+  { path: 'addNewInvoices', component: AddNewInvoicesComponent },
+  { path: 'template', component: TemplateComponent },
+  { path: 'myreqs', component: MyreqsComponent },
+  { path: 'pending', component: PendingComponent },
+{path:'access-levels',component:AccessLevelsComponent}
   
+
+
+
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AdminRoutingModule {}
+export class AdminRoutingModule { }
