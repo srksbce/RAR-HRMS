@@ -7,7 +7,7 @@ import { DepartmentComponent } from './department/department.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { SharedModule } from '../shared/shared.module';
 
-import { VisaupdateComponent } from './visaupdate/visaupdate.component';
+import { VisaupdateComponent } from '../superuser/visaupdate/visaupdate.component';
 import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
