@@ -60,13 +60,13 @@
                     <link rel="stylesheet" type="text/css"
                         href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
                     <section class="vh-200 gradient-custom">
-                        <div class="container py-5 h-100">
-                            <div class="row justify-content-center align-items-center h-50">
+                        <!-- <div class="container py-5 h-100"> -->
+                            <!-- <div class="row justify-content-center align-items-center h-50">
                                 <div class="col-12 col-lg-9 col-xl-9" style="width:100%">
-                                    <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
+                                    <div class="shadow-lg p-3 mb-5 bg-body " id="shadow"> -->
 
                                         <div class="card-body p-4 p-md-4">
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Personal</h4>
+                                         
                                             <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h5>
                                             <div class="fixTableHead">
                                                 <form name="Personal" #Personal="ngForm"
@@ -501,12 +501,12 @@
                                             <hr>
 
                                         </div>
-                                    </div>
+                                    <!-- </div>
 
 
                                 </div>
-                            </div>
-                        </div>
+                            </div> -->
+                        <!-- </div> -->
 
                     </section>
                 </div>
@@ -519,33 +519,20 @@
                         href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
                     <form name="Personal" #Personal="ngForm" (ngSubmit)="Personal.valid && personal(Personal)">
                         <section class="vh-200 gradient-custom">
-                            <div class="container py-5 h-100">
-                                <div class="row justify-content-center align-items-center h-50">
+                            <!-- <div class="container py-5 h-100"> -->
+                                <!-- <div class="row justify-content-center align-items-center h-50">
                                     <div class="col-12 col-lg-9 col-xl-9" style="width:100%">
-                                        <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
-
+                                        <div class="shadow-lg p-3 mb-5 bg-body " id="shadow"> -->
+<br>
                                             <div class="card-body p-4 p-md-4">
-                                                <h3 class="mb-4 pb-2 pb-md-0 mb-md-3">Job</h3>
+                                               
                                                 <a [routerLink]="['/visaupdate']" class=" ml-auto"
                                                     routerLinkActive="router-link-active" role="button"
                                                     style="position: relative;left: 83%;top: -45px;">
 
-
-                                                    <h5><i class="bi bi-text-right"></i> Customized fields</h5>
-
+                                                    <h6><i class="bi bi-sliders"></i> Customize fields</h6>
 
                                                 </a>
-
-                                                <hr>
-
-                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Date of joining</h4><input
-                                                    type="date" #startdate="ngModel" [(ngModel)]="empdata.startdate"
-                                                    name="startdate" id="startdate" class="form-control"
-                                                    style="width: 30%;margin-bottom: 5;" required>
-                                                <small
-                                                    *ngIf="(startdate.touched && startdate.invalid) || (startdate.invalid && Personal.submitted)">Hire
-                                                    date
-                                                    is required </small>
 
                                                 <hr>
                                                 <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Status</h5>
@@ -556,8 +543,6 @@
 
 
                                                     <h5> <i class="bi bi-pencil"></i>Update</h5>
-
-
                                                 </a>
                                                 <div class="table-bordered">
 
@@ -739,11 +724,11 @@
                                                     Reports</h5>
 
                                             </div>
-                                        </div>
+                                        <!-- </div> -->
 
-                                    </div>
+                                    <!-- </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </section>
                     </form>
