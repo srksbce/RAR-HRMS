@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
-import { EmployeeComponent } from './employee/employee.component';
+
 import { DepartmentComponent } from './department/department.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { SharedModule } from '../shared/shared.module';
-import { LaunchpageComponent } from './launchpage/launchpage.component';
-import { VisaupdateComponent } from './visaupdate/visaupdate.component';
+
+import { VisaupdateComponent } from '../superuser/visaupdate/visaupdate.component';
 import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
-import { PersonaldataComponent } from './personaldata/personaldata.component';
+
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
@@ -37,9 +37,13 @@ import { InvoiceComponent } from './invoice/invoice.component';
 
 import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
 import { TemplateComponent } from './template/template.component';
-import { EmployeeinfoComponent } from './employeeinfo/employeeinfo.component';
+
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { NewExpenseComponent } from './new-expense/new-expense.component';
+
+import { PersonaldataComponent } from './personaldata/personaldata.component';
+import { AccessLevelsComponent } from './access-levels/access-levels.component';
+
 
 
 
@@ -50,10 +54,10 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
 
 @NgModule({
   declarations: [
-    EmployeeComponent,
+
     DepartmentComponent,
     AdminDashboardComponent,
-    LaunchpageComponent,
+
     VisaupdateComponent,
     OrganizationdataComponent,
     PendingrequestComponent,
@@ -73,30 +77,45 @@ import { NewExpenseComponent } from './new-expense/new-expense.component';
     NewempComponent,
     ActiveemployeedataComponent,
     CompensationUpdateComponent,
-    JobTabComponent,  
-    UserdetailsComponent, 
+    JobTabComponent,
+    UserdetailsComponent,
     SearchfilterPipe,
-   DocumentComponent,
+    DocumentComponent,
     AddNewInvoiceComponent,
-     InvoiceComponent,
+    InvoiceComponent,
 
-     AddNewInvoicesComponent,
-     TemplateComponent,
-     EmployeeinfoComponent,
-     MyreqsComponent,
-     NewExpenseComponent
+    AddNewInvoicesComponent,
+    TemplateComponent,
 
-     
-    
-  
+    MyreqsComponent,
+    NewExpenseComponent,
+
+
+
+
+
+    AddNewInvoicesComponent,
+    TemplateComponent,
+
+    MyreqsComponent,
+    NewExpenseComponent,
+    AccessLevelsComponent,
+
+
+
+
+
 
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
     
+    
+
+
 
   ]
 })
