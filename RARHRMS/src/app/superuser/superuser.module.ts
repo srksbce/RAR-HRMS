@@ -8,6 +8,7 @@ import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component'
 
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 import { FormsModule } from '@angular/forms';
+import { AddeducationComponent } from './addeducation/addeducation.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     SuperuserexpensesComponent,
     SuperuserinfoComponent,
 
-    SuperuserrequestsComponent
+    SuperuserrequestsComponent,
+      AddeducationComponent
   ],
   imports: [
     CommonModule,
