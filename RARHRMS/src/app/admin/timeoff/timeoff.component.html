@@ -1,0 +1,130 @@
+<app-navbarset></app-navbarset>
+<div class="container" style="position: relative;top: 67px;left: 13%;">
+    <div class="card">
+        <div class="card-body">
+            <br>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="Overview-tab" data-bs-toggle="tab" data-bs-target="#Overview"
+                        type="button" role="tab" aria-controls="Overview" aria-selected="true">Overview</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="Vacation-tab" data-bs-toggle="tab" data-bs-target="#Vacation"
+                        type="button" role="tab" aria-controls="Vacation" aria-selected="false">Vacation</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="Sick-tab" data-bs-toggle="tab" data-bs-target="#Sick" type="button"
+                        role="tab" aria-controls="Sick" aria-selected="false">Sick</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="Bereavement-tab" data-bs-toggle="tab" data-bs-target="#Bereavement"
+                        type="button" role="tab" aria-controls="Bereavement" aria-selected="false">Bereavement</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="Comp/In-Lieu-tab" data-bs-toggle="tab" data-bs-target="#Comp/In-Lieu"
+                        type="button" role="tab" aria-controls="Comp/In-Lieu"
+                        aria-selected="false">Comp/In-Lieu</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="FMLA-tab" data-bs-toggle="tab" data-bs-target="#FMLA" type="button"
+                        role="tab" aria-controls="FMLA" aria-selected="false">FMLA</button>
+                </li>
+            </ul>
+            <br>
+            <a [routerLink]="['/education-update']" class=" ml-auto" routerLinkActive="router-link-active" role="button"
+                style="position: relative;left: 83%;top: -49px;">
+                <h5>+ New Category</h5>
+            </a>
+            <div class="tab-content pt-2" id="myTabContent">
+                <div class="tab-pane fade show active" id="Overview" role="tabpanel" aria-labelledby="Overview-tab">
+                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Overview</h5>
+                    <!-- <button [routerLink]="['/education-update']" type="button" style="position: relative;left: 83%;top: -49px;"
+                class="btn btn-primary">+New Policy</button><br> -->
+                    <a [routerLink]="['/education-update']" class=" ml-auto" routerLinkActive="router-link-active"
+                        role="button" style="position: relative;left: 83%;top: -49px;">
+                        <h5>+ New Policy</h5>
+                    </a>
+                    <hr>
+                    <button [routerLink]="['/education-update']" type="button" class="btn btn-primary">Add
+                        Category</button><br>
+                    <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start">
+                        <div class="card">
+                            <table class="table auto-index table-hover">
+                                <thead>
+
+                                    <tr>
+                                        <th>NAME</th>
+                                        <th>NO OF POLICIES</th>
+                                        <th>PEOPLE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Vacation</td>
+                                        <td>3</td>
+                                        <td>53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sick</td>
+                                        <td>3</td>
+                                        <td>53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bereavement</td>
+                                        <td>3</td>
+                                        <td>53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Comp/In-Lieu</td>
+                                        <td>3</td>
+                                        <td>53</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="Vacation" role="tabpanel" aria-labelledby="Vacation-tab">
+                    Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos quia. Accusantium
+                    distinctio
+                    omnis et atque fugiat. Itaque doloremque aliquid sint quasi quia distinctio similique.
+                    Voluptate nihil
+                    recusandae mollitia dolores. Ut laboriosam voluptatum dicta.
+                </div>
+                <div class="tab-pane fade" id="Sick" role="tabpanel" aria-labelledby="Sick-tab">
+                    Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
+                    Accusantium quibusdam
+                    perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui
+                    amet ipsum
+                    iure. Dignissimos fuga tempore dolor.
+                </div>
+                <div class="tab-pane fade" id="Bereavement" role="tabpanel" aria-labelledby="Bereavement-tab">
+                    Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
+                    Accusantium quibusdam
+                    perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui
+                    amet ipsum
+                    iure. Dignissimos fuga tempore dolor.
+                </div>
+                <div class="tab-pane fade" id="Comp/In-Lieu" role="tabpanel" aria-labelledby="Comp/In-Lieu-tab">
+                    Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
+                    Accusantium quibusdam
+                    perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui
+                    amet ipsum
+                    iure. Dignissimos fuga tempore dolor.
+                </div>
+                <div class="tab-pane fade" id="FMLA" role="tabpanel" aria-labelledby="FMLA-tab">
+                    Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
+                    Accusantium quibusdam
+                    perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui
+                    amet ipsum
+                    iure. Dignissimos fuga tempore dolor.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
