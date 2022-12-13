@@ -35,11 +35,11 @@ import { DocumentComponent } from './document/document.component';
 import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 
-import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
+import { AddNewInvoicesComponent } from '../superuser/add-new-invoices/add-new-invoices.component';
 import { TemplateComponent } from './template/template.component';
 
 import { MyreqsComponent } from './myreqs/myreqs.component';
-import { NewExpenseComponent } from './new-expense/new-expense.component';
+import { NewExpenseComponent } from '../superuser/new-expense/new-expense.component';
 
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AccessLevelsComponent } from './access-levels/access-levels.component';
