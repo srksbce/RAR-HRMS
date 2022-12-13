@@ -506,7 +506,8 @@
                                         </div>
 
                                         <div class="col">
-                                            <label class="form-label" for="emailaddress">Work mail-Id</label><span>*</span>
+                                            <label class="form-label" for="emailaddress">Work
+                                                mail-Id</label><span>*</span>
                                             <input type="text" class="form-control" name="emailaddress"
                                                 aria-label="emailaddress"
                                                 pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel"
@@ -518,7 +519,8 @@
                                         </div>
 
                                         <div class="col">
-                                            <label class="form-label" for="emailaddress">Home mail-Id</label><span>*</span>
+                                            <label class="form-label" for="emailaddress">Home
+                                                mail-Id</label><span>*</span>
                                             <input type="text" class="form-control" name="emailaddress"
                                                 aria-label="emailaddress"
                                                 pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel"
@@ -595,7 +597,7 @@
                             <hr>
                             <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h5>
 
-                            <a [routerLink]="['/education-update']" class=" ml-auto"
+                            <a [routerLink]="['/superuser/addeducation']" class=" ml-auto"
                                 routerLinkActive="router-link-active" role="button"
                                 style="position: relative;left: 83%;top: -49px;">
                                 <h5>+Add New</h5>
@@ -741,7 +743,7 @@
                                 </a>
 
                                 <hr>
-                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Status</h5>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Details</h5>
 
                                 <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
                                     role="button" style="position: relative;left: 83%;top: -45px;">
@@ -755,16 +757,15 @@
                                         <thead class="bg-light">
                                             <tr>
                                                 <th>Date of joining</th>
-                                                <th>Probation end date</th>
-                                                <th>Probation status</th>
-                                                <th>Notice period</th>
-                                                <th>Background status</th>
-                                                <th>Comments</th>
-
+                                                    <th>Probation end date</th>
+                                                    <th>Probation status</th>
+                                                    <th>Notice period</th>
+                                                    <th>Background status</th>
+                                                    <th>Comments</th>
                                             </tr>
                                         </thead>
 
-                                        <tr *ngFor="let ed of educationData">
+                                        <!-- <tr *ngFor="let ed of educationData">
                                             <td>{{ed.highestdegree}}</td>
                                             <td>{{ed.university}}</td>
 
@@ -776,12 +777,59 @@
                                             <td>{{ed.degreeenddate}}</td>
 
 
-                                        </tr>
+                                        </tr> -->
 
 
 
                                     </table>
 
+
+                                </div>
+                                <hr>
+                                <div >
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Offboarding Details
+                                    </h5>
+                                    
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                role="button" style="position: relative;left: 83%;top: -45px;">
+
+
+                                <h5> <i class="bi bi-pencil"></i>Update</h5>
+                            </a>
+                                    <div class="table-bordered">
+
+                                        <table class="table">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th>Termination Type</th>
+                                                    <th>Termination Reason</th>
+                                                    <th>Probation status</th>
+                                                    <th>Eligible For Rehire</th>
+                                                    <th>Last Working Day</th>
+                                                
+                                                </tr>
+                                            </thead>
+    
+                                            <tr *ngFor="let ed of educationData">
+                                                <td>{{ed.highestdegree}}</td>
+                                                <td>{{ed.university}}</td>
+    
+                                                <td>{{ed.specialization}}</td>
+    
+                                                <td>{{ed.gpa}}</td>
+    
+                                                <td>{{ed.degreestartdate}}</td>
+                                                <td>{{ed.degreeenddate}}</td>
+    
+    
+                                            </tr>
+    
+    
+    
+                                        </table>
+    
+    
+                                    </div>
 
                                 </div>
                                 <hr>
@@ -801,7 +849,7 @@
                                         <thead class="bg-light">
                                             <tr>
                                                 <th>Effective Date</th>
-                                                <th>Employment status</th>
+                                                <th>Job Type</th>
                                                 <th>Comments</th>
                                             </tr>
                                         </thead>
@@ -843,12 +891,11 @@
                                         <thead class="bg-light">
                                             <tr>
                                                 <th>Effective Date</th>
-                                                <th>Location</th>
-                                                <th>Client Name</th>
-                                                <th>Department</th>
-                                                <th>Job title</th>
+                                                <th>Job Role</th>
                                                 <th>Reports to</th>
-
+                                                <th>Department</th>
+                                                <th>Business Area</th>
+                                                <th>Location</th>
                                             </tr>
                                         </thead>
 
@@ -892,9 +939,9 @@
                                                 <th>Frequency</th>
                                                 <th>Pay Type</th>
                                                 <th>Amount</th>
-                                                <th>Overtime</th>
+                                                <th>Overtime Eligibility</th>
                                                 <th>Overtime Rate</th>
-                                                <th>change Reason</th>
+                                                <th>Reason</th>
                                                 <th>Comment</th>
 
                                             </tr>
@@ -921,8 +968,49 @@
 
 
                                 </div>
+                                
                                 <hr>
-                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3" style="font-weight: bold;">Direct
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">My Assignments</h5>
+
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                    role="button" style="position: relative;left: 83%;top: -45px;">
+
+
+                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                </a>
+                                <div class="table-bordered">
+
+                                    <table class="table ">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th>Project Name</th>
+                                                <th>Client Name</th>
+                                                <th>Project Start Date</th>
+                                                <th>Project End Date</th>
+                                            </tr>
+                                        </thead>
+
+                                        <!-- <tr *ngFor="let ed of educationData">
+                                            <td>{{ed.highestdegree}}</td>
+                                            <td>{{ed.university}}</td>
+
+                                            <td>{{ed.specialization}}</td>
+
+                                            <td>{{ed.gpa}}</td>
+
+                                            <td>{{ed.degreestartdate}}</td>
+                                            <td>{{ed.degreeenddate}}</td>
+
+
+                                        </tr> -->
+
+                                    </table>
+
+                                </div>
+                                <hr>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Direct
                                     Reports</h5>
 
                             </div>
