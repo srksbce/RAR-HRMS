@@ -43,7 +43,8 @@ import { NewExpenseComponent } from '../superuser/new-expense/new-expense.compon
 
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AccessLevelsComponent } from './access-levels/access-levels.component';
-import {  AngularFileUploaderModule } from 'angular-file-uploader';
+import { AngularFileUploaderModule } from 'angular-file-uploader';
+import { TimeoffComponent } from './timeoff/timeoff.component';
 
 
 
@@ -101,6 +102,7 @@ import {  AngularFileUploaderModule } from 'angular-file-uploader';
     MyreqsComponent,
     NewExpenseComponent,
     AccessLevelsComponent,
+    TimeoffComponent,
 
 
 
@@ -113,8 +115,8 @@ import {  AngularFileUploaderModule } from 'angular-file-uploader';
     AdminRoutingModule,
     SharedModule,
     FormsModule,
-  AngularFileUploaderModule
-    
+    AngularFileUploaderModule
+
 
 
 
