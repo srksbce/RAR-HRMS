@@ -13,6 +13,7 @@ import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component'
 
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
+import { AddnewcompdetailsComponent } from './addnewcompdetails/addnewcompdetails.component';
 
 const routes: Routes = [
   { path: 'superuser', component: SuperuserComponent },
@@ -26,7 +27,7 @@ const routes: Routes = [
   { path: 'visaupdate', component: VisaupdateComponent },
   { path: 'newexpense', component: NewExpenseComponent },
   { path: 'addnewinvoice', component: AddNewInvoicesComponent },
-
+  { path: 'addnewcomp', component: AddnewcompdetailsComponent }
 
 
 
