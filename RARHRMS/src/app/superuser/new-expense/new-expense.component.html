@@ -1,107 +1,87 @@
-<form name="newexpense" #newexpense="ngForm"(ngSubmit)="newexpense.valid && Newexp(newexpense)">
+<form name="newexpense" #newexpense="ngForm" (ngSubmit)="newexpense.valid && Newexp(newexpense)"><br>
+    <h3 class="text-center" style="position: relative;bottom: -53px;">Add Expense</h3>
+    <a [routerLink]="['/superuser/superuserrequests']" class=" ml-auto" routerLinkActive="router-link-active"
+        role="button" style="position: relative;left: 20%;bottom: -45px;">
+        <h5><i class="bi bi-arrow-left-short"></i>Back</h5>
+    </a>
     <br>
-    <button  type="button" [routerLink]="['/admin/myreqs']" class="btn btn-primary"
-        style="margin-left: 22%;
-        position: relative;
-        top: 95px;" >Back</button>
     <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
         <div class=" shadow-lg p-4mb-2 bg-white rounded">
 
             <div class="card-body py-3 px-md-2">
-
-
-                <div class="col-md-6 mb-6">
-
+                <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                        <label for="form2Example1" class="form-label"></label>
+                        <label for="form2Example3" class="form-label">Expense type</label><span>*</span>
+                        <select class="form-select" name="Expensetype" #Expensetype="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWEXPENSE.Expensetype" required>
+                            <option>Flight Expenses</option>
+                            <option>Food Expenses</option>
+                            <option>Medical Expenses</option>
+                            <option>Visa Expenses</option>
+                            <option>Mobil Expenses</option>
+                            <option>Internet Expenses</option>
+                            <option>Other Expenses</option>
+                            <option>Travel Expenses</option>
 
+                        </select>
+                        <small *ngIf="Expensetype.touched &&Expensetype.invalid">Expensetype is required</small>
                     </div>
 
                 </div>
-
 
                 <div class="col-md-6 mb-4">
-                    <h2>New Expense </h2>
+
+                    <div class="form-outline">
+                        <label for="Amount" class="form-label">Amount</label><span>*</span>
+                        <input type="text" class="form-control" name="Amount" aria-label="Amount" #Amount="ngModel"
+                            [(ngModel)]="NEWEXPENSE.Amount" required>
+                        <small
+                            *ngIf="(Amount.touched && Amount.invalid) || (Amount.invalid && newexpense.submitted)">Amount
+                            is required </small>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                        <label for="form2Example4" class="form-label">Date </label><span>*</span>
+                        <input type="date" class="form-control" name="Datetime" aria-label="Datetime"
+                            #Datetime="ngModel" [(ngModel)]="NEWEXPENSE.Datetime" required>
+                        <small
+                            *ngIf="(Datetime.touched && Datetime.invalid) || (Datetime.invalid && newexpense.submitted)">
+                            Date is required</small>
+
+                    </div>
 
                 </div>
 
-                <span>
-                    <div class="col-md-3 mb-8">
+                <div class="col-md-7 mb-4">
 
-                        <div class="form-outline">
-                            <label for="form2Example3" class="form-label" >Expense type</label><span>*</span>
-                            <select class="form-select" name="Expensetype" #Expensetype="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWEXPENSE.Expensetype" required>
-                                <option>Flight Expenses</option>
-                                <option>Food Expenses</option>
-                                <option>Medical Expenses</option>
-                                <option>Visa Expenses</option>
-                                <option>Mobil Expenses</option>
-                                <option>Internet Expenses</option>
-                                <option>Other Expenses</option>
-                                <option>Travel Expenses</option>
-                                
-                            </select>
-                            <small *ngIf="Expensetype.touched &&Expensetype.invalid">Expensetype is required</small>
-                        </div>
-
+                    <div class="form-outline">
+                        <label for="Description" class="form-label">Description</label><span>*</span>
                     </div>
-                    <br>
-                    <div class="col-md-3 mb-8">
+                    <div class="form-outline">
+                        <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
+                            name="Description" #Description="ngModel" aria-label="Default select example"
+                            [(ngModel)]="NEWEXPENSE.Description" required></textarea>
+                        <label class="form-label" for="textAreaExample"></label>
 
-                        <div class="form-outline">
-                            <label for="Amount" class="form-label">Amount</label><span>*</span>
-                            <input type="text" class="form-control" name="Amount" aria-label="Amount" #Amount="ngModel"[(ngModel)]="NEWEXPENSE.Amount" required>
-                            <small
-                      *ngIf="(Amount.touched && Amount.invalid) || (Amount.invalid && newexpense.submitted)">Amount
-                      is required </small>
-                        </div>
+                        <small *ngIf="Description.touched &&Description.invalid">Description is required</small>
                     </div>
-                    <br>
-                    <div class="col-md-4 mb-4">
-
-                        <div class="form-outline">
-                            <label for="form2Example4" class="form-label">Date </label><span>*</span>
-                            <input type="date" class="form-control" name="Datetime" aria-label="Datetime" #Datetime="ngModel"[(ngModel)]="NEWEXPENSE.Datetime" required>
-                            <small
-                      *ngIf="(Datetime.touched && Datetime.invalid) || (Datetime.invalid && newexpense.submitted)">
-                       Date is required</small>
-
-                        </div>
-
-                    </div>
-                </span>
-                <span>
-                    <div class="col-md-7 mb-4">
-
-                        <div class="form-outline">
-                            <label for="Description" class="form-label">Description</label><span>*</span>
-                        </div>
-                        <div class="form-outline">
-                            <textarea class="form-control" id="textAreaExample" rows="7"
-                                placeholder="type here" name="Description" #Description="ngModel"
-                                aria-label="Default select example" [(ngModel)]="NEWEXPENSE.Description" required></textarea>
-                            <label class="form-label" for="textAreaExample"></label>
-    
-                            <small *ngIf="Description.touched &&Description.invalid">Description is required</small>
-                        </div>
 
 
-                    </div>
-                </span>
+                </div>
 
-
-                <angular-file-uploader
-                [config]="afuConfig">
                
-                
-               </angular-file-uploader>
+                <angular-file-uploader [config]="afuConfig">
 
-                <div class="mt-4 pt-2">
+
+                </angular-file-uploader>
+                <div class="mt-4 pt-2 text-center">
                     <input class="btn btn-primary " type="submit" value="save" style="width:105px;" />
                 </div>
+                
             </div>
         </div>
     </div>
-
 </form>

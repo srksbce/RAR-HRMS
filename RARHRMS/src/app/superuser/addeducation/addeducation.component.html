@@ -1,9 +1,11 @@
 <form name="EDUCATIONUPDATE" #EDUCATIONUPDATE="ngForm" (ngSubmit)="EDUCATIONUPDATE.valid && education(EDUCATIONUPDATE)">
+    <h2 class="text-center">Add Educational Information</h2>
+    <a [routerLink]="['/superuser/superuserinfo']" class=" ml-auto" routerLinkActive="router-link-active" role="button">
+        <h5><i class="bi bi-arrow-left-short"></i>Back</h5>
+    </a>
     <br>
-    <h1 class="text-center" style="position: relative;top: 36px;">Add Educational Information</h1>
-    <a [routerLink]="['/superuser/superuserinfo']" routerLinkActive="router-link-active"  style="position: relative;right: -340px;"><h5><i class="bi bi-arrow-left-short"></i>Back</h5>  </a>
-
-    <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
+    <br>
+    <div class="addedu px-4 py-2 px-md-5 col-md-6 text-center text-lg-start">
         <div class=" shadow-lg p-4mb-2 bg-white rounded">
 
             <div class="card-body py-3 px-md-2">
@@ -14,8 +16,7 @@
                     <div class="form-outline">
                         <label for="form2Example1" class="form-label">University*</label>
                         <input type="text" class="form-control" id="university" placeholder="university"
-                            name="university" #university="ngModel" [(ngModel)]="educationupdate.university"
-                            required />
+                            name="university" #university="ngModel" [(ngModel)]="educationupdate.university" required />
                         <small
                             *ngIf="( university.touched &&  university.invalid) || ( university.invalid && EDUCATIONUPDATE.submitted)">University
                             Name is required </small>
@@ -27,14 +28,15 @@
 
                 <div class="col-md-6 mb-4">
                     <label class="form-label">Degree*</label>
-                    <select class="form-select" aria-label="Default select example" id="highestdegree" placeholder="highestdegree"
-                        name="highestdegree" #highestdegree="ngModel" [(ngModel)]="educationupdate.highestdegree" required>
+                    <select class="form-select" aria-label="Default select example" id="highestdegree"
+                        placeholder="highestdegree" name="highestdegree" #highestdegree="ngModel"
+                        [(ngModel)]="educationupdate.highestdegree" required>
 
                         <option>Choose Option</option>
-                        <option >Bachelors</option>
+                        <option>Bachelors</option>
                         <option>Masters</option>
-                        <option >Diploma</option>
-                        <option >Doctorate</option>
+                        <option>Diploma</option>
+                        <option>Doctorate</option>
                     </select>
                     <small
                         *ngIf="(highestdegree.touched && highestdegree.invalid) || (highestdegree.invalid && EDUCATIONUPDATE.submitted)">Degree
@@ -104,11 +106,9 @@
 
                 </div>
 
-                <div class="mt-4 pt-2">
-                    <input class="btn btn-primary " type="submit" value="Add Details" style="margin-left: 45%;" />
+                <div class="mt-4 pt-2 text-center">
+                    <input class="btn btn-primary " type="submit" value="Add Details" />
                 </div>
-
-
             </div>
         </div>
     </div>
