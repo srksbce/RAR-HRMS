@@ -24,11 +24,11 @@ import { AddeducationComponent } from './addeducation/addeducation.component';
 
 
     SuperuserrequestsComponent,
-        JobdetailsComponent,
-    
+    JobdetailsComponent,
+
 
     SuperuserrequestsComponent,
-      AddeducationComponent
+    AddeducationComponent
 
   ],
   imports: [
