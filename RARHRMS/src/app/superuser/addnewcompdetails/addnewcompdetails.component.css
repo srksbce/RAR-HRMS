@@ -1,5 +1,6 @@
 .card{
     padding-top: 10px;
+    
    
 }
 
@@ -18,3 +19,6 @@
       color: red;
   }
  
+ .shadow-lg{
+    width: 800px;
+ }
