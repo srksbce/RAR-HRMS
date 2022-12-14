@@ -1,5 +1,5 @@
 <div class="container" style="position: relative;top: 67px;left: 13%;">
-    
+
     <div class="container" style="display:flex ">
         <div class="card-body ">
             <img src="/assets/profile-img.jpg" alt="Profile" class="rounded-circle">
@@ -60,453 +60,662 @@
                     <link rel="stylesheet" type="text/css"
                         href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
                     <section class="vh-200 gradient-custom">
-                        <div class="container py-5 h-100">
-                            <div class="row justify-content-center align-items-center h-50">
+                        <!-- <div class="container py-5 h-100"> -->
+                        <!-- <div class="row justify-content-center align-items-center h-50">
                                 <div class="col-12 col-lg-9 col-xl-9" style="width:100%">
-                                    <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
-
-                                        <div class="card-body p-4 p-md-4">
-                                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Personal</h4>
-                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h5>
-                                            <div class="fixTableHead">
-                                                <form name="Personal" #Personal="ngForm"
-                                                    (ngSubmit)="Personal.valid && personal(Personal)">
-                                                    <div class="row">
-
-                                                        <div class="col">
-                                                            <label class="form-label" for="employeeid">Employee
-                                                                Id</label><span>*</span>
-                                                            <input type="text" class="form-control" placeholder="203356"
-                                                                name="employeeid" aria-label="EmployeeId"
-                                                                #employeeid="ngModel" [(ngModel)]="empdata.employeeid"
-                                                                required />
-                                                            <small
-                                                                *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Personal.submitted)">Employee
-                                                                Id
-                                                                is required </small>
-                                                        </div>
-
-
-                                                        <div class="col-2">
-                                                            <label class="form-label"
-                                                                for="status">Status</label><span>*</span>
-                                                            <input class="form-control" id="status" name="status"
-                                                                #status="ngModel" [(ngModel)]="empdata.status" required>
-                                                            <small
-                                                                *ngIf="(status.touched && status.invalid) || (status.invalid && Personal.submitted)">Status
-                                                                is required </small>
-                                                        </div>
-
-                                                        <div class="col-2">
-                                                            <label class="form-label">Gender*</label>
-                                                            <select class="form-select" id="gender" name="gender"
-                                                                #gender="ngModel" aria-label="Default select example"
-                                                                [(ngModel)]="empdata.gender" required>
-                                                                <option di>Select</option>
-                                                                <option>Male</option>
-                                                                <option>Female</option>
-
-                                                            </select>
-                                                            <small
-                                                                *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Personal.submitted)">Gender
-                                                                is required </small>
-                                                        </div>
-                                                        <div class="col-2">
-                                                            <label class="form-label">Title*</label>
-                                                            <select class="form-select" id="title" name="title"
-                                                                #title="ngModel" aria-label="Default select example"
-                                                                [(ngModel)]="empdata.title" required>
-                                                                <option di>Select</option>
-                                                                <option>Mr</option>
-                                                                <option>Ms</option>
-                                                                <option>Mrs</option>
-
-                                                            </select>
-                                                            <small
-                                                                *ngIf="(title.touched && title.invalid) || (title.invalid && Personal.submitted)">Title
-                                                                is required </small>
-                                                        </div>
-                                                        <br>
-                                                        <div class="col">
-                                                            <label class="form-label" for="firstname">First
-                                                                Name</label><span>*</span>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="firstname" name="firstname"
-                                                                aria-label="firstname" #firstname="ngModel"
-                                                                [(ngModel)]="empdata.firstname" required />
-                                                            <small
-                                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">First
-                                                                Name
-                                                                is required </small>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <br>
-
-                                                    <div class="row">
-
-                                                        <div class="col">
-                                                            <label class="form-label" for="lastname">Last
-                                                                Name</label><span>*</span>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="lastname" name="lastname"
-                                                                aria-label="Last Name" #lastname="ngModel"
-                                                                [(ngModel)]="empdata.lastname" required />
-                                                            <small
-                                                                *ngIf="(lastname.touched && lastname.invalid) || (lastname.invalid && Personal.submitted)">Last
-                                                                Name is required </small>
-                                                        </div>
-
-
-
-
-
-                                                        <div class="col">
-                                                            <label for="dateofbirth" class="form-label">Date Of
-                                                                Birth</label>
-                                                            <input type="date" class="form-control" id="dateofbirth"
-                                                                name="dateofbirth" #dateofbirth="ngModel"
-                                                                [(ngModel)]="empdata.dateofbirth" required />
-                                                            <small
-                                                                *ngIf="(dateofbirth.touched && dateofbirth.invalid) || (dateofbirth.invalid && Personal.submitted)">Date
-                                                                Of Birth is required </small>
-
-                                                        </div>
-
-
-
-
-
-                                                        <br>
-
-
-
-
-                                                        <div class="col">
-                                                            <label class="form-label"
-                                                                for="ssn">SSN</label><span>*</span>
-                                                            <input type="text" class="form-control" placeholder="ssn"
-                                                                name="ssn" aria-label="ssn" #ssn="ngModel"
-                                                                [(ngModel)]="empdata.ssn" required />
-                                                            <small
-                                                                *ngIf="(ssn.touched && ssn.invalid) || (ssn.invalid && Personal.submitted)">SSN
-                                                                is
-                                                                required </small>
-                                                        </div>
-
-
-                                                        <div class="col">
-                                                            <label class="form-label" for="taxfilenumber">Tax File
-                                                                Number</label><span>*</span>
-                                                            <input type="number" class="form-control"
-                                                                placeholder="246880" name="taxfilenumber"
-                                                                aria-label="taxfilenumber" #taxfilenumber="ngModel"
-                                                                [(ngModel)]="empdata.taxfilenumber" required />
-                                                            <small
-                                                                *ngIf="(taxfilenumber.touched && taxfilenumber.invalid) || (taxfilenumber.invalid && Personal.submitted)">Tax
-                                                                File Number is required </small>
-                                                        </div>
-
-
-                                                    </div>
-
-
-                                                    <hr>
-
-                                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h5>
-                                                    <div class="fixTableHead">
-
-
-                                                        <div class="form-group">
-                                                            <label for="#Address1">Address Line-1</label><span>*</span>
-                                                            <input type="text" class="form-control" id="#addressline1"
-                                                                placeholder="addressline1" name="#addressline1"
-                                                                aria-label="#addressline1" #addressline1="ngModel"
-                                                                [(ngModel)]="empdata.addressline1" required />
-                                                            <small
-                                                                *ngIf="(addressline1.touched && addressline1.invalid) || (addressline1.invalid && Personal.submitted)">
-                                                                Address-1 is required </small>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="Address2">Address Line-2</label><span>*</span>
-                                                            <input type="text" class="form-control" id="addressline2"
-                                                                placeholder="addressline2" name="#addressline2"
-                                                                aria-label="#addressline2" #addressline2="ngModel"
-                                                                [(ngModel)]="empdata.addressline2" required />
-                                                            <small
-                                                                *ngIf="(addressline2.touched && addressline2.invalid) || (addressline2.invalid && Personal.submitted)">
-                                                                Address-2 is required </small>
-                                                        </div>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-4">
-                                                                <label for="CITY1">City</label><span>*</span>
-                                                                <input type="text" class="form-control" id="city"
-                                                                    name="city" aria-label="city" #city="ngModel"
-                                                                    [(ngModel)]="empdata.city" required />
-                                                                <small
-                                                                    *ngIf="(city.touched && city.invalid) || (city.invalid && Personal.submitted)">
-                                                                    City is required </small>
-                                                            </div>
-                                                            <div class="form-group col-md-4">
-                                                                <label for="state">State</label><span>*</span>
-                                                                <input id="state" class="form-control" #state="ngModel"
-                                                                    id="state" name="state" [(ngModel)]="empdata.state"
-                                                                    required>
-                                                                <small
-                                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">State
-                                                                    is required </small>
-                                                            </div>
-                                                            <div class="col-2">
-                                                                <label class="form-label">Country*</label>
-                                                                <select class="form-select" id="country" name="country"
-                                                                    #country="ngModel"
-                                                                    aria-label="Default select example"
-                                                                    [(ngModel)]="empdata.country" required>
-                                                                    <option di>Select</option>
-                                                                    <option>India</option>
-                                                                    <option>US</option>
-
-                                                                </select>
-                                                                <small
-                                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">Country
-                                                                    is required </small>
-                                                            </div>
-                                                            <div class="form-group col-md-2">
-                                                                <label for="zipcode">Zip code</label><span>*</span>
-                                                                <input type="number" name="zipCode" class="form-control"
-                                                                    placeholder="zipCode" aria-label="zipcode"
-                                                                    #zipcode="ngModel" [(ngModel)]="empdata.zipcode"
-                                                                    required />
-                                                                <small
-                                                                    *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Personal.submitted)">Zip
-                                                                    Code
-                                                                    is
-                                                                    required </small>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <hr>
-                                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Contact Details</h5>
-                                                    <div class="row">
-
-                                                        <div class="col">
-                                                            <label class="form-label" for="contactnumber">Phone
-                                                                Number</label><span>*</span>
-                                                            <input type="number" class="form-control"
-                                                                name="contactnumber" aria-label="contactnumber"
-                                                                pattern="[0-9]{10}" #contactnumber="ngModel"
-                                                                [(ngModel)]="empdata.contactnumber" required />
-                                                            <small
-                                                                *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
-                                                                Phone number is required </small>
-                                                        </div>
-
-                                                        <div class="col">
-                                                            <label class="form-label"
-                                                                for="emailaddress">Email-Id</label><span>*</span>
-                                                            <input type="text" class="form-control" name="emailaddress"
-                                                                aria-label="emailaddress"
-                                                                pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                                                                #emailaddress="ngModel"
-                                                                [(ngModel)]="empdata.emailaddress" required />
-                                                            <small
-                                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">Email
-                                                                id
-                                                                is required </small>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <br>
-                                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3"> Emergency Contact Details
-                                                    </h5>
-                                                    <div class="row">
-
-                                                        <div class="col">
-                                                            <label class="form-label" for="name">
-                                                                Name</label><span>*</span>
-                                                            <input type="text" class="form-control" placeholder="name"
-                                                                name="name" aria-label="name" #firstname="ngModel"
-                                                                [(ngModel)]="empdata.firstname" required />
-                                                            <small
-                                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">Name
-                                                                is required </small>
-                                                        </div>
-
-                                                        <div class="col">
-                                                            <label class="form-label"
-                                                                for="emailaddress">Email-Id</label><span>*</span>
-                                                            <input type="text" class="form-control" name="emailaddress"
-                                                                aria-label="emailaddress"
-                                                                pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                                                                #emailaddress="ngModel"
-                                                                [(ngModel)]="empdata.emailaddress" required />
-                                                            <small
-                                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">Email
-                                                                id
-                                                                is required </small>
-                                                        </div>
-                                                        <div class="col">
-                                                            <label class="form-label" for="contactnumber">Phone
-                                                                Number</label><span>*</span>
-                                                            <input type="number" class="form-control"
-                                                                name="contactnumber" aria-label="contactnumber"
-                                                                pattern="[0-9]{10}" #contactnumber="ngModel"
-                                                                [(ngModel)]="empdata.contactnumber" required />
-                                                            <small
-                                                                *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
-                                                                Phone Number is required </small>
-                                                        </div>
-
-                                                        <div class="col-2">
-                                                            <label class="form-label">Relationship*</label>
-                                                            <select class="form-select" id="gender" name="gender"
-                                                                #gender="ngModel" aria-label="Default select example"
-                                                                [(ngModel)]="empdata.gender" required>
-                                                                <option di>Select</option>
-                                                                <option>Father</option>
-                                                                <option>Mother</option>
-                                                                <option>Brother</option>
-                                                                <option>Sister</option>
-                                                                <option>Husband</option>
-                                                                <option>Wife</option>
-                                                                <option>Friend</option>
-                                                            </select>
-                                                            <small
-                                                                *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Personal.submitted)">
-                                                                Relationship is required </small>
-                                                        </div>
-                                                    </div>
-                                                    <br>
-                                                    <br>
-
-                                                </form>
-                                            </div>
-                                            <hr>
-                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h5>
-
-                                            <a [routerLink]="['/education-update']" class=" ml-auto"
-                                                routerLinkActive="router-link-active" role="button"
-                                                style="position: relative;left: 83%;top: -49px;">
-                                                <h5>+Add New</h5>
-                                            </a>
-
-                                            <div class="table-bordered">
-
-                                                <table class="table ">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Degree</th>
-                                                            <th>University</th>
-                                                            <th>Specialization</th>
-                                                            <th>Grade/Score</th>
-                                                            <th>Degree StartDate</th>
-                                                            <th>Degree EndDate</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tr *ngFor="let ed of educationData">
-                                                        <td>{{ed.highestdegree}}</td>
-                                                        <td>{{ed.university}}</td>
-
-                                                        <td>{{ed.specialization}}</td>
-                                                        <td>{{ed.gpa}}</td>
-
-                                                        <td>{{ed.degreestartdate}}</td>
-                                                        <td>{{ed.degreeenddate}}</td>
-                                                    </tr>
-
-                                                </table>
-                                            </div>
-                                            <hr>
-                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h5>
-                                            <!-- <button [routerLink]="['/visaupdate']"
-                                                            style="position: relative;left: 83%;top: -49px;" type="button"
-                                                            class="btn btn-primary">+Add New</button><br> -->
-
-                                            <a [routerLink]="['/superuser/visaupdate']" class=" ml-auto"
-                                                routerLinkActive="router-link-active" role="button"
-                                                style="position: relative;left: 83%;top: -49px;">
-                                                <h5>+Add New</h5>
-                                            </a>
-
-                                            <div class="table-bordered">
-
-                                                <table class="table ">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Date</th>
-                                                            <th>Visa Type</th>
-                                                            <th>Issued Country</th>
-                                                            <th>Issued Date</th>
-                                                            <th>Expiry Date</th>
-                                                            <th>Status</th>
-                                                        </tr>
-                                                    </thead>
-
-                                                    <tr *ngFor="let vi of visaData">
-                                                        <td>{{vi.date}}</td>
-                                                        <td>{{vi.visastatus}}</td>
-
-                                                        <td>{{vi.issuingcountry}}</td>
-
-                                                        <td>{{vi.issueddate}}</td>
-
-                                                        <td>{{vi.expirationdate}}</td>
-                                                        <td>{{vi.status}}</td>
-                                                    </tr>
-
-                                                </table>
-                                            </div>
-                                            <hr>
-                                            <br>
-                                            <hr>
-                                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h5>
-
-                                            <a [routerLink]="['/visaupdate']" class=" ml-auto"
-                                                routerLinkActive="router-link-active" role="button"
-                                                style="position: relative;left: 83%;top: -49px;">
-                                                <h5><i class=" bi-pencil-fill"></i>&nbsp;Update</h5>
-                                            </a>
-
-                                            <div class="table-bordered">
-
-                                                <table class="table ">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Bank Name</th>
-                                                            <th>IFSC Code</th>
-                                                            <th>Account Number</th>
-                                                            <th>Account Name</th>
-                                                            <th>Proof</th>
-
-                                                        </tr>
-                                                    </thead>
-
-                                                    <tr *ngFor="let vi of visaData">
-                                                        <td>{{vi.date}}</td>
-                                                        <td>{{vi.visastatus}}</td>
-
-                                                        <td>{{vi.issuingcountry}}</td>
-
-                                                        <td>{{vi.issueddate}}</td>
-
-                                                        <td>{{vi.expirationdate}}</td>
-                                                        <td>{{vi.status}}</td>
-                                                    </tr>
-
-                                                </table>
-                                            </div>
-                                            <hr>
+                                    <div class="shadow-lg p-3 mb-5 bg-body " id="shadow"> -->
+
+                        <div class="card-body p-4 p-md-4">
+
+                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h5>
+                            <div class="fixTableHead">
+                                <form name="Personal" #Personal="ngForm"
+                                    (ngSubmit)="Personal.valid && personal(Personal)">
+                                    <div class="row">
+
+                                        <div class="col">
+                                            <label class="form-label" for="employeeid">Employee
+                                                Id</label><span>*</span>
+                                            <input type="text" class="form-control" placeholder="203356"
+                                                name="employeeid" aria-label="EmployeeId" #employeeid="ngModel"
+                                                [(ngModel)]="empdata.employeeid" required />
+                                            <small
+                                                *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Personal.submitted)">Employee
+                                                Id
+                                                is required </small>
+                                        </div>
+
+
+                                        <div class="col-2">
+                                            <label class="form-label" for="status">Status</label><span>*</span>
+                                            <input class="form-control" id="status" name="status" #status="ngModel"
+                                                [(ngModel)]="empdata.status" required>
+                                            <small
+                                                *ngIf="(status.touched && status.invalid) || (status.invalid && Personal.submitted)">Status
+                                                is required </small>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <label class="form-label">Gender*</label>
+                                            <select class="form-select" id="gender" name="gender" #gender="ngModel"
+                                                aria-label="Default select example" [(ngModel)]="empdata.gender"
+                                                required>
+                                                <option di>Select</option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+
+                                            </select>
+                                            <small
+                                                *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Personal.submitted)">Gender
+                                                is required </small>
+                                        </div>
+                                        <div class="col-2">
+                                            <label class="form-label">Title*</label>
+                                            <select class="form-select" id="title" name="title" #title="ngModel"
+                                                aria-label="Default select example" [(ngModel)]="empdata.title"
+                                                required>
+                                                <option di>Select</option>
+                                                <option>Mr</option>
+                                                <option>Ms</option>
+                                                <option>Mrs</option>
+
+                                            </select>
+                                            <small
+                                                *ngIf="(title.touched && title.invalid) || (title.invalid && Personal.submitted)">Title
+                                                is required </small>
+                                        </div>
+                                        <br>
+                                        <div class="col-2">
+                                            <label class="form-label" for="firstname">First
+                                                Name</label><span>*</span>
+                                            <input type="text" class="form-control" placeholder="firstname"
+                                                name="firstname" aria-label="firstname" #firstname="ngModel"
+                                                [(ngModel)]="empdata.firstname" required />
+                                            <small
+                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">First
+                                                Name
+                                                is required </small>
+                                        </div>
+
+                                    </div>
+
+                                    <br>
+
+                                    <div class="row">
+
+                                        <div class="col-2">
+                                            <label class="form-label" for="MiddleName">Middle Name
+                                            </label><span>*</span>
+                                            <input type="text" class="form-control" placeholder="MiddleName"
+                                                name="MiddleName" aria-label="Middle Name" #MiddleName="ngModel"
+                                                [(ngModel)]="empdata.MiddleName" required />
+                                            <small
+                                                *ngIf="(MiddleName.touched && MiddleName.invalid) || (MiddleName.invalid && Personal.submitted)">Middle
+                                                Name is required </small>
+                                        </div>
+
+
+                                        <div class="col-2">
+                                            <label class="form-label" for="lastname">Last
+                                                Name</label><span>*</span>
+                                            <input type="text" class="form-control" placeholder="lastname"
+                                                name="lastname" aria-label="Last Name" #lastname="ngModel"
+                                                [(ngModel)]="empdata.lastname" required />
+                                            <small
+                                                *ngIf="(lastname.touched && lastname.invalid) || (lastname.invalid && Personal.submitted)">Last
+                                                Name is required </small>
+                                        </div>
+
+
+
+
+
+                                        <div class="col-2">
+                                            <label for="dateofbirth" class="form-label">Date Of
+                                                Birth*</label>
+                                            <input type="date" class="form-control" id="dateofbirth" name="dateofbirth"
+                                                #dateofbirth="ngModel" [(ngModel)]="empdata.dateofbirth" required />
+                                            <small
+                                                *ngIf="(dateofbirth.touched && dateofbirth.invalid) || (dateofbirth.invalid && Personal.submitted)">Date
+                                                Of Birth is required </small>
 
                                         </div>
+                                        <div class="col-2">
+                                            <label class="form-label">Marital Status*</label>
+                                            <select class="form-select" id="MaritalStatus" name="MaritalStatus"
+                                                #MaritalStatus="ngModel" aria-label="Default select example"
+                                                [(ngModel)]="empdata.MaritalStatus" required>
+                                                <option di>Select</option>
+                                                <option>Single</option>
+                                                <option>Married</option>
+                                                <option>Divorced</option>
+                                                <option>Widow</option>
+                                                <option>Domestic Partnership</option>
+
+                                            </select>
+                                            <small
+                                                *ngIf="(MaritalStatus.touched && MaritalStatus.invalid) || (MaritalStatus.invalid && Personal.submitted)">Marital
+                                                Status
+                                                is required </small>
+
+                                        </div>
+
+                                        <div class="col-4">
+                                            <label class="form-label">Secondary Language*</label>
+                                            <select class="form-select" id="SecondaryLanguage" name="SecondaryLanguage"
+                                                #SecondaryLanguage="ngModel" aria-label="Default select example"
+                                                [(ngModel)]="empdata.SecondaryLanguage" required>
+                                                <option di>Select</option>
+                                                <option>Hindi</option>
+                                                <option>Bengali</option>
+                                                <option>Tamil</option>
+                                                <option>Malyalam</option>
+
+
+
+                                            </select>
+
+                                            <small
+                                                *ngIf="(MaritalStatus.touched && MaritalStatus.invalid) || (MaritalStatus.invalid && Personal.submitted)">Marital
+                                                Status
+                                                is required </small>
+
+                                        </div>
+
+                                        <br>
+
+
+
+
+                                        <div class="col">
+                                            <label class="form-label" for="ssn">SSN</label><span>*</span>
+                                            <input type="text" class="form-control" placeholder="SSN" name="SSN"
+                                                aria-label="ssn" #ssn="ngModel" [(ngModel)]="empdata.ssn" required />
+                                            <small
+                                                *ngIf="(ssn.touched && ssn.invalid) || (ssn.invalid && Personal.submitted)">SSN
+                                                is
+                                                required </small>
+                                        </div>
+
+                                        <div class="col">
+                                            <label class="form-label" for="National Id/SSN/Aadhar No">National
+                                                Id/SSN/Aadhar No</label><span>*</span>
+                                            <input type="text" class="form-control" placeholder="SSN" name="SSN"
+                                                aria-label="ssn" #ssn="ngModel" [(ngModel)]="empdata.ssn" required />
+                                            <small
+                                                *ngIf="(ssn.touched && ssn.invalid) || (ssn.invalid && Personal.submitted)">National
+                                                Id/SSN/Aadhar No
+                                                is
+                                                required </small>
+                                        </div>
+
+
+                                        <div class="col">
+                                            <label class="form-label" for="taxfilenumber">Tax File
+                                                Number/PAN/NIN</label><span>*</span>
+                                            <input type="number" class="form-control" placeholder="246880"
+                                                name="taxfilenumber" aria-label="taxfilenumber" #taxfilenumber="ngModel"
+                                                [(ngModel)]="empdata.taxfilenumber" required />
+                                            <small
+                                                *ngIf="(taxfilenumber.touched && taxfilenumber.invalid) || (taxfilenumber.invalid && Personal.submitted)">Tax
+                                                File Number is required </small>
+                                        </div>
+
+
                                     </div>
 
 
-                                </div>
+                                    <hr>
+
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h5>
+                                    <div class="fixTableHead">
+
+
+                                        <div class="form-group">
+                                            <label for="#Address1">Address Line-1</label><span>*</span>
+                                            <input type="text" class="form-control" id="#addressline1"
+                                                placeholder="addressline1" name="#addressline1"
+                                                aria-label="#addressline1" #addressline1="ngModel"
+                                                [(ngModel)]="empdata.addressline1" required />
+                                            <small
+                                                *ngIf="(addressline1.touched && addressline1.invalid) || (addressline1.invalid && Personal.submitted)">
+                                                Address Line-1 is required </small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Address2">Address Line-2</label><span>*</span>
+                                            <input type="text" class="form-control" id="addressline2"
+                                                placeholder="addressline2" name="#addressline2"
+                                                aria-label="#addressline2" #addressline2="ngModel"
+                                                [(ngModel)]="empdata.addressline2" required />
+                                            <small
+                                                *ngIf="(addressline2.touched && addressline2.invalid) || (addressline2.invalid && Personal.submitted)">
+                                                Address Line-2 is required </small>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label for="CITY1">City</label><span>*</span>
+                                                <input type="text" class="form-control" id="city" name="city"
+                                                    aria-label="city" #city="ngModel" [(ngModel)]="empdata.city"
+                                                    required />
+                                                <small
+                                                    *ngIf="(city.touched && city.invalid) || (city.invalid && Personal.submitted)">
+                                                    City is required </small>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="state">State</label><span>*</span>
+                                                <input id="state" class="form-control" #state="ngModel" id="state"
+                                                    name="state" [(ngModel)]="empdata.state" required>
+                                                <small
+                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">State
+                                                    is required </small>
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="form-label">Country*</label>
+                                                <select type="text" class="form-select"
+                                                    aria-label="Default select example" name="country" id="country"
+                                                    placeholder="Country" #country="ngModel" required
+                                                    [(ngModel)]="empdata.country">
+                                                    <option disabled selected value>Country</option>
+                                                    <option value="Afghanistan">Afghanistan</option>
+                                                    <option value="Albania">Albania</option>
+                                                    <option value="Algeria">Algeria</option>
+                                                    <option value="American Samoa">American Samoa</option>
+                                                    <option value="Andorra">Andorra</option>
+                                                    <option value="Angola">Angola</option>
+                                                    <option value="Anguilla">Anguilla</option>
+                                                    <option value="Antartica">Antarctica</option>
+                                                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                                    <option value="Argentina">Argentina</option>
+                                                    <option value="Armenia">Armenia</option>
+                                                    <option value="Aruba">Aruba</option>
+                                                    <option value="Australia">Australia</option>
+                                                    <option value="Austria">Austria</option>
+                                                    <option value="Azerbaijan">Azerbaijan</option>
+                                                    <option value="Bahamas">Bahamas</option>
+                                                    <option value="Bahrain">Bahrain</option>
+                                                    <option value="Bangladesh">Bangladesh</option>
+                                                    <option value="Barbados">Barbados</option>
+                                                    <option value="Belarus">Belarus</option>
+                                                    <option value="Belgium">Belgium</option>
+                                                    <option value="Belize">Belize</option>
+                                                    <option value="Benin">Benin</option>
+                                                    <option value="Bermuda">Bermuda</option>
+                                                    <option value="Bhutan">Bhutan</option>
+                                                    <option value="Bolivia">Bolivia</option>
+                                                    <option value="Bosnia and Herzegowina">Bosnia and Herzegowina
+                                                    </option>
+                                                    <option value="Botswana">Botswana</option>
+                                                    <option value="Bouvet Island">Bouvet Island</option>
+                                                    <option value="Brazil">Brazil</option>
+                                                    <option value="British Indian Ocean Territory">British Indian Ocean
+                                                        Territory</option>
+                                                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                                    <option value="Bulgaria">Bulgaria</option>
+                                                    <option value="Burkina Faso">Burkina Faso</option>
+                                                    <option value="Burundi">Burundi</option>
+                                                    <option value="Cambodia">Cambodia</option>
+                                                    <option value="Cameroon">Cameroon</option>
+                                                    <option value="Canada">Canada</option>
+                                                    <option value="Cape Verde">Cape Verde</option>
+                                                    <option value="Cayman Islands">Cayman Islands</option>
+                                                    <option value="Central African Republic">Central African Republic
+                                                    </option>
+                                                    <option value="Chad">Chad</option>
+                                                    <option value="Chile">Chile</option>
+                                                    <option value="China">China</option>
+                                                    <option value="Christmas Island">Christmas Island</option>
+                                                    <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+                                                    <option value="Colombia">Colombia</option>
+                                                    <option value="Comoros">Comoros</option>
+                                                    <option value="Congo">Congo</option>
+                                                    <option value="Congo">Congo, the Democratic Republic of the</option>
+                                                    <option value="Cook Islands">Cook Islands</option>
+                                                    <option value="Costa Rica">Costa Rica</option>
+                                                    <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+                                                    <option value="Croatia">Croatia (Hrvatska)</option>
+                                                    <option value="Cuba">Cuba</option>
+                                                    <option value="Cyprus">Cyprus</option>
+                                                    <option value="Czech Republic">Czech Republic</option>
+                                                    <option value="Denmark">Denmark</option>
+                                                    <option value="Djibouti">Djibouti</option>
+                                                    <option value="Dominica">Dominica</option>
+                                                    <option value="Dominican Republic">Dominican Republic</option>
+                                                    <option value="East Timor">East Timor</option>
+                                                    <option value="Ecuador">Ecuador</option>
+                                                    <option value="Egypt">Egypt</option>
+                                                    <option value="El Salvador">El Salvador</option>
+                                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                    <option value="Eritrea">Eritrea</option>
+                                                    <option value="Estonia">Estonia</option>
+                                                    <option value="Ethiopia">Ethiopia</option>
+                                                    <option value="Falkland Islands">Falkland Islands (Malvinas)
+                                                    </option>
+                                                    <option value="Faroe Islands">Faroe Islands</option>
+                                                    <option value="Fiji">Fiji</option>
+                                                    <option value="Finland">Finland</option>
+                                                    <option value="France">France</option>
+                                                    <option value="France Metropolitan">France, Metropolitan</option>
+                                                    <option value="French Guiana">French Guiana</option>
+                                                    <option value="French Polynesia">French Polynesia</option>
+                                                    <option value="French Southern Territories">French Southern
+                                                        Territories</option>
+                                                    <option value="Gabon">Gabon</option>
+                                                    <option value="Gambia">Gambia</option>
+                                                    <option value="Georgia">Georgia</option>
+                                                    <option value="Germany">Germany</option>
+                                                    <option value="Ghana">Ghana</option>
+                                                    <option value="Gibraltar">Gibraltar</option>
+                                                    <option value="Greece">Greece</option>
+                                                    <option value="Greenland">Greenland</option>
+                                                    <option value="Grenada">Grenada</option>
+                                                    <option value="Guadeloupe">Guadeloupe</option>
+                                                    <option value="Guam">Guam</option>
+                                                    <option value="Guatemala">Guatemala</option>
+                                                    <option value="Guinea">Guinea</option>
+                                                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                                    <option value="Guyana">Guyana</option>
+                                                    <option value="Haiti">Haiti</option>
+                                                    <option value="Heard and McDonald Islands">Heard and Mc Donald
+                                                        Islands</option>
+                                                    <option value="Holy See">Holy See (Vatican City State)</option>
+                                                    <option value="Honduras">Honduras</option>
+                                                    <option value="Hong Kong">Hong Kong</option>
+                                                    <option value="Hungary">Hungary</option>
+                                                    <option value="Iceland">Iceland</option>
+                                                    <option value="India">India</option>
+                                                    <option value="Indonesia">Indonesia</option>
+                                                    <option value="Iran">Iran (Islamic Republic of)</option>
+                                                    <option value="Iraq">Iraq</option>
+                                                    <option value="Ireland">Ireland</option>
+                                                    <option value="Israel">Israel</option>
+                                                    <option value="Italy">Italy</option>
+                                                    <option value="Jamaica">Jamaica</option>
+                                                    <option value="Japan">Japan</option>
+                                                    <option value="Jordan">Jordan</option>
+                                                    <option value="Kazakhstan">Kazakhstan</option>
+                                                    <option value="Kenya">Kenya</option>
+                                                    <option value="Kiribati">Kiribati</option>
+                                                    <option value="Democratic People's Republic of Korea">Korea,
+                                                        Democratic People's Republic
+                                                        of</option>
+                                                    <option value="Korea">Korea, Republic of</option>
+                                                    <option value="Kuwait">Kuwait</option>
+                                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                    <option value="Lao">Lao People's Democratic Republic</option>
+                                                    <option value="Latvia">Latvia</option>
+                                                    <option value="Lebanon">Lebanon</option>
+                                                    <option value="Lesotho">Lesotho</option>
+                                                    <option value="Liberia">Liberia</option>
+                                                    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya
+                                                    </option>
+                                                    <option value="Liechtenstein">Liechtenstein</option>
+                                                    <option value="Lithuania">Lithuania</option>
+                                                    <option value="Luxembourg">Luxembourg</option>
+                                                    <option value="Macau">Macau</option>
+                                                    <option value="Macedonia">Macedonia, The Former Yugoslav Republic of
+                                                    </option>
+                                                    <option value="Madagascar">Madagascar</option>
+                                                    <option value="Malawi">Malawi</option>
+                                                    <option value="Malaysia">Malaysia</option>
+                                                    <option value="Maldives">Maldives</option>
+                                                    <option value="Mali">Mali</option>
+                                                </select>
+                                                <small
+                                                    *ngIf="(state.touched && state.invalid) || (state.invalid && Personal.submitted)">Country
+                                                    is required </small>
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label for="zipcode">Zip Code/Post code</label><span>*</span>
+                                                <input type="number" name="zipCode" class="form-control"
+                                                    placeholder="Zipcode/Postcode" aria-label="zipcode"
+                                                    #zipcode="ngModel" [(ngModel)]="empdata.zipcode" required />
+                                                <small
+                                                    *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Personal.submitted)">Zip
+                                                    Code
+                                                    is
+                                                    required </small>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <hr>
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Contact Details</h5>
+                                    <div class="row">
+
+                                        <div class="col">
+                                            <label class="form-label" for="contactnumber">Work Phone
+                                                Number</label><span>*</span>
+                                            <input type="number" class="form-control" name="contactnumber"
+                                                aria-label="contactnumber" pattern="[0-9]{10}" #contactnumber="ngModel"
+                                                [(ngModel)]="empdata.contactnumber" required />
+                                            <small
+                                                *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
+                                                Mobile number is required </small>
+                                        </div>
+
+                                        <div class="col">
+                                            <label class="form-label" for="contactnumber">Mobile
+                                                Number</label><span>*</span>
+                                            <input type="number" class="form-control" name="contactnumber"
+                                                aria-label="contactnumber" pattern="[0-9]{10}" #contactnumber="ngModel"
+                                                [(ngModel)]="empdata.contactnumber" required />
+                                            <small
+                                                *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
+                                                Phone number is required </small>
+                                        </div>
+
+                                        <div class="col">
+                                            <label class="form-label" for="emailaddress">Work
+                                                mail-Id</label><span>*</span>
+                                            <input type="text" class="form-control" name="emailaddress"
+                                                aria-label="emailaddress"
+                                                pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel"
+                                                [(ngModel)]="empdata.emailaddress" required />
+                                            <small
+                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">Email
+                                                id
+                                                is required </small>
+                                        </div>
+
+                                        <div class="col">
+                                            <label class="form-label" for="emailaddress">Home
+                                                mail-Id</label><span>*</span>
+                                            <input type="text" class="form-control" name="emailaddress"
+                                                aria-label="emailaddress"
+                                                pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel"
+                                                [(ngModel)]="empdata.emailaddress" required />
+                                            <small
+                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">Email
+                                                id
+                                                is required </small>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <br>
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3"> Emergency Contact Details
+                                    </h5>
+                                    <div class="row">
+
+                                        <div class="col">
+                                            <label class="form-label" for="name">
+                                                Name</label><span>*</span>
+                                            <input type="text" class="form-control" placeholder="name" name="name"
+                                                aria-label="name" #firstname="ngModel" [(ngModel)]="empdata.firstname"
+                                                required />
+                                            <small
+                                                *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Personal.submitted)">Name
+                                                is required </small>
+                                        </div>
+
+                                        <div class="col">
+                                            <label class="form-label" for="emailaddress">Email-Id</label><span>*</span>
+                                            <input type="text" class="form-control" name="emailaddress"
+                                                aria-label="emailaddress"
+                                                pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel"
+                                                [(ngModel)]="empdata.emailaddress" required />
+                                            <small
+                                                *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">Email
+                                                id
+                                                is required </small>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="contactnumber">Phone
+                                                Number</label><span>*</span>
+                                            <input type="number" class="form-control" name="contactnumber"
+                                                aria-label="contactnumber" pattern="[0-9]{10}" #contactnumber="ngModel"
+                                                [(ngModel)]="empdata.contactnumber" required />
+                                            <small
+                                                *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
+                                                Phone Number is required </small>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <label class="form-label">Relationship*</label>
+                                            <select class="form-select" id="gender" name="gender" #gender="ngModel"
+                                                aria-label="Default select example" [(ngModel)]="empdata.gender"
+                                                required>
+                                                <option di>Select</option>
+                                                <option>Father</option>
+                                                <option>Mother</option>
+                                                <option>Brother</option>
+                                                <option>Sister</option>
+                                                <option>Husband</option>
+                                                <option>Wife</option>
+                                                <option>Friend</option>
+                                            </select>
+                                            <small
+                                                *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Personal.submitted)">
+                                                Relationship is required </small>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+
+                                </form>
                             </div>
+                            <hr>
+                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h5>
+
+                            <a [routerLink]="['/superuser/addeducation']" class=" ml-auto"
+                                routerLinkActive="router-link-active" role="button"
+                                style="position: relative;left: 83%;top: -49px;">
+                                <h5>+Add New</h5>
+                            </a>
+
+                            <div class="table-bordered">
+
+                                <table class="table ">
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th>Degree</th>
+                                            <th>University</th>
+                                            <th>Specialization</th>
+                                            <th>GPA</th>
+                                            <th>Degree StartDate</th>
+                                            <th>Degree EndDate</th>
+                                        </tr>
+                                    </thead>
+                                    <tr *ngFor="let ed of educationData">
+                                        <td>{{ed.highestdegree}}</td>
+                                        <td>{{ed.university}}</td>
+
+                                        <td>{{ed.specialization}}</td>
+                                        <td>{{ed.gpa}}</td>
+
+                                        <td>{{ed.degreestartdate}}</td>
+                                        <td>{{ed.degreeenddate}}</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <hr>
+                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h5>
+                            <!-- <button [routerLink]="['/visaupdate']"
+                                                            style="position: relative;left: 83%;top: -49px;" type="button"
+                                                            class="btn btn-primary">+Add New</button><br> -->
+
+                            <a [routerLink]="['/superuser/visaupdate']" class=" ml-auto"
+                                routerLinkActive="router-link-active" role="button"
+                                style="position: relative;left: 83%;top: -49px;">
+                                <h5>+Add New</h5>
+                            </a>
+
+                            <div class="table-bordered">
+
+                                <table class="table ">
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Visa Type</th>
+                                            <th>Issued Country</th>
+                                            <th>Issued Date</th>
+                                            <th>Expiry Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tr *ngFor="let vi of visaData">
+                                        <td>{{vi.date}}</td>
+                                        <td>{{vi.visastatus}}</td>
+
+                                        <td>{{vi.issuingcountry}}</td>
+
+                                        <td>{{vi.issueddate}}</td>
+
+                                        <td>{{vi.expirationdate}}</td>
+                                        <td>{{vi.status}}</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <hr>
+                            <br>
+                            <hr>
+                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h5>
+
+                            <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                role="button" style="position: relative;left: 83%;top: -49px;">
+                                <h5><i class=" bi-pencil-fill"></i>&nbsp;Update</h5>
+                            </a>
+
+                            <div class="table-bordered">
+
+                                <table class="table ">
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th>Bank Name</th>
+                                            <th>IFSC Code</th>
+                                            <th>Account Number</th>
+                                            <th>Account Name</th>
+                                            <th>Proof</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tr *ngFor="let vi of visaData">
+                                        <td>{{vi.date}}</td>
+                                        <td>{{vi.visastatus}}</td>
+
+                                        <td>{{vi.issuingcountry}}</td>
+
+                                        <td>{{vi.issueddate}}</td>
+
+                                        <td>{{vi.expirationdate}}</td>
+                                        <td>{{vi.status}}</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <hr>
+
                         </div>
+                        <!-- </div>
+
+
+                                </div>
+                            </div> -->
+                        <!-- </div> -->
 
                     </section>
                 </div>
@@ -519,231 +728,297 @@
                         href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
                     <form name="Personal" #Personal="ngForm" (ngSubmit)="Personal.valid && personal(Personal)">
                         <section class="vh-200 gradient-custom">
-                            <div class="container py-5 h-100">
-                                <div class="row justify-content-center align-items-center h-50">
+                            <!-- <div class="container py-5 h-100"> -->
+                            <!-- <div class="row justify-content-center align-items-center h-50">
                                     <div class="col-12 col-lg-9 col-xl-9" style="width:100%">
-                                        <div class="shadow-lg p-3 mb-5 bg-body " id="shadow">
+                                        <div class="shadow-lg p-3 mb-5 bg-body " id="shadow"> -->
+                            <br>
+                            <div class="card-body p-4 p-md-4">
 
-                                            <div class="card-body p-4 p-md-4">
-                                                <h3 class="mb-4 pb-2 pb-md-0 mb-md-3">Job</h3>
-                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
-                                                    routerLinkActive="router-link-active" role="button"
-                                                    style="position: relative;left: 83%;top: -45px;">
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                    role="button" style="position: relative;left: 83%;top: -45px;">
 
+                                    <h6><i class="bi bi-sliders"></i> Customize fields</h6>
 
-                                                    <h5><i class="bi bi-text-right"></i> Customized fields</h5>
+                                </a>
 
+                                <hr>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Details</h5>
 
-                                                </a>
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                    role="button" style="position: relative;left: 83%;top: -45px;">
 
-                                                <hr>
 
-                                                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Date of joining</h4><input
-                                                    type="date" #startdate="ngModel" [(ngModel)]="empdata.startdate"
-                                                    name="startdate" id="startdate" class="form-control"
-                                                    style="width: 30%;margin-bottom: 5;" required>
-                                                <small
-                                                    *ngIf="(startdate.touched && startdate.invalid) || (startdate.invalid && Personal.submitted)">Hire
-                                                    date
-                                                    is required </small>
+                                    <h5> <i class="bi bi-pencil"></i>Update</h5>
+                                </a>
+                                <div class="table-bordered">
 
-                                                <hr>
-                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Status</h5>
+                                    <table class="table">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th>Date of joining</th>
+                                                    <th>Probation end date</th>
+                                                    <th>Probation status</th>
+                                                    <th>Notice period</th>
+                                                    <th>Background status</th>
+                                                    <th>Comments</th>
+                                            </tr>
+                                        </thead>
 
-                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
-                                                    routerLinkActive="router-link-active" role="button"
-                                                    style="position: relative;left: 83%;top: -45px;">
+                                        <!-- <tr *ngFor="let ed of educationData">
+                                            <td>{{ed.highestdegree}}</td>
+                                            <td>{{ed.university}}</td>
 
+                                            <td>{{ed.specialization}}</td>
 
-                                                    <h5> <i class="bi bi-pencil"></i>Update</h5>
+                                            <td>{{ed.gpa}}</td>
 
+                                            <td>{{ed.degreestartdate}}</td>
+                                            <td>{{ed.degreeenddate}}</td>
 
-                                                </a>
-                                                <div class="table-bordered">
 
-                                                    <table class="table">
-                                                        <thead class="bg-light">
-                                                            <tr>
-                                                                <th>Date of joining</th>
-                                                                <th>Probation end date</th>
-                                                                <th>Probation status</th>
-                                                                <th>Notice period</th>
-                                                                <th>Background status</th>
-                                                                <th>Comments</th>
+                                        </tr> -->
 
-                                                            </tr>
-                                                        </thead>
 
-                                                        <tr *ngFor="let ed of educationData">
-                                                            <td>{{ed.highestdegree}}</td>
-                                                            <td>{{ed.university}}</td>
 
-                                                            <td>{{ed.specialization}}</td>
+                                    </table>
 
-                                                            <td>{{ed.gpa}}</td>
 
-                                                            <td>{{ed.degreestartdate}}</td>
-                                                            <td>{{ed.degreeenddate}}</td>
-
-
-                                                        </tr>
-
-
-
-                                                    </table>
-
-
-                                                </div>
-                                                <hr>
-                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Status</h5>
-
-                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
-                                                    routerLinkActive="router-link-active" role="button"
-                                                    style="position: relative;left: 83%;top: -45px;">
-
-
-                                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
-
-
-                                                </a>
-                                                <div class="table-bordered">
-
-                                                    <table class="table ">
-                                                        <thead class="bg-light">
-                                                            <tr>
-                                                                <th>Effective Date</th>
-                                                                <th>Employment status</th>
-                                                                <th>Comments</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tr *ngFor="let ed of educationData">
-                                                            <td>{{ed.highestdegree}}</td>
-                                                            <td>{{ed.university}}</td>
-
-                                                            <td>{{ed.specialization}}</td>
-
-                                                            <td>{{ed.gpa}}</td>
-
-                                                            <td>{{ed.degreestartdate}}</td>
-                                                            <td>{{ed.degreeenddate}}</td>
-
-
-                                                        </tr>
-
-
-
-                                                    </table>
-
-
-                                                </div>
-                                                <hr>
-                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Job details</h5>
-
-                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
-                                                    routerLinkActive="router-link-active" role="button"
-                                                    style="position: relative;left: 83%;top: -45px;">
-
-
-                                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
-
-
-                                                </a>
-                                                <div class="table-bordered">
-
-                                                    <table class="table ">
-                                                        <thead class="bg-light">
-                                                            <tr>
-                                                                <th>Effective Date</th>
-                                                                <th>Location</th>
-                                                                <th>Client Name</th>
-                                                                <th>Department</th>
-                                                                <th>Job title</th>
-                                                                <th>Reports to</th>
-
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tr *ngFor="let ed of educationData">
-                                                            <td>{{ed.highestdegree}}</td>
-                                                            <td>{{ed.university}}</td>
-
-                                                            <td>{{ed.specialization}}</td>
-
-                                                            <td>{{ed.gpa}}</td>
-
-                                                            <td>{{ed.degreestartdate}}</td>
-                                                            <td>{{ed.degreeenddate}}</td>
-
-
-                                                        </tr>
-
-
-
-                                                    </table>
-
-
-                                                </div>
-                                                <hr>
-                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h5>
-
-                                                <a [routerLink]="['/visaupdate']" class=" ml-auto"
-                                                    routerLinkActive="router-link-active" role="button"
-                                                    style="position: relative;left: 83%;top: -45px;">
-
-
-                                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
-
-
-                                                </a>
-                                                <div class="table-bordered">
-
-                                                    <table class="table ">
-                                                        <thead class="bg-light">
-                                                            <tr>
-                                                                <th>Effective Date</th>
-                                                                <th>Frequency</th>
-                                                                <th>Pay Type</th>
-                                                                <th>Amount</th>
-                                                                <th>Overtime</th>
-                                                                <th>Overtime Rate</th>
-                                                                <th>change Reason</th>
-                                                                <th>Comment</th>
-
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tr *ngFor="let ed of educationData">
-                                                            <td>{{ed.highestdegree}}</td>
-                                                            <td>{{ed.university}}</td>
-
-                                                            <td>{{ed.specialization}}</td>
-
-                                                            <td>{{ed.gpa}}</td>
-
-                                                            <td>{{ed.degreestartdate}}</td>
-                                                            <td>{{ed.degreeenddate}}</td>
-
-
-                                                        </tr>
-
-
-
-                                                    </table>
-
-
-
-                                                </div>
-                                                <hr>
-                                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3" style="font-weight: bold;">Direct
-                                                    Reports</h5>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
                                 </div>
+                                <hr>
+                                <div >
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Offboarding Details
+                                    </h5>
+                                    
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                role="button" style="position: relative;left: 83%;top: -45px;">
+
+
+                                <h5> <i class="bi bi-pencil"></i>Update</h5>
+                            </a>
+                                    <div class="table-bordered">
+
+                                        <table class="table">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th>Termination Type</th>
+                                                    <th>Termination Reason</th>
+                                                    <th>Probation status</th>
+                                                    <th>Eligible For Rehire</th>
+                                                    <th>Last Working Day</th>
+                                                
+                                                </tr>
+                                            </thead>
+    
+                                            <tr *ngFor="let ed of educationData">
+                                                <td>{{ed.highestdegree}}</td>
+                                                <td>{{ed.university}}</td>
+    
+                                                <td>{{ed.specialization}}</td>
+    
+                                                <td>{{ed.gpa}}</td>
+    
+                                                <td>{{ed.degreestartdate}}</td>
+                                                <td>{{ed.degreeenddate}}</td>
+    
+    
+                                            </tr>
+    
+    
+    
+                                        </table>
+    
+    
+                                    </div>
+
+                                </div>
+                                <hr>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Status</h5>
+
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                    role="button" style="position: relative;left: 83%;top: -45px;">
+
+
+                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                </a>
+                                <div class="table-bordered">
+
+                                    <table class="table ">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th>Effective Date</th>
+                                                <th>Job Type</th>
+                                                <th>Comments</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tr *ngFor="let ed of educationData">
+                                            <td>{{ed.highestdegree}}</td>
+                                            <td>{{ed.university}}</td>
+
+                                            <td>{{ed.specialization}}</td>
+
+                                            <td>{{ed.gpa}}</td>
+
+                                            <td>{{ed.degreestartdate}}</td>
+                                            <td>{{ed.degreeenddate}}</td>
+
+
+                                        </tr>
+
+
+
+                                    </table>
+
+
+                                </div>
+                                <hr>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Job details</h5>
+
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                    role="button" style="position: relative;left: 83%;top: -45px;">
+
+
+                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                </a>
+                                <div class="table-bordered">
+
+                                    <table class="table ">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th>Effective Date</th>
+                                                <th>Job Role</th>
+                                                <th>Reports to</th>
+                                                <th>Department</th>
+                                                <th>Business Area</th>
+                                                <th>Location</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tr *ngFor="let ed of educationData">
+                                            <td>{{ed.highestdegree}}</td>
+                                            <td>{{ed.university}}</td>
+
+                                            <td>{{ed.specialization}}</td>
+
+                                            <td>{{ed.gpa}}</td>
+
+                                            <td>{{ed.degreestartdate}}</td>
+                                            <td>{{ed.degreeenddate}}</td>
+
+
+                                        </tr>
+
+
+
+                                    </table>
+
+
+                                </div>
+                                <hr>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h5>
+
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                    role="button" style="position: relative;left: 83%;top: -45px;">
+
+
+                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                </a>
+                                <div class="table-bordered">
+
+                                    <table class="table ">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th>Effective Date</th>
+                                                <th>Frequency</th>
+                                                <th>Pay Type</th>
+                                                <th>Amount</th>
+                                                <th>Overtime Eligibility</th>
+                                                <th>Overtime Rate</th>
+                                                <th>Reason</th>
+                                                <th>Comment</th>
+
+                                            </tr>
+                                        </thead>
+
+                                        <tr *ngFor="let ed of educationData">
+                                            <td>{{ed.highestdegree}}</td>
+                                            <td>{{ed.university}}</td>
+
+                                            <td>{{ed.specialization}}</td>
+
+                                            <td>{{ed.gpa}}</td>
+
+                                            <td>{{ed.degreestartdate}}</td>
+                                            <td>{{ed.degreeenddate}}</td>
+
+
+                                        </tr>
+
+
+
+                                    </table>
+
+
+
+                                </div>
+                                
+                                <hr>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">My Assignments</h5>
+
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                    role="button" style="position: relative;left: 83%;top: -45px;">
+
+
+                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                </a>
+                                <div class="table-bordered">
+
+                                    <table class="table ">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th>Project Name</th>
+                                                <th>Client Name</th>
+                                                <th>Project Start Date</th>
+                                                <th>Project End Date</th>
+                                            </tr>
+                                        </thead>
+
+                                        <!-- <tr *ngFor="let ed of educationData">
+                                            <td>{{ed.highestdegree}}</td>
+                                            <td>{{ed.university}}</td>
+
+                                            <td>{{ed.specialization}}</td>
+
+                                            <td>{{ed.gpa}}</td>
+
+                                            <td>{{ed.degreestartdate}}</td>
+                                            <td>{{ed.degreeenddate}}</td>
+
+
+                                        </tr> -->
+
+                                    </table>
+
+                                </div>
+                                <hr>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Direct
+                                    Reports</h5>
+
                             </div>
+                            <!-- </div> -->
+
+                            <!-- </div>
+                                </div>
+                            </div> -->
 
                         </section>
                     </form>
@@ -755,135 +1030,172 @@
 
                         <!DOCTYPE html>
                         <html lang="en">
+
                         <head>
                             <meta charset="utf-8">
                             <meta name="viewport" content="width=device-width, initial-scale=1">
                             <title>Folder - Creation</title>
-                            
-                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                            <link rel="stylesheet"
+                                href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+                            <link rel="stylesheet"
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-                            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" ></script>
-                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" ></script>
-                            
+                            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
                         </head>
+
                         <body>
                             <br>
                             <br>
                             <section class="document">
                                 <div class="container">
-                                <div class="row pt-3 ">
-                                    <div class="col-md-6">
-                                        <div class="head-left">
-                                            <h1>Documents</h1>
+                                    <div class="row pt-3 ">
+                                        <div class="col-md-6">
+                                            <div class="head-left">
+                                                <h1>Documents</h1>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="head-right">
-                                            <!-- <img class="img-fluid " height="30" src="img/download.jpg"> -->
-                                            <i class="fa fa-download" aria-hidden="true"></i>
-                                            <a class="pl-2 mt-2" href="#">Download All Folders</a>
+                                        <div class="col-md-6">
+                                            <div class="head-right">
+                                                <!-- <img class="img-fluid " height="30" src="img/download.jpg"> -->
+                                                <i class="fa fa-download" aria-hidden="true"></i>
+                                                <a class="pl-2 mt-2" href="#">Download All Folders</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="container">
-                                <hr>
-                            </div>
-                            <section>
                                 <div class="container">
-                                    <div class="row">   
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="main">
-                                                        
-                                                        <div class="search-bar">
-                                                            <form class="search-form d-flex align-items-center" method="POST" action="#">
-                                                              <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                                                              <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-                                                            </form>
-                                                          </div>
-                                            </div>
-                                            <br>
-                                            <br>
-                        
-                                                </div>
-                                                <form >
-                                                    <input type="file" id="myFile" name="filename">
-                                                    <input type="submit">
-                                                  </form>
-                                            </div>
-                                            <div class="folder-gallery">
-                                                <h4>Folders</h4>
-                                            </div>
-                                            <div class="content pt-3 pb-3 text-center">
-                                                <div class="container">
-                                                    <h3 class="text-center pb-3"></h3>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <div class="card p-5 mb-3">
-                                                                <a href="https://snaddevelopers.sharepoint.com/sites/SNADKnowledgeRepository/Client%20Side/Forms/AllItems.aspx?newTargetListUrl=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side&viewpath=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side%2FForms%2FAllItems%2Easpx&OR=Teams%2DHL&CT=1670391816396&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjExMzAwNDEwMCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&id=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side%2FEmployee%20Documents&viewid=10cbb50b%2Dcf52%2D43c3%2D8550%2D1e927b60e2b5" target="_blank" >
-                                                                    <img class="card-img-top" src="assets/folder.png" alt="Card image cap"></a>
-                                                                <h5 class="text-center pt-3">Employee Documents </h5>
-                                            
+                                    <hr>
+                                </div>
+                                <section>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="main">
+
+                                                            <div class="search-bar">
+                                                                <form class="search-form d-flex align-items-center"
+                                                                    method="POST" action="#">
+                                                                    <input type="text" name="query" placeholder="Search"
+                                                                        title="Enter search keyword">
+                                                                    <button type="submit" title="Search"><i
+                                                                            class="bi bi-search"></i></button>
+                                                                </form>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-3">
-                                                            <div class="card p-5 mb-3">
-                                                                <a href="https://www.w3schools.com/" target="_blank"> 
-                                                                    <img class="card-img-top" src="assets/folder.png" alt="Card image cap"></a>
-                                                                <h5 class="text-center pt-3">Employee Expenses</h5>
-                                                              </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="card p-5 mb-3">
-                                                                <a href="https://www.w3schools.com/" target="_blank"><img class="card-img-top" src="assets/folder.png" alt="Card image cap"></a>
-                                                                <h5 class="text-center pt-3">Employee Uploads</h5>
-                                                              </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="card p-5 mb-3">
-                                                                <a href="https://www.w3schools.com/" target="_blank"><img class="card-img-top" src="assets/folder.png" alt="Card image cap"></a>
-                                                                <h5 class="text-center pt-3">Invoices</h5>
-                                                              </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="card p-5 mb-3">
-                                                                <a href="https://www.w3schools.com/" target="_blank"><img class="card-img-top" src="assets/folder.png" alt="Card image cap"></a>
-                                                                <h5 class="text-center pt-3">Resumes and Applications</h5>
-                                                              </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="card p-5 mb-3">
-                                                                <a href="https://www.w3schools.com/" target="_blank"><img class="card-img-top" src="assets/folder.png" alt="Card image cap"></a>
-                                                                <h5 class="text-center pt-3">Signed Documents</h5>
-                                                              </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="card p-5 mb-3">
-                                                                <a href="https://www.w3schools.com/" target="_blank"><img class="card-img-top" src="assets/folder.png" alt="Card image cap"></a>
-                                                                <h5 class="text-center pt-3">Tasklist Attachments</h5>
-                                                              </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="card p-5 mb-3">
-                                                                <a href="https://www.w3schools.com/" target="_blank"><img class="card-img-top" src="assets/folder.png" alt="Card image cap"></a>
-                                                                <h5 class="text-center pt-3">Workflow Attachments</h5>
-                                                              </div>
+                                                        <br>
+                                                        <br>
+
+                                                    </div>
+                                                    <form>
+                                                        <input type="file" id="myFile" name="filename">
+                                                        <input type="submit">
+                                                    </form>
+                                                </div>
+                                                <div class="folder-gallery">
+                                                    <h4>Folders</h4>
+                                                </div>
+                                                <div class="content pt-3 pb-3 text-center">
+                                                    <div class="container">
+                                                        <h3 class="text-center pb-3"></h3>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="card p-5 mb-3">
+                                                                    <a href="https://snaddevelopers.sharepoint.com/sites/SNADKnowledgeRepository/Client%20Side/Forms/AllItems.aspx?newTargetListUrl=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side&viewpath=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side%2FForms%2FAllItems%2Easpx&OR=Teams%2DHL&CT=1670391816396&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjExMzAwNDEwMCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&id=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side%2FEmployee%20Documents&viewid=10cbb50b%2Dcf52%2D43c3%2D8550%2D1e927b60e2b5"
+                                                                        target="_blank">
+                                                                        <img class="card-img-top"
+                                                                            src="assets/folder.png"
+                                                                            alt="Card image cap"></a>
+                                                                    <h5 class="text-center pt-3">Employee Documents
+                                                                    </h5>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="card p-5 mb-3">
+                                                                    <a href="https://www.w3schools.com/"
+                                                                        target="_blank">
+                                                                        <img class="card-img-top"
+                                                                            src="assets/folder.png"
+                                                                            alt="Card image cap"></a>
+                                                                    <h5 class="text-center pt-3">Employee Expenses</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="card p-5 mb-3">
+                                                                    <a href="https://www.w3schools.com/"
+                                                                        target="_blank"><img class="card-img-top"
+                                                                            src="assets/folder.png"
+                                                                            alt="Card image cap"></a>
+                                                                    <h5 class="text-center pt-3">Employee Uploads</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="card p-5 mb-3">
+                                                                    <a href="https://www.w3schools.com/"
+                                                                        target="_blank"><img class="card-img-top"
+                                                                            src="assets/folder.png"
+                                                                            alt="Card image cap"></a>
+                                                                    <h5 class="text-center pt-3">Invoices</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="card p-5 mb-3">
+                                                                    <a href="https://www.w3schools.com/"
+                                                                        target="_blank"><img class="card-img-top"
+                                                                            src="assets/folder.png"
+                                                                            alt="Card image cap"></a>
+                                                                    <h5 class="text-center pt-3">Resumes and
+                                                                        Applications</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="card p-5 mb-3">
+                                                                    <a href="https://www.w3schools.com/"
+                                                                        target="_blank"><img class="card-img-top"
+                                                                            src="assets/folder.png"
+                                                                            alt="Card image cap"></a>
+                                                                    <h5 class="text-center pt-3">Signed Documents</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="card p-5 mb-3">
+                                                                    <a href="https://www.w3schools.com/"
+                                                                        target="_blank"><img class="card-img-top"
+                                                                            src="assets/folder.png"
+                                                                            alt="Card image cap"></a>
+                                                                    <h5 class="text-center pt-3">Tasklist Attachments
+                                                                    </h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="card p-5 mb-3">
+                                                                    <a href="https://www.w3schools.com/"
+                                                                        target="_blank"><img class="card-img-top"
+                                                                            src="assets/folder.png"
+                                                                            alt="Card image cap"></a>
+                                                                    <h5 class="text-center pt-3">Workflow Attachments
+                                                                    </h5>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </section>
-                        
+                                </section>
+
                             </section>
                         </body>
+
                         </html>
-                        
+
                     </div>
                 </div>
             </div>

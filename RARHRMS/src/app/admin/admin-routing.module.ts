@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NewExpenseComponent } from './new-expense/new-expense.component';
+import { NewExpenseComponent } from '../superuser/new-expense/new-expense.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
@@ -31,12 +31,13 @@ import { UserdataComponent } from './userdata/userdata.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from '../superuser/visaupdate/visaupdate.component';
-import { AddNewInvoicesComponent } from './add-new-invoices/add-new-invoices.component';
+import { AddNewInvoicesComponent } from '../superuser/add-new-invoices/add-new-invoices.component';
 import { MyreqsComponent } from './myreqs/myreqs.component';
 import { PendingComponent } from '../pending/pending.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { AccessLevelsComponent } from './access-levels/access-levels.component';
+import { TimeoffComponent } from './timeoff/timeoff.component';
 
 
 
@@ -46,7 +47,7 @@ const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
 
   { path: 'department', component: DepartmentComponent },
-  
+
   { path: 'orgdata', component: OrganizationdataComponent },
   { path: 'pendingrequest', component: PendingrequestComponent },
   { path: 'education-update', component: EducationUpdateComponent },
@@ -70,10 +71,10 @@ const routes: Routes = [
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
   { path: 'compensationupdate', component: CompensationUpdateComponent },
   { path: 'jobtab', component: JobTabComponent },
-  {path:'job-update' ,component:JobUpdateComponent},
-  {path:'document',component:DocumentComponent},
-  {path:'addNewInvoice',component:AddNewInvoiceComponent},
-  {path:'timesheet',component:TimesheetComponent},
+  { path: 'job-update', component: JobUpdateComponent },
+  { path: 'document', component: DocumentComponent },
+  { path: 'addNewInvoice', component: AddNewInvoiceComponent },
+  { path: 'timesheet', component: TimesheetComponent },
 
 
 
@@ -81,8 +82,9 @@ const routes: Routes = [
   { path: 'template', component: TemplateComponent },
   { path: 'myreqs', component: MyreqsComponent },
   { path: 'pending', component: PendingComponent },
-{path:'access-levels',component:AccessLevelsComponent}
-  
+  { path: 'access-levels', component: AccessLevelsComponent },
+  { path: 'timeoff', component: TimeoffComponent }
+
 
 
 
