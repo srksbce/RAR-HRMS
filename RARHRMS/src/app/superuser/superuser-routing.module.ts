@@ -15,21 +15,21 @@ import { SuperuserrequestsComponent } from './superuserrequests/superuserrequest
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 
 const routes: Routes = [
-  {path:'superuser',component:SuperuserComponent},
-  {path:'superuserinfo',component:SuperuserinfoComponent},
-  {path:'superuserrequests',component:SuperuserrequestsComponent},
+  { path: 'superuser', component: SuperuserComponent },
+  { path: 'superuserinfo', component: SuperuserinfoComponent },
+  { path: 'superuserrequests', component: SuperuserrequestsComponent },
 
-   {path: 'jobdetails', component:JobdetailsComponent},
-  {path:'visaupdate',component:VisaupdateComponent}
+  { path: 'jobdetails', component: JobdetailsComponent },
+  { path: 'visaupdate', component: VisaupdateComponent },
 
-  {path:'addeducation',component:AddeducationComponent},
-  {path:'visaupdate',component:VisaupdateComponent},
-  {path:'newexpense',component:NewExpenseComponent},
-  {path:'addnewinvoice',component:AddNewInvoicesComponent},
+  { path: 'addeducation', component: AddeducationComponent },
+  { path: 'visaupdate', component: VisaupdateComponent },
+  { path: 'newexpense', component: NewExpenseComponent },
+  { path: 'addnewinvoice', component: AddNewInvoicesComponent },
 
 
 
-  
+
 ];
 
 @NgModule({
