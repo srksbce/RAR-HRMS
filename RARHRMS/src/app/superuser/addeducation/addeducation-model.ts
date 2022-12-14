@@ -1,5 +1,4 @@
-export interface Ivisaupdate
-{
+export interface IEducationUpdate{
     employeeid: number,
     firstname: string,
     lastname: string,

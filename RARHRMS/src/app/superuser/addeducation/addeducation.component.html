@@ -1,0 +1,115 @@
+<form name="EDUCATIONUPDATE" #EDUCATIONUPDATE="ngForm" (ngSubmit)="EDUCATIONUPDATE.valid && education(EDUCATIONUPDATE)">
+    <h2 class="text-center">Add Educational Information</h2>
+    <a [routerLink]="['/superuser/superuserinfo']" class=" ml-auto" routerLinkActive="router-link-active" role="button">
+        <h5><i class="bi bi-arrow-left-short"></i>Back</h5>
+    </a>
+    <br>
+    <br>
+    <div class="addedu px-4 py-2 px-md-5 col-md-6 text-center text-lg-start">
+        <div class=" shadow-lg p-4mb-2 bg-white rounded">
+
+            <div class="card-body py-3 px-md-2">
+
+
+                <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                        <label for="form2Example1" class="form-label">University*</label>
+                        <input type="text" class="form-control" id="university" placeholder="university"
+                            name="university" #university="ngModel" [(ngModel)]="educationupdate.university" required />
+                        <small
+                            *ngIf="( university.touched &&  university.invalid) || ( university.invalid && EDUCATIONUPDATE.submitted)">University
+                            Name is required </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 mb-4">
+                    <label class="form-label">Degree*</label>
+                    <select class="form-select" aria-label="Default select example" id="highestdegree"
+                        placeholder="highestdegree" name="highestdegree" #highestdegree="ngModel"
+                        [(ngModel)]="educationupdate.highestdegree" required>
+
+                        <option>Choose Option</option>
+                        <option>Bachelors</option>
+                        <option>Masters</option>
+                        <option>Diploma</option>
+                        <option>Doctorate</option>
+                    </select>
+                    <small
+                        *ngIf="(highestdegree.touched && highestdegree.invalid) || (highestdegree.invalid && EDUCATIONUPDATE.submitted)">Degree
+                        is required </small>
+
+
+                </div>
+
+                <span>
+                    <div class="col-md-6 mb-4">
+
+                        <div class="form-outline">
+                            <label for="form2Example3" class="form-label">Specialization*</label>
+                            <input type="text" class="form-control" id="specialization" placeholder="specialization"
+                                name="specialization" #specialization="ngModel"
+                                [(ngModel)]="educationupdate.specialization" required />
+                            <small
+                                *ngIf="(specialization.touched && specialization.invalid) || (specialization.invalid && EDUCATIONUPDATE.submitted)">Specialization
+                                is required </small>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2 mb-4">
+
+                        <div class="form-outline">
+                            <label for="form2Example4" class="form-label">GPA*</label>
+                            <input type="text" class="form-control" id="gpa" placeholder="gpa" name="gpa" #gpa="ngModel"
+                                [(ngModel)]="educationupdate.gpa" required />
+                            <small
+                                *ngIf="(gpa.touched && gpa.invalid) || (gpa.invalid && EDUCATIONUPDATE.submitted)">GPA
+                                is required </small>
+
+                        </div>
+
+                    </div>
+                </span>
+                <span>
+                    <div class="col-md-6 mb-4">
+
+                        <div class="form-outline">
+                            <label for="DegreeStartDate" class="form-label">Start Date*</label>
+                            <input type="date" class="form-control" id="degreestartdate" placeholder="degreestartdate"
+                                name="degreestartdate" #degreestartdate="ngModel"
+                                [(ngModel)]="educationupdate.degreestartdate" required />
+                            <small
+                                *ngIf="(degreestartdate.touched && degreestartdate.invalid) || (degreestartdate.invalid && EDUCATIONUPDATE.submitted)">Degree
+                                Start Date
+                                is required </small>
+
+                        </div>
+
+                    </div>
+                </span>
+                <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                        <label for="DegreeEndDate" class="form-label">End Date*</label>
+                        <input type="date" class="form-control" id="degreeenddate" placeholder="degreeenddate"
+                            name="degreeenddate" #degreeenddate="ngModel" [(ngModel)]="educationupdate.degreeenddate"
+                            required />
+                        <small
+                            *ngIf="(degreeenddate.touched && degreeenddate.invalid) || (degreeenddate.invalid && EDUCATIONUPDATE.submitted)">Degree
+                            End Date
+                            is required </small>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 pt-2 text-center">
+                    <input class="btn btn-primary " type="submit" value="Add Details" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

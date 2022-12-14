@@ -1,0 +1,135 @@
+ 
+/*fixed table head*/
+
+
+      
+*{
+    box-sizing: border-box;
+  }
+  
+  .fixTableHead {
+                  overflow-y: auto;
+                  height: 70vh;
+                  width: 100%;
+                }
+  
+  .fixTableHead thead th {
+                           position: sticky;
+                           top: 0;
+  
+                         }
+
+
+  table {
+          border-collapse: collapse;        
+          width: 100%;
+          background-color: white;
+          vertical-align: baseline;
+          text-align: center;
+  }
+  
+  .shadow{
+
+                 box-shadow: 0 2px 15px rgba(64,64,64,.7);
+          }
+  
+    th:first-of-type {
+                       
+                            border-top-left-radius: 10px;
+                     }
+
+    th:last-of-type {
+                    border-top-right-radius: 10px;
+                    }
+  
+  
+    td {
+      padding: 8px 15px;
+       padding: 20px;
+      font-size: 18px;
+      border-top: 1px solid rgb(158, 168, 214);
+      }
+
+
+    th {
+        background-color: rgba(142, 140, 147, 0.515);
+        padding: 20px;
+        font-size: 18px;
+      }
+
+      
+  .rt {
+    text-align: end;
+  }
+  .full{
+    text-align: center;
+  }
+
+
+  
+/*search bar*/
+
+body{
+
+  background: #d1d5db;
+}
+
+.height{
+
+  height: 10vh;
+}
+
+.form{
+
+  position: relative;
+}
+
+.form .fa-search{
+
+  position: absolute;
+  top:20px;
+  left: 20px;
+  color: #9ca3af;
+
+}
+
+.form span{
+
+      position: absolute;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db;
+
+}
+
+.left-pan{
+  padding-left: 7px;
+}
+
+.left-pan i{
+ 
+ padding-left: 10px;
+}
+
+.form-input{
+
+  height: 55px;
+  text-indent: 33px;
+  border-radius: 10px;
+
+
+}
+
+.form-input:focus{
+  border:none;
+
+}
+
+  
+
+
+  
+  
+  
+  

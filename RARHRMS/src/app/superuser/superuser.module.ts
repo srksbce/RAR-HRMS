@@ -5,11 +5,15 @@ import { SuperuserRoutingModule } from './superuser-routing.module';
 import { SuperuserComponent } from './superuser/superuser.component';
 import { SuperuserexpensesComponent } from './superuserexpenses/superuserexpenses.component';
 import { SuperuserinfoComponent } from './superuserinfo/superuserinfo.component';
-import { SuperuserinvoiceComponent } from './superuserinvoice/superuserinvoice.component';
-import { SuppersonaldataComponent } from './suppersonaldata/suppersonaldata.component';
+
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 import { FormsModule } from '@angular/forms';
 import { AddnewcompdetailsComponent } from './addnewcompdetails/addnewcompdetails.component';
+
+import { JobdetailsComponent } from './jobdetails/jobdetails.component';
+
+
+import { AddeducationComponent } from './addeducation/addeducation.component';
 
 
 @NgModule({
@@ -17,10 +21,17 @@ import { AddnewcompdetailsComponent } from './addnewcompdetails/addnewcompdetail
     SuperuserComponent,
     SuperuserexpensesComponent,
     SuperuserinfoComponent,
-    SuperuserinvoiceComponent,
-    SuppersonaldataComponent,
+
+
+
     SuperuserrequestsComponent,
-    AddnewcompdetailsComponent
+    JobdetailsComponent,
+
+    AddnewcompdetailsComponent,
+
+    SuperuserrequestsComponent,
+    AddeducationComponent
+
   ],
   imports: [
     CommonModule,

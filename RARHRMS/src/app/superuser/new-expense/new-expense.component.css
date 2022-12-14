@@ -19,5 +19,7 @@
     small{
       color: red;
   }
-
+.ml-auto{
+  position: relative;left: 20%;bottom: -45px;
+}
   

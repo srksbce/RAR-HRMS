@@ -24,8 +24,8 @@
                         <div class="d-flex col-sm ">
 
                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Expenses</h4>
-                            <a [routerLink]="['/admin/new-expense']" class=" ml-auto"
-                                routerLinkActive="router-link-active" role="button">
+                            <a [routerLink]="['/superuser/newexpense']" class=" ml-auto" routerLinkActive="router-link-active"
+                                role="button">
                                 <h5>+ Add Expense</h5>
                             </a>
                             <br>
@@ -38,20 +38,20 @@
 
                             <div class="row">
                                 <div class="col-sm">
-                                    <h4>Name: Ramu Srirangam </h4>
+                                    <h5>Name: Ramu Srirangam </h5>
                                 </div>
                                 <div class="col-sm">
-                                    <h4>Employee ID: 1012 </h4>
+                                    <h5>Employee ID: 1012 </h5>
                                 </div>
                                 <div class="col-sm">
-                                    <h4> Total Amount $840</h4>
+                                    <h5> Total Amount $840</h5>
                                 </div>
                             </div>
                         </div>
                         <br>
-                        <div class="card-body">
+                        <div class="card">
 
-                            <table class="table table-borderless datatable">
+                            <table class="table auto-index table-hover">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -66,42 +66,46 @@
 
                                     </tr>
                                 </thead>
-
-                                <tr>
-                                    <td>1</td>
-                                    <td>12/11/21</td>
-                                    <td>Travel</td>
-                                    <td>$350</td>
-                                    <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
-                                    <td> <span class="badge bg-info text-dark" style="color: white;">In Review</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>12/08/21</td>
-                                    <td>Travel</td>
-                                    <td>$490</td>
-                                    <td><a href="\assets\classic-white-750px.png"><i
-                                                class="bi bi-paperclip"></i>View</a></td>
-                                    <td><span class="badge bg-success">Approved</span></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>12/08/21</td>
-                                    <td>Other</td>
-                                    <td>$50</td>
-                                    <td><a href="\assets\1669449398.webp"><i class="bi bi-paperclip"></i>View</a></td>
-                                    <td><span class="badge bg-danger">Rejected</span></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>12/06/21</td>
-                                    <td>Other</td>
-                                    <td>-</td>
-                                    <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
-                                    <td><span class="badge bg-dark">Draft</span></td>
-                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>12/11/21</td>
+                                        <td>Travel</td>
+                                        <td>$350</td>
+                                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                        <td> <span class="badge bg-info text-dark" style="color: white;">In
+                                                Review</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>12/08/21</td>
+                                        <td>Travel</td>
+                                        <td>$490</td>
+                                        <td><a href="\assets\classic-white-750px.png"><i
+                                                    class="bi bi-paperclip"></i>View</a></td>
+                                        <td><span class="badge bg-success">Approved</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>12/08/21</td>
+                                        <td>Other</td>
+                                        <td>$50</td>
+                                        <td><a href="\assets\1669449398.webp"><i class="bi bi-paperclip"></i>View</a>
+                                        </td>
+                                        <td><span class="badge bg-danger">Rejected</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>12/06/21</td>
+                                        <td>Other</td>
+                                        <td>-</td>
+                                        <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                        <td><span class="badge bg-dark">Draft</span></td>
+                                    </tr>
+                                </tbody>
                             </table>
+
                         </div>
                     </div>
                 </div>
@@ -110,8 +114,8 @@
                         <div class="d-flex col-sm">
 
                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Invoices</h4>
-                            <a [routerLink]="['/admin/addNewInvoices']" class=" ml-auto"
-                                routerLinkActive="router-link-active" role="button">
+                            <a [routerLink]="['/superuser/addnewinvoice']" class=" ml-auto" routerLinkActive="router-link-active"
+                                role="button">
                                 <h5>+ Add Invoice</h5>
                             </a>
 
@@ -120,21 +124,20 @@
                         <div class="container ">
                             <hr>
                             <div class="row  ">
-                                <div class="col-sm ">
-                                    <h4>Name: Ramu Srirangam </h4>
+                                <div class="col-sm">
+                                    <h5>Name: Ramu Srirangam </h5>
                                 </div>
-                                <div class="col-sm full">
-                                    <h4>Employee ID: 1012 </h4>
+                                <div class="col-sm">
+                                    <h5>Employee ID: 1012 </h5>
                                 </div>
-                                <div class="col rt">
-                                    <h4> Total Amount $840</h4>
+                                <div class="col-sm">
+                                    <h5> Total Amount $840</h5>
                                 </div>
                             </div>
                         </div>
                         <br>
-                        <div class="card-body">
-
-                            <table class="table table-borderless datatable">
+                        <div class="card">
+                            <table class="table auto-index table-hover">
                                 <thead>
                                     <tr>
                                         <th>no</th>
@@ -147,6 +150,8 @@
                                         <th>Status</th>
 
                                     </tr>
+                                </thead>
+                                <tbody>
                                     <tr>
                                         <td>1</td>
                                         <td>104</td>
@@ -192,7 +197,7 @@
                                         <!-- <td><span class="dotjky"></span> Draft</td> -->
                                         <td><span class="badge bg-dark">Draft</span></td>
                                     </tr>
-                                </thead>
+                                </tbody>
 
                                 <!-- <tbody>
                                       <tr *ngFor="let emp of Expensedata let i=index;">
@@ -206,79 +211,196 @@
 
                             </table>
                         </div>
+
                     </div>
                 </div>
                 <div class="tab-pane fade" id="PendingApprovals" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="container ">
-                        <div class="d-flex col-sm">
 
-                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Pending Approvals</h4>
-                            <!-- <a [routerLink]="['/admin/addNewInvoices']" class=" ml-auto"
-                                routerLinkActive="router-link-active" role="button">
-                                <h3>+ Add Invoice</h3>
-                            </a> -->
+                    <div class="row" style="position: relative;top: 9px">
 
-                        </div>
-                        
-                        <hr>
-                        <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Type</h5>
-                        <div class="col-md-2 mb-6">
 
-                            <div class="form-outline">
+                        <h4>Expenses</h4><br>
 
-                                <select class="form-select">
-                                    <option> Expenses</option>
-                                    <option>Invoices</option>
-                                    <option>Timesheet</option>
-
-                                </select>
-
+                        <div class="row height d-flex justify-content-left align-items-left">
+                    
+                            <div class="col-md-4">
+              
+                              <div class="form">
+                                <i class="fa fa-search"></i>
+                                <input type="text" class="form-control form-input" placeholder="Search...">
+                                
+                              </div>
+                              
                             </div>
+                            
+                          </div>
+                        
 
-                        </div>
-                        <br>
+                           
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
 
-                        <div class="card-body">
+                                                <th> Date</th>
 
-                            <table class="table table-borderless datatable">
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th> Date</th>
-                                        <th> Employee Name</th>
-                                        <th>Employee Id</th>
-                                        <th>Amount</th>
-                                        <th>Invoice</th>
-                                        <th>Action</th>
+                                                <th>Employee Name</th>
+                                                <th>Employee Id</th>
+                                                <th>Amount </th>
+                                                <th>Attachment</th>
+                                                <th>Action</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>12/11/21</td>
+                                                <td>Travel</td>
+                                                <td>1012</td>
+                                                <td>$350</td>
+                                                <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                                <td><button type="button" class="btn btn-success m-2"
+                                                        style="color: white ">Approve</button><button type="button"
+                                                        class="btn btn-danger">Reject</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>12/08/21</td>
+                                                <td>Travel</td>
+                                                <td>1013</td>
+                                                <td>$490</td>
+                                                <td><a href="\assets\classic-white-750px.png"><i
+                                                            class="bi bi-paperclip"></i>View</a></td>
+                                                <td><button type="button" class="btn btn-success m-2"
+                                                        style="color: white ">Approve</button><button type="button"
+                                                        class="btn btn-danger">Reject</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>12/08/21</td>
+                                                <td>Maintaince</td>
+                                                <td>1014</td>
+                                                <td>$50</td>
+                                                <td><a href="\assets\1669449398.webp"><i
+                                                            class="bi bi-paperclip"></i>View</a>
+                                                </td>
+                                                <td><button type="button" class="btn btn-success m-2"
+                                                        style="color: white ">Approve</button><button type="button"
+                                                        class="btn btn-danger">Reject</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>12/06/21</td>
+                                                <td>Maintaince</td>
+                                                <td>1015</td>
+                                                <td>$60</td>
+                                                <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                                <td><button type="button" class="btn btn-success m-2"
+                                                        style="color: white ">Approve</button><button type="button"
+                                                        class="btn btn-danger">Reject</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                         
 
 
-                                    </tr>
-                                </thead>
-                                <tr>
-                                    <td>1</td>
-                                    <td>12/11/21</td>
-                                    <td>Ashwini</td>
-                                    <td>03502</td>
-                                    <td>$450</td>
-                                    <td style="color: blue;"><i class="bi bi-paperclip" style="color: blue"></i>View
-                                    </td>
-                                    <td>
-                                        <span class="badge bg-success">Approved</span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>12/11/21</td>
-                                    <td>Rohini</td>
-                                    <td>03503</td>
-                                    <td>$550</td>
-                                    <td style="color: blue;"><i class="bi bi-paperclip" style="color: blue"></i>View
-                                    </td>
-                                    <td><span class="badge bg-success">Approved</span></td>
+                        <hr>
+                        <h4>Invoices</h4>
+                        <div class="row height d-flex justify-content-left align-items-left">
+                    
+                            <div class="col-md-4">
+              
+                              <div class="form">
+                                <i class="fa fa-search"></i>
+                                <input type="text" class="form-control form-input" placeholder="Search...">
+                                
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+                        
+                       
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
 
-                                </tr>
-                            </table>
-                        </div>
+                                            <th> Date</th>
+
+                                            <th>Invoice Type</th>
+                                            <th>Invoice No</th>
+                                            <th>Amount </th>
+                                            <th>Attachment</th>
+                                            <th>Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>12/11/21</td>
+                                            <td>Travel</td>
+                                            <td>1012</td>
+                                            <td>$350</td>
+                                            <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                            <td><button type="button" class="btn btn-success m-2"
+                                                    style="color: white ">Approve</button><button type="button"
+                                                    class="btn btn-danger">Reject</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>12/08/21</td>
+                                            <td>Travel</td>
+                                            <td>1013</td>
+                                            <td>$490</td>
+                                            <td><a href="\assets\classic-white-750px.png"><i
+                                                        class="bi bi-paperclip"></i>View</a></td>
+                                            <td><button type="button" class="btn btn-success m-2"
+                                                    style="color: white ">Approve</button><button type="button"
+                                                    class="btn btn-danger">Reject</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>12/08/21</td>
+                                            <td>Maintaince</td>
+                                            <td>1014</td>
+                                            <td>$50</td>
+                                            <td><a href="\assets\1669449398.webp"><i
+                                                        class="bi bi-paperclip"></i>View</a>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success m-2"
+                                                    style="color: white ">Approve</button><button type="button"
+                                                    class="btn btn-danger">Reject</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>12/06/21</td>
+                                            <td>Maintaince</td>
+                                            <td>1015</td>
+                                            <td>$60</td>
+                                            <td><a href=""><i class="bi bi-paperclip"></i>View</a></td>
+                                            <td><button type="button" class="btn btn-success m-2"
+                                                    style="color: white ">Approve</button><button type="button"
+                                                    class="btn btn-danger">Reject</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                        
+
                     </div>
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>

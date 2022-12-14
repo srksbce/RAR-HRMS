@@ -1,0 +1,74 @@
+
+<form name="newinvoices" #newinvoices="ngForm" (ngSubmit)="newinvoices.valid &&  NewINVOICES(newinvoices)"><br>
+    <h3 class="text-center">Add Invoice</h3>
+    <a [routerLink]="['/superuser/superuserrequests']" class="ml-auto" routerLinkActive="router-link-active"
+        role="button">
+        <h5><i class="bi bi-arrow-left-short"></i>Back</h5>
+    </a>
+    <br>
+    <div class="addnewinv px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" >
+        <div class=" shadow-lg p-4
+         mb-2 bg-white rounded">
+            <div class="card-body py-3 px-md-2">
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="form2Example3" class="form-label">Invoice type</label><span>*</span>
+                        <select class="form-select" name="Invoicetype" #Invoicetype="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicetype" required>
+                            <option>Travel Expense</option>
+                            <option>Food Expense</option>
+                            <option>Health Expense</option>
+                            <option>shopping Expense</option>
+
+                        </select>
+                        <small *ngIf="Invoicetype.touched &&Invoicetype.invalid">Invoice Type is Mandatory</small>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="form2Example3" class="form-label">Invoice Number</label><span>*</span>
+                        <input type="text" class="form-control" name=" Invoicenumber" #Invoicenumber="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicenumber" required>
+                        <small *ngIf="Invoicenumber.touched &&Invoicenumber.invalid">Invoice Number is
+                            Mandatory</small>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="form2Example4" class="form-label">Invoice Date* </label><span>*</span>
+                        <input type="date" class="form-control" name="Invoicedate" #Invoicedate="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicedate" required>
+                        <small *ngIf="Invoicedate.touched &&Invoicedate.invalid">Invoice Date is Mandatory</small>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="form2Example3" class="form-label">Amount</label><span>*</span>
+                        <input type="text" class="form-control" name="Amount" #Amount="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Amount" required>
+                        <small *ngIf="Amount.touched &&Amount.invalid">Amount is Mandatory</small>
+                    </div>
+                </div>
+                <div class="col-md-7 mb-4">
+                    <div class="form-outline">
+                        <label for="Description" class="form-label">Description</label><span>*</span>
+                    </div>
+                    <div class="form-outline">
+                        <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
+                            name="Description" #Description="ngModel" aria-label="Default select example"
+                            [(ngModel)]="NEWINVOICES.Description" required></textarea>
+                        <label class="form-label" for="textAreaExample"></label>
+                        <small *ngIf="Description.touched &&Description.invalid">Description is Mandatory</small>
+                    </div>
+                </div>
+
+                    <angular-file-uploader [config]="afuConfig"></angular-file-uploader>
+                    <div class="mt-4 pt-2 text-center">
+                        <input class="btn btn-primary " type="submit" value="save"  />
+                    </div>
+               
+            </div>
+        </div>
+    </div>
+</form>
