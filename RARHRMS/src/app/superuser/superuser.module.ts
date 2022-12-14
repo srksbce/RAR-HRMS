@@ -9,6 +9,7 @@ import { SuperuserinvoiceComponent } from './superuserinvoice/superuserinvoice.c
 import { SuppersonaldataComponent } from './suppersonaldata/suppersonaldata.component';
 import { SuperuserrequestsComponent } from './superuserrequests/superuserrequests.component';
 import { FormsModule } from '@angular/forms';
+import { AddnewcompdetailsComponent } from './addnewcompdetails/addnewcompdetails.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     SuperuserinfoComponent,
     SuperuserinvoiceComponent,
     SuppersonaldataComponent,
-    SuperuserrequestsComponent
+    SuperuserrequestsComponent,
+    AddnewcompdetailsComponent
   ],
   imports: [
     CommonModule,

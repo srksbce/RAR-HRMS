@@ -1,0 +1,141 @@
+<form name="compdetails" #compdetails="ngForm" (ngSubmit)="compdetails.valid && newcomp(compdetails)">
+    <br>
+    <button type="button" [routerLink]="['/superuser/superuserinfo/']" class="btn btn-primary" style="margin-left: 22%;
+        position: relative;
+        top: 95px;">Back</button>
+    <div class="px-5 py-3 px-md-6 col-md-6 text-center text-lg-start" style="margin-left:28%">
+        <div class=" shadow-lg p-4mb-3 bg-white rounded">
+
+            <div class="card-body py-2 px-md-4">
+
+
+                <div class="col-md-6 mb-6">
+
+                    <div class="form-outline">
+                        <label for="form2Example1" class="form-label"></label>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 mb-4">
+
+                    <div class="form-outline">
+                        <label for="form2Example4" class="form-label">Compensation Effective Date </label><span>*</span>
+                        <input type="date" class="form-control" name="EffectiveDate" aria-label="EffectiveDate"
+                            #Datetime="ngModel" [(ngModel)]="COMPDETAILS.EffectiveDate" required>
+                        <small *ngIf="Datetime.touched &&Datetime.invalid">Effective Date is required</small>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 mb-8">
+
+                    <div class="form-outline">
+                        <label for="form2Example3" class="form-label">Overtime Eligibility</label><span>*</span>
+                        <select class="form-select" name="Overtime" #Overtime="ngModel"
+                            aria-label="Default select example" [(ngModel)]="COMPDETAILS.OvertimeEligibility" required>
+                            <option>Yes</option>
+                            <option>No</option>
+
+
+                        </select>
+                        <small
+                            *ngIf="(Overtime.touched && Overtime.invalid) || (Overtime.invalid && compdetails.submitted)">Overtime Eligibility
+                            is required </small>
+                    </div>
+                </div>
+            <br>
+
+
+            <div class="col-md-3 mb-8">
+
+                <div class="form-outline">
+                    <label for="form2Example3" class="form-label">Reason</label><span>*</span>
+                    <select class="form-select" name="Reason" #Reason="ngModel" aria-label="Default select example"
+                        [(ngModel)]="COMPDETAILS. Reason" required>
+
+                        <option>Pay Increase</option>
+                        <option>Annual Pay Increase</option>
+                        <option>Promotion</option>
+                        <option>Title Change</option>
+                        <option>Relocated</option>
+                        <option>NA</option>
+
+                    </select>
+
+                    <small
+                        *ngIf="( Reason.touched &&  Reason.invalid) || ( Reason.invalid && compdetails.submitted)">Reason
+                        is required </small>
+
+                </div>
+            </div>
+<br>
+            <span>
+                <div class="col-md-7 mb-4">
+
+                    <div class="form-outline">
+                        <label for="Description" class="form-label">Compensation Comments</label><span>*</span>
+                    </div>
+                    <div class="form-outline">
+                        <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
+                            name="Comments" #Comments="ngModel" aria-label="Default select example"
+                            [(ngModel)]="COMPDETAILS.Comments" required></textarea>
+                        <label class="form-label" for="textAreaExample"></label>
+
+                        <small *ngIf="Comments.touched &&Comments.invalid">Comment is required</small>
+                    </div>
+                </div>
+                
+            <div class="col-md-3 mb-8">
+
+                <div class="form-outline">
+                    <label for="form2Example3" class="form-label">Frequency</label><span>*</span>
+                    <select class="form-select" name="Frequency" #Frequency="ngModel" aria-label="Default select example"
+                    [(ngModel)]="COMPDETAILS. Frequency" required>
+
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                        <option>Daily</option>
+
+                    </select>
+                    <small *ngIf=" Frequency.touched &&compdetails.invalid">Frequency is Required
+                    </small>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-8">
+                <div class="form-outline">
+                    <label for="form2Example3" class="form-label">Pay Type</label><span>*</span>
+                    <select class="form-select" name="Frequency" #Paytype="ngModel" aria-label="Default select example"
+                    [(ngModel)]="COMPDETAILS.Paytype" required>
+
+                        <option>Hourly</option>
+                        <option>Salary</option>
+                        <option>Commission</option>
+                    </select>
+                    <small *ngIf="Paytype.touched &&compdetails.invalid">Pay Type isRequired
+                    </small>
+                </div>
+            </div>
+            <br>
+           
+            <div class="col-md-3 mb-8">
+            <div class="form-outline">
+                <label for="Amount" class="form-label">Amount</label><span>*</span>
+                
+                <input type="text" class="form-control" name="Amount" aria-label="Amount" #Amount="ngModel"[(ngModel)]="COMPDETAILS.Amount" required>
+                <small
+                      *ngIf="(Amount.touched && Amount.invalid) || (Amount.invalid && compdetails.submitted)">Amount
+                      is required </small>
+            </div>
+        <br>
+        <div class="mt-4 pt-2">
+            <input class="btn btn-primary " type="submit" value="save" style="width:105px;" />
+        </div>
+
+    
+
+    
