@@ -35,7 +35,7 @@ import { EmployeeFieldsComponent } from './admin/employee-fields/employee-fields
     PendingComponent,
     ManagerLayoutComponent,
     SuperuserlayoutComponent,
-  EmployeeFieldsComponent
+    EmployeeFieldsComponent
  
 
 
