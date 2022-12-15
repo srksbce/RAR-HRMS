@@ -9,7 +9,13 @@ export class EmployeeFieldsComponent implements OnInit {
   newitems : string [] = [];
   inputvalue : string = "";
   Add(){
-    this.newitems.push(this.inputvalue);
+    if(this.inputvalue !=""){
+      this.newitems.push(this.inputvalue);
+      this.inputvalue="";
+    }
+    else{
+      alert("please enter proper value")
+    }
   }
   constructor() { }
 
