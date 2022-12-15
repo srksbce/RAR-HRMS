@@ -39,6 +39,7 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
 import { AccessLevelsComponent } from './access-levels/access-levels.component';
 import { TimeoffComponent } from './timeoff/timeoff.component';
 import { EmployeeFieldsComponent } from './employee-fields/employee-fields.component';
+import { ApprovalsComponent } from './approvals/approvals.component';
 
 
 
@@ -85,7 +86,10 @@ const routes: Routes = [
   { path: 'pending', component: PendingComponent },
   { path: 'access-levels', component: AccessLevelsComponent },
   { path: 'timeoff', component: TimeoffComponent },
-  {path:'Employee-fields',component:EmployeeFieldsComponent}
+  {path:'Employee-fields',component:EmployeeFieldsComponent},
+  {path:'approvals',component:ApprovalsComponent},
+
+
 
 
 

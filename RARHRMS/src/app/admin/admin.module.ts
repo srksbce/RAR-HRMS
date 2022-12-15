@@ -45,6 +45,7 @@ import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AccessLevelsComponent } from './access-levels/access-levels.component';
 import { AngularFileUploaderModule } from 'angular-file-uploader';
 import { TimeoffComponent } from './timeoff/timeoff.component';
+import { ApprovalsComponent } from './approvals/approvals.component';
 
 
 
@@ -104,6 +105,7 @@ import { TimeoffComponent } from './timeoff/timeoff.component';
     NewExpenseComponent,
     AccessLevelsComponent,
     TimeoffComponent,
+    ApprovalsComponent,
    
 
 
