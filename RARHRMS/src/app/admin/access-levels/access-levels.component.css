@@ -81,3 +81,7 @@ text-align: justify;
 .navbar-nav {
   margin-left: auto;
 }
+.d-flex{
+  position: relative;
+  top: 31px;
+}
