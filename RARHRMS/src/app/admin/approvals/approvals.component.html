@@ -2,7 +2,7 @@
 <div class="container" style="position: relative;top: 67px;left: 13%;">
     <div class="card ">
         <div class="card-body d-flex">
-            <h3>Approvals</h3><a [routerLink]="['/superuser/superuserinfo']" class="newapproval"
+            <h3 >Approvals</h3><a [routerLink]="['/superuser/superuserinfo']" class="newapproval"
                 routerLinkActive="router-link-active">+ New Approval</a>
 
         </div>
@@ -62,14 +62,16 @@
                         name="search" />
                     <input type="button" value="Add" class="btn btn-primary m-2">
                 </div>
+                <br>
                 <div class="d-flex">
-                    <h3>Information Updates</h3>
+                    <h3 class="Infohead">Information Updates</h3>
                     <a [routerLink]="['/superuser/superuserinfo']" class="infoupdate">
 
                         <h5> <i class="bi bi-pencil"></i>Update</h5>
                     </a>
                 </div>
-                <table class="table  pt-6 table-hover infoup ">
+                
+                <table class="table  pt-6 table-hover infoup m-4 shadow">
                     <thead>
 
                         <tr>
@@ -92,6 +94,8 @@
 
                     </tbody>
                 </table>
+                <a [routerLink]="['/superuser/superuserinfo']" 
+                routerLinkActive="router-link-active">+ New access</a>
 
             </div>
 
