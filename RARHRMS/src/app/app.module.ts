@@ -15,6 +15,8 @@ import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.
 import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layout.component';
 import { PendingComponent } from './pending/pending.component';
 import { SuperuserlayoutComponent } from './layouts/superuserlayout/superuserlayout.component';
+import { EmployeeFieldsComponent } from './admin/employee-fields/employee-fields.component';
+
 
 
 
@@ -33,6 +35,7 @@ import { SuperuserlayoutComponent } from './layouts/superuserlayout/superuserlay
     PendingComponent,
     ManagerLayoutComponent,
     SuperuserlayoutComponent,
+  EmployeeFieldsComponent
  
 
 
