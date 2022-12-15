@@ -147,8 +147,8 @@
 
                             <div class=" d-flex">
                                 <input type="text" class="form-control form-input w-25" placeholder="New Item"
-                                    id="search" name="search" />
-                                <input type="button" value="Add" class="btn btn-primary m-2">
+                                    id="search" name="inputvalue" [(ngModel)]="inputvalue"/>
+                                <input type="button" value="Add" class="btn btn-primary m-2" (click)="Add()">
                             </div>
                             <table class="table auto-index table-hover w-50">
                                 <thead>
@@ -158,23 +158,13 @@
 
                                     </tr>
                                 </thead>
-                                <tbody>
+                            
+                                <tbody *ngFor="let newitem of newitems">
                                     <tr>
-                                        <td>Extended</td>
+                                        <td>{{newitem}}</td>
 
                                     </tr>
-                                    <tr>
-                                        <td>Failed</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>Passed</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>OutStanding</td>
-
-                                    </tr>
+                                    
 
                                 </tbody>
                             </table>
