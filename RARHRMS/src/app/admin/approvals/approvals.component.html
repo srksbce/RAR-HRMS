@@ -1,0 +1,130 @@
+<app-navbarset></app-navbarset>
+<div class="container" style="position: relative;top: 67px;left: 13%;">
+    <div class="card ">
+        <div class="card-body d-flex">
+            <h3 >Approvals</h3><a [routerLink]="['/superuser/superuserinfo']" class="newapproval"
+                routerLinkActive="router-link-active">+ New Approval</a>
+
+        </div>
+        <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
+
+            <li class="nav-item" role="presentation">
+
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                    data-bs-target="#bordered-ProbationStatus" type="button" role="tab" aria-controls="home"
+                    aria-selected="true">Information Updates</button>
+
+            </li>
+
+            <li class="nav-item" role="presentation">
+
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                    data-bs-target="#bordered-BackgroundCheckStatus" type="button" role="tab" aria-controls="profile"
+                    aria-selected="false">Time-off Requests</button>
+
+            </li>
+
+            <li class="nav-item" role="presentation">
+
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                    data-bs-target="#bordered-EmployementStatus" type="button" role="tab" aria-controls="contact"
+                    aria-selected="false">Compensation</button>
+
+            </li>
+            <li class="nav-item" role="presentation">
+
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#bordered-Frequency"
+                    type="button" role="tab" aria-controls="contact" aria-selected="false">Employement Status</button>
+
+            </li>
+            <li class="nav-item" role="presentation">
+
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#bordered-Paytype"
+                    type="button" role="tab" aria-controls="contact" aria-selected="false">Job Information</button>
+
+            </li>
+            <li class="nav-item" role="presentation">
+
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#bordered-OverTime"
+                    type="button" role="tab" aria-controls="contact" aria-selected="false">Promotion</button>
+
+            </li>
+
+
+        </ul>
+        <div class="tab-content pt-2" id="borderedTabContent">
+
+            <div class="tab-pane fade show active" id="bordered-ProbationStatus" role="tabpanel"
+                aria-labelledby="home-tab">
+
+                <div class=" d-flex">
+                    <input type="text" class="form-control form-input w-25" placeholder="New Item" id="search"
+                        name="search" />
+                    <input type="button" value="Add" class="btn btn-primary m-2">
+                </div>
+                <br>
+                <div class="d-flex">
+                    <h3 class="Infohead">Information Updates</h3>
+                    <a [routerLink]="['/superuser/superuserinfo']" class="infoupdate">
+
+                        <h5> <i class="bi bi-pencil"></i>Update</h5>
+                    </a>
+                </div>
+                
+                <table class="table  pt-6 table-hover infoup m-4 shadow">
+                    <thead>
+
+                        <tr>
+                            <th>NAME</th>
+                            <th>NO OF POLICIES</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vacation</td>
+                            <td>3</td>
+
+                        </tr>
+                        <tr>
+                            <td>Sick</td>
+                            <td>3</td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+                <a [routerLink]="['/superuser/superuserinfo']" 
+                routerLinkActive="router-link-active">+ New access</a>
+
+            </div>
+
+            <div class="tab-pane fade" id="bordered-BackgroundCheckStatus" role="tabpanel"
+                aria-labelledby="profile-tab">
+
+                Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos quia. Accusantium
+                distinctio omnis et atque fugiat. Itaque doloremque aliquid sint quasi quia distinctio
+                similique. Voluptate nihil recusandae mollitia dolores. Ut laboriosam voluptatum dicta.
+
+            </div>
+
+            <div class="tab-pane fade" id="bordered-EmployementStatus" role="tabpanel" aria-labelledby="contact-tab">
+
+                Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
+                Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit
+                molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+
+            </div>
+            <div class="tab-pane fade" id="bordered-Frequency" role="tabpanel" aria-labelledby="contact-tab">
+
+                Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
+                Accusantium
+                quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum
+                veniam.
+                Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+
+            </div>
+
+        </div>
+    </div>
+</div>
