@@ -38,6 +38,7 @@ import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { AccessLevelsComponent } from './access-levels/access-levels.component';
 import { TimeoffComponent } from './timeoff/timeoff.component';
+import { EmployeeFieldsComponent } from './employee-fields/employee-fields.component';
 
 
 
@@ -83,7 +84,8 @@ const routes: Routes = [
   { path: 'myreqs', component: MyreqsComponent },
   { path: 'pending', component: PendingComponent },
   { path: 'access-levels', component: AccessLevelsComponent },
-  { path: 'timeoff', component: TimeoffComponent }
+  { path: 'timeoff', component: TimeoffComponent },
+  {path:'Employee-fields',component:EmployeeFieldsComponent}
 
 
 
