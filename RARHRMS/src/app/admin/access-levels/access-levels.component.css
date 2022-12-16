@@ -29,13 +29,14 @@
 
 
 .table-container{
-border-collapse: collapse;        
+/* border-collapse: collapse;         */
 width: 35%;
 background-color: white;
 vertical-align: center;
 text-align: center;
 padding-left: 19px;
 height: 20px;
+
 
 
 
@@ -84,4 +85,8 @@ text-align: justify;
 .d-flex{
   position: relative;
   top: 31px;
+}
+.card{
+  position: relative;
+  
 }
