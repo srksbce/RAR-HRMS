@@ -1,0 +1,90 @@
+<app-navbarset></app-navbarset>
+<form name="customaccess" #customaccess="ngForm" (ngSubmit)="customaccess.valid && cusaccess(customaccess)"></form>
+<div class="container" style="position: relative;top: 67px;left: 13%;">
+    <div class="card">
+        <div class="card-body">
+            <br>
+            <span><i class="bi bi-arrow-left-circle-fill"></i> Access Levels</span>
+            <br>
+            <br>
+            <h4>New Custom Access Level</h4>
+            <br>
+
+
+
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+                <li class="nav-item" role="presentation">
+
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">Basic</button>
+
+                </li>
+
+                <li class="nav-item" role="presentation">
+
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">Action Access</button>
+
+                </li>
+
+                <li class="nav-item" role="presentation">
+
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                        type="button" role="tab" aria-controls="contact" aria-selected="false">View Access</button>
+
+                </li>
+
+            </ul>
+            <br>
+
+            <span>
+                <div class="col-md-4 mb-4">
+
+                    <div class="form-outline">
+                        <label for="form2Example4" class="form-label">Basic Details </label>
+                        <input type="text" class="form-control" name="details" aria-label="details" #details="ngModel"
+                            [(ngModel)]="CUSTOMACCESS.details" required>
+                        <small *ngIf="details.touched &&details.invalid">Basic Details are required</small>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="col-md-4 mb-4">
+
+                    <div class="form-outline">
+                        <label for="form2Example4" class="form-label">Access Level Name </label><span>*</span>
+                        <input type="text" class="form-control" name="LevelName" aria-label="LevelName"
+                            #LevelName="ngModel" [(ngModel)]="CUSTOMACCESS.LevelName" required>
+                        <small *ngIf="LevelName.touched &&LevelName.invalid">Access Level Name is required</small>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-7 mb-4">
+
+                    <div class="form-outline">
+                        <label for="Description" class="form-label">Description</label>
+                    </div>
+                    <div class="form-outline">
+                        <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
+                            name="Description" #Description="ngModel" aria-label="Default select example"
+                            [(ngModel)]=" CUSTOMACCESS.Description" required></textarea>
+                        <label class="form-label" for="textAreaExample"></label>
+
+                        <small *ngIf="Description.touched &&Description.invalid">Description is required</small>
+                    </div>
+                </div>
+
+            </span>
+        </div>
+    </div>
+</div>
