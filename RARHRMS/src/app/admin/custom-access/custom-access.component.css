@@ -2,3 +2,10 @@
     position: initial;
     right: 12%;
 }
+.mixedaccess{
+    position: relative;
+    left: 400%;
+}
+.dropdown{
+    width: 28%;
+}

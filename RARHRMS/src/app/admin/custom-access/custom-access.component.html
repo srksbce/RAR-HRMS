@@ -130,16 +130,18 @@
                                 <div class="tab-content" id="v-pills-tabContent">
                                     <div class="tab-pane fade show active" id="v-pills-personal" role="tabpanel"
                                         aria-labelledby="v-pills-home-tab">
-                                        Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus.
-                                        Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae
-                                        quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.
+                                        <div class="d-flex">
+                                            <h4>Personal</h4>
+                                            <a [routerLink]="['/']" routerLinkActive="router-link-active"
+                                                class="mixedaccess">Mixed Access</a>
+                                            <hr>
+                                        </div>
                                     </div>
+
                                     <div class="tab-pane fade" id="v-pills-job" role="tabpanel"
                                         aria-labelledby="v-pills-profile-tab">
-                                        Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos quia.
-                                        Accusantium distinctio omnis et atque fugiat. Itaque doloremque aliquid sint
-                                        quasi quia distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut
-                                        laboriosam voluptatum dicta.
+                                        
+
                                     </div>
                                     <div class="tab-pane fade" id="v-pills-documents" role="tabpanel"
                                         aria-labelledby="v-pills-messages-tab">
@@ -152,9 +154,30 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="bordered-profile" role="tabpanel" aria-labelledby="profile-tab">
-                            Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos quia. Accusantium
-                            distinctio omnis et atque fugiat. Itaque doloremque aliquid sint quasi quia distinctio
-                            similique. Voluptate nihil recusandae mollitia dolores. Ut laboriosam voluptatum dicta.
+                            <h4>Should they be able to see their own information?</h4>
+                                        <div class="custom-control custom-radio ">
+                                            <input type="radio" class="custom-control-input" id="defaultInline1"
+                                                name="inlineDefaultRadiosExample" required>
+                                            <label class="custom-control-label" for="defaultInline1">Yes, Allow
+                                                Access</label>
+                                        </div>
+                                        <div class="custom-control custom-radio ">
+                                            <input type="radio" class="custom-control-input" id="defaultInline2"
+                                                name="inlineDefaultRadiosExample" required>
+                                            <label class="custom-control-label" for="defaultInline2">No, hide My info
+                                                Section</label>
+                                            <br>
+                                            <br>
+                                            <h4>Which access level should apply?</h4>
+                                            <br>
+                                            <select class="form-select dropdown" >
+                                                <option value="">Manager</option>
+                                                <option value="">Employee</option>
+
+                                            </select>
+                                        </div>
+                                        <br>
+                                        <br>
                         </div>
                         <div class="tab-pane fade" id="bordered-contact" role="tabpanel" aria-labelledby="contact-tab">
                             Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
