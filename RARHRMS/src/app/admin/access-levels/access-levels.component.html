@@ -22,9 +22,16 @@
         <div class="d-flex col-sm ">
             <hr>
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-3" style="display: block;">Employee Level Access</h3>
-            <a [routerLink]="" class=" ml-auto" routerLinkActive="router-link-active" role="button">
-                <span class="add" style="color:blue "> + Add Access Level</span>
-            </a>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
 
             <a [routerLink]="" class=" ml-auto" routerLinkActive="router-link-active" role="button">
                 <i class="bi bi-gear" style="font-size: 130%; color: blue"></i><span class="set"
