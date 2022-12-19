@@ -40,7 +40,6 @@ import { AccessLevelsComponent } from './access-levels/access-levels.component';
 import { TimeoffComponent } from './timeoff/timeoff.component';
 import { EmployeeFieldsComponent } from './employee-fields/employee-fields.component';
 import { ApprovalsComponent } from './approvals/approvals.component';
-import { CustomAccessComponent } from './custom-access/custom-access.component';
 
 
 
@@ -89,7 +88,7 @@ const routes: Routes = [
   { path: 'timeoff', component: TimeoffComponent },
   {path:'Employee-fields',component:EmployeeFieldsComponent},
   {path:'approvals',component:ApprovalsComponent},
-{path:'custom-access',component:CustomAccessComponent}
+
 
 
 
