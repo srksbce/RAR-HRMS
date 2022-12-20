@@ -16,7 +16,7 @@ import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 import { AddnewcompdetailsComponent } from './addnewcompdetails/addnewcompdetails.component';
 
 const routes: Routes = [
-  { path: 'superuser', component: SuperuserComponent },
+  { path: 'superusers', component: SuperuserComponent },
   { path: 'superuserinfo', component: SuperuserinfoComponent },
   { path: 'superuserrequests', component: SuperuserrequestsComponent },
 
