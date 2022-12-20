@@ -1,6 +1,6 @@
 .card{
-    position: initial;
-    right: 12%;
+    position: inherit;
+    right: 100px;
 }
 .mixedaccess{
     position: relative;
