@@ -1,0 +1,41 @@
+<form name="newapp" #newapp="ngForm" (ngSubmit)="newapp.valid && newapproval(newapp)"></form>
+<div class="container" style="position: relative;top: 67px;left: 13%;">
+    <div class="card">
+        <div class="card-body">
+            <br>
+            <span>
+                <h4>New Approval</h4>
+                <br>
+                <div class="col-md-4 mb-4">
+
+                    <div class="form-outline">
+                        <label for="form2Example4" class="form-label">Approval Name</label><span>*</span>
+                        <input type="text" class="form-control" name="ApprovalName" aria-label="ApprovalName"
+                            #ApprovalName="ngModel" [(ngModel)]="NEWAPPROVAL.ApprovalName" required>
+                        <small *ngIf="ApprovalName.touched &&ApprovalName.invalid">Approval Name is
+                            required</small>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-7 mb-4">
+
+                    <div class="form-outline">
+                        <label for="Description" class="form-label">Description</label>
+                    </div>
+                    <div class="form-outline">
+                        <textarea class="form-control" id="textAreaExample" rows="7" placeholder="Type Here"
+                            name="Description" #Description="ngModel" aria-label="Default select example"
+                            [(ngModel)]=" NEWAPPROVAL.Description" required></textarea>
+                        <label class="form-label" for="textAreaExample"></label>
+
+                        <small *ngIf="Description.touched &&Description.invalid">Description is required</small>
+                    </div>
+                </div>
+
+            </span>
+        </div>
+    </div>
+</div>
