@@ -41,6 +41,7 @@ import { TimeoffComponent } from './timeoff/timeoff.component';
 import { EmployeeFieldsComponent } from './employee-fields/employee-fields.component';
 import { ApprovalsComponent } from './approvals/approvals.component';
 import { CustomAccessComponent } from './custom-access/custom-access.component';
+import { NewapprovalComponent } from './newapproval/newapproval.component';
 
 
 
@@ -79,7 +80,7 @@ const routes: Routes = [
   { path: 'addNewInvoice', component: AddNewInvoiceComponent },
   { path: 'timesheet', component: TimesheetComponent },
 
-
+{path:'newapproval',component:NewapprovalComponent},
 
   { path: 'addNewInvoices', component: AddNewInvoicesComponent },
   { path: 'template', component: TemplateComponent },
