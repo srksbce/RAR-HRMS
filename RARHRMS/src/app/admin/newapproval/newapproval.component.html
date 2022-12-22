@@ -1,0 +1,93 @@
+<form name="newapp" #newapp="ngForm" (ngSubmit)="newapp.valid && newapproval(newapp)"></form>
+<div class="container" style="position: relative;top: 67px;left: 13%;">
+    <div class="card">
+        <div class="card-body">
+            <div class="row  ">
+                <div class="col-sm">
+                    <br>
+                    <span>
+                        <h4><b>New Approval</b></h4>
+                        <br>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label for="form2Example4" class="form-label">Approval Name</label><span>*</span>
+                                <input type="text" class="form-control" name="ApprovalName" aria-label="ApprovalName"
+                                    #ApprovalName="ngModel" [(ngModel)]="NEWAPPROVAL.ApprovalName" required>
+                                <small *ngIf="ApprovalName.touched &&ApprovalName.invalid">Approval Name is
+                                    required</small>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+
+                            <div class="form-outline">
+                                <label for="Description" class="form-label">Description</label>
+                            </div>
+                            <div class="form-outline">
+                                <textarea class="form-control" id="textAreaExample" rows="5" placeholder="Type Here"
+                                    name="Description" #Description="ngModel" aria-label="Default select example"
+                                    [(ngModel)]=" NEWAPPROVAL.Description" required></textarea>
+                                <label class="form-label" for="textAreaExample"></label>
+
+                                <small *ngIf="Description.touched &&Description.invalid">Description is required</small>
+                            </div>
+                        </div>
+
+                        <div class="shadow p-3 mb-5 bg-white rounded" style="width: 400px;">
+                            <div class="form-outline">
+                                <label for="Select Fields" class="form-label">Select Fields</label>
+                            </div>
+                            <div class="form">
+                                <i class="fa fa-search"></i>
+                                <input type="text" class="form-control form-input" placeholder="Search fields">
+                            </div><br>
+
+                            <h6>Personal</h6>
+                            <h6>Education</h6>
+                            <h6>Visa</h6>
+                            <h6>Time Off</h6>
+                            <h6>Benefits</h6>
+
+                        </div>
+                        <button [routerLink]="['/admin/']" routerLinkActive="router-link-active" type="button"
+                            class="btn btn-primary">
+                            Create
+                        </button>
+                    </span>
+
+                </div>
+               
+                <div class="col-sm">
+                    <div class="shadow p-3 mb-5 bg-white rounded" style="display:flex" style="width: 450px;">
+                        <div class="form-outline">
+                            <label for="Select Fields" class="form-label">Form Preview</label>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="form-check form-switch">
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Degree*</label>
+                                        <input class="form-check-input" style="left: 150px;" type="checkbox"
+                                            id="flexSwitchCheckChecked" checked>
+
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="">
+                                    <i class="bi bi-trash3"></i>
+                                </div>
+                                <div class="col-5">
+                                    <div class="form-check form-switch">
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">College*</label>
+                                        <input class="form-check-input" style="left: 150px;" type="checkbox"
+                                            id="flexSwitchCheckChecked" checked>
+
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

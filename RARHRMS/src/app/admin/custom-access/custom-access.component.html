@@ -79,7 +79,7 @@
                                 <label for="Description" class="form-label">Description</label>
                             </div>
                             <div class="form-outline">
-                                <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
+                                <textarea class="form-control" id="textAreaExample" rows="7" placeholder="Type Here"
                                     name="Description" #Description="ngModel" aria-label="Default select example"
                                     [(ngModel)]=" CUSTOMACCESS.Description" required></textarea>
                                 <label class="form-label" for="textAreaExample"></label>
@@ -148,7 +148,7 @@
 
                                     <div class="tab-pane fade" id="v-pills-job" role="tabpanel"
                                         aria-labelledby="v-pills-profile-tab">
-                                        
+
 
                                     </div>
                                     <div class="tab-pane fade" id="v-pills-documents" role="tabpanel"
@@ -169,11 +169,62 @@
                                         accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos
                                         fuga tempore dolor.
                                     </div>
+                            <h4>Should they be able to see their own information?</h4>
+                            <div class="custom-control custom-radio ">
+                                <input type="radio" class="custom-control-input" id="defaultInline1"
+                                    name="inlineDefaultRadiosExample" required>
+                                <label class="custom-control-label" for="defaultInline1">Yes, Allow
+                                    Access</label>
+                            </div>
+                            <div class="custom-control custom-radio ">
+                                <input type="radio" class="custom-control-input" id="defaultInline2"
+                                    name="inlineDefaultRadiosExample" required>
+                                <label class="custom-control-label" for="defaultInline2">No, hide My info
+                                    Section</label>
+                                <br>
+                                <br>
+                                <h4>Which access level should apply?</h4>
+                                <br>
+                                <select class="form-select dropdown">
+                                    <option value="">Manager</option>
+                                    <option value="">Employee</option>
+
+                                </select>
+                            </div>
+                            <br>
+                            <br>
                         </div>
                         <div class="tab-pane fade" id="bordered-contact" role="tabpanel" aria-labelledby="contact-tab">
-                            Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
-                            Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit
-                            molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Celebrations
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Announcements
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Links
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Welcome New Hires
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Who's Out
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
