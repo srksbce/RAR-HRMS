@@ -1,495 +1,1152 @@
+<app-navbar></app-navbar>
 <br>
-
-<button [routerLink]="['/admin/activeemployeedata']" routerLinkActive="router-link-active" type="button"
-  class="btn btn-primary" id="buttons">Back</button><br><br>
-
-
-<div class="col d-flex justify-content-center">
-  <div class="shadow-lg p-5 mb-7 bg-white " id="shadow">
+<a [routerLink]="['/admin/superuser']" routerLinkActive="router-link-active"> <span><i
+      class="bi bi-arrow-left"></i></span></a>
+Dashboard<i class="bi bi-chevron-double-right"style="margin-left: 530px;"></i>
+<h2 class="d-flex ">Active Employees</h2>
+<br>
+<div class="container" style="position: relative;top: 67px;left: 13%;">
+  <div class="shadow p-5 mb-4 bg-white" id="shadow">
     <form name="Newemp" #Newemp="ngForm" (ngSubmit)="Newemp.valid && employee(Newemp)">
-      <h4>Personal</h4>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Employee Number <span>*</span> </label>
-        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Employee Number"
-          name="EmployeeNumber" min="0" aria-label="EmployeeNumber" #EmployeeNumber="ngModel" [(ngModel)]="NEWEMP. employeeid"
-          required />
-        <small
-          *ngIf="(EmployeeNumber.touched && EmployeeNumber.invalid) || (EmployeeNumber.invalid && Newemp.submitted)">Employee number
-          is required </small>
-      </div>
-
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h5>
+      <h6><i class="bi bi-sliders"></i> Customize fields</h6>
+      <hr>
       <div class="row">
-        <label for="exampleFormControlInput1" class="form-label" required>Name<span>*</span> </label>
         <div class="col">
-          <input type="text" class="form-control" id="FirstName" placeholder="First Name" name="FirstName"  pattern="^[a-zA-Z0-9]+$"
-            aria-label="First Name" #FirstName="ngModel" placeholder="First Name" [(ngModel)]="NEWEMP.firstname"
-            required />
-          <small *ngIf="(FirstName.touched && FirstName.invalid) || (FirstName.invalid && Newemp.submitted)">First name
+          <label class="form-label" for="employeeid">Employee Id</label><span>*</span>
+          <input type="text" class="form-control" placeholder="Id" name="employeeid" aria-label="EmployeeId"
+            #employeeid="ngModel" [(ngModel)]="empdata.employeeid" required />
+          <small *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Newemp.submitted)">Employee
+            Id is required </small>
+        </div><br>
+
+        <div class="col">
+          <label class="form-label" for="status">Status</label><span>*</span>
+          <input class="form-control" id="status" name="status" #status="ngModel" [(ngModel)]="empdata.status" required>
+          <small *ngIf="(status.touched && status.invalid) || (status.invalid && Newemp.submitted)">Status
             is required </small>
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Last Name" name="LastName" aria-label="Last Name"
-            #LastName="ngModel" [(ngModel)]="NEWEMP.lastname" required />
-          <small *ngIf="(LastName.touched && LastName.invalid) || (LastName.invalid && Newemp.submitted)">Last name is
-            required </small>
-        </div>
-        <div class="col"></div>
-      </div><br>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Date Of Birth<span>*</span> </label>
-        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="" name="DateOfBirth"
-        (change)="dobvalid(NEWEMP.dateofbirth)" #DateOfBirth="ngModel" [(ngModel)]="NEWEMP.dateofbirth" required />
-        <small
-          *ngIf="(DateOfBirth.touched && DateOfBirth.invalid) || (DateOfBirth.invalid && Newemp.submitted)">*Date of birth
-          is required </small>
-          <small *ngIf="(show)" > age should be 18 -75 years</small>
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Gender<span>*</span> </label>
-        <select class="form-select" name="Gender" aria-label="Default select example" #Gender="ngModel"
-          [(ngModel)]="NEWEMP.gender" required>
-          <option value="undefined" disabled selected>Gender</option>
-          <option >Male</option>
-          <option >Female</option>
-          <option>Others</option>
-        </select>
-        <small *ngIf="(Gender.touched && Gender.invalid) || (Gender.invalid && Newemp.submitted)">Gender is required
-        </small>
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">National ID<span>*</span> </label>
-        <input type="text" class="form-control" name="NationalID" id="exampleFormControlInput1"
-          placeholder="National ID" #NationalID="ngModel" [(ngModel)]="NEWEMP.ssn" required />
-        <small
-          *ngIf="(NationalID.touched && NationalID .invalid) || (NationalID.invalid && Newemp.submitted)">National ID is
-          required </small>
-      </div>
-      <hr>
-      <h4>Address</h4>
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" name="AddressLine1" placeholder="Address Line 1"
-            aria-label="Address Line 1" #AddressLine1="ngModel" [(ngModel)]="NEWEMP.addressline1" required />
-          <small
-            *ngIf="(AddressLine1.touched && AddressLine1 .invalid) || (AddressLine1.invalid && Newemp.submitted)">Address
-            line 1 is required </small>
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" name="AddressLine1" placeholder="Address Line 2"
-            aria-label="Address Line 2" #AddressLine2="ngModel" [(ngModel)]="NEWEMP.addressline2" required />
-          <small
-            *ngIf="(AddressLine2.touched && AddressLine2 .invalid) || (AddressLine2.invalid && Newemp.submitted)">Address
-            line 2 is required </small>
-        </div>
-        <div class="col">
-        </div>
-      </div><br>
-      <div class="row">
-        <div class="col">
-          <input type="text" name="City" class="form-control" placeholder="City" aria-label="City" #City="ngModel"
-            [(ngModel)]="NEWEMP.city" required />
-          <small *ngIf="(City.touched && City .invalid) || (City.invalid && Newemp.submitted)">City is required </small>
-        </div>
-        <div class="col">
-          <input type="text" name="State" class="form-control" placeholder="State" aria-label="State" #State="ngModel"
-            [(ngModel)]="NEWEMP.state" required />
-          <small *ngIf="(State.touched && State .invalid) || (State.invalid && Newemp.submitted)">State is required
-          </small>
-        </div>
-        <div class="col">
-          <input type="number" id="number" name="ZipCode" class="form-control" placeholder="ZipCode" aria-label="Zipcode"
-            #Zipcode="ngModel" [(ngModel)]="NEWEMP.zipcode" required min="0" />
-          <small *ngIf="(Zipcode.touched && Zipcode .invalid) || (Zipcode.invalid && Newemp.submitted)">ZipCode is
-            required </small>
-        </div>
-      </div>
-      <label for="exampleFormControlInput1" class="form-label"></label>
-      <select class="form-select" name="SelectCountry" aria-label="Default select example" #selectcountry="ngModel"
-        [(ngModel)]="NEWEMP.country" required>
-
-        <option value="undefined" disabled selected>Select Country</option>
-        <option disabled selected value>Select Country</option>
-        <option value="Afghanistan">Afghanistan</option>
-        <option value="Albania">Albania</option>
-        <option value="Algeria">Algeria</option>
-        <option value="American Samoa">American Samoa</option>
-        <option value="Andorra">Andorra</option>
-        <option value="Angola">Angola</option>
-        <option value="Anguilla">Anguilla</option>
-        <option value="Antartica">Antarctica</option>
-        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-        <option value="Argentina">Argentina</option>
-        <option value="Armenia">Armenia</option>
-        <option value="Aruba">Aruba</option>
-        <option value="Australia">Australia</option>
-        <option value="Austria">Austria</option>
-        <option value="Azerbaijan">Azerbaijan</option>
-        <option value="Bahamas">Bahamas</option>
-        <option value="Bahrain">Bahrain</option>
-        <option value="Bangladesh">Bangladesh</option>
-        <option value="Barbados">Barbados</option>
-        <option value="Belarus">Belarus</option>
-        <option value="Belgium">Belgium</option>
-        <option value="Belize">Belize</option>
-        <option value="Benin">Benin</option>
-        <option value="Bermuda">Bermuda</option>
-        <option value="Bhutan">Bhutan</option>
-        <option value="Bolivia">Bolivia</option>
-        <option value="Bosnia and Herzegowina">Bosnia and Herzegowina</option>
-        <option value="Botswana">Botswana</option>
-        <option value="Bouvet Island">Bouvet Island</option>
-        <option value="Brazil">Brazil</option>
-        <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
-        <option value="Brunei Darussalam">Brunei Darussalam</option>
-        <option value="Bulgaria">Bulgaria</option>
-        <option value="Burkina Faso">Burkina Faso</option>
-        <option value="Burundi">Burundi</option>
-        <option value="Cambodia">Cambodia</option>
-        <option value="Cameroon">Cameroon</option>
-        <option value="Canada">Canada</option>
-        <option value="Cape Verde">Cape Verde</option>
-        <option value="Cayman Islands">Cayman Islands</option>
-        <option value="Central African Republic">Central African Republic</option>
-        <option value="Chad">Chad</option>
-        <option value="Chile">Chile</option>
-        <option value="China">China</option>
-        <option value="Christmas Island">Christmas Island</option>
-        <option value="Cocos Islands">Cocos (Keeling) Islands</option>
-        <option value="Colombia">Colombia</option>
-        <option value="Comoros">Comoros</option>
-        <option value="Congo">Congo</option>
-        <option value="Congo">Congo, the Democratic Republic of the</option>
-        <option value="Cook Islands">Cook Islands</option>
-        <option value="Costa Rica">Costa Rica</option>
-        <option value="Cota D'Ivoire">Cote d'Ivoire</option>
-        <option value="Croatia">Croatia (Hrvatska)</option>
-        <option value="Cuba">Cuba</option>
-        <option value="Cyprus">Cyprus</option>
-        <option value="Czech Republic">Czech Republic</option>
-        <option value="Denmark">Denmark</option>
-        <option value="Djibouti">Djibouti</option>
-        <option value="Dominica">Dominica</option>
-        <option value="Dominican Republic">Dominican Republic</option>
-        <option value="East Timor">East Timor</option>
-        <option value="Ecuador">Ecuador</option>
-        <option value="Egypt">Egypt</option>
-        <option value="El Salvador">El Salvador</option>
-        <option value="Equatorial Guinea">Equatorial Guinea</option>
-        <option value="Eritrea">Eritrea</option>
-        <option value="Estonia">Estonia</option>
-        <option value="Ethiopia">Ethiopia</option>
-        <option value="Falkland Islands">Falkland Islands (Malvinas)</option>
-        <option value="Faroe Islands">Faroe Islands</option>
-        <option value="Fiji">Fiji</option>
-        <option value="Finland">Finland</option>
-        <option value="France">France</option>
-        <option value="France Metropolitan">France, Metropolitan</option>
-        <option value="French Guiana">French Guiana</option>
-        <option value="French Polynesia">French Polynesia</option>
-        <option value="French Southern Territories">French Southern Territories</option>
-        <option value="Gabon">Gabon</option>
-        <option value="Gambia">Gambia</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Germany">Germany</option>
-        <option value="Ghana">Ghana</option>
-        <option value="Gibraltar">Gibraltar</option>
-        <option value="Greece">Greece</option>
-        <option value="Greenland">Greenland</option>
-        <option value="Grenada">Grenada</option>
-        <option value="Guadeloupe">Guadeloupe</option>
-        <option value="Guam">Guam</option>
-        <option value="Guatemala">Guatemala</option>
-        <option value="Guinea">Guinea</option>
-        <option value="Guinea-Bissau">Guinea-Bissau</option>
-        <option value="Guyana">Guyana</option>
-        <option value="Haiti">Haiti</option>
-        <option value="Heard and McDonald Islands">Heard and Mc Donald Islands</option>
-        <option value="Holy See">Holy See (Vatican City State)</option>
-        <option value="Honduras">Honduras</option>
-        <option value="Hong Kong">Hong Kong</option>
-        <option value="Hungary">Hungary</option>
-        <option value="Iceland">Iceland</option>
-        <option value="India">India</option>
-        <option value="Indonesia">Indonesia</option>
-        <option value="Iran">Iran (Islamic Republic of)</option>
-        <option value="Iraq">Iraq</option>
-        <option value="Ireland">Ireland</option>
-        <option value="Israel">Israel</option>
-        <option value="Italy">Italy</option>
-        <option value="Jamaica">Jamaica</option>
-        <option value="Japan">Japan</option>
-        <option value="Jordan">Jordan</option>
-        <option value="Kazakhstan">Kazakhstan</option>
-        <option value="Kenya">Kenya</option>
-        <option value="Kiribati">Kiribati</option>
-        <option value="Democratic People's Republic of Korea">Korea, Democratic People's Republic of</option>
-        <option value="Korea">Korea, Republic of</option>
-        <option value="Kuwait">Kuwait</option>
-        <option value="Kyrgyzstan">Kyrgyzstan</option>
-        <option value="Lao">Lao People's Democratic Republic</option>
-        <option value="Latvia">Latvia</option>
-        <option value="Lebanon">Lebanon</option>
-        <option value="Lesotho">Lesotho</option>
-        <option value="Liberia">Liberia</option>
-        <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
-        <option value="Liechtenstein">Liechtenstein</option>
-        <option value="Lithuania">Lithuania</option>
-        <option value="Luxembourg">Luxembourg</option>
-        <option value="Macau">Macau</option>
-        <option value="Macedonia">Macedonia, The Former Yugoslav Republic of</option>
-        <option value="Madagascar">Madagascar</option>
-        <option value="Malawi">Malawi</option>
-        <option value="Malaysia">Malaysia</option>
-        <option value="Maldives">Maldives</option>
-        <option value="Mali">Mali</option>
-        <option value="Malta">Malta</option>
-        <option value="Marshall Islands">Marshall Islands</option>
-        <option value="Martinique">Martinique</option>
-        <option value="Mauritania">Mauritania</option>
-        <option value="Mauritius">Mauritius</option>
-        <option value="Mayotte">Mayotte</option>
-        <option value="Mexico">Mexico</option>
-        <option value="Micronesia">Micronesia, Federated States of</option>
-        <option value="Moldova">Moldova, Republic of</option>
-        <option value="Monaco">Monaco</option>
-        <option value="Mongolia">Mongolia</option>
-        <option value="Montserrat">Montserrat</option>
-        <option value="Morocco">Morocco</option>
-        <option value="Mozambique">Mozambique</option>
-        <option value="Myanmar">Myanmar</option>
-        <option value="Namibia">Namibia</option>
-        <option value="Nauru">Nauru</option>
-        <option value="Nepal">Nepal</option>
-        <option value="Netherlands">Netherlands</option>
-        <option value="Netherlands Antilles">Netherlands Antilles</option>
-        <option value="New Caledonia">New Caledonia</option>
-        <option value="New Zealand">New Zealand</option>
-        <option value="Nicaragua">Nicaragua</option>
-        <option value="Niger">Niger</option>
-        <option value="Nigeria">Nigeria</option>
-        <option value="Niue">Niue</option>
-        <option value="Norfolk Island">Norfolk Island</option>
-        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
-        <option value="Norway">Norway</option>
-        <option value="Oman">Oman</option>
-        <option value="Pakistan">Pakistan</option>
-        <option value="Palau">Palau</option>
-        <option value="Panama">Panama</option>
-        <option value="Papua New Guinea">Papua New Guinea</option>
-        <option value="Paraguay">Paraguay</option>
-        <option value="Peru">Peru</option>
-        <option value="Philippines">Philippines</option>
-        <option value="Pitcairn">Pitcairn</option>
-        <option value="Poland">Poland</option>
-        <option value="Portugal">Portugal</option>
-        <option value="Puerto Rico">Puerto Rico</option>
-        <option value="Qatar">Qatar</option>
-        <option value="Reunion">Reunion</option>
-        <option value="Romania">Romania</option>
-        <option value="Russia">Russian Federation</option>
-        <option value="Rwanda">Rwanda</option>
-        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-        <option value="Saint LUCIA">Saint LUCIA</option>
-        <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
-        <option value="Samoa">Samoa</option>
-        <option value="San Marino">San Marino</option>
-        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-        <option value="Saudi Arabia">Saudi Arabia</option>
-        <option value="Senegal">Senegal</option>
-        <option value="Seychelles">Seychelles</option>
-        <option value="Sierra">Sierra Leone</option>
-        <option value="Singapore">Singapore</option>
-        <option value="Slovakia">Slovakia (Slovak Republic)</option>
-        <option value="Slovenia">Slovenia</option>
-        <option value="Solomon Islands">Solomon Islands</option>
-        <option value="Somalia">Somalia</option>
-        <option value="South Africa">South Africa</option>
-        <option value="South Georgia">South Georgia and the South Sandwich Islands</option>
-        <option value="Span">Spain</option>
-        <option value="SriLanka">Sri Lanka</option>
-        <option value="St. Helena">St. Helena</option>
-        <option value="St. Pierre and Miguelon">St. Pierre and Miquelon</option>
-        <option value="Sudan">Sudan</option>
-        <option value="Suriname">Suriname</option>
-        <option value="Svalbard">Svalbard and Jan Mayen Islands</option>
-        <option value="Swaziland">Swaziland</option>
-        <option value="Sweden">Sweden</option>
-        <option value="Switzerland">Switzerland</option>
-        <option value="Syria">Syrian Arab Republic</option>
-        <option value="Taiwan">Taiwan, Province of China</option>
-        <option value="Tajikistan">Tajikistan</option>
-        <option value="Tanzania">Tanzania, United Republic of</option>
-        <option value="Thailand">Thailand</option>
-        <option value="Togo">Togo</option>
-        <option value="Tokelau">Tokelau</option>
-        <option value="Tonga">Tonga</option>
-        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-        <option value="Tunisia">Tunisia</option>
-        <option value="Turkey">Turkey</option>
-        <option value="Turkmenistan">Turkmenistan</option>
-        <option value="Turks and Caicos">Turks and Caicos Islands</option>
-        <option value="Tuvalu">Tuvalu</option>
-        <option value="Uganda">Uganda</option>
-        <option value="Ukraine">Ukraine</option>
-        <option value="United Arab Emirates">United Arab Emirates</option>
-        <option value="United Kingdom">United Kingdom</option>
-        <option value="United States">United States</option>
-        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
-        <option value="Uruguay">Uruguay</option>
-        <option value="Uzbekistan">Uzbekistan</option>
-        <option value="Vanuatu">Vanuatu</option>
-        <option value="Venezuela">Venezuela</option>
-        <option value="Vietnam">Viet Nam</option>
-        <option value="Virgin Islands (British)">Virgin Islands (British)</option>
-        <option value="Virgin Islands (U.S)">Virgin Islands (U.S.)</option>
-        <option value="Wallis and Futana Islands">Wallis and Futuna Islands</option>
-        <option value="Western Sahara">Western Sahara</option>
-        <option value="Yemen">Yemen</option>
-        <option value="Serbia">Serbia</option>
-        <option value="Zambia">Zambia</option>
-        <option value="Zimbabwe">Zimbabwe</option>
-      </select>
-      <small
-        *ngIf="(selectcountry.touched && selectcountry .invalid) || (selectcountry.invalid && Newemp.submitted)">Select
-        country is required </small>
-      <hr>
-      <h4>Contact<span>*</span> </h4>
-      <div class="row">
-        <div class="col">
-          <input type="number" name="ContactNumber" class="form-control" id="ContactNumber" name="ContactNumber"
-            pattern="^((\\+91-?)|0)?[0-9]{10}$"  #ContactNumber="ngModel" placeholder="Contact Number" [(ngModel)]="NEWEMP.contactnumber"
-            required ng-model="ContactNumber" minlength="10" />
-            <div *ngIf="(ContactNumber.touched && ContactNumber.invalid) || (ContactNumber.invalid && Newemp.submitted)"
-            class="alert">
-
-            <small *ngIf="ContactNumber.errors?.['required']">
-              Contact Number is required
-            </small>
-            <small *ngIf="ContactNumber.errors?.['pattern']">
-              Please enter a valid contact number
-            </small>
-
-        </div>
-        </div>
+        </div><br>
 
         <div class="col">
-          <input type="Email" class="form-control" name="EmailId" id="EmailId" name="EmailId" #EmailId="ngModel"
-            placeholder="Email Id" [(ngModel)]="NEWEMP.emailaddress" required
-            pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
-          <small *ngIf="(EmailId.touched && EmailId.invalid) || (EmailId.invalid && Newemp.submitted)">Email Id is
-            required </small>
+          <label class="form-label">Gender*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option di>Select</option>
+            <option>Male</option>
+            <option>Female</option>
+
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Gender
+            is required </small>
+        </div><br>
+
+        <div class="col">
+          <label for="dateofbirth" class="form-label">Date Of
+            Birth*</label>
+          <input type="date" class="form-control" id="dateofbirth" name="dateofbirth" #dateofbirth="ngModel"
+            [(ngModel)]="empdata.dateofbirth" required />
+          <small *ngIf="(dateofbirth.touched && dateofbirth.invalid) || (dateofbirth.invalid && Newemp.submitted)">Date
+            Of Birth is required </small>
         </div>
-        <div class="col"></div>
-      </div>
-      <hr>
-      <h4>Compensation <span>*</span></h4>
-      <div class="mb-3">
-        <select class="form-select" aria-label="Default select example" name="SelectPaySchedule"
-          #SelectPaySchedule="ngModel" [(ngModel)]="NEWEMP.payschedule" required>
-          <option value="undefined" disabled selected>Select Pay Schedule</option>
-          <option>Every Other Week</option>
-          <option>Every Month</option>
-          <option>Twice a Month</option>
-        </select><small
-          *ngIf="(SelectPaySchedule.touched && SelectPaySchedule.invalid) || (SelectPaySchedule.invalid && Newemp.submitted)">Select pay schedule
-          is required </small>
         <br>
-        <select class="form-select" aria-label="Default select example" name="SelectPayType" #paytype="ngModel"
-          [(ngModel)]="NEWEMP.paytype" required>
-          <option value="undefined" disabled selected>Select Pay Type</option>
-          <option>Salary</option>
-          <option>Hourly</option>
-          <option>Commission Only</option>
-        </select><small
-          *ngIf="(paytype.touched && paytype.invalid) || (paytype.invalid && Newemp.submitted)">Select pay type is
-          required </small><br>
+      </div>
 
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pay Rate" for="payrate"
-          name="PayRate" #PayRate="ngModel" [(ngModel)]="NEWEMP.payrate" required>
-        <small *ngIf="(PayRate.touched && PayRate.invalid) || (PayRate.invalid && Newemp.submitted)">Pay rate is required
-        </small><br>
-        <hr>
-        <h4>Job Information</h4>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Hire Date <span>*</span> </label>
-          <input type="Date" class="form-control" id="exampleFormControlInput1" placeholder="Hire Date" name="HireDate"
-            #HireDate="ngModel" [(ngModel)]="NEWEMP.startdate" required>
-          <small *ngIf="(HireDate.touched && HireDate.invalid) || (HireDate.invalid && Newemp.submitted)">Hire date is
-            required </small><br>
+      <br>
 
-          <label for="exampleFormControlInput1" class="form-label">Employement Status</label>
-          <select class="form-select" aria-label="Default select example" name="Employement Status"
-            #EmployeementStatus="ngModel" [(ngModel)]="NEWEMP. empstatus" required>
-            <option value="undefined" disabled selected>Employement Status </option>
-            <option>Active</option>
-            <option>Inactive</option>
-          </select><small
-            *ngIf="(EmployeementStatus.touched && EmployeementStatus.invalid) || (EmployeementStatus.invalid && Newemp.submitted)">Employeement status
+      <div class="row">
+
+        <div class="col">
+          <label class="form-label">Title*</label>
+          <select class="form-select" id="title" name="title" #title="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.title" required>
+            <option di>Select</option>
+            <option>Mr</option>
+            <option>Ms</option>
+            <option>Mrs</option>
+          </select>
+          <small *ngIf="(title.touched && title.invalid) || (title.invalid && Newemp.submitted)">Title
             is required </small>
-          <br>
+        </div><br>
 
-          <label for="exampleFormControlInput1" class="form-label">Employement Type<span>*</span> </label>
-          <select class="form-select" aria-label="Default select example" for="EmployementType" name="Employement Type"
-            #EmployeementType="ngModel" [(ngModel)]="NEWEMP.employementstatus" required>
-            <option value="undefined" disabled selected> Employement Type </option>
-            <option>Full Time</option>
-            <option>Part Time</option>
-            <option>Intern</option>
-          </select><small
-            *ngIf="(EmployeementType.touched && EmployeementType.invalid) || (EmployeementType.invalid && Newemp.submitted)">Employeement type
-            is required </small><br>
+        <div class="col">
+          <label class="form-label" for="firstname">First Name</label><span>*</span>
+          <input type="text" class="form-control" placeholder="firstname" name="firstname" aria-label="firstname"
+            #firstname="ngModel" [(ngModel)]="empdata.firstname" required />
+          <small *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Newemp.submitted)">First
+            Name
+            is required </small>
+        </div><br>
 
-          <label for="exampleFormControlInput1" class="form-label">Job Title<span>*</span> </label>
-          <select class="form-select" aria-label="Default select example" name="SelectTitle" #selecttitle="ngModel"
-            [(ngModel)]="NEWEMP.jobtitle" required>
-            <option value="undefined" disabled selected>Select Title </option>
-            <option value="System Admin">System Admin</option>
-            <option value="HR Anaylst">HR Anaylst</option>
-            <option value="Recruiting Manager">Recruiting Manager</option>
-            <option value="Director Operations">Director Operations</option>
-            <option value="Business Analyst">Business Analyst</option>
-            <option value="IT Manager">IT Manager</option>
-            <option value="Executive Board">Executive Board</option>
-            <option value="Department Head">Department Head</option>
-            <option value="Payroll Admin">Payroll Admin</option>
-            <option value="IT Manager">IT Manager</option>
-            <option value="HR Manager">HR Manager</option>
-            <option value="Software Developer">Software Developer</option>
-            <option value="Tester">Tester</option>
+        <div class="col">
+          <label class="form-label" for="lastname">Last Name</label><span>*</span>
+          <input type="text" class="form-control" placeholder="lastname" name="lastname" aria-label="Last Name"
+            #lastname="ngModel" [(ngModel)]="empdata.lastname" required />
+          <small *ngIf="(lastname.touched && lastname.invalid) || (lastname.invalid && Newemp.submitted)">Last
+            Name is required </small>
+        </div><br>
 
+        <div class="col">
+          <label class="form-label">Marital Status*</label>
+          <select class="form-select" id="MaritalStatus" name="MaritalStatus" #MaritalStatus="ngModel"
+            aria-label="Default select example" [(ngModel)]="empdata.MaritalStatus" required>
+            <option di>Select</option>
+            <option>Single</option>
+            <option>Married</option>
+            <option>Divorced</option>
+            <option>Widow</option>
+            <option>Domestic Partnership</option>
           </select>
           <small
-            *ngIf="(selecttitle.touched && selecttitle.invalid) || (selecttitle.invalid && Newemp.submitted)">Select title
-            is required </small><br>
-
-          <label for="exampleFormControlInput1" class="form-label">Supervisor<span>*</span> </label>
-          <select class="form-select" aria-label="Default select example" name="Supervisor Id" #SupervisorId="ngModel"
-            [(ngModel)]="NEWEMP.supervisor" required>
-            <option value="undefined" disabled selected>Select Id</option>
-            <option *ngFor="let item of empdetails" [ngValue]="item.employeeid"> {{item.fullname}} </option>
-
-          </select>
-          <small
-            *ngIf="(SupervisorId.touched && SupervisorId.invalid) || (SupervisorId.invalid && Newemp.submitted)">Supervisor Id
-            is required </small><br>
-
-
-          <label for="exampleFormControlInput1" class="form-label">Client Name<span>*</span> </label>
-          <select class="form-select" aria-label="Default select example" name="Selectclient" for="clientname"
-            #SelectClient="ngModel" [(ngModel)]="NEWEMP.clientname" required>
-            <option value="undefined" disabled selected>Select Client</option>
-
-            <option *ngFor="let item of client"> {{item.clientname}} </option>
-          </select><small
-            *ngIf="(SelectClient.touched && SelectClient.invalid) || (SelectClient.invalid && Newemp.submitted)">Select client
+            *ngIf="(MaritalStatus.touched && MaritalStatus.invalid) || (MaritalStatus.invalid && Newemp.submitted)">Marital
+            Status
             is required </small>
 
+        </div><br>
+
+        <div class="col">
+          <label class="form-label" for="National Id/SSN/Aadhar No">National
+            Id/SSN/Aadhar No</label><span>*</span>
+          <input type="text" class="form-control" placeholder="SSN" name="SSN" aria-label="ssn" #ssn="ngModel"
+            [(ngModel)]="empdata.ssn" required />
+          <small *ngIf="(ssn.touched && ssn.invalid) || (ssn.invalid && Newemp.submitted)">National
+            Id/SSN/Aadhar No
+            is
+            required </small>
+        </div><br>
+
+      </div>
+      <div class="row">
+
+        <div class="col">
+          <label class="form-label" for="taxfilenumber">Tax File
+            Number/PAN/NIN</label><span>*</span>
+          <input type="number" class="form-control" placeholder="246880" name="taxfilenumber" aria-label="taxfilenumber"
+            #taxfilenumber="ngModel" [(ngModel)]="empdata.taxfilenumber" required />
+          <small
+            *ngIf="(taxfilenumber.touched && taxfilenumber.invalid) || (taxfilenumber.invalid && Newemp.submitted)">Tax
+            File Number is required </small>
+        </div><br>
+
+        <div class="col">
+          <label class="form-label">Secondary Language*</label>
+          <select class="form-select" id="SecondaryLanguage" name="SecondaryLanguage" #SecondaryLanguage="ngModel"
+            aria-label="Default select example" [(ngModel)]="empdata.SecondaryLanguage" required>
+            <option di>Select</option>
+            <option>Hindi</option>
+            <option>Bengali</option>
+            <option>Tamil</option>
+            <option>Malyalam</option>
+          </select>
+          <small
+            *ngIf="(MaritalStatus.touched && MaritalStatus.invalid) || (MaritalStatus.invalid && Newemp.submitted)">Second
+            LanguagezA
+            is required </small>
+        </div>
+        <br>
+      </div>
+
+      <hr>
+
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h5>
+
+      <hr>
+
+      <div class="row">
+
+        <div class="col">
+          <label for="#Address1">Address Line-1</label><span>*</span>
+          <input type="text" class="form-control" id="#addressline1" placeholder="addressline1" name="#addressline1"
+            aria-label="#addressline1" #addressline1="ngModel" [(ngModel)]="empdata.addressline1" required />
+          <small *ngIf="(addressline1.touched && addressline1.invalid) || (addressline1.invalid && Newemp.submitted)">
+            Address Line-1 is required </small>
+        </div><br>
+        <div class="col">
+          <label for="Address2">Address Line-2</label><span>*</span>
+          <input type="text" class="form-control" id="addressline2" placeholder="addressline2" name="#addressline2"
+            aria-label="#addressline2" #addressline2="ngModel" [(ngModel)]="empdata.addressline2" required />
+          <small *ngIf="(addressline2.touched && addressline2.invalid) || (addressline2.invalid && Newemp.submitted)">
+            Address Line-2 is required </small>
+        </div><br>
+        <div class="col">
+
+          <label for="CITY1">City</label><span>*</span>
+          <input type="text" class="form-control" id="city" name="city" aria-label="city" #city="ngModel"
+            [(ngModel)]="empdata.city" required />
+          <small *ngIf="(city.touched && city.invalid) || (city.invalid && Newemp.submitted)">
+            City is required </small>
+        </div><br>
+        <div class="col">
+          <label for="state">State</label><span>*</span>
+          <input id="state" class="form-control" #state="ngModel" id="state" name="state" [(ngModel)]="empdata.state"
+            required>
+          <small *ngIf="(state.touched && state.invalid) || (state.invalid && Newemp.submitted)">State
+            is required </small>
+        </div><br>
+
+        <div class="col">
+          <label class="form-label">Country*</label>
+          <select type="text" class="form-select" aria-label="Default select example" name="country" id="country"
+            placeholder="Country" #country="ngModel" required [(ngModel)]="empdata.country">
+            <option disabled selected value>Country</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antartica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Bosnia and Herzegowina">Bosnia and Herzegowina
+            </option>
+            <option value="Botswana">Botswana</option>
+            <option value="Bouvet Island">Bouvet Island</option>
+            <option value="Brazil">Brazil</option>
+            <option value="British Indian Ocean Territory">British Indian Ocean
+              Territory</option>
+            <option value="Brunei Darussalam">Brunei Darussalam</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">Central African Republic
+            </option>
+            <option value="Chad">Chad</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Christmas Island">Christmas Island</option>
+            <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Congo">Congo</option>
+            <option value="Congo">Congo, the Democratic Republic of the</option>
+            <option value="Cook Islands">Cook Islands</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+            <option value="Croatia">Croatia (Hrvatska)</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dominica">Dominica</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="East Timor">East Timor</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Falkland Islands">Falkland Islands (Malvinas)
+            </option>
+            <option value="Faroe Islands">Faroe Islands</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="France Metropolitan">France, Metropolitan</option>
+            <option value="French Guiana">French Guiana</option>
+            <option value="French Polynesia">French Polynesia</option>
+            <option value="French Southern Territories">French Southern
+              Territories</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Greece">Greece</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Grenada">Grenada</option>
+            <option value="Guadeloupe">Guadeloupe</option>
+            <option value="Guam">Guam</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea-Bissau">Guinea-Bissau</option>
+            <option value="Guyana">Guyana</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Heard and McDonald Islands">Heard and Mc Donald
+              Islands</option>
+            <option value="Holy See">Holy See (Vatican City State)</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran">Iran (Islamic Republic of)</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Kiribati">Kiribati</option>
+            <option value="Democratic People's Republic of Korea">Korea,
+              Democratic People's Republic
+              of</option>
+            <option value="Korea">Korea, Republic of</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Lao">Lao People's Democratic Republic</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya
+            </option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macau">Macau</option>
+            <option value="Macedonia">Macedonia, The Former Yugoslav Republic of
+            </option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+          </select>
+          <small *ngIf="(state.touched && state.invalid) || (state.invalid && Newemp.submitted)">Country
+            is required </small>
+        </div>
+
+        <div class="col">
+          <label for="zipcode">Zip Code/Post code</label><span>*</span>
+          <input type="number" name="zipCode" class="form-control" placeholder="Zipcode/Postcode" aria-label="zipcode"
+            #zipcode="ngModel" [(ngModel)]="empdata.zipcode" required />
+          <small *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Newemp.submitted)">Zip
+            Code
+            is
+            required </small>
         </div>
       </div>
-      <div style="text-align: center;">
-        <button  type="submit" class="btn btn-primary">Save Details</button>
+
+      <hr>
+
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Contact Details</h5>
+
+      <hr>
+      <div class="row">
+
+        <div class="col">
+          <label class="form-label" for="contactnumber">Work Phone
+          </label><span>*</span>
+          <input type="number" class="form-control" name="contactnumber" aria-label="contactnumber" pattern="[0-9]{10}"
+            #contactnumber="ngModel" [(ngModel)]="empdata.contactnumber" required />
+          <small
+            *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Newemp.submitted)">
+            Work phone is required </small>
+        </div>
+
+        <div class="col">
+          <label class="form-label" for="contactnumber">Mobile Phone</label><span>*</span>
+          <input type="number" class="form-control" name="contactnumber" aria-label="contactnumber" pattern="[0-9]{10}"
+            #contactnumber="ngModel" [(ngModel)]="empdata.contactnumber" required />
+          <small
+            *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Newemp.submitted)">
+            Mobile number is required </small>
+        </div>
+
+        <div class="col">
+          <label class="form-label" for="emailaddress">Work Mail</label><span>*</span>
+          <input type="text" class="form-control" name="emailaddress" aria-label="emailaddress"
+            pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel" [(ngModel)]="empdata.emailaddress"
+            required />
+          <small
+            *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Newemp.submitted)">Work
+            Mail-id
+            is required </small>
+        </div>
+
+        <div class="col">
+          <label class="form-label" for="emailaddress">Home Mail</label><span>*</span>
+          <input type="text" class="form-control" name="emailaddress" aria-label="emailaddress"
+            pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel" [(ngModel)]="empdata.emailaddress"
+            required />
+          <small
+            *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Newemp.submitted)">Home
+            Mail-id
+            is required </small>
+        </div>
+
+      </div>
+      <hr>
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3"> Emergency Contact Details
+      </h5>
+      <div class="row">
+
+        <div class="col">
+          <label class="form-label" for="name">Name</label><span>*</span>
+          <input type="text" class="form-control" placeholder="name" name="name" aria-label="name" #firstname="ngModel"
+            [(ngModel)]="empdata.firstname" required />
+          <small *ngIf="(firstname.touched && firstname.invalid) || (firstname.invalid && Newemp.submitted)">Name
+            is required </small>
+        </div>
+
+        <div class="col">
+          <label class="form-label" for="emailaddress">Email-Id</label><span>*</span>
+          <input type="text" class="form-control" name="emailaddress" aria-label="emailaddress"
+            pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel" [(ngModel)]="empdata.emailaddress"
+            required />
+          <small
+            *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Newemp.submitted)">Email-Id
+            is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label" for="contactnumber">Phone Number</label><span>*</span>
+          <input type="number" class="form-control" name="contactnumber" aria-label="contactnumber" pattern="[0-9]{10}"
+            #contactnumber="ngModel" [(ngModel)]="empdata.contactnumber" required />
+          <small
+            *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Newemp.submitted)">
+            Phone Number is required </small>
+        </div>
+
+        <div class="col">
+          <label class="form-label">Relationship*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option di>Select</option>
+            <option>Father</option>
+            <option>Mother</option>
+            <option>Brother</option>
+            <option>Sister</option>
+            <option>Husband</option>
+            <option>Wife</option>
+            <option>Friend</option>
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">
+            Relationship is required </small>
+        </div>
+      </div>
+      <hr>
+      <br>
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3"> Education</h5>
+      <br>
+      <div class="row">
+        <div class="col">
+          <label class="form-label" for="highestdegree">Degree</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="highestdegree" aria-label="highestdegree"
+            #highestdegree="ngModel" [(ngModel)]="empdata.highestdegree" required />
+          <small
+            *ngIf="(highestdegree.touched && highestdegree.invalid) || (highestdegree.invalid && Newemp.submitted)">Degree
+            is required</small>
+        </div>
+        <div class="col">
+          <label class="form-label" for="university">University</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="university" aria-label="university"
+            #university="ngModel" [(ngModel)]="empdata.university" required />
+          <small
+            *ngIf="(university.touched && university.invalid) || (university.invalid && Newemp.submitted)">University
+            is required</small>
+        </div>
+        <div class="col">
+          <label class="form-label" for="specialization">Specialization</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="specialization" aria-label="specialization"
+            #specialization="ngModel" [(ngModel)]="empdata.specialization" required />
+          <small
+            *ngIf="(specialization.touched && specialization.invalid) || (specialization.invalid && Newemp.submitted)">Specialization
+            is required</small>
+        </div>
+        <div class="col">
+          <label class="form-label" for="gpa">GPA</label><span>*</span>
+          <input type="text" class="form-control" placeholder="Id" name="gpa" aria-label="gpa" #gpa="ngModel"
+            [(ngModel)]="empdata.gpa" required />
+          <small *ngIf="(gpa.touched && gpa.invalid) || (gpa.invalid && Newemp.submitted)">GPA is required </small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="egreestartdate" class="form-label">Degree Start Date*</label>
+          <input type="date" class="form-control" id="degreestartdate" name="degreestartdate" #degreestartdate="ngModel"
+            [(ngModel)]="empdata.egreestartdate" required />
+          <small
+            *ngIf="(degreestartdate.touched && degreestartdate.invalid) || (degreestartdate.invalid && Newemp.submitted)">Degree
+            Date is required </small>
+        </div>
+
+        <div class="col">
+          <label for="degreeenddate" class="form-label">Degree End Date*</label>
+          <input type="date" class="form-control" id="degreeenddate" name="degreeenddate" #degreeenddate="ngModel"
+            [(ngModel)]="empdata.degreeenddate" required />
+          <small
+            *ngIf="(degreeenddate.touched && degreeenddate.invalid) || (degreeenddate.invalid && Newemp.submitted)">End
+            Date is required </small>
+        </div>
+
+      </div>
+      <hr>
+
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h5>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <label class="form-label" for="visastatus">Visa Type</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="visastatus" aria-label="visastatus"
+            #visastatus="ngModel" [(ngModel)]="empdata.visastatus" required />
+          <small *ngIf="(visastatus.touched && visastatus.invalid) || (visastatus.invalid && Newemp.submitted)">Visa
+            Type
+
+            is required</small>
+        </div>
+
+        <div class="col">
+          <label class="form-label">Country*</label>
+          <select type="text" class="form-select" aria-label="Default select example" name="country" id="country"
+            placeholder="Country" #country="ngModel" required [(ngModel)]="empdata.country">
+            <option disabled selected value>Country</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antartica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Bosnia and Herzegowina">Bosnia and Herzegowina
+            </option>
+            <option value="Botswana">Botswana</option>
+            <option value="Bouvet Island">Bouvet Island</option>
+            <option value="Brazil">Brazil</option>
+            <option value="British Indian Ocean Territory">British Indian Ocean
+              Territory</option>
+            <option value="Brunei Darussalam">Brunei Darussalam</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">Central African Republic
+            </option>
+            <option value="Chad">Chad</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Christmas Island">Christmas Island</option>
+            <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Congo">Congo</option>
+            <option value="Congo">Congo, the Democratic Republic of the</option>
+            <option value="Cook Islands">Cook Islands</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+            <option value="Croatia">Croatia (Hrvatska)</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dominica">Dominica</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="East Timor">East Timor</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Falkland Islands">Falkland Islands (Malvinas)
+            </option>
+            <option value="Faroe Islands">Faroe Islands</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="France Metropolitan">France, Metropolitan</option>
+            <option value="French Guiana">French Guiana</option>
+            <option value="French Polynesia">French Polynesia</option>
+            <option value="French Southern Territories">French Southern
+              Territories</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Greece">Greece</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Grenada">Grenada</option>
+            <option value="Guadeloupe">Guadeloupe</option>
+            <option value="Guam">Guam</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea-Bissau">Guinea-Bissau</option>
+            <option value="Guyana">Guyana</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Heard and McDonald Islands">Heard and Mc Donald
+              Islands</option>
+            <option value="Holy See">Holy See (Vatican City State)</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran">Iran (Islamic Republic of)</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Kiribati">Kiribati</option>
+            <option value="Democratic People's Republic of Korea">Korea,
+              Democratic People's Republic
+              of</option>
+            <option value="Korea">Korea, Republic of</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Lao">Lao People's Democratic Republic</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya
+            </option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macau">Macau</option>
+            <option value="Macedonia">Macedonia, The Former Yugoslav Republic of
+            </option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+          </select>
+          <small *ngIf="(state.touched && state.invalid) || (state.invalid && Newemp.submitted)">Country
+            is required </small>
+        </div>
+        <div class="col">
+          <label for="issueddate" class="form-label">Issued Date*</label>
+          <input type="date" class="form-control" id="issueddate" name="issueddate" #issueddate="ngModel"
+            [(ngModel)]="empdata.issueddate" required />
+          <small *ngIf="(issueddate.touched && issueddate.invalid) || (issueddate.invalid && Newemp.submitted)">Issued
+            Date is required </small>
+        </div>
+        <div class="col">
+          <label for="expirationdate" class="form-label">Expiration Date*</label>
+          <input type="date" class="form-control" id="expirationdate" name="expirationdate" #expirationdate="ngModel"
+            [(ngModel)]="empdata.expirationdate" required />
+          <small
+            *ngIf="(expirationdate.touched && expirationdate.invalid) || (expirationdate.invalid && Newemp.submitted)">Expiration
+            Date is required </small>
+        </div>
+
+        <div class="col">
+          <label class="form-label" for="status">Status</label><span>*</span>
+          <input class="form-control" id="status" name="status" #status="ngModel" [(ngModel)]="empdata.status" required>
+          <small *ngIf="(status.touched && status.invalid) || (status.invalid && Newemp.submitted)">Status
+            is required </small>
+        </div>
+        <!-- <div class="col">
+            <label for="notes" class="form-label">Notes</label>
+            <textarea class="form-control" id="textAreaExample" rows="5" placeholder="Type Here" name="notes"
+              #notes="ngModel" aria-label="Default select example" [(ngModel)]=" Newemp.notes" required></textarea>
+            <label class="form-label" for="textAreaExample"></label>
+            <small *ngIf="notes.touched &&notes.invalid">notes is required</small>
+        </div> -->
+      </div>
+      <hr>
+
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h5>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <label class="form-label" for="visastatus">Bank Name</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="visastatus" aria-label="visastatus"
+            #visastatus="ngModel" [(ngModel)]="empdata.visastatus" required />
+          <small *ngIf="(visastatus.touched && visastatus.invalid) || (visastatus.invalid && Newemp.submitted)">Bank
+            Name
+            is required</small>
+        </div>
+        <div class="col">
+          <label class="form-label" for="employeeid">Account Number</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="employeeid" aria-label="EmployeeId"
+            #employeeid="ngModel" [(ngModel)]="empdata.employeeid" required />
+          <small *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Newemp.submitted)">Account
+            Number is required </small>
+        </div><br>
+
+        <div class="col">
+          <label class="form-label" for="visastatus">Account Name</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="visastatus" aria-label="visastatus"
+            #visastatus="ngModel" [(ngModel)]="empdata.visastatus" required />
+          <small *ngIf="(visastatus.touched && visastatus.invalid) || (visastatus.invalid && Newemp.submitted)">Account
+            Name required</small>
+        </div>
+
+        <div class="col">
+          <label for="zipcode">IFSC Code</label><span>*</span>
+          <input type="number" name="zipCode" class="form-control" placeholder="" aria-label="zipcode"
+            #zipcode="ngModel" [(ngModel)]="empdata.zipcode" required />
+          <small *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Newemp.submitted)">IFSC
+            Code
+            is
+            required </small>
+        </div>
+
+        <div class="col">
+          <label class="form-label" for="visastatus">Upload</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="visastatus" aria-label="visastatus"
+            #visastatus="ngModel" [(ngModel)]="empdata.visastatus" required />
+          <small *ngIf="(visastatus.touched && visastatus.invalid) || (visastatus.invalid && Newemp.submitted)">File
+            is required</small>
+        </div>
+      </div>
+
+
+      <hr>
+
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Details</h5>
+      <hr>
+
+      <div class="row">
+        <div class="col-2">
+          <label for="issueddate" class="form-label">Date of Joining*</label>
+          <input type="date" class="form-control" id="issueddate" name="issueddate" #issueddate="ngModel"
+            [(ngModel)]="empdata.issueddate" required />
+          <small *ngIf="(issueddate.touched && issueddate.invalid) || (issueddate.invalid && Newemp.submitted)">Joining
+            Date is required </small>
+        </div>
+        <div class="col-2">
+          <label for="issueddate" class="form-label">Probation End Date*</label>
+          <input type="date" class="form-control" id="issueddate" name="issueddate" #issueddate="ngModel"
+            [(ngModel)]="empdata.issueddate" required />
+          <small *ngIf="(issueddate.touched && issueddate.invalid) || (issueddate.invalid && Newemp.submitted)">End
+            Date is required </small>
+        </div>
+        <div class="col-2">
+          <label class="form-label" for="status">Probation Status</label><span>*</span>
+          <input class="form-control" id="status" name="status" #status="ngModel" [(ngModel)]="empdata.status" required>
+          <small *ngIf="(status.touched && status.invalid) || (status.invalid && Newemp.submitted)">Status
+            is required </small>
+        </div>
+        <div class="col-2">
+          <label class="form-label" for="employeeid">Notice period</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="employeeid" aria-label="EmployeeId"
+            #employeeid="ngModel" [(ngModel)]="empdata.employeeid" required />
+          <small *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Newemp.submitted)">Notice
+            Period is required </small>
+        </div><br>
+        <div class="col-3">
+          <label class="form-label" for="status">Background check Status</label><span>*</span>
+          <input class="form-control" id="status" name="status" #status="ngModel" [(ngModel)]="empdata.status" required>
+          <small *ngIf="(status.touched && status.invalid) || (status.invalid && Newemp.submitted)">Status
+            is required </small>
+        </div><br>
+        <div class="col">
+          <label for="validationTextarea" class="form-label">Notes</label>
+          <textarea class="form-control" id="validationTextarea" style="height:2px" placeholder="Enter Here"
+            required></textarea>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Employement Type</h5>
+      <hr>
+      <div class="row">
+        <div class="col-3">
+          <label class="form-label">Job Type*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option di>Select</option>
+            <option>1 Month</option>
+            <option>2 Months</option>
+            <option>3 Months</option>
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Job Type
+            is required </small>
+        </div>
+        <div class="col">
+          <label for="effectivedate" class="form-label">EMP Effective Date*</label>
+          <input type="date" class="form-control" id="effectivedate" name="effectivedate" #effectivedate="ngModel"
+            [(ngModel)]="empdata.effectivedate" required />
+          <small
+            *ngIf="(effectivedate.touched && effectivedate.invalid) || (effectivedate.invalid && Newemp.submitted)">Effective
+            Date is required </small>
+        </div>
+        <div class="col">
+          <label for="validationTextarea" class="form-label">Comments</label>
+          <textarea class="form-control" id="validationTextarea" style="height:2px" placeholder="Enter Here"
+            required></textarea>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Job Details</h5>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <label for="jobeffectivedate" class="form-label">Effective Date*</label>
+          <input type="date" class="form-control" id="jobeffectivedate" name="jobeffectivedate"
+            #jobeffectivedate="ngModel" [(ngModel)]="empdata.jobeffectivedate" required />
+          <small
+            *ngIf="(jobeffectivedate.touched && jobeffectivedate.invalid) || (jobeffectivedate.invalid && Newemp.submitted)">Effective
+            Date is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label" for="status">Job Role</label><span>*</span>
+          <input class="form-control" id="status" name="status" #status="ngModel" [(ngModel)]="empdata.status" required>
+          <small *ngIf="(status.touched && status.invalid) || (status.invalid && Newemp.submitted)">Job Role
+            is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label">Reporting To*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option di>Select</option>
+            <option>Satya Kishore Mavuri</option>
+            <option>Deepthi</option>
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Reporting to
+            is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label">Department*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option>IT</option>
+            <option>Cse</option>
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Department
+            is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label">Business Area*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option di>Select</option>
+            <option></option>
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Business Area
+            is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label">Country*</label>
+          <select type="text" class="form-select" aria-label="Default select example" name="country" id="country"
+            placeholder="Country" #country="ngModel" required [(ngModel)]="empdata.country">
+            <option disabled selected value>Country</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antartica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Bosnia and Herzegowina">Bosnia and Herzegowina
+            </option>
+            <option value="Botswana">Botswana</option>
+            <option value="Bouvet Island">Bouvet Island</option>
+            <option value="Brazil">Brazil</option>
+            <option value="British Indian Ocean Territory">British Indian Ocean
+              Territory</option>
+            <option value="Brunei Darussalam">Brunei Darussalam</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">Central African Republic
+            </option>
+            <option value="Chad">Chad</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Christmas Island">Christmas Island</option>
+            <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Congo">Congo</option>
+            <option value="Congo">Congo, the Democratic Republic of the</option>
+            <option value="Cook Islands">Cook Islands</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+            <option value="Croatia">Croatia (Hrvatska)</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dominica">Dominica</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="East Timor">East Timor</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Falkland Islands">Falkland Islands (Malvinas)
+            </option>
+            <option value="Faroe Islands">Faroe Islands</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="France Metropolitan">France, Metropolitan</option>
+            <option value="French Guiana">French Guiana</option>
+            <option value="French Polynesia">French Polynesia</option>
+            <option value="French Southern Territories">French Southern
+              Territories</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Greece">Greece</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Grenada">Grenada</option>
+            <option value="Guadeloupe">Guadeloupe</option>
+            <option value="Guam">Guam</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea-Bissau">Guinea-Bissau</option>
+            <option value="Guyana">Guyana</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Heard and McDonald Islands">Heard and Mc Donald
+              Islands</option>
+            <option value="Holy See">Holy See (Vatican City State)</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran">Iran (Islamic Republic of)</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Kiribati">Kiribati</option>
+            <option value="Democratic People's Republic of Korea">Korea,
+              Democratic People's Republic
+              of</option>
+            <option value="Korea">Korea, Republic of</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Lao">Lao People's Democratic Republic</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya
+            </option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macau">Macau</option>
+            <option value="Macedonia">Macedonia, The Former Yugoslav Republic of
+            </option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+          </select>
+          <small *ngIf="(state.touched && state.invalid) || (state.invalid && Newemp.submitted)">Country
+            is required </small>
+        </div>
+      </div>
+      <hr>
+
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h5>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <label for="compensationeffectivedate" class="form-label">Effective Date*</label>
+          <input type="date" class="form-control" id="compensationeffectivedate" name="compensationeffectivedate"
+            #compensationeffectivedate="ngModel" [(ngModel)]="empdata.compensationeffectivedate" required />
+          <small
+            *ngIf="(compensationeffectivedate.touched && compensationeffectivedate.invalid) || (compensationeffectivedate.invalid && Newemp.submitted)">Effective
+            Date is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label">Overtime Eligibility*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option di>Select</option>
+            <option>1 Month</option>
+            <option>2 Months</option>
+            <option>3 Months</option>
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Overtime
+            is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label">Reason*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option di>Select</option>
+            <option>1 Month</option>
+            <option>2 Months</option>
+            <option>3 Months</option>
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Reason
+            is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label">Frequency*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option di>Select</option>
+            <option>1 Month</option>
+            <option>2 Months</option>
+            <option>3 Months</option>
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Frequency
+            is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label">Pay Type*</label>
+          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.gender" required>
+            <option di>Select</option>
+            <option>1 Month</option>
+            <option>2 Months</option>
+            <option>3 Months</option>
+          </select>
+          <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Pay Type
+            is required </small>
+        </div>
+        <div class="col">
+          <label class="form-label" for="employeeid">Amount</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="employeeid" aria-label="EmployeeId"
+            #employeeid="ngModel" [(ngModel)]="empdata.employeeid" required />
+          <small *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Newemp.submitted)">Amount
+            is required </small>
+        </div><br>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-4">
+          <label for="validationTextarea" class="form-label">Comments</label>
+          <textarea class="form-control" id="validationTextarea" style="height:2px" placeholder="Enter Here"
+            required></textarea>
+        </div>
+      </div>
+      <hr>
+
+      <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Security Details</h5>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <label class="form-label" for="employeeid">User Id</label><span>*</span>
+          <input type="text" class="form-control" placeholder="Id" name="employeeid" aria-label="EmployeeId"
+            #employeeid="ngModel" [(ngModel)]="empdata.employeeid" required />
+          <small *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Newemp.submitted)">Employee
+            Id is required </small>
+        </div><br>
+        <div class="col">
+          <label class="form-label" for="employeeid">Password</label><span>*</span>
+          <input type="text" class="form-control" placeholder="Id" name="employeeid" aria-label="EmployeeId"
+            #employeeid="ngModel" [(ngModel)]="empdata.employeeid" required />
+          <small *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Newemp.submitted)">Employee
+            Id is required </small>
+        </div><br>
+        <div class="col">
+          <label class="form-label" for="employeeid">Confirm Password</label><span>*</span>
+          <input type="text" class="form-control" placeholder="Id" name="employeeid" aria-label="EmployeeId"
+            #employeeid="ngModel" [(ngModel)]="empdata.employeeid" required />
+          <small *ngIf="(employeeid.touched && employeeid.invalid) || (employeeid.invalid && Newemp.submitted)">Employee
+            Id is required </small>
+        </div><br>
       </div>
     </form>
+    <br>
+
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col"  style="margin-left: 530px;">
+    <button [routerLink]="['/admin/']" routerLinkActive="router-link-active" type="button" class="btn btn-primary">Save
+      Changes</button>
+  </div>
+  <div class="col"  style="margin-right: 200px;">
+    <h5>Cancel</h5>
   </div>
 </div>

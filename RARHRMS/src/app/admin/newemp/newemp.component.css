@@ -1,4 +1,4 @@
-.form-control{
+/* .form-control{
     width: 250px;
     text-align: center;
     margin-right: 0%;
@@ -35,14 +35,21 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 
-/* Firefox */
-input[type=number] {
+
+/* input[type=number] {
   -moz-appearance: textfield;
 }
 
 #buttons{
     margin-left: 25px;
 
+} */
+small{
+    color:red;
 }
+#shadow{
+    border-radius: 25px;
+     
+ }
