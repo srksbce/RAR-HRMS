@@ -86,4 +86,5 @@ export interface INewemp{
  "employementstatus":string;
  "jobeffectivedate":string;
   "compensationeffectivedate":string;
+  "notes":string;
 }
