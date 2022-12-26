@@ -1,218 +1,404 @@
 <app-navbarset></app-navbarset>
-<form name="customaccess" #customaccess="ngForm" (ngSubmit)="customaccess.valid && cusaccess(customaccess)"></form>
-<div class="container" style="position: relative;top: 67px;left: 13%;">
-    <div class="card">
-        <div class="card-body">
-            <br>
-            <a [routerLink]="['/admin/access-levels']" routerLinkActive="router-link-active"> <span><i
-                        class="bi bi-arrow-left-circle-fill"></i></span></a> Access Levels
-            <br>
-            <br>
-            <h4>New Custom Access Level</h4>
-            <br>
+<form name="customaccess" #customaccess="ngForm" (ngSubmit)="customaccess.valid && cusaccess(customaccess)">
+    <div class="container" style="position: relative;top: 67px;left: 13%;">
+        <div class="card">
+            <div class="card-body">
+                <br>
+                <a [routerLink]="['/admin/access-levels']" routerLinkActive="router-link-active"> <span><i
+                            class="bi bi-arrow-left-circle-fill"></i></span></a> Access Levels
+                <br>
+                <br>
+                <h4>New Custom Access Level</h4>
+                <br>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Basic"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">Basic</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#ActionAccess"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">Action
+                            Access</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#ViewAccess"
+                            type="button" role="tab" aria-controls="contact" aria-selected="false">View Access</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content pt-2" id="myTabContent">
+                    <!-- Basic -->
+                    <div class="tab-pane fade show active" id="Basic" role="tabpanel" aria-labelledby="home-tab">
+                        <span>
+                            
 
 
 
 
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <div class="col-md-4 mb-4">
 
-                <li class="nav-item" role="presentation">
-
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                        type="button" role="tab" aria-controls="home" aria-selected="true">Basic</button>
-
-                </li>
-
-                <li class="nav-item" role="presentation">
-
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                        type="button" role="tab" aria-controls="profile" aria-selected="false">Action Access</button>
-
-                </li>
-
-                <li class="nav-item" role="presentation">
-
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                        type="button" role="tab" aria-controls="contact" aria-selected="false">View Access</button>
-
-                </li>
-
-            </ul>
-            <br>
-            <div class="tab-content pt-2" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-                    <span>
-                        <div class="col-md-4 mb-4">
-
-                            <div class="form-outline">
-                                <label for="form2Example4" class="form-label">Basic Details </label>
-                                <input type="text" class="form-control" name="details" aria-label="details"
-                                    #details="ngModel" [(ngModel)]="CUSTOMACCESS.details" required>
-                                <small *ngIf="details.touched &&details.invalid">Basic Details are required</small>
+                                <div class="form-outline">
+                                    <label for="form2Example4" class="form-label">Access Level Name
+                                    </label><span>*</span>
+                                    <input type="text" class="form-control" name="LevelName" aria-label="LevelName"
+                                        #LevelName="ngModel" [(ngModel)]="CUSTOMACCESS.LevelName" required>
+                                    <small *ngIf="LevelName.touched &&LevelName.invalid">Access Level Name is
+                                        required</small>
 
 
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="col-md-4 mb-4">
-
-                            <div class="form-outline">
-                                <label for="form2Example4" class="form-label">Access Level Name </label><span>*</span>
-                                <input type="text" class="form-control" name="LevelName" aria-label="LevelName"
-                                    #LevelName="ngModel" [(ngModel)]="CUSTOMACCESS.LevelName" required>
-                                <small *ngIf="LevelName.touched &&LevelName.invalid">Access Level Name is
-                                    required</small>
-
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-7 mb-4">
-
-                            <div class="form-outline">
-                                <label for="Description" class="form-label">Description</label>
-                            </div>
-                            <div class="form-outline">
-                                <textarea class="form-control" id="textAreaExample" rows="7" placeholder="Type Here"
-                                    name="Description" #Description="ngModel" aria-label="Default select example"
-                                    [(ngModel)]=" CUSTOMACCESS.Description" required></textarea>
-                                <label class="form-label" for="textAreaExample"></label>
-
-                                <small *ngIf="Description.touched &&Description.invalid">Description is required</small>
-                            </div>
-                        </div>
-
-                    </span>
-                </div>
-                <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="home-tab">
-                    ohiubiibibuiub
-                </div>
-                <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="home-tab">
-                    <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                                data-bs-target="#bordered-home" type="button" role="tab" aria-controls="home"
-                                aria-selected="true">About Other Employees</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
-                                data-bs-target="#bordered-profile" type="button" role="tab" aria-controls="profile"
-                                aria-selected="false">About Themselves</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
-                                data-bs-target="#bordered-contact" type="button" role="tab" aria-controls="contact"
-                                aria-selected="false">On DashBoard</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content pt-2" id="borderedTabContent">
-                        <div class="tab-pane fade show active" id="bordered-home" role="tabpanel"
-                            aria-labelledby="home-tab">
-                            <div class="d-flex align-items-start">
-                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
-                                    aria-orientation="vertical">
-                                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-personal" type="button" role="tab"
-                                        aria-controls="v-pills-home" aria-selected="true">Personal</button>
-                                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-job" type="button" role="tab"
-                                        aria-controls="v-pills-profile" aria-selected="false">Job</button>
-                                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-documents" type="button" role="tab"
-                                        aria-controls="v-pills-messages" aria-selected="false">Documents</button>
                                 </div>
-                                <div class="tab-content" id="v-pills-tabContent">
-                                    <div class="tab-pane fade show active" id="v-pills-personal" role="tabpanel"
-                                        aria-labelledby="v-pills-home-tab">
-                                        <div class="d-flex">
-                                            <h4>Personal</h4>
-                                            <a [routerLink]="['/']" routerLinkActive="router-link-active"
-                                                class="mixedaccess">Mixed Access</a>
-                                            <hr>
-                                        </div>
-                                    </div>
 
-                                    <div class="tab-pane fade" id="v-pills-job" role="tabpanel"
-                                        aria-labelledby="v-pills-profile-tab">
+                            </div>
 
+                            <div class="col-md-7 mb-4">
 
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-documents" role="tabpanel"
-                                        aria-labelledby="v-pills-messages-tab">
-                                        Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis
-                                        cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis
-                                        accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos
-                                        fuga tempore dolor.
-                                    </div>
+                                <div class="form-outline">
+                                    <label for="Description" class="form-label">Description</label>
+                                </div>
+                                <div class="form-outline">
+                                    <textarea class="form-control" id="textAreaExample" rows="7" placeholder="Type Here"
+                                        name="Description" #Description="ngModel" aria-label="Default select example"
+                                        [(ngModel)]=" CUSTOMACCESS.Description" required></textarea>
+                                    <label class="form-label" for="textAreaExample"></label>
+
+                                    <small *ngIf="Description.touched &&Description.invalid">Description is
+                                        required</small>
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="bordered-profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <h4>Should they be able to see their own information?</h4>
-                            <div class="custom-control custom-radio ">
-                                <input type="radio" class="custom-control-input" id="defaultInline1"
-                                    name="inlineDefaultRadiosExample" required>
-                                <label class="custom-control-label" for="defaultInline1">Yes, Allow
-                                    Access</label>
-                            </div>
-                            <div class="custom-control custom-radio ">
-                                <input type="radio" class="custom-control-input" id="defaultInline2"
-                                    name="inlineDefaultRadiosExample" required>
-                                <label class="custom-control-label" for="defaultInline2">No, hide My info
-                                    Section</label>
-                                <br>
-                                <br>
-                                <h4>Which access level should apply?</h4>
-                                <br>
-                                <select class="form-select dropdown">
-                                    <option value="">Manager</option>
-                                    <option value="">Employee</option>
 
-                                </select>
+                        </span>
+                    </div>
+                    <!-- Basic Ends-->
+
+                    <!-- ActionAccess -->
+                    <div class="tab-pane fade" id="ActionAccess" role="tabpanel" aria-labelledby="profile-tab">
+                        <h4>What can people with this access level do ?</h4>
+                        <br>
+
+                        <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#bordered-Employees" type="button" role="tab" aria-controls="home"
+                                    aria-selected="true">Employees</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#bordered-Hiring" type="button" role="tab" aria-controls="profile"
+                                    aria-selected="false">Hiring</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#bordered-Reports" type="button" role="tab" aria-controls="contact"
+                                    aria-selected="false">Reports</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#bordered-CompanyFiles" type="button" role="tab"
+                                    aria-controls="contact" aria-selected="false">Company Files</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#bordered-Settings" type="button" role="tab" aria-controls="contact"
+                                    aria-selected="false">Settings</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content pt-2" id="borderedTabContent">
+                            <div class="tab-pane fade show active" id="bordered-Employees" role="tabpanel"
+                                aria-labelledby="home-tab">
+                                <h5><b>Employees</b></h5>
+                                <br>
+
+                                <div class="input">
+                                    <input type="checkbox"> Add New Employees<br>
+
+                                    <input type="checkbox"> End Employments<br>
+
+                                    <input type="checkbox"> Power Edit Employees<br>
+
+                                    <input type="checkbox"> Change Employee Photos<br>
+
+                                    <input type="checkbox"> Manage Time Off Policy Assignments<br>
+
+                                    <input type="checkbox"> Download Employee Forms(1-9,w-4,etc)<br>
+
+                                </div>
                             </div>
-                            <br>
-                            <br>
-                        </div>
-                        <div class="tab-pane fade" id="bordered-contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Celebrations
-                                </label>
+                            <div class="tab-pane fade" id="bordered-Hiring" role="tabpanel"
+                                aria-labelledby="profile-tab">
+                                Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos quia.
+                                Accusantium distinctio omnis et atque fugiat. Itaque doloremque aliquid sint quasi quia
+                                distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut laboriosam
+                                voluptatum dicta.
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Announcements
-                                </label>
+                            <div class="tab-pane fade" id="bordered-Reports" role="tabpanel"
+                                aria-labelledby="contact-tab">
+                                Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
+                                Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit
+                                molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Links
-                                </label>
+                            <div class="tab-pane fade" id="bordered-CompanyFiles" role="tabpanel"
+                                aria-labelledby="contact-tab">
+                                ASK
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Welcome New Hires
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Who's Out
-                                </label>
+                            <div class="tab-pane fade" id="bordered-Settings" role="tabpanel"
+                                aria-labelledby="contact-tab">
+                                BSl
                             </div>
                         </div>
                     </div>
+                    <!-- ActionAccess Ends-->
+
+                    <!-- ViewAccess -->
+
+                    <div class="tab-pane fade" id="ViewAccess" role="tabpanel" aria-labelledby="contact-tab">
+                        <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#AboutOtherEmployees" type="button" role="tab" aria-controls="home"
+                                    aria-selected="true">About Other Employees</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#AboutThemselves" type="button" role="tab" aria-controls="profile"
+                                    aria-selected="false">About Themselves</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#OnDashboard" type="button" role="tab" aria-controls="contact"
+                                    aria-selected="false">On Dashboard</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content pt-2" id="borderedTabContent">
+                            <!-- about otherEmployees  -->
+                            <div class="tab-pane fade show active" id="AboutOtherEmployees" role="tabpanel"
+                                aria-labelledby="home-tab">
+                                <div class="d-flex align-items-start">
+                                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#Personal" type="button" role="tab"
+                                            aria-controls="v-pills-home" aria-selected="true">Personal</button>
+                                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#Job" type="button" role="tab"
+                                            aria-controls="v-pills-profile" aria-selected="false">Job</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#Documents" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Documents</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#TimeOff" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Time Off</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#Benifits" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Benifits</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#Performance" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Performance</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#Training" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Training</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#Assets" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Assets</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#Notes" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Notes</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#Emergency" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Emergency</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#OnBoarding" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">OnBoarding</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#OffBoarding" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">OffBoarding</button>
+
+                                    </div>
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="Personal" role="tabpanel"
+                                            aria-labelledby="v-pills-home-tab">
+                                            <h4><b>Personal</b></h4>
+                                            <table class="table auto-index table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <select class="form-select">
+                                                            <option aria-disabled="true">Basic</option>
+                                                            <option value="">Employee ID</option>
+                                                            <option value="">Gender</option>
+                                                            <option value="">Date Of Birth</option>
+                                                            <option value="">Title</option>
+                                                            <option value="">FirstName</option>
+                                                            <option value="">LastName</option>
+                                                            <option value="">Marital Status</option>
+                                                            <option value="">National ID</option>
+                                                        </select>
+                                                    </tr>
+                                                    <br>
+                                                    <br>
+                                                    <tr>
+                                                        <select class="form-select">
+                                                            <option aria-disabled="true">Address</option>
+                                                            <option value="">Address Line 1</option>
+                                                            <option value="">Address Line 2</option>
+                                                            <option value="">City</option>
+                                                            <option value="">State</option>
+                                                            <option value="">Country</option>
+                                                            <option value="">Postal Code</option>
+                                                        </select>
+                                                    </tr>
+                                                    <br>
+                                                    <br>
+                                                    <tr>
+                                                        <select class="form-select">
+                                                            <option aria-disabled="true">Contact Details</option>
+                                                            <option value="">Work Phone</option>
+                                                            <option value="">Work Phone</option>
+                                                            <option value="">Work Email</option>
+                                                            <option value="">Home Email</option>
+                                                        </select>
+                                                    </tr>
+                                                    <br>
+                                                    <br>
+                                                    <tr>
+                                                        <select class="form-select">
+                                                            <option aria-disabled="true">Emergency Contact Details
+                                                            </option>
+                                                            <option value="">Name</option>
+                                                            <option value="">Email ID</option>
+                                                            <option value="">Phone Number</option>
+                                                            <option value="">Relationship</option>
+                                                        </select>
+                                                    </tr>
+                                                    <br>
+                                                    <br>
+                                                    <tr>
+                                                        <select class="form-select">
+                                                            <option aria-disabled="true">Education</option>
+                                                            <option value="">Degree</option>
+                                                            <option value="">University</option>
+                                                            <option value="">Specialization</option>
+                                                            <option value="">Degree Start Date</option>
+                                                            <option value="">Degree End Date</option>
+
+                                                        </select>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+
+
+                                        </div>
+                                        <div class="tab-pane fade" id="Job" role="tabpanel"
+                                            aria-labelledby="v-pills-profile-tab">
+                                            Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos
+                                            quia. Accusantium distinctio omnis et atque fugiat. Itaque doloremque
+                                            aliquid sint quasi quia distinctio similique. Voluptate nihil recusandae
+                                            mollitia dolores. Ut laboriosam voluptatum dicta.
+                                        </div>
+                                        <div class="tab-pane fade" id="Documents" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis
+                                            cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis
+                                            accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos
+                                            fuga tempore dolor.
+                                        </div>
+                                        <div class="tab-pane fade" id="TimeOff" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            ASK1
+                                        </div>
+                                        <div class="tab-pane fade" id="Benifits" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            ASK2
+                                        </div>
+                                        <div class="tab-pane fade" id="Performance" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            ASK3
+                                        </div>
+                                        <div class="tab-pane fade" id="Training" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            ASK4
+                                        </div>
+                                        <div class="tab-pane fade" id="Assets" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            ASK5
+                                        </div>
+                                        <div class="tab-pane fade" id="Notes" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            ASK6
+                                        </div>
+                                        <div class="tab-pane fade" id="Emergency" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            ASK7
+                                        </div>
+                                        <div class="tab-pane fade" id="OnBoarding" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            ASK8
+                                        </div>
+                                        <div class="tab-pane fade" id="OffBoarding" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            ASK9
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- about otheremployees ends -->
+
+
+                            <!-- about themselves -->
+                            <div class="tab-pane fade" id="AboutThemselves" role="tabpanel"
+                                aria-labelledby="profile-tab">
+                                <h4>Should they be able to see their own information?</h4>
+                                <div class="custom-control custom-radio ">
+                                    <input type="radio" class="custom-control-input" id="defaultInline1"
+                                        name="inlineDefaultRadiosExample" required>
+                                    <label class="custom-control-label" for="defaultInline1">Yes, Allow
+                                        Access</label>
+                                </div>
+                                <div class="custom-control custom-radio ">
+                                    <input type="radio" class="custom-control-input" id="defaultInline2"
+                                        name="inlineDefaultRadiosExample" required>
+                                    <label class="custom-control-label" for="defaultInline2">No, hide My info
+                                        Section</label>
+                                    <br>
+                                    <br>
+                                    <h4>Which access level should apply?</h4>
+                                    <br>
+                                    <select class="form-select dropdown">
+                                        <option value="">Manager</option>
+                                        <option value="">Employee</option>
+
+                                    </select>
+                                </div>
+                                <br>
+                                <br>
+                            </div>
+
+                            <!-- about themselves ends -->
+
+                            <!-- Ondashboard -->
+                            <div class="tab-pane fade" id="OnDashboard" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="input">
+                                    <input type="checkbox"> Celebrations<br>
+
+                                    <input type="checkbox"> Announcements<br>
+
+                                    <input type="checkbox"> Links<br>
+
+                                    <input type="checkbox"> Welcome New Hires<br>
+
+                                    <input type="checkbox"> Who's Out<br>
+
+
+                                </div>
+                            </div>
+                            <!-- ondashboard ends -->
+
+                        </div>
+                    </div>
+                    <!-- ViewAccess Ends-->
+
                 </div>
             </div>
         </div>
     </div>
+</form>

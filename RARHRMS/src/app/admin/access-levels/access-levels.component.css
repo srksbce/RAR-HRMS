@@ -87,6 +87,6 @@ text-align: justify;
   top: 31px;
 }
 .card{
-  position: inherit;
+  position: initial;
   right: 100px;
 }
