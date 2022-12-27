@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import { SharedRoutingModule } from './shared-routing.module';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminFooterComponent } from './admin-footer/admin-footer.component';
@@ -12,6 +13,7 @@ import { SidebarempComponent } from './sidebaremp/sidebaremp.component';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarsetComponent } from './navbarset/navbarset.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { NavbarsetComponent } from './navbarset/navbarset.component';
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    FormsModule
   ],
   exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent,AuthenticFooterComponent,AuthenticHeaderComponent,NavbarComponent,SidebarempComponent, Navbar1Component,NavbarsetComponent,LoginComponent],
 })

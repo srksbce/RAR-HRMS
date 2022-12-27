@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ILogin } from '../register-model';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { FormControl, NgForm, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 import { Router } from '@angular/router';
