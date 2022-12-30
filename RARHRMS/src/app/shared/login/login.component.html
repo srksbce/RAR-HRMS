@@ -34,14 +34,13 @@
                         </span>
                         <!-- <span style="position: relative;right: -44%;top: 30px;" class="eyeicon"  (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye-fill':'bi bi-eye-slash-fill'"></i>
                                   </span> -->
-                        <input [type]="changetype?'password':'text'" id="password" placeholder="Password"
-                            name="password" class="form-control" required />
-
-                        <!--                                      
-                                      <small
+                                  <input [type]="changetype?'password':'text'"id="password" placeholder="Enter Password" name="password" #password="ngModel"
+                                  [(ngModel)]="SIGNIN.password" 
+                                      class="form-control" required />
+                                     <small
                                       *ngIf="(password.touched && password.invalid) || (password.invalid && LOGIN.submitted)">Password
                                       is
-                                      required</small> -->
+                                      required</small> 
                     </div>
 
                     <br>
