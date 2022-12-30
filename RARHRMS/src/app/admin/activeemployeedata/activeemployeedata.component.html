@@ -1,54 +1,62 @@
 <app-navbar></app-navbar>
-<div class="container" style="position: relative;top: 67px;left: 13%;">
+<div class="container">
+  <div class="container" style="position: relative;top: 67px;left: 13%;">
 
-  <br>
-  <a [routerLink]="['/admin/superuser']" routerLinkActive="router-link-active"> <span><i class="bi bi-arrow-left"></i></span></a>
-  Dashboard<i class="bi bi-chevron-double-right"></i>
-  <h2 class="d-flex ">Active Employees</h2>
-  <br>
-  <button [routerLink]="['/admin/newemp']" routerLinkActive="router-link-active" type="button" class="btn btn-primary"
-    style="float:right;top:200px;">
-    <i class="bi bi-plus-square"></i>
-  </button>
-  <hr class="hr" />
-  <div class="card">
-    <div class="card-body"><br>
-      <div class="row height d-flex ">
-        <div class="col">
-          <div class="form">
-            <i class="fa fa-search"></i>
-            <input type="text" class="form-control form-input" placeholder="Search...">
-            
+    <br>
+    <a [routerLink]="['/admin/superuser']" routerLinkActive="router-link-active"> <span><i
+          class="bi bi-arrow-left"></i></span></a>
+    Dashboard<i class="bi bi-chevron-double-right"></i>
+    <h2 class="d-flex ">Active Employees</h2>
+    <br>
+    <button [routerLink]="['/admin/newemp']" routerLinkActive="router-link-active" type="button" class="btn btn-primary"
+      style="float:right;top:200px;">
+      <i class="bi bi-plus-square"></i>
+    </button>
+    <hr class="hr" />
+    <div class="card">
+      <div class="card-body"><br>
+        <div class="row height d-flex ">
+          <div class="col">
+            <div class="form">
+              <i class="fa fa-search"></i>
+              <input type="text" class="form-control form-input" placeholder="Search...">
+
+            </div>
+
           </div>
-          
         </div>
-      </div>
-      <table class="table auto-index table-hover">
-        <thead>
-          <tr>
-            <th>Employee Name</th>
+        
+         
+            <table class="table auto-index table-hover flex-wrap tabledes">
+              
+              <thead>
+                <tr>
+                  <th>Employee Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Reports To</th>
+                  <th>Direct Reports</th>
+                </tr>
+              </thead>
             
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Reports To</th>
-            <th>Direct Reports</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let act of actemployees | searchfilter: searchValue" class="hover" (click)="select(act)">
+              <tbody>
+                <tr *ngFor="let act of actemployees | searchfilter: searchValue" class="hover" (click)="select(act)">
 
-            <td>{{ act.employeeid }}</td>
-            <td>{{ act.firstname }}</td>
-            <td>{{ act.lastname }}</td>
-            <td>{{ act.emailaddress }}</td>
-            <td>{{ act.contactnumber }}</td>
-            <td>{{ act.jobtitle }}</td>
+                  <td>{{ act.employeeid }}</td>
+                  <td>{{ act.firstname }}</td>
+                  <td>{{ act.lastname }}</td>
+                  <td>{{ act.emailaddress }}</td>
+                  <td>{{ act.contactnumber }}</td>
+                  <td>{{ act.jobtitle }}</td>
 
-          </tr>
-        </tbody>
-      </table>
+                </tr>
+              </tbody>
+            </table>
+          
+        
+
+      </div>
 
     </div>
-
   </div>
 </div>
