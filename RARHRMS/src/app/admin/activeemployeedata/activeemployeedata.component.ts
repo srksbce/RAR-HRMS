@@ -20,7 +20,7 @@ export class ActiveemployeedataComponent implements OnInit {
   }
 
   empdata() {
-    this.subscription = this.http.getData("empdata").subscribe({
+    this.subscription = this.http.getData("Register").subscribe({
       next: (data: any) => {
         this.actemployees = data as IActive[];
       },

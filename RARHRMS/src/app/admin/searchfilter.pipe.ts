@@ -12,13 +12,13 @@ export class SearchfilterPipe implements PipeTransform {
        return actemployees;
     }
     return actemployees.filter(p => 
-      p.firstname.toLowerCase().includes(searchValue.toLowerCase()) ||
-      p.lastname.toLowerCase().includes(searchValue.toLowerCase()) ||
+      p.FirstName.toLowerCase().includes(searchValue.toLowerCase()) ||
       p.emailaddress.toLowerCase().includes(searchValue.toLowerCase()) ||
-      p.jobtitle.toLowerCase().includes(searchValue.toLowerCase()) ||
-      p.contactnumber.toString().toLowerCase().includes(searchValue.toLowerCase()) ||
-      p.employeeid === Number(searchValue))
+      p.ReportingTo.toLowerCase().includes(searchValue.toLowerCase()) ||
+      p.contactnumber.toString().toLowerCase().includes(searchValue.toLowerCase()))
+      
  
 
 }
+
 }
