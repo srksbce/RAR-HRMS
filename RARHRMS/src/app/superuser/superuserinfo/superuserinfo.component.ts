@@ -21,6 +21,7 @@ export class SuperuserinfoComponent implements OnInit {
   personalData = [] as any;
   jobData=[] as any;
   compensationData=[] as any;
+  BankData = [] as any;
 
 
 

@@ -1,8 +1,8 @@
 export interface INewemp{
-  employeeNumber: any;
+ 
   // ssn: any;
   // payrate: any;
-  // country: any;
+  // Country: any;
   // add1: any;
   // mobile: any;
   // clientname: any;
@@ -19,7 +19,7 @@ export interface INewemp{
     //  AddressLine2:String,
     //  City:String,
     // State:String,
-    //  Zipcode:Number,
+    //  ZipCode:Number,
     // SelectCountry:String,
     // PhoneNumber:Number,
     // EmailId:String,
@@ -33,58 +33,57 @@ export interface INewemp{
     // SupervisorId:Number,
     // Selectclient:String,
     
-    "employeeid":Number;
-  "firstname": string;
- "lastname": string;
- "fullname": string;
- "empstatus":string;
+  "EmployeeId":Number;
+  "FirstName": string;
+ "LastName": string;
+"empstatus":string;
  "emailaddress":string;
  "jobtitle": string;
  "internalstaff": string;
  "supervisor":number;
- "visastatus": string;
- "gender":string;
- "entity":string;
- "dateofbirth": string;
- "clientname": string;
+ "VisaStatus": string;
+ "Gender":string;
+ "Entity":string;
+ "DOB": any;
+ "ClientName": string;
  "clientcode": number;
  "startdate":number;
  "createdby":number;
  "updatedby": number;
  "immigrationstatus":string;
  "highestdegree":string;
- "university": string;
+ "University": string;
  "contactnumber": number;
- "addressline1":string;
- "addressline2":string;
- "city": string;
- "state": string;
- "zipcode":number;
- "country":string;
+ "AddressLine1":string;
+ "AddressLine2":string;
+ "City": string;
+ "State": string;
+ "ZipCode":number;
+ "Country":string;
  "ssn":number;
- "taxfilenumber":number;
+ "TaxFileNumber":number;
  "emergencynumber":number;
  "effectivedate":string;
- "location":string;
- "reportsto":string;
+ "Location":string;
+ "ReportingTo":string;
  "payschedule":string;
- "paytype":string;
+ "PayType":string;
  "payrate": number;
- "overtime":string;
- "overtimerate":number;
- "changereason":string;
- "comment":string;
- "specialization":string;
- "gpa":number;
- "degreestartdate":string;
- "degreeenddate": string;
+ "OvertimeEligibility":string;
+ "Overtimerate":number;
+ "Reason":string;
+ "Comments":string;
+ "Specialization":string;
+ "Gpa":number;
+ "Educationstartdate":string;
+ "Educationenddate": string;
  "date":string;
- "issuingcountry":string;
- "issueddate":string;
+ "VisaTypeIssuingCountry":string;
+ "issuedDate":string;
  "expirationdate":string;
  "status":string;
  "employementstatus":string;
- "jobeffectivedate":string;
-  "compensationeffectivedate":string;
-  "notes":string;
+ "JobEffectiveDate":string;
+  "CompensationEffectiveDate":string;
+  "Notes":string;
 }
