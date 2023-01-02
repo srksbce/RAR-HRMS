@@ -1,40 +1,46 @@
 <section class="">
     <!-- Jumbotron -->
 
-    <div class="col-lg-5 mb-4 "style="margin-top:130px;">
-        <div class="card-body px-md-4" style="left: 500px;">
+    <div class="col-4">
+        <div class="card-body " style="left: 500px;">
             <div class="shadow-lg p-5 mb-7 bg-white rounded">
 
-                <form name="LOGIN" >
+                <form name="LOGIN" #LOGIN="ngForm" (ngSubmit)="LOGIN.valid && login(LOGIN)">
                     <div class="img">
                         <img alt="" src="../assets/snadicon.png" />
                     </div>
                     <h3><b>Log In To Your Account</b></h3>
-                    <input type="email" id="email" name="email" placeholder="Log In with Google" class="form-control "
-                    required /><br><h6>OR LOGIN WITH EMAIL</h6>
-                    <div class="form-outline mb-2">
-                        <label class="form-label" for="form2Example1">Email</label>
-                        <input type="email" id="email" name="email" placeholder="" class="form-control"
-                            required />
-                        <!-- <small
-                                      *ngIf="(email.touched && email.invalid) || (email.invalid && LOGIN.submitted)">
-                                      User id is
-                                      required</small> -->
+                    <button type="button" class="login-with-google-btn">
+                        Sign in with Google
+                    </button>
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0 text-muted">OR LOGIN WITH EMAIL</p>
                     </div>
-                   <br>
-
+                    <label class="form-label" for="form2Example1">Email</label>
                     <div class="form-outline mb-2">
-                        <label class="form-label" for="form2Example2">Password</label>
+                        <label class="form-label" for="form2Example1"></label><i class="bi bi-person-circle"
+                            style="position: relative;right: -44%;top: 28px;"></i>
+                        <input type="email" id="email" name="email" placeholder="Enter User Id" #email="ngModel"
+                            [(ngModel)]="SIGNIN.email" class="form-control" required />
+                        <small *ngIf="(email.touched && email.invalid) || (email.invalid && LOGIN.submitted)">
+                            User id is
+                            required</small>
+                    </div>
+                    <br>
+                    <label class="form-labels" for="form2Example1">Password</label>
+                    <div class="form-outline mb-2">
+                        <span style="position: relative;right: -44%;top: 30px;" class="eyeicon" (click)="viewpass()"><i
+                                [ngClass]="visible?'bi bi-eye-fill':'bi bi-eye-slash-fill'"></i>
+                        </span>
                         <!-- <span style="position: relative;right: -44%;top: 30px;" class="eyeicon"  (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye-fill':'bi bi-eye-slash-fill'"></i>
                                   </span> -->
-                        <input type="password" id="password" placeholder="" name="password"
-                            class="form-control" required />
-
-                        <!--                                      
-                                      <small
+                                  <input [type]="changetype?'password':'text'"id="password" placeholder="Enter Password" name="password" #password="ngModel"
+                                  [(ngModel)]="SIGNIN.password" 
+                                      class="form-control" required />
+                                     <small
                                       *ngIf="(password.touched && password.invalid) || (password.invalid && LOGIN.submitted)">Password
                                       is
-                                      required</small> -->
+                                      required</small> 
                     </div>
 
                     <br>
@@ -50,14 +56,13 @@
                                 <a class="regis1" href="/forgotpassword"><b>Forgot Password?</b></a>
                             </div>
                         </div>
-                       
+
                     </div>
-                   
+
                     <br>
                     <button type="submit" class="btn btn-primary btn-block mb-3 col-10">Log In</button>
 
-                    <h5>Don't have an account? <a class="regis1" href="/reg"><b>Signup
-                       </b></a></h5>
+
                 </form>
             </div>
         </div>
