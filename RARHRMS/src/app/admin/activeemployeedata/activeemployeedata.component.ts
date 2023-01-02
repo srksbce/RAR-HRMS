@@ -22,6 +22,7 @@ export class ActiveemployeedataComponent implements OnInit {
   empdata() {
     this.subscription = this.http.getData("Register").subscribe({
       next: (data: any) => {
+        console.log(data);
         this.actemployees = data as IActive[];
       },
       error: reason => console.log(reason)

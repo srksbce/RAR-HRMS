@@ -1,7 +1,8 @@
 export interface IActive {
-    FirstName:string;
+    firstName:string;
     emailaddress:string;
     contactnumber:number;
-    ReportingTo:string;
+    reportingTo:string;
+    lastName:string;
 
 }

@@ -42,11 +42,11 @@
               <tbody>
                 <tr *ngFor="let act of actemployees | searchfilter: searchValue" class="hover" (click)="select(act)">
 
-                  <td>{{ act.FirstName }}</td>
+                  <td>{{ act.firstName +act.lastName }}</td>
                   <td>{{ act.emailaddress }}</td>
                   <td>{{ act.contactnumber }}</td>
-                  <td>{{ act.ReportingTo  }}</td>
-                  <td>{{ act.ReportingTo  }}</td>
+                  <td>{{ act.reportingTo  }}</td>
+                  <td>{{ act.reportingTo  }}</td>
 
                   
                   

@@ -12,9 +12,9 @@ export class SearchfilterPipe implements PipeTransform {
        return actemployees;
     }
     return actemployees.filter(p => 
-      p.FirstName.toLowerCase().includes(searchValue.toLowerCase()) ||
+      p.firstName.toLowerCase().includes(searchValue.toLowerCase()) ||
       p.emailaddress.toLowerCase().includes(searchValue.toLowerCase()) ||
-      p.ReportingTo.toLowerCase().includes(searchValue.toLowerCase()) ||
+      p.reportingTo.toLowerCase().includes(searchValue.toLowerCase()) ||
       p.contactnumber.toString().toLowerCase().includes(searchValue.toLowerCase()))
       
  
