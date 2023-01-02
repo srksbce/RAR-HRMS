@@ -19,7 +19,10 @@
           <div class="col">
             <div class="form">
               <i class="fa fa-search"></i>
-              <input type="text" class="form-control form-input" placeholder="Search...">
+              <input type="text" 
+              [(ngModel)]="searchValue"
+              
+               class="form-control form-input" placeholder="Search...">
 
             </div>
 
@@ -42,7 +45,7 @@
               <tbody>
                 <tr *ngFor="let act of actemployees | searchfilter: searchValue" class="hover" (click)="select(act)">
 
-                  <td>{{ act.firstName +act.lastName }}</td>
+                  <td>{{ act.firstName }}</td>
                   <td>{{ act.emailaddress }}</td>
                   <td>{{ act.contactnumber }}</td>
                   <td>{{ act.reportingTo  }}</td>
