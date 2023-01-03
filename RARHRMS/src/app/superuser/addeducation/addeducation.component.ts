@@ -24,16 +24,16 @@ export class AddeducationComponent implements OnInit {
     console.log(this.empdata)
   }
   education(f:NgForm){
-    this.educationupdate.employeeid = parseInt(this.empdata.employeeid)
+    this.educationupdate.employeeId = parseInt(this.empdata.employeeid)
   
    console.log(this.educationupdate)
 
-  this.subscription=this.http.empPostData("empdata/",this.educationupdate, parseInt(this.empdata.id)).subscribe({
+  this.subscription=this.http.empPostData("Register/",this.educationupdate, parseInt(this.empdata.id)).subscribe({
     next: (data: any) => {
       console.log(data)
       if(data.statuscode==200){
         alert(data.message)
-        this.router.navigate(["/admin/personaldata"])
+        this.router.navigate(["/superuser/superuserinfo"])
       }
     },
     error: (reason: any) => {

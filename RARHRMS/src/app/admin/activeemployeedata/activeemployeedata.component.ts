@@ -31,7 +31,7 @@ export class ActiveemployeedataComponent implements OnInit {
   }
   select(act:any){
     localStorage.setItem("personaldata",JSON.stringify(act) );
-    this.router.navigate(["/admin/personaldata"])
+    this.router.navigate(["/superuser/superuserinfo"])
   }
   ngOnDestroy(): void {
     if(this.subscription)
