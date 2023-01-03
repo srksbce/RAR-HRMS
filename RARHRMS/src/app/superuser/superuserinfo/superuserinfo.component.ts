@@ -31,7 +31,7 @@ export class SuperuserinfoComponent implements OnInit {
 
 
   ngOnInit(): void {
-    //this.empdata = JSON.parse(localStorage.getItem("personaldata") || '{}')
+    this.empdata = JSON.parse(localStorage.getItem("personaldata") || '{}')
     console.log(this.empdata);
     this.getEducationData();
     this.getvisainformation();
