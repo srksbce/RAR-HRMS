@@ -2,7 +2,7 @@
 <br>
 <a [routerLink]="['/superuser/superuser']" routerLinkActive="router-link-active"> <span><i
       class="bi bi-arrow-left"></i></span></a>
-Dashboard<i class="bi bi-chevron-double-right"style="margin-left: 530px;"></i>
+Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
 <h2 class="d-flex ">Active Employees</h2>
 <br>
 <div class="container" style="position: relative;top: 67px;left: 13%;">
@@ -43,8 +43,8 @@ Dashboard<i class="bi bi-chevron-double-right"style="margin-left: 530px;"></i>
         <div class="col">
           <label for="DOB" class="form-label">Date Of
             Birth*</label>
-          <input type="date" class="form-control" id="DOB" name="DOB" #DOB="ngModel"
-            [(ngModel)]="empdata.DOB" required />
+          <input type="date" class="form-control" id="DOB" name="DOB" #DOB="ngModel" [(ngModel)]="empdata.DOB"
+            required />
           <small *ngIf="(DOB.touched && DOB.invalid) || (DOB.invalid && Newemp.submitted)">Date
             Of Birth is required </small>
         </div>
@@ -483,8 +483,8 @@ Dashboard<i class="bi bi-chevron-double-right"style="margin-left: 530px;"></i>
       <div class="row">
         <div class="col">
           <label for="egreestartdate" class="form-label">Degree Start Date*</label>
-          <input type="date" class="form-control" id="Educationstartdate" name="Educationstartdate" #Educationstartdate="ngModel"
-            [(ngModel)]="empdata.egreestartdate" required />
+          <input type="date" class="form-control" id="Educationstartdate" name="Educationstartdate"
+            #Educationstartdate="ngModel" [(ngModel)]="empdata.egreestartdate" required />
           <small
             *ngIf="(Educationstartdate.touched && Educationstartdate.invalid) || (Educationstartdate.invalid && Newemp.submitted)">Degree
             Date is required </small>
@@ -492,8 +492,8 @@ Dashboard<i class="bi bi-chevron-double-right"style="margin-left: 530px;"></i>
 
         <div class="col">
           <label for="Educationenddate" class="form-label">Degree End Date*</label>
-          <input type="date" class="form-control" id="Educationenddate" name="Educationenddate" #Educationenddate="ngModel"
-            [(ngModel)]="empdata.Educationenddate" required />
+          <input type="date" class="form-control" id="Educationenddate" name="Educationenddate"
+            #Educationenddate="ngModel" [(ngModel)]="empdata.Educationenddate" required />
           <small
             *ngIf="(Educationenddate.touched && Educationenddate.invalid) || (Educationenddate.invalid && Newemp.submitted)">End
             Date is required </small>
@@ -1133,20 +1133,19 @@ Dashboard<i class="bi bi-chevron-double-right"style="margin-left: 530px;"></i>
             Id is required </small>
         </div><br>
       </div>
+      <div class="row">
+        <div class="col" style="margin-left: 530px;">
+          <button [routerLink]="['/admin/']" routerLinkActive="router-link-active" type="button"
+            class="btn btn-primary">Save
+            Changes</button>
+        </div>
+        <div class="col" style="margin-right: 200px;">
+          <button [routerLink]="['/admin/']" routerLinkActive="router-link-active" type="button"
+            class="btn btn-primary">Cancel</button>
+        </div>
+      </div>
     </form>
     <br>
 
-  </div>
-</div>
-<br>
-<br>
-<br>
-<div class="row">
-  <div class="col"  style="margin-left: 530px;">
-    <button [routerLink]="['/admin/']" routerLinkActive="router-link-active" type="button" class="btn btn-primary">Save
-      Changes</button>
-  </div>
-  <div class="col"  style="margin-right: 200px;">
-    <h5>Cancel</h5>
   </div>
 </div>
