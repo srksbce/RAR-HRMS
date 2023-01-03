@@ -13,22 +13,21 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class SuperuserinfoComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  subscription !: Subscription;
   educationData = [] as any;
+
   visaData = [] as any;
   PERSONAL = {} as Ipersonaldata;
+
   empdata = [] as any;
-  subscription !: Subscription;
-  personalData = [] as any;
+ 
   jobData=[] as any;
   compensationData=[] as any;
   BankData = [] as any;
 
 
 
-  constructor(
-    private http: HttpService,
-    private router: Router
-  ) { }
+  constructor( private http: HttpService,private router: Router ) { }
 
 
   ngOnInit(): void {
