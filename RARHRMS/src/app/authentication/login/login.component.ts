@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ILogin } from '../register-model';
 import { FormControl, NgForm, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
@@ -16,23 +16,33 @@ export class LoginComponent implements OnInit,OnDestroy {
 
   Login = {} as ILogin;
   subscription!: Subscription;
-  
+ urllink:string = "assets/profile-img.jpg";
+ selectFiles(event:any){
+  if(event.target.files){
+    var reader= new FileReader()
+    reader.readAsDataURL(event.target.files[0])
+    reader.onload = (event:any) =>{
+      this.urllink = event.target.result
+    }
+  }
+ }
   entities= [] as any;
   visible:boolean = false;
   changetype:boolean =true;
-
+ 
   constructor(private _httpservice:HttpService,
     private router:Router,
-
+   
     ) { }
-
+   
   ngOnInit(): void {
     this.getentities();
     
 
   }
-
   
+
+ 
   viewpass(){
     this.visible = !this.visible;
     this.changetype = !this.changetype;
