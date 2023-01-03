@@ -1,89 +1,104 @@
 export interface INewemp{
  
-  // ssn: any;
-  // payrate: any;
-  // Country: any;
-  // add1: any;
-  // mobile: any;
-  // clientname: any;
-  // jobrole: any;
-  // empstatus: any;
-   
-    // EmployeeNumber:string,
-    // FirstName:string,
-    // LastName:string,
-    // DateOfBirth:string,
-    // Gender:string,
-    // NationalID:Number,
-    // AddressLine1:String,
-    //  AddressLine2:String,
-    //  City:String,
-    // State:String,
-    //  ZipCode:Number,
-    // SelectCountry:String,
-    // PhoneNumber:Number,
-    // EmailId:String,
-    // SelectPaySchedule:String,
-    // SelectPayType:String,
-    // HireDate:Number,
-    // EmployementStatus:String,
-    // EmployementType:String,
-    // JobTitle:String,
-    // SelectTitle:String
-    // SupervisorId:Number,
-    // Selectclient:String,
-    
-  "EmployeeId":Number;
-  "FirstName": string;
- "LastName": string;
-"empstatus":string;
- "emailaddress":string;
- "jobtitle": string;
- "internalstaff": string;
- "supervisor":number;
- "VisaStatus": string;
- "Gender":string;
- "Entity":string;
- "DOB": any;
- "ClientName": string;
- "clientcode": number;
- "startdate":number;
- "createdby":number;
- "updatedby": number;
- "immigrationstatus":string;
- "highestdegree":string;
- "University": string;
- "contactnumber": number;
- "AddressLine1":string;
- "AddressLine2":string;
- "City": string;
- "State": string;
- "ZipCode":number;
- "Country":string;
- "ssn":number;
- "TaxFileNumber":number;
- "emergencynumber":number;
- "effectivedate":string;
- "Location":string;
- "ReportingTo":string;
- "payschedule":string;
- "PayType":string;
- "payrate": number;
- "OvertimeEligibility":string;
- "Overtimerate":number;
- "Reason":string;
- "Comments":string;
- "Specialization":string;
- "Gpa":number;
- "Educationstartdate":string;
- "Educationenddate": string;
- "date":string;
- "VisaTypeIssuingCountry":string;
- "issuedDate":string;
- "expirationdate":string;
- "status":string;
- "employementstatus":string;
- "JobEffectiveDate":string;
-  "CompensationEffectiveDate":string;
-  "Notes":string;
+  employeeId: number,
+  empstatus: string,
+  firstName: string,
+  lastName:string,
+  maritalStatus: string,
+  emailaddress: string,
+  internalstaff: string,
+  supervisor: number,
+  accountNumber: number,
+  addressId: number,
+  addressLine1: string,
+  addressLine2: string,
+  amount: number,
+  backgroundCheckStatus: string,
+  bankName: string,
+  businessArea: string,
+  city: string,
+  clientName: string,
+  clientcode: number,
+  comments: string,
+  compensationComments: string,
+  compensationEffectiveDate: any,
+  confirmPassword: string,
+  contactnumber: number,
+  country: string,
+  createdby: string,
+  dateOfJoining: any,
+  degree: string,
+  department: string,
+  dob: any,
+  educationenddate: any,
+  educationstartdate: any,
+  effectivedate: any,
+  eligibleforrehire: string,
+  emailId: string,
+ 
+  emergencyName: string,
+  emergencynumber: number,
+  
+  employementstatus: string,
+ 
+  entity: string,
+  expirationdate: any,
+  
+  frequency: string,
+  gender: string,
+  gpa: number,
+
+  homeEmail: string,
+  id: number,
+  ifscCode: number,
+  immigrationstatus: string,
+ 
+  issuedDate: any,
+  jobEffectiveDate: any,
+  jobRole: string,
+
+  lastworkingday: any,
+  location: string,
+  
+  mobileNumber: number,
+  mobilePhone: number,
+  nationalId: number,
+  notes: string,
+  noticePeriod: string,
+  overtimeEligibility: string,
+  overtimerate: number,
+  password: string,
+  payType: string,
+  payrate: number,
+  payschedule: string,
+  probationEndDate: any,
+  probationStatus: string,
+  profilePic: string,
+  projectEndDate: any,
+  projectName: string,
+  projectStartDate: any,
+  proof: string,
+  reason: string,
+  relationShip: string,
+  reportingTo: string,
+  secondaryLanguage: string,
+  specialization: string,
+  ssn: number,
+  startdate: any,
+  state: string,
+  status: string,
+ 
+  taxFileNumber: number,
+  termreasonoffboard: string,
+  termtypeoffboard: string,
+  title: string,
+  university: string,
+  updatedby: string,
+  userName: string,
+  visaStatus: string,
+  visaTypeIssuingCountry: string,
+  
+  workEmail: string,
+  workPhone: number,
+  zipCode: number,
 }
