@@ -29,7 +29,31 @@ viewpass(){
   ngOnInit(): void {
   }
   login(f:NgForm){
+    console.log(this.SIGNIN);
+    this.subscription=this._httpservice.logindata("Register",this.SIGNIN).subscribe({
+     next: (data:any) => {
+     if(data.status == "success" && data.statuscode == 200){
+       console.log(data);
+       localStorage.setItem("personaldata",JSON.stringify(data.logindetails) );
+       localStorage.setItem("loginedIn", data.loginedIn);
+       this.router.navigate(["/superuser/superuserinfo"])
+     }
+     else{
+       alert(data.message)
+     }
 
+     },
+     error:reason=>console.log(reason)
+    });
+  }
+
+  ngOnDestroy(): void {
+    if(this.subscription){
+      this.subscription.unsubscribe();
+    }
+    
+    
+    
   }
 
 }
