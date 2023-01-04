@@ -16,7 +16,17 @@ export class LoginComponent implements OnInit,OnDestroy {
 
   Login = {} as ILogin;
   subscription!: Subscription;
- urllink:string = "assets/profile-img.jpg";
+ 
+ 
+  entities= [] as any;
+  visible:boolean = false;
+  changetype:boolean =true;
+ 
+  constructor(private _httpservice:HttpService,
+    private router:Router,
+   
+    ) { }
+    urllink:string = "assets/profile-img.jpg";
  selectFiles(event:any){
   if(event.target.files){
     var reader= new FileReader()
@@ -26,14 +36,6 @@ export class LoginComponent implements OnInit,OnDestroy {
     }
   }
  }
-  entities= [] as any;
-  visible:boolean = false;
-  changetype:boolean =true;
- 
-  constructor(private _httpservice:HttpService,
-    private router:Router,
-   
-    ) { }
    
   ngOnInit(): void {
     this.getentities();
@@ -41,6 +43,26 @@ export class LoginComponent implements OnInit,OnDestroy {
 
   }
   
+  upload(){
+    this.subscription = this._httpservice.postdata('Register', this.urllink).subscribe({
+      next: (data: any) => {
+        
+        if(data.status == "success" && data.statuscode == 200){
+          console.log(data);
+          alert("image uploaded successfully  ")
+       
+          this.router.navigate(["/"])
+        }
+        else {
+          alert(data.message);
+        }
+      },
+      error: reason => {
+        console.log(reason);
+      }
+    });
+  
+  }
 
  
   viewpass(){

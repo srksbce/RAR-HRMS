@@ -337,10 +337,10 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
         </div>
 
         <div class="col">
-          <label for="ZipCode">Zip Code/Post code</label><span>*</span>
+          <label for="ZipCode">Zip Code/Post Code</label><span>*</span>
           <input type="number" name="zipCode" class="form-control" placeholder="ZipCode/Postcode" aria-label="ZipCode"
             #zipCode="ngModel" [(ngModel)]="empdata.zipCode" required />
-          <small *ngIf="(zipCode.touched && zipCode .invalid) || (ZipCode.invalid && Newemp.submitted)">Zip
+          <small *ngIf="(zipCode.touched && zipCode .invalid) || (zipCode.invalid && Newemp.submitted)">Zip
             Code
             is
             required </small>
@@ -357,40 +357,40 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
         <div class="col">
           <label class="form-label" for="contactnumber">Work Phone
           </label><span>*</span>
-          <input type="number" class="form-control" name="contactnumber" aria-label="contactnumber" pattern="[0-9]{10}"
-            #contactnumber="ngModel" [(ngModel)]="empdata.contactnumber" required />
+          <input type="number" class="form-control" name="workPhone" aria-label="workPhone" pattern="[0-9]{10}"
+            #workPhone="ngModel" [(ngModel)]="empdata.workPhone" required />
           <small
-            *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Newemp.submitted)">
+            *ngIf="(workPhone.touched && workPhone.invalid) || (workPhone.invalid && Newemp.submitted)">
             Work phone is required </small>
         </div>
 
         <div class="col">
-          <label class="form-label" for="contactnumber">Mobile Phone</label><span>*</span>
-          <input type="number" class="form-control" name="contactnumber" aria-label="contactnumber" pattern="[0-9]{10}"
-            #contactnumber="ngModel" [(ngModel)]="empdata.contactnumber" required />
+          <label class="form-label" for="mobilePhone">Mobile Phone</label><span>*</span>
+          <input type="number" class="form-control" name="mobilePhone" aria-label="mobilePhone" pattern="[0-9]{10}"
+            #mobilePhone="ngModel" [(ngModel)]="empdata.mobilePhone" required />
           <small
-            *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Newemp.submitted)">
+            *ngIf="(mobilePhone.touched && mobilePhone.invalid) || (mobilePhone.invalid && Newemp.submitted)">
             Mobile number is required </small>
         </div>
 
         <div class="col">
-          <label class="form-label" for="emailaddress">Work Mail</label><span>*</span>
-          <input type="text" class="form-control" name="emailaddress" aria-label="emailaddress"
-            pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel" [(ngModel)]="empdata.emailaddress"
+          <label class="form-label" for="workEmail">Work Mail</label><span>*</span>
+          <input type="text" class="form-control" name="workEmail" aria-label="workEmail"
+            pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #workEmail="ngModel" [(ngModel)]="empdata.workEmail"
             required />
           <small
-            *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Newemp.submitted)">Work
+            *ngIf="(workEmail.touched && workEmail.invalid) || (workEmail.invalid && Newemp.submitted)">Work
             Mail-id
             is required </small>
         </div>
 
         <div class="col">
-          <label class="form-label" for="emailaddress">Home Mail</label><span>*</span>
-          <input type="text" class="form-control" name="emailaddress" aria-label="emailaddress"
-            pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel" [(ngModel)]="empdata.emailaddress"
+          <label class="form-label" for="homeEmail">Home Mail</label><span>*</span>
+          <input type="text" class="form-control" name="homeEmail" aria-label="homeEmail"
+            pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #homeEmail="ngModel" [(ngModel)]="empdata.homeEmail"
             required />
           <small
-            *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Newemp.submitted)">Home
+            *ngIf="(homeEmail.touched && homeEmail.invalid) || (homeEmail.invalid && Newemp.submitted)">Home
             Mail-id
             is required </small>
         </div>
@@ -703,34 +703,34 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
       <hr>
       <div class="row">
         <div class="col">
-          <label class="form-label" for="VisaStatus">Bank Name</label><span>*</span>
-          <input type="text" class="form-control" placeholder="" name="VisaStatus" aria-label="VisaStatus"
-            #VisaStatus="ngModel" [(ngModel)]="empdata.VisaStatus" required />
-          <small *ngIf="(VisaStatus.touched && VisaStatus.invalid) || (VisaStatus.invalid && Newemp.submitted)">Bank
+          <label class="form-label" for="bankName">Bank Name</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="bankName" aria-label="bankName"
+            #bankName="ngModel" [(ngModel)]="empdata.bankName" required />
+          <small *ngIf="(bankName.touched && bankName.invalid) || (bankName.invalid && Newemp.submitted)">Bank
             Name
             is required</small>
         </div>
         <div class="col">
-          <label class="form-label" for="EmployeeId">Account Number</label><span>*</span>
-          <input type="text" class="form-control" placeholder="" name="EmployeeId" aria-label="EmployeeId"
-            #EmployeeId="ngModel" [(ngModel)]="empdata.EmployeeId" required />
-          <small *ngIf="(EmployeeId.touched && EmployeeId.invalid) || (EmployeeId.invalid && Newemp.submitted)">Account
+          <label class="form-label" for="accountNumber">Account Number</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="accountNumber" aria-label="accountNumber"
+            #accountNumber="ngModel" [(ngModel)]="empdata.accountNumber" required />
+          <small *ngIf="(accountNumber.touched && accountNumber.invalid) || (accountNumber.invalid && Newemp.submitted)">Account
             Number is required </small>
         </div><br>
 
         <div class="col">
-          <label class="form-label" for="VisaStatus">Account Name</label><span>*</span>
-          <input type="text" class="form-control" placeholder="" name="VisaStatus" aria-label="VisaStatus"
-            #VisaStatus="ngModel" [(ngModel)]="empdata.VisaStatus" required />
-          <small *ngIf="(VisaStatus.touched && VisaStatus.invalid) || (VisaStatus.invalid && Newemp.submitted)">Account
+          <label class="form-label" for="userName">Account Name</label><span>*</span>
+          <input type="text" class="form-control" placeholder="" name="userName" aria-label="userName"
+            #userName="ngModel" [(ngModel)]="empdata.userName" required />
+          <small *ngIf="(userName.touched && userName.invalid) || (userName.invalid && Newemp.submitted)">Account
             Name required</small>
         </div>
 
         <div class="col">
-          <label for="ZipCode">IFSC Code</label><span>*</span>
-          <input type="number" name="ZipCode" class="form-control" placeholder="" aria-label="ZipCode"
-            #ZipCode="ngModel" [(ngModel)]="empdata.ZipCode" required />
-          <small *ngIf="(ZipCode.touched && ZipCode .invalid) || (zipCode.invalid && Newemp.submitted)">IFSC
+          <label for="ifscCode">IFSC Code</label><span>*</span>
+          <input type="number" name="ifscCode" class="form-control" placeholder="" aria-label="ifscCode"
+            #ifscCode="ngModel" [(ngModel)]="empdata.ifscCode" required />
+          <small *ngIf="(ifscCode.touched && ifscCode .invalid) || (ifscCode.invalid && Newemp.submitted)">IFSC
             Code
             is
             required </small>
@@ -877,7 +877,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <select class="form-select" id="businessArea" name="businessArea" #businessArea="ngModel" aria-label="Default select example"
             [(ngModel)]="empdata.businessArea" required>
             <option di>Select</option>
-            <option></option>
+            <option>Finance</option>
           </select>
           <small *ngIf="(businessArea.touched && businessArea.invalid) || (businessArea.invalid && Newemp.submitted)">Business Area
             is required </small>
@@ -1145,7 +1145,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
       <br>
       <div class="row">
         <div class="col" style="margin-left: 530px;">
-          <button [routerLink]="['/admin/']" routerLinkActive="router-link-active" type="button"
+          <button [routerLink]="['/admin/']" routerLinkActive="router-link-active" type="submit" 
             class="btn btn-primary">Save
             Changes</button>
         </div>

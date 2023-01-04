@@ -35,31 +35,23 @@ export interface INewemp{
   effectivedate: any,
   eligibleforrehire: string,
   emailId: string,
- 
   emergencyName: string,
   emergencynumber: number,
-  
   employementstatus: string,
- 
   entity: string,
   expirationdate: any,
-  
   frequency: string,
   gender: string,
   gpa: number,
-
   homeEmail: string,
   id: number,
   ifscCode: number,
   immigrationstatus: string,
- 
   issuedDate: any,
   jobEffectiveDate: any,
   jobRole: string,
-
   lastworkingday: any,
   location: string,
-  
   mobileNumber: number,
   mobilePhone: number,
   nationalId: number,
@@ -87,7 +79,6 @@ export interface INewemp{
   startdate: any,
   state: string,
   status: string,
- 
   taxFileNumber: number,
   termreasonoffboard: string,
   termtypeoffboard: string,
@@ -97,8 +88,8 @@ export interface INewemp{
   userName: string,
   visaStatus: string,
   visaTypeIssuingCountry: string,
-  
   workEmail: string,
   workPhone: number,
   zipCode: number,
+  img : string
 }
