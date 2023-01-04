@@ -27,27 +27,37 @@ export class NewempComponent implements OnInit {
 
   constructor(
     private http: HttpService,
-    private router:Router    
-    ) { }
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     // this.NEWEMP = this.emailFormControl({
     // EmailId: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
     // })
-    this.clientdata();
+    //this.clientdata();
     this.emp();
   }
-  dobvalid(value:any) {
+  img: string = "assets/profile-img.jpg";
+  selectFiles(event: any) {
+    if (event.target.files) {
+      var reader = new FileReader()
+      reader.readAsDataURL(event.target.files[0])
+      reader.onload = (event: any) => {
+        this.NEWEMP.img = event.target.result
+      }
+    }
+  }
+  dobvalid(value: any) {
 
     console.log(value)
-    
-   var age = moment(moment.now()).diff(value, "years");
-   console.log(age)
+
+    var age = moment(moment.now()).diff(value, "years");
+    console.log(age)
 
     if (age >= 18 && age <= 75) {
       this.show = false
     } else {
-      this.show= true
+      this.show = true
     }
   }
 
@@ -72,7 +82,7 @@ export class NewempComponent implements OnInit {
   }
 
   employee(f: NgForm) {
-
+   
     this.empdata = {
       "employeeId": this.NEWEMP.employeeId,
       "firstName": this.NEWEMP.firstName,
@@ -97,8 +107,8 @@ export class NewempComponent implements OnInit {
       "contactnumber": this.NEWEMP.contactnumber,
       "addressLine1": this.NEWEMP.addressLine1,
       "addressLine2": this.NEWEMP.addressLine2,
-      "city":this.NEWEMP.city,
-      "state":this.NEWEMP.state,
+      "city": this.NEWEMP.city,
+      "state": this.NEWEMP.state,
       "zipCode": this.NEWEMP.zipCode,
       "country": this.NEWEMP.country,
       "ssn": this.NEWEMP.ssn,
@@ -111,18 +121,18 @@ export class NewempComponent implements OnInit {
       "payType": this.NEWEMP.payType,
       "payrate": this.NEWEMP.payrate,
       "overtimeEligibility": this.NEWEMP.overtimeEligibility,
-      "overtimerate":this.NEWEMP.overtimerate,
+      "overtimerate": this.NEWEMP.overtimerate,
       "reason": this.NEWEMP.reason,
-      "comments":this.NEWEMP.comments,
+      "comments": this.NEWEMP.comments,
       "specialization": this.NEWEMP.specialization,
       "gpa": this.NEWEMP.gpa,
       "educationstartdate": this.NEWEMP.educationstartdate,
       "educationenddate": this.NEWEMP.educationenddate,
       "visaTypeIssuingCountry": this.NEWEMP.visaTypeIssuingCountry,
       "issuedDate": this.NEWEMP.issuedDate,
-      "expirationdate":this.NEWEMP.expirationdate,
-      "status":this.NEWEMP.status,
-      "employementstatus":this.NEWEMP.employementstatus,
+      "expirationdate": this.NEWEMP.expirationdate,
+      "status": this.NEWEMP.status,
+      "employementstatus": this.NEWEMP.employementstatus,
       "jobEffectiveDate": this.NEWEMP.jobEffectiveDate,
       "compensationEffectiveDate": this.NEWEMP.compensationEffectiveDate,
       "title": this.NEWEMP.title,
@@ -145,12 +155,12 @@ export class NewempComponent implements OnInit {
       "proof": this.NEWEMP.proof,
       "dateOfJoining": this.NEWEMP.dateOfJoining,
       "probationEndDate": this.NEWEMP.probationEndDate,
-      "probationStatus":this.NEWEMP.probationStatus,
+      "probationStatus": this.NEWEMP.probationStatus,
       "noticePeriod": this.NEWEMP.noticePeriod,
-      "backgroundCheckStatus":this.NEWEMP.backgroundCheckStatus,
-      "department":this.NEWEMP.department,
+      "backgroundCheckStatus": this.NEWEMP.backgroundCheckStatus,
+      "department": this.NEWEMP.department,
       "businessArea": this.NEWEMP.businessArea,
-      "compensationComments":this.NEWEMP.compensationComments,
+      "compensationComments": this.NEWEMP.compensationComments,
       "frequency": this.NEWEMP.frequency,
       "amount": this.NEWEMP.amount,
       "emergencyName": this.NEWEMP.emergencyName,
@@ -164,7 +174,8 @@ export class NewempComponent implements OnInit {
       "termreasonoffboard": this.NEWEMP.termreasonoffboard,
       "eligibleforrehire": this.NEWEMP.eligibleforrehire,
       "lastworkingday": this.NEWEMP.lastworkingday,
-      "jobRole": this.NEWEMP.jobRole
+      "jobRole": this.NEWEMP.jobRole,
+      "img": this.NEWEMP.img
 
     }
 
@@ -174,9 +185,9 @@ export class NewempComponent implements OnInit {
     this.subscription = this.http.postdata("Register", this.empdata).subscribe({
       next: (data: any) => {
         console.log(data)
-        if(data.statuscode==200){
-         alert("Data Saved Successfully")
-         this.router.navigate(["/admin/activeemployeedata"])
+        if (data.statuscode == 200) {
+          alert("Data Saved Successfully")
+          //this.router.navigate(["/admin/activeemployeedata"])
         }
       },
       error: Reason => console.log(Reason)
