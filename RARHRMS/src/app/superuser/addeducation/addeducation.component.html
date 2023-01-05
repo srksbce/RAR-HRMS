@@ -78,11 +78,11 @@
 
                         <div class="form-outline">
                             <label for="DegreeStartDate" class="form-label">Start Date*</label>
-                            <input type="date" class="form-control" id="educationstartdate" placeholder="educationstartdate"
-                                name="educationstartdate" #educationstartdate="ngModel"
-                                [(ngModel)]="educationupdate.educationstartdate" required />
+                            <input type="date" class="form-control" id="degreeStartDate" placeholder="degreeStartDate"
+                                name="degreeStartDate" #degreeStartDate="ngModel"
+                                [(ngModel)]="educationupdate.degreeStartDate" required />
                             <small
-                                *ngIf="(educationstartdate.touched && educationstartdate.invalid) || (educationstartdate.invalid && EDUCATIONUPDATE.submitted)">Degree
+                                *ngIf="(degreeStartDate.touched && degreeStartDate.invalid) || (degreeStartDate.invalid && EDUCATIONUPDATE.submitted)">Degree
                                 Start Date
                                 is required </small>
 
@@ -94,11 +94,11 @@
 
                     <div class="form-outline">
                         <label for="DegreeEndDate" class="form-label">End Date*</label>
-                        <input type="date" class="form-control" id="educationenddate" placeholder="educationenddate"
-                            name="degreeenddate" #educationenddate="ngModel" [(ngModel)]="educationupdate.educationenddate"
+                        <input type="date" class="form-control" id="degreeEndDate" placeholder="degreeEndDate"
+                            name="degreeEndDate" #degreeEndDate="ngModel" [(ngModel)]="educationupdate.degreeEndDate"
                             required />
                         <small
-                            *ngIf="(educationenddate.touched && educationenddate.invalid) || (educationenddate.invalid && EDUCATIONUPDATE.submitted)">Degree
+                            *ngIf="(degreeEndDate.touched && degreeEndDate.invalid) || (degreeEndDate.invalid && EDUCATIONUPDATE.submitted)">Degree
                             End Date
                             is required </small>
 

@@ -55,7 +55,8 @@ export interface Ipersonal {
     issuedDate: any,
     jobEffectiveDate: any,
     jobRole: string,
-
+    degreeStartDate:any ,
+    degreeEndDate: any
     lastworkingday: any,
     location: string,
     

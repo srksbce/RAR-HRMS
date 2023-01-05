@@ -14,12 +14,12 @@ import { HttpService } from 'src/app/services/http.service';
 export class SuperuserinfoComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   subscription !: Subscription;
-  educationData = [] as any;
+  educationData = {} as any;
 
   visaData = [] as any;
   PERSONAL = {} as Ipersonaldata;
 
-  empdata = [] as any;
+  empdata = {} as any;
  
   jobData=[] as any;
   compensationData=[] as any;
@@ -42,10 +42,10 @@ export class SuperuserinfoComponent implements OnInit {
 
   getEducationData() {
     let sdata = {
-      "employeeId": parseInt(this.empdata.employeeid)
+      "employeeId": parseInt(this.empdata.employeeId)
     }
     console.log(sdata)
-    this.subscription = this.http.postdata("Register", sdata).subscribe({
+    this.subscription = this.http.postdata("EducationDatum", sdata).subscribe({
       next: (data: any) => {
         console.log(data);
         this.educationData = data
