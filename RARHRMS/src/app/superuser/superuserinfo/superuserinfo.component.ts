@@ -19,7 +19,7 @@ export class SuperuserinfoComponent implements OnInit {
   visaData = [] as any;
   PERSONAL = {} as Ipersonaldata;
 
-  empdata = [] as any;
+  empdata = {} as any;
  
   jobData=[] as any;
   compensationData=[] as any;
@@ -42,7 +42,7 @@ export class SuperuserinfoComponent implements OnInit {
 
   getEducationData() {
     let sdata = {
-      "employeeId": parseInt(this.empdata.employeeid)
+      "employeeId": parseInt(this.empdata.employeeId)
     }
     console.log(sdata)
     this.subscription = this.http.postdata("Register", sdata).subscribe({
@@ -54,7 +54,7 @@ export class SuperuserinfoComponent implements OnInit {
   }
   getvisainformation() {
     let sdata = {
-      "employeeid": parseInt(this.empdata.employeeid)
+      "employeeId": parseInt(this.empdata.employeeId)
     }
     console.log(sdata)
     this.subscription = this.http.postdata("getvisainformation", sdata).subscribe({

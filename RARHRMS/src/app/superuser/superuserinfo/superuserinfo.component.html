@@ -168,7 +168,7 @@
                                             <label class="form-label">Marital Status*</label>
                                             <select class="form-select" id=" maritalStatus" name=" maritalStatus"
                                                 #maritalStatus="ngModel" aria-label="Default select example"
-                                                [(ngModel)]="empdata. maritalStatus" required>
+                                                [(ngModel)]="empdata.maritalStatus" required>
                                                 <option di>Select</option>
                                                 <option>Single</option>
                                                 <option>Married</option>
@@ -189,17 +189,16 @@
                                             <select class="form-select" id="  secondaryLanguage"
                                                 name="  secondaryLanguage" #secondaryLanguage="ngModel"
                                                 aria-label="Default select example"
-                                                [(ngModel)]="empdata.  secondaryLanguage" required>
+                                                [(ngModel)]="empdata.secondaryLanguage" required>
                                                 <option di>Select</option>
                                                 <option>Hindi</option>
-                                                <option>Bengali</option>
-                                                <option>Tamil</option>
-                                                <option>Malyalam</option>
+                                                <option>French</option>
+                                                <option>Spanish</option>
 
                                             </select>
 
                                             <small
-                                                *ngIf="(  secondaryLanguage.touched &&   secondaryLanguage.invalid) || (  secondaryLanguage.invalid && Personal.submitted)">Marital
+                                                *ngIf="(secondaryLanguage.touched && secondaryLanguage.invalid) || (secondaryLanguage.invalid && Personal.submitted)">Marital
                                                 Status
                                                 is required </small>
 
@@ -662,14 +661,14 @@
                                         </tr>
                                     </thead>
 
-                                    <tr *ngFor="let ba of BankData">
-                                        <td>{{ba.bankName}}</td>
-                                        <td>{{ba.ifscCode}}
-                                        <td>{{ba.accountNumber}}</td>
+                                    <tr>
+                                        <td>{{empdata.bankName}}</td>
+                                        <td>{{empdata.ifscCode}}
+                                        <td>{{empdata.accountNumber}}</td>
 
-                                        <td>{{ba.userName}}</td>
+                                        <td>{{empdata.userName}}</td>
 
-                                        <td>{{ba.proof}}</td>
+                                        <td>{{empdata.proof}}</td>
 
                                     </tr>
 
@@ -728,16 +727,16 @@
                                             </tr>
                                         </thead>
 
-                                        <tr *ngFor="let ed of educationData">
-                                            <td>{{ed.dateOfJoining}}</td>
-                                            <td>{{ed.probationEndDate}}</td>
+                                        <tr>
+                                            <td>{{empdata.dateOfJoining}}</td>
+                                            <td>{{empdata.probationEndDate}}</td>
 
-                                            <td>{{ed.probationStatus}}</td>
+                                            <td>{{empdata.probationStatus}}</td>
 
-                                            <td>{{ed.noticePeriod}}</td>
+                                            <td>{{empdata.noticePeriod}}</td>
 
-                                            <td>{{ed.backgroundCheckStatus}}</td>
-                                            <td>{{ed.comments}}</td>
+                                            <td>{{empdata.backgroundCheckStatus}}</td>
+                                            <td>{{empdata.comments}}</td>
 
 
                                         </tr>
@@ -774,13 +773,13 @@
                                                 </tr>
                                             </thead>
 
-                                            <tr *ngFor="let ed of educationData">
-                                                <td>{{ed. termtypeoffboard}}</td>
-                                                <td>{{ed. termreasonoffboard}}</td>
+                                            <tr>
+                                                <td>{{empdata. termtypeoffboard}}</td>
+                                                <td>{{empdata. termreasonoffboard}}</td>
 
-                                                <td>{{ed.eligibleforrehire}}</td>
+                                                <td>{{empdata.eligibleforrehire}}</td>
 
-                                                <td>{{ed.lastworkingday}}</td>
+                                                <td>{{empdata.lastworkingday}}</td>
 
 
                                             </tr>
@@ -816,11 +815,11 @@
                                             </tr>
                                         </thead>
 
-                                        <tr *ngFor="let ed of educationData">
-                                            <td>{{ed.jobType}}</td>
-                                            <td>{{ed.effectivedate}}</td>
+                                        <tr>
+                                            <td>{{empdata.jobType}}</td>
+                                            <td>{{empdata.effectivedate}}</td>
 
-                                            <td>{{ed.comments}}</td>
+                                            <td>{{empdata.comments}}</td>
 
 
                                         </tr>
@@ -950,13 +949,13 @@
                                             </tr>
                                         </thead>
 
-                                        <tr *ngFor="let ed of educationData">
-                                            <td>{{ed.projectName}}</td>
-                                            <td>{{ed.clientName}}</td>
+                                        <tr>
+                                            <td>{{empdata.projectName}}</td>
+                                            <td>{{empdata.clientName}}</td>
 
-                                            <td>{{ed.projectStartDate}}</td>
+                                            <td>{{empdata.projectStartDate}}</td>
 
-                                            <td>{{ed.projectEndDate}}</td>
+                                            <td>{{empdata.projectEndDate}}</td>
                                         </tr>
 
                                     </table>
