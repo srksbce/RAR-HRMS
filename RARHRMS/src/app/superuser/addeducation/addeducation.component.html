@@ -28,15 +28,15 @@
 
                 <div class="col-md-6 mb-4">
                     <label class="form-label">Degree*</label>
-                    <select class="form-select" aria-label="Default select example" id="degree"
-                        placeholder="highestdegree" name="degree" #degree="ngModel"
-                        [(ngModel)]="educationupdate.degree" required>
+                    <select class="form-select" aria-label="Default select example" id="degree" placeholder="degree"
+                        name="degree" #degree="ngModel" [(ngModel)]="educationupdate.degree" required>
 
                         <option>Choose Option</option>
-                        <option>Bachelors</option>
-                        <option>Masters</option>
+                        <option>Associate</option>
+                        <option>Bachelor</option>
                         <option>Diploma</option>
                         <option>Doctorate</option>
+                        <option>Masters</option>
                     </select>
                     <small
                         *ngIf="(degree.touched && degree.invalid) || (degree.invalid && EDUCATIONUPDATE.submitted)">Degree
