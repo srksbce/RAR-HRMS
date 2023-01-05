@@ -9,7 +9,6 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
   <div class="shadow p-5 mb-4 bg-white" id="shadow">
     <form name="Newemp" #Newemp="ngForm" (ngSubmit)="Newemp.valid && employee(Newemp)">
       <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h5>
-      <h6><i class="bi bi-sliders"></i> Customize fields</h6>
       <hr>
       <div class="row">
         <div class="col">
@@ -22,19 +21,20 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
 
         <div class="col">
           <label class="form-label" for="status">Status</label><span>*</span>
-          <input class="form-control" id="empstatus" name="empstatus" #empstatus="ngModel" [(ngModel)]="empdata.empstatus" required>
+          <input class="form-control" id="empstatus" name="empstatus" placeholder="Status" #empstatus="ngModel"
+            [(ngModel)]="empdata.empstatus" required>
           <small *ngIf="(empstatus.touched && empstatus.invalid) || (empstatus.invalid && Newemp.submitted)">Status
             is required </small>
         </div><br>
 
         <div class="col">
           <label class="form-label">Gender*</label>
-          <select class="form-select" id="gender" name="gender" #gender="ngModel" aria-label="Default select example"
+          <select class="form-select" id="gender" name="gender" placeholder="Select"#gender="ngModel" aria-label="Default select example"
             [(ngModel)]="empdata.gender" required>
             <option di>Select</option>
             <option>Male</option>
             <option>Female</option>
-
+            <option>Other</option>
           </select>
           <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && Newemp.submitted)">Gender
             is required </small>
@@ -61,8 +61,9 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
             [(ngModel)]="empdata.title" required>
             <option di>Select</option>
             <option>Mr</option>
-            <option>Ms</option>
             <option>Mrs</option>
+            <option>Miss</option>
+            <option>Ms</option>
           </select>
           <small *ngIf="(title.touched && title.invalid) || (title.invalid && Newemp.submitted)">Title
             is required </small>
@@ -70,7 +71,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
 
         <div class="col">
           <label class="form-label" for="FirstName">First Name</label><span>*</span>
-          <input type="text" class="form-control" placeholder="FirstName" name="firstName" aria-label="firstName"
+          <input type="text" class="form-control" placeholder="First Name" name="firstName" aria-label="firstName"
             #firstName="ngModel" [(ngModel)]="empdata.firstName" required />
           <small *ngIf="(firstName.touched && firstName.invalid) || (firstName.invalid && Newemp.submitted)">First
             Name
@@ -79,7 +80,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
 
         <div class="col">
           <label class="form-label" for="LastName">Last Name</label><span>*</span>
-          <input type="text" class="form-control" placeholder="LastName" name="lastName" aria-label="lastName"
+          <input type="text" class="form-control" placeholder="Last Name" name="lastName" aria-label="lastName"
             #lastName="ngModel" [(ngModel)]="empdata.lastName" required />
           <small *ngIf="(lastName.touched && lastName.invalid) || (lastName.invalid && Newemp.submitted)">Last
             Name is required </small>
@@ -106,8 +107,8 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
         <div class="col">
           <label class="form-label" for="National Id/SSN/Aadhar No">National
             Id/SSN/Aadhar No</label><span>*</span>
-          <input type="text" class="form-control" placeholder="nationalId" name="nationalId" aria-label="nationalId" #nationalId="ngModel"
-            [(ngModel)]="empdata.nationalId" required />
+          <input type="text" class="form-control" placeholder="Enter Id Number" name="nationalId" aria-label="nationalId"
+            #nationalId="ngModel" [(ngModel)]="empdata.nationalId" required />
           <small *ngIf="(nationalId.touched && nationalId.invalid) || (nationalId.invalid && Newemp.submitted)">National
             Id/SSN/Aadhar No
             is
@@ -117,29 +118,97 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
       </div>
       <div class="row">
 
-        <div class="col">
+        <div class="col-4">
           <label class="form-label" for="TaxFileNumber">Tax File
             Number/PAN/NIN</label><span>*</span>
-          <input type="number" class="form-control" placeholder="taxFileNumber" name="taxFileNumber" aria-label="taxFileNumber"
-            #taxFileNumber="ngModel" [(ngModel)]="empdata.taxFileNumber" required />
+          <input type="number" class="form-control" placeholder="taxFileNumber" name="taxFileNumber"
+            aria-label="taxFileNumber" #taxFileNumber="ngModel" [(ngModel)]="empdata.taxFileNumber" required />
           <small
             *ngIf="(taxFileNumber.touched && taxFileNumber.invalid) || (taxFileNumber.invalid && Newemp.submitted)">Tax
             File Number is required </small>
         </div><br>
 
-        <div class="col">
+        <div class="col-4">
           <label class="form-label">Secondary Language*</label>
-          <select class="form-select" id="secondaryLanguage" name="SecondaryLanguage" #secondaryLanguage="ngModel"
+          <select class="form-select" id="secondaryLanguage" name="SecondaryLanguage" placeholder="Enter Tax Number" #secondaryLanguage="ngModel"
             aria-label="Default select example" [(ngModel)]="empdata.secondaryLanguage" required>
             <option di>Select</option>
-            <option>Hindi</option>
-            <option>Bengali</option>
-            <option>Tamil</option>
-            <option>Malyalam</option>
+            <option value="Afrikaans">Afrikaans</option>
+            <option value="Albanian">Albanian</option>
+            <option value="Arabic">Arabic</option>
+            <option value="Armenian">Armenian</option>
+            <option value="Basque">Basque</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Bulgarian">Bulgarian</option>
+            <option value="Catalan">Catalan</option>
+            <option value="Cambodian">Cambodian</option>
+            <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+            <option value="Croatian">Croatian</option>
+            <option value="Czech">Czech</option>
+            <option value="Danish">Danish</option>
+            <option value="Dutch">Dutch</option>
+            <option value="English">English</option>
+            <option value="Estonian">Estonian</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finnish">Finnish</option>
+            <option value="French">French</option>
+            <option value="Georgian">Georgian</option>
+            <option value="German">German</option>
+            <option value="Greek">Greek</option>
+            <option value="Gujarati">Gujarati</option>
+            <option value="Hebrew">Hebrew</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Hungarian">Hungarian</option>
+            <option value="Icelandic">Icelandic</option>
+            <option value="Indonesian">Indonesian</option>
+            <option value="Irish">Irish</option>
+            <option value="Italian">Italian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Javanese">Javanese</option>
+            <option value="Korean">Korean</option>
+            <option value="Latin">Latin</option>
+            <option value="Latvian">Latvian</option>
+            <option value="Lithuanian">Lithuanian</option>
+            <option value="Macedonian">Macedonian</option>
+            <option value="Malay">Malay</option>
+            <option value="Malayalam">Malayalam</option>
+            <option value="Maltese">Maltese</option>
+            <option value="Maori">Maori</option>
+            <option value="Marathi">Marathi</option>
+            <option value="Mongolian">Mongolian</option>
+            <option value="Nepali">Nepali</option>
+            <option value="Norwegian">Norwegian</option>
+            <option value="Persian">Persian</option>
+            <option value="Polish">Polish</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Punjabi">Punjabi</option>
+            <option value="Quechua">Quechua</option>
+            <option value="Romanian">Romanian</option>
+            <option value="Russian">Russian</option>
+            <option value="Samoan">Samoan</option>
+            <option value="Serbian">Serbian</option>
+            <option value="Slovak">Slovak</option>
+            <option value="Slovenian">Slovenian</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Swahili">Swahili</option>
+            <option value="Swedish ">Swedish </option>
+            <option value="Tamil">Tamil</option>
+            <option value="Tatar">Tatar</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Thai">Thai</option>
+            <option value="Tibetan">Tibetan</option>
+            <option value="Tonga">Tonga</option>
+            <option value="Turkish">Turkish</option>
+            <option value="Ukrainian">Ukrainian</option>
+            <option value="Urdu">Urdu</option>
+            <option value="Uzbek">Uzbek</option>
+            <option value="Vietnamese">Vietnamese</option>
+            <option value="Welsh">Welsh</option>
+            <option value="Xhosa">Xhosa</option>
           </select>
           <small
-            *ngIf="(secondaryLanguage.touched && secondaryLanguage.invalid) || (secondaryLanguage.invalid && Newemp.submitted)">Second
-            LanguagezA
+            *ngIf="(secondaryLanguage.touched && secondaryLanguage.invalid) || (secondaryLanguage.invalid && Newemp.submitted)">Secondary
+            Language
             is required </small>
         </div>
         <br>
@@ -260,8 +329,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
             <option value="Eritrea">Eritrea</option>
             <option value="Estonia">Estonia</option>
             <option value="Ethiopia">Ethiopia</option>
-            <option value="Falkland Islands">Falkland Islands (Malvinas)
-            </option>
+            <option value="Falkland Islands">Falkland Islands (Malvinas)</option>
             <option value="Faroe Islands">Faroe Islands</option>
             <option value="Fiji">Fiji</option>
             <option value="Finland">Finland</option>
@@ -269,8 +337,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
             <option value="France Metropolitan">France, Metropolitan</option>
             <option value="French Guiana">French Guiana</option>
             <option value="French Polynesia">French Polynesia</option>
-            <option value="French Southern Territories">French Southern
-              Territories</option>
+            <option value="French Southern Territories">French Southern Territories</option>
             <option value="Gabon">Gabon</option>
             <option value="Gambia">Gambia</option>
             <option value="Georgia">Georgia</option>
@@ -287,8 +354,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
             <option value="Guinea-Bissau">Guinea-Bissau</option>
             <option value="Guyana">Guyana</option>
             <option value="Haiti">Haiti</option>
-            <option value="Heard and McDonald Islands">Heard and Mc Donald
-              Islands</option>
+            <option value="Heard and McDonald Islands">Heard and Mc Donald Islands</option>
             <option value="Holy See">Holy See (Vatican City State)</option>
             <option value="Honduras">Honduras</option>
             <option value="Hong Kong">Hong Kong</option>
@@ -341,9 +407,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <input type="number" name="zipCode" class="form-control" placeholder="ZipCode/Postcode" aria-label="ZipCode"
             #zipCode="ngModel" [(ngModel)]="empdata.zipCode" required />
           <small *ngIf="(zipCode.touched && zipCode .invalid) || (zipCode.invalid && Newemp.submitted)">Zip
-            Code
-            is
-            required </small>
+            Code is required </small>
         </div>
       </div>
 
@@ -357,10 +421,9 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
         <div class="col">
           <label class="form-label" for="contactnumber">Work Phone
           </label><span>*</span>
-          <input type="number" class="form-control" name="workPhone" aria-label="workPhone" pattern="[0-9]{10}"
+          <input type="number" class="form-control" name="workPhone" placeholder="Work Phone" aria-label="workPhone" pattern="[0-9]{10}"
             #workPhone="ngModel" [(ngModel)]="empdata.workPhone" required />
-          <small
-            *ngIf="(workPhone.touched && workPhone.invalid) || (workPhone.invalid && Newemp.submitted)">
+          <small *ngIf="(workPhone.touched && workPhone.invalid) || (workPhone.invalid && Newemp.submitted)">
             Work phone is required </small>
         </div>
 
@@ -368,8 +431,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <label class="form-label" for="mobilePhone">Mobile Phone</label><span>*</span>
           <input type="number" class="form-control" name="mobilePhone" aria-label="mobilePhone" pattern="[0-9]{10}"
             #mobilePhone="ngModel" [(ngModel)]="empdata.mobilePhone" required />
-          <small
-            *ngIf="(mobilePhone.touched && mobilePhone.invalid) || (mobilePhone.invalid && Newemp.submitted)">
+          <small *ngIf="(mobilePhone.touched && mobilePhone.invalid) || (mobilePhone.invalid && Newemp.submitted)">
             Mobile number is required </small>
         </div>
 
@@ -378,8 +440,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <input type="text" class="form-control" name="workEmail" aria-label="workEmail"
             pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #workEmail="ngModel" [(ngModel)]="empdata.workEmail"
             required />
-          <small
-            *ngIf="(workEmail.touched && workEmail.invalid) || (workEmail.invalid && Newemp.submitted)">Work
+          <small *ngIf="(workEmail.touched && workEmail.invalid) || (workEmail.invalid && Newemp.submitted)">Work
             Mail-id
             is required </small>
         </div>
@@ -389,8 +450,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <input type="text" class="form-control" name="homeEmail" aria-label="homeEmail"
             pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #homeEmail="ngModel" [(ngModel)]="empdata.homeEmail"
             required />
-          <small
-            *ngIf="(homeEmail.touched && homeEmail.invalid) || (homeEmail.invalid && Newemp.submitted)">Home
+          <small *ngIf="(homeEmail.touched && homeEmail.invalid) || (homeEmail.invalid && Newemp.submitted)">Home
             Mail-id
             is required </small>
         </div>
@@ -403,9 +463,10 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
 
         <div class="col">
           <label class="form-label" for="name">Emergency Name</label><span>*</span>
-          <input type="text" class="form-control" placeholder="name" name="emergencyName" aria-label="emergencyName" #emergencyName="ngModel"
-            [(ngModel)]="empdata.emergencyName" required />
-          <small *ngIf="(emergencyName.touched && emergencyName.invalid) || (emergencyName.invalid && Newemp.submitted)">Name
+          <input type="text" class="form-control" placeholder="name" name="emergencyName" aria-label="emergencyName"
+            #emergencyName="ngModel" [(ngModel)]="empdata.emergencyName" required />
+          <small
+            *ngIf="(emergencyName.touched && emergencyName.invalid) || (emergencyName.invalid && Newemp.submitted)">Name
             is required </small>
         </div>
 
@@ -414,23 +475,22 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <input type="text" class="form-control" name="emailId" aria-label="emailId"
             pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailId="ngModel" [(ngModel)]="empdata.emailId"
             required />
-          <small
-            *ngIf="(emailId.touched && emailId.invalid) || (emailId.invalid && Newemp.submitted)">Email-Id
+          <small *ngIf="(emailId.touched && emailId.invalid) || (emailId.invalid && Newemp.submitted)">Email-Id
             is required </small>
         </div>
         <div class="col">
           <label class="form-label" for="contactnumber">Emergency number</label><span>*</span>
-          <input type="number" class="form-control" name="emergencynumber" aria-label="emergencynumber" pattern="[0-9]{10}"
-            #emergencynumber="ngModel" [(ngModel)]="empdata.emergencynumber" required />
+          <input type="number" class="form-control" name="emergencynumber" aria-label="emergencynumber"
+            pattern="[0-9]{10}" #emergencynumber="ngModel" [(ngModel)]="empdata.emergencynumber" required />
           <small
             *ngIf="(emergencynumber.touched && emergencynumber.invalid) || (emergencynumber.invalid && Newemp.submitted)">
-            Phone Number is required </small>
+            Emergency Number is required </small>
         </div>
 
         <div class="col">
           <label class="form-label">Relationship*</label>
-          <select class="form-select" id="relationShip" name="relationShip" #relationShip="ngModel" aria-label="Default select example"
-            [(ngModel)]="empdata.relationShip" required>
+          <select class="form-select" id="relationShip" name="relationShip" #relationShip="ngModel"
+            aria-label="Default select example" [(ngModel)]="empdata.relationShip" required>
             <option di>Select</option>
             <option>Father</option>
             <option>Mother</option>
@@ -450,11 +510,17 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
       <br>
       <div class="row">
         <div class="col">
-          <label class="form-label" for="highestdegree">Degree</label><span>*</span>
-          <input type="text" class="form-control" placeholder="" name="degree" aria-label="degree"
-            #degree="ngModel" [(ngModel)]="empdata.degree" required />
-          <small
-            *ngIf="(degree.touched && degree.invalid) || (degree.invalid && Newemp.submitted)">Degree
+          <label class="form-label" for="degree">Degree</label><span>*</span>
+          <select class="form-select" aria-label="Default select example" id="degree" placeholder="degree" name="degree"
+            #degree="ngModel" [(ngModel)]="empdata.degree" required>
+            <option>Choose Option</option>
+            <option>Associate</option>
+            <option>Bachelor</option>
+            <option>Diploma</option>
+            <option>Doctorate</option>
+            <option>Masters</option>
+          </select>
+          <small *ngIf="(degree.touched && degree.invalid) || (degree.invalid && Newemp.submitted)">Degree
             is required</small>
         </div>
         <div class="col">
@@ -481,7 +547,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col-4">
           <label for="egreestartdate" class="form-label">Degree Start Date*</label>
           <input type="date" class="form-control" id="Educationstartdate" name="educationstartdate"
             #educationstartdate="ngModel" [(ngModel)]="empdata.educationstartdate" required />
@@ -490,7 +556,7 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
             Date is required </small>
         </div>
 
-        <div class="col">
+        <div class="col-4">
           <label for="Educationenddate" class="form-label">Degree End Date*</label>
           <input type="date" class="form-control" id="educationenddate" name="educationenddate"
             #educationenddate="ngModel" [(ngModel)]="empdata.educationenddate" required />
@@ -714,7 +780,8 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <label class="form-label" for="accountNumber">Account Number</label><span>*</span>
           <input type="text" class="form-control" placeholder="" name="accountNumber" aria-label="accountNumber"
             #accountNumber="ngModel" [(ngModel)]="empdata.accountNumber" required />
-          <small *ngIf="(accountNumber.touched && accountNumber.invalid) || (accountNumber.invalid && Newemp.submitted)">Account
+          <small
+            *ngIf="(accountNumber.touched && accountNumber.invalid) || (accountNumber.invalid && Newemp.submitted)">Account
             Number is required </small>
         </div><br>
 
@@ -752,45 +819,62 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
       <hr>
 
       <div class="row">
-        <div class="col-2">
+        <div class="col">
           <label for="issuedDate" class="form-label">Date of Joining*</label>
           <input type="date" class="form-control" id="issuedDate" name="issuedDate" #issuedDate="ngModel"
             [(ngModel)]="empdata.issuedDate" required />
           <small *ngIf="(issuedDate.touched && issuedDate.invalid) || (issuedDate.invalid && Newemp.submitted)">Joining
             Date is required </small>
         </div>
-        <div class="col-2">
+        <div class="col">
           <label for="issuedDate" class="form-label">Probation End Date*</label>
-          <input type="date" class="form-control" id="probationEndDate" name="probationEndDate" #probationEndDate="ngModel"
-            [(ngModel)]="empdata.probationEndDate" required />
-          <small *ngIf="(probationEndDate.touched && probationEndDate.invalid) || (probationEndDate.invalid && Newemp.submitted)">End
+          <input type="date" class="form-control" id="probationEndDate" name="probationEndDate"
+            #probationEndDate="ngModel" [(ngModel)]="empdata.probationEndDate" required />
+          <small
+            *ngIf="(probationEndDate.touched && probationEndDate.invalid) || (probationEndDate.invalid && Newemp.submitted)">End
             Date is required </small>
         </div>
-        <div class="col-2">
+        <div class="col">
           <label class="form-label" for="status">Probation Status</label><span>*</span>
-          <input class="form-control" id="probationStatus" name="probationStatus" #probationStatus="ngModel" [(ngModel)]="empdata.probationStatus" required>
-          <small *ngIf="(probationStatus.touched && probationStatus.invalid) || (probationStatus.invalid && Newemp.submitted)">Status
+          <select class="form-select" id="probationStatus" name="probationStatus" #probationStatus="ngModel"
+            aria-label="Default select example" [(ngModel)]="empdata.probationStatus" required>
+            <option di>Select</option>
+            <option>Passed</option>
+            <option>Failed</option>
+            <option>Outstanding</option>
+          </select>
+          <small
+            *ngIf="(probationStatus.touched && probationStatus.invalid) || (probationStatus.invalid && Newemp.submitted)">Status
             is required </small>
         </div>
-        <div class="col-2">
+        <div class="col">
           <label class="form-label" for="EmployeeId">Notice period</label><span>*</span>
-          <input type="text" class="form-control" placeholder="noticePeriod" name="noticePeriod" aria-label="noticePeriod"
-            #noticePeriod="ngModel" [(ngModel)]="empdata.noticePeriod" required />
-          <small *ngIf="(noticePeriod.touched && noticePeriod.invalid) || (noticePeriod.invalid && Newemp.submitted)">Notice
+          <input type="text" class="form-control" placeholder="noticePeriod" name="noticePeriod"
+            aria-label="noticePeriod" #noticePeriod="ngModel" [(ngModel)]="empdata.noticePeriod" required />
+          <small
+            *ngIf="(noticePeriod.touched && noticePeriod.invalid) || (noticePeriod.invalid && Newemp.submitted)">Notice
             Period is required </small>
         </div><br>
         <div class="col-3">
           <label class="form-label" for="status">Background check Status</label><span>*</span>
-          <input class="form-control" id="backgroundCheckStatus" name="backgroundCheckStatus" #backgroundCheckStatus="ngModel" [(ngModel)]="empdata.backgroundCheckStatus" required>
-          <small *ngIf="(backgroundCheckStatus.touched && backgroundCheckStatus.invalid) || (backgroundCheckStatus.invalid && Newemp.submitted)">Status
+
+          <select class="form-select" id="backgroundCheckStatus" name="backgroundCheckStatus"
+            #backgroundCheckStatus="ngModel" aria-label="Default select example"
+            [(ngModel)]="empdata.backgroundCheckStatus" required>
+            <option di>Select</option>
+            <option>Passed</option>
+            <option>Failed</option>
+          </select>
+          <small
+            *ngIf="(backgroundCheckStatus.touched && backgroundCheckStatus.invalid) || (backgroundCheckStatus.invalid && Newemp.submitted)">Status
             is required </small>
         </div><br>
         <div class="col">
-          <label for="validationTextarea" class="form-label">Notes</label> 
-          <textarea class="form-control" id="notes" style="height:2px" #notes="ngModel" [(ngModel)]="empdata.notes" placeholder="Enter Here"
-            required></textarea>
-            <small *ngIf="(notes.touched && notes.invalid) || (notes.invalid && Newemp.submitted)">Status
-              is required </small>
+          <label for="validationTextarea" class="form-label">Notes</label>
+          <textarea class="form-control" id="notes" style="height:2px" #notes="ngModel" [(ngModel)]="empdata.notes"
+            placeholder="Enter Here" required></textarea>
+          <small *ngIf="(notes.touched && notes.invalid) || (notes.invalid && Newemp.submitted)">Status
+            is required </small>
         </div>
 
       </div>
@@ -805,9 +889,10 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <select class="form-select" id="jobRole" name="jobRole" #jobRole="ngModel" aria-label="Default select example"
             [(ngModel)]="empdata.jobRole" required>
             <option di>Select</option>
-            <option>1 Month</option>
-            <option>2 Months</option>
-            <option>3 Months</option>
+            <option>Full Time</option>
+            <option>Part Time</option>
+            <option>Intern</option>
+            <option>Contract</option>
           </select>
           <small *ngIf="(jobRole.touched && jobRole.invalid) || (jobRole.invalid && Newemp.submitted)">Job Type
             is required </small>
@@ -822,11 +907,9 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
         </div>
         <div class="col">
           <label for="validationTextarea" class="form-label">Comments</label>
-          <textarea class="form-control" id="comments" #comments="ngModel"
-          [(ngModel)]="empdata.comments" style="height:2px" placeholder="Enter Here"
-            required></textarea>
-            <small
-            *ngIf="(comments.touched && comments.invalid) || (comments.invalid && Newemp.submitted)">Effective
+          <textarea class="form-control" id="comments" #comments="ngModel" [(ngModel)]="empdata.comments"
+            style="height:2px" placeholder="Enter Here" required></textarea>
+          <small *ngIf="(comments.touched && comments.invalid) || (comments.invalid && Newemp.submitted)">Effective
             Date is required </small>
         </div>
 
@@ -847,39 +930,45 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
         </div>
         <div class="col">
           <label class="form-label" for="status">Job Role</label><span>*</span>
-          <input class="form-control" id="jobRole" name="jobRole" #jobRole="ngModel" [(ngModel)]="empdata.jobRole" required>
+          <input class="form-control" id="jobRole" name="jobRole" #jobRole="ngModel" [(ngModel)]="empdata.jobRole"
+            required>
           <small *ngIf="(jobRole.touched && jobRole.invalid) || (jobRole.invalid && Newemp.submitted)">Job Role
             is required </small>
         </div>
         <div class="col">
           <label class="form-label">Reporting To*</label>
-          <select class="form-select" id="reportingTo" name="reportingTo" #reportingTo="ngModel" aria-label="Default select example"
-            [(ngModel)]="empdata.reportingTo" required>
+          <select class="form-select" id="reportingTo" name="reportingTo" #reportingTo="ngModel"
+            aria-label="Default select example" [(ngModel)]="empdata.reportingTo" required>
             <option di>Select</option>
             <option>Satya Kishore Mavuri</option>
             <option>Deepthi</option>
           </select>
-          <small *ngIf="(reportingTo.touched && reportingTo.invalid) || (reportingTo.invalid && Newemp.submitted)">Reporting to
+          <small
+            *ngIf="(reportingTo.touched && reportingTo.invalid) || (reportingTo.invalid && Newemp.submitted)">Reporting
+            to
             is required </small>
         </div>
         <div class="col">
           <label class="form-label">Department*</label>
-          <select class="form-select" id="department" name="department" #department="ngModel" aria-label="Default select example"
-            [(ngModel)]="empdata.department" required>
+          <select class="form-select" id="department" name="department" #department="ngModel"
+            aria-label="Default select example" [(ngModel)]="empdata.department" required>
             <option>IT</option>
             <option>Cse</option>
           </select>
-          <small *ngIf="(department.touched && department.invalid) || (department.invalid && Newemp.submitted)">Department
+          <small
+            *ngIf="(department.touched && department.invalid) || (department.invalid && Newemp.submitted)">Department
             is required </small>
         </div>
         <div class="col">
           <label class="form-label">Business Area*</label>
-          <select class="form-select" id="businessArea" name="businessArea" #businessArea="ngModel" aria-label="Default select example"
-            [(ngModel)]="empdata.businessArea" required>
+          <select class="form-select" id="businessArea" name="businessArea" #businessArea="ngModel"
+            aria-label="Default select example" [(ngModel)]="empdata.businessArea" required>
             <option di>Select</option>
             <option>Finance</option>
           </select>
-          <small *ngIf="(businessArea.touched && businessArea.invalid) || (businessArea.invalid && Newemp.submitted)">Business Area
+          <small
+            *ngIf="(businessArea.touched && businessArea.invalid) || (businessArea.invalid && Newemp.submitted)">Business
+            Area
             is required </small>
         </div>
         <div class="col">
@@ -1050,14 +1139,15 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
         </div>
         <div class="col">
           <label class="form-label">Overtime Eligibility*</label>
-          <select class="form-select" id="overtimeEligibility" name="overtimeEligibility" #overtimeEligibility="ngModel" aria-label="Default select example"
-            [(ngModel)]="empdata.overtimeEligibility" required>
+          <select class="form-select" id="overtimeEligibility" name="overtimeEligibility" #overtimeEligibility="ngModel"
+            aria-label="Default select example" [(ngModel)]="empdata.overtimeEligibility" required>
             <option di>Select</option>
-            <option>1 Month</option>
-            <option>2 Months</option>
-            <option>3 Months</option>
+            <option>Yes</option>
+            <option>No</option>
+
           </select>
-          <small *ngIf="(overtimeEligibility.touched && overtimeEligibility.invalid) || (overtimeEligibility.invalid && Newemp.submitted)">OvertimeEligibility
+          <small
+            *ngIf="(overtimeEligibility.touched && overtimeEligibility.invalid) || (overtimeEligibility.invalid && Newemp.submitted)">OvertimeEligibility
             is required </small>
         </div>
         <div class="col">
@@ -1074,12 +1164,12 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
         </div>
         <div class="col">
           <label class="form-label">Frequency*</label>
-          <select class="form-select" id="frequency" name="frequency" #frequency="ngModel" aria-label="Default select example"
-            [(ngModel)]="empdata.frequency" required>
+          <select class="form-select" id="frequency" name="frequency" #frequency="ngModel"
+            aria-label="Default select example" [(ngModel)]="empdata.frequency" required>
             <option di>Select</option>
-            <option>1 Month</option>
-            <option>2 Months</option>
-            <option>3 Months</option>
+            <option>Weekly</option>
+            <option>Monthly</option>
+            <option>Daily</option>
           </select>
           <small *ngIf="(frequency.touched && frequency.invalid) || (frequency.invalid && Newemp.submitted)">Frequency
             is required </small>
@@ -1089,9 +1179,9 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <select class="form-select" id="payType" name="payType" #payType="ngModel" aria-label="Default select example"
             [(ngModel)]="empdata.payType" required>
             <option di>Select</option>
-            <option>1 Month</option>
-            <option>2 Months</option>
-            <option>3 Months</option>
+            <option>Hourly</option>
+            <option>Salary</option>
+            <option>Commision Only</option>
           </select>
           <small *ngIf="(payType.touched && payType.invalid) || (payType.invalid && Newemp.submitted)">Pay Type
             is required </small>
@@ -1108,10 +1198,10 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
       <div class="row">
         <div class="col-4">
           <label for="validationTextarea" class="form-label">Comments</label>
-          <textarea class="form-control" id="compensationComments" #compensationComments="ngModel" [(ngModel)]="empdata.compensationComments" style="height:2px" placeholder="Enter Here"
-            required></textarea>
-            <small *ngIf="(compensationComments.touched && compensationComments.invalid) || (compensationComments.invalid && Newemp.submitted)">Amount
-              is required </small>
+          <textarea class="form-control" id="compensationComments" #compensationComments="ngModel"
+            [(ngModel)]="empdata.compensationComments" style="height:2px" placeholder="Enter Here" required></textarea>
+          <!-- <small *ngIf="(compensationComments.touched && compensationComments.invalid) || (compensationComments.invalid && Newemp.submitted)">Comments
+              is required </small> -->
         </div>
       </div>
       <hr>
@@ -1130,22 +1220,23 @@ Dashboard<i class="bi bi-chevron-double-right" style="margin-left: 530px;"></i>
           <label class="form-label" for="EmployeeId">Password</label><span>*</span>
           <input type="text" class="form-control" placeholder="password" name="password" aria-label="password"
             #password="ngModel" [(ngModel)]="empdata.password" required />
-          <small *ngIf="(password.touched && password.invalid) || (password.invalid && Newemp.submitted)">Employee
-            Id is required </small>
+          <small *ngIf="(password.touched && password.invalid) || (password.invalid && Newemp.submitted)">Password is
+            required </small>
         </div><br>
         <div class="col">
           <label class="form-label" for="EmployeeId">Confirm Password</label><span>*</span>
-          <input type="text" class="form-control" placeholder="confirmPassword" name="confirmPassword" aria-label="confirmPassword"
-            #confirmPassword="ngModel" [(ngModel)]="empdata.confirmPassword" required />
-          <small *ngIf="(confirmPassword.touched && confirmPassword.invalid) || (confirmPassword.invalid && Newemp.submitted)">Employee
-            Id is required </small>
+          <input type="text" class="form-control" placeholder="confirmPassword" name="confirmPassword"
+            aria-label="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="empdata.confirmPassword" required />
+          <small
+            *ngIf="(confirmPassword.touched && confirmPassword.invalid) || (confirmPassword.invalid && Newemp.submitted)">Confirm
+            Password is required </small>
         </div><br>
       </div>
       <br>
       <br>
       <div class="row">
         <div class="col" style="margin-left: 530px;">
-          <button [routerLink]="['/admin/']" routerLinkActive="router-link-active" type="submit" 
+          <button [routerLink]="['/admin/']" routerLinkActive="router-link-active" type="submit"
             class="btn btn-primary">Save
             Changes</button>
         </div>
