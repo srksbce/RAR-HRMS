@@ -3,7 +3,7 @@
     <div class="container" style="display:flex ">
         <div class="card-body ">
             <img src="/assets/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <h5>Kevin Anderson</h5>
+            <h5>Kevin</h5>
             <h5>Web Designer</h5>
         </div>
         <div class="row" style="    display: contents;">
@@ -86,12 +86,18 @@
 
 
                                         <div class="col-2">
-                                            <label class="form-label" for="status">Status</label><span>*</span>
-                                            <input class="form-control" id="status" name="empstatus"
-                                                #empstatus="ngModel" [(ngModel)]="empdata.empstatus" required>
+                                            <label class="form-label">Status*</label>
+                                            <select class="form-select" id="empstatus" name=" empstatus"
+                                                #empstatus="ngModel" aria-label="Default select example"
+                                                [(ngModel)]="empdata.empstatus" required>
+                                                <option di>Select</option>
+                                                <option>Active</option>
+                                                <option>Inactive</option>
+
+                                            </select>
                                             <small
                                                 *ngIf="(empstatus.touched && empstatus.invalid) || (empstatus.invalid && Personal.submitted)">Status
-                                                is required </small>
+                                                is required</small>
                                         </div>
 
                                         <div class="col-2">
@@ -102,6 +108,7 @@
                                                 <option di>Select</option>
                                                 <option>Male</option>
                                                 <option>Female</option>
+                                                <option>Other</option>
 
                                             </select>
                                             <small
@@ -115,8 +122,9 @@
                                                 required>
                                                 <option di>Select</option>
                                                 <option>Mr</option>
-                                                <option>Ms</option>
                                                 <option>Mrs</option>
+                                                <option>Miss</option>
+                                                <option>Ms</option>
 
                                             </select>
                                             <small
@@ -186,20 +194,89 @@
 
                                         <div class="col">
                                             <label class="form-label">Secondary Language*</label>
-                                            <select class="form-select" id="  secondaryLanguage"
-                                                name="  secondaryLanguage" #secondaryLanguage="ngModel"
-                                                aria-label="Default select example"
+                                            <select class="form-select" id="secondaryLanguage"
+                                                placeholder="Choose a Language..." name="secondaryLanguage"
+                                                #secondaryLanguage="ngModel" aria-label="Default select example"
                                                 [(ngModel)]="empdata.secondaryLanguage" required>
                                                 <option di>Select</option>
-                                                <option>Hindi</option>
-                                                <option>French</option>
-                                                <option>Spanish</option>
+                                                <option value="Afrikaans">Afrikaans</option>
+                                                <option value="Albanian">Albanian</option>
+                                                <option value="Arabic">Arabic</option>
+                                                <option value="Armenian">Armenian</option>
+                                                <option value="Basque">Basque</option>
+                                                <option value="Bengali">Bengali</option>
+                                                <option value="Bulgarian">Bulgarian</option>
+                                                <option value="Catalan">Catalan</option>
+                                                <option value="Cambodian">Cambodian</option>
+                                                <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+                                                <option value="Croatian">Croatian</option>
+                                                <option value="Czech">Czech</option>
+                                                <option value="Danish">Danish</option>
+                                                <option value="Dutch">Dutch</option>
+                                                <option value="English">English</option>
+                                                <option value="Estonian">Estonian</option>
+                                                <option value="Fiji">Fiji</option>
+                                                <option value="Finnish">Finnish</option>
+                                                <option value="French">French</option>
+                                                <option value="Georgian">Georgian</option>
+                                                <option value="German">German</option>
+                                                <option value="Greek">Greek</option>
+                                                <option value="Gujarati">Gujarati</option>
+                                                <option value="Hebrew">Hebrew</option>
+                                                <option value="Hindi">Hindi</option>
+                                                <option value="Hungarian">Hungarian</option>
+                                                <option value="Icelandic">Icelandic</option>
+                                                <option value="Indonesian">Indonesian</option>
+                                                <option value="Irish">Irish</option>
+                                                <option value="Italian">Italian</option>
+                                                <option value="Japanese">Japanese</option>
+                                                <option value="Javanese">Javanese</option>
+                                                <option value="Korean">Korean</option>
+                                                <option value="Latin">Latin</option>
+                                                <option value="Latvian">Latvian</option>
+                                                <option value="Lithuanian">Lithuanian</option>
+                                                <option value="Macedonian">Macedonian</option>
+                                                <option value="Malay">Malay</option>
+                                                <option value="Malayalam">Malayalam</option>
+                                                <option value="Maltese">Maltese</option>
+                                                <option value="Maori">Maori</option>
+                                                <option value="Marathi">Marathi</option>
+                                                <option value="Mongolian">Mongolian</option>
+                                                <option value="Nepali">Nepali</option>
+                                                <option value="Norwegian">Norwegian</option>
+                                                <option value="Persian">Persian</option>
+                                                <option value="Polish">Polish</option>
+                                                <option value="Portuguese">Portuguese</option>
+                                                <option value="Punjabi">Punjabi</option>
+                                                <option value="Quechua">Quechua</option>
+                                                <option value="Romanian">Romanian</option>
+                                                <option value="Russian">Russian</option>
+                                                <option value="Samoan">Samoan</option>
+                                                <option value="Serbian">Serbian</option>
+                                                <option value="Slovak">Slovak</option>
+                                                <option value="Slovenian">Slovenian</option>
+                                                <option value="Spanish">Spanish</option>
+                                                <option value="Swahili">Swahili</option>
+                                                <option value="Swedish ">Swedish </option>
+                                                <option value="Tamil">Tamil</option>
+                                                <option value="Tatar">Tatar</option>
+                                                <option value="Telugu">Telugu</option>
+                                                <option value="Thai">Thai</option>
+                                                <option value="Tibetan">Tibetan</option>
+                                                <option value="Tonga">Tonga</option>
+                                                <option value="Turkish">Turkish</option>
+                                                <option value="Ukrainian">Ukrainian</option>
+                                                <option value="Urdu">Urdu</option>
+                                                <option value="Uzbek">Uzbek</option>
+                                                <option value="Vietnamese">Vietnamese</option>
+                                                <option value="Welsh">Welsh</option>
+                                                <option value="Xhosa">Xhosa</option>
 
                                             </select>
 
                                             <small
-                                                *ngIf="(secondaryLanguage.touched && secondaryLanguage.invalid) || (secondaryLanguage.invalid && Personal.submitted)">Marital
-                                                Status
+                                                *ngIf="(  secondaryLanguage.touched &&   secondaryLanguage.invalid) || (  secondaryLanguage.invalid && Personal.submitted)">
+                                                Secondary Language
                                                 is required </small>
 
                                         </div>
@@ -445,9 +522,7 @@
                                                     [(ngModel)]="empdata. zipCode" required />
                                                 <small
                                                     *ngIf="( zipCode.touched &&  zipCode .invalid) || ( zipCode.invalid && Personal.submitted)">Zip
-                                                    Code
-                                                    is
-                                                    required </small>
+                                                    Code is required </small>
                                             </div>
                                         </div>
 
@@ -465,7 +540,7 @@
                                                 [(ngModel)]="empdata.workPhone" required />
                                             <small
                                                 *ngIf="(workPhone.touched && workPhone.invalid) || (workPhone.invalid && Personal.submitted)">
-                                                Mobile number is required </small>
+                                                Work Phone Number is required </small>
                                         </div>
 
                                         <div class="col">
@@ -476,7 +551,7 @@
                                                 [(ngModel)]="empdata.mobilePhone" required />
                                             <small
                                                 *ngIf="(mobilePhone.touched && mobilePhone.invalid) || (mobilePhone.invalid && Personal.submitted)">
-                                                Phone number is required </small>
+                                                Mobile Phone number is required </small>
                                         </div>
 
                                         <div class="col">
@@ -487,8 +562,8 @@
                                                 pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #workEmail="ngModel"
                                                 [(ngModel)]="empdata.workEmail" required />
                                             <small
-                                                *ngIf="(workEmail.touched && workEmail.invalid) || (workEmail.invalid && Personal.submitted)">Email
-                                                id
+                                                *ngIf="(workEmail.touched && workEmail.invalid) || (workEmail.invalid && Personal.submitted)">Work
+                                                Email-Id
                                                 is required </small>
                                         </div>
 
@@ -500,8 +575,8 @@
                                                 pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #homeEmail="ngModel"
                                                 [(ngModel)]="empdata.homeEmail" required />
                                             <small
-                                                *ngIf="(homeEmail.touched && homeEmail.invalid) || (homeEmail.invalid && Personal.submitted)">Email
-                                                id
+                                                *ngIf="(homeEmail.touched && homeEmail.invalid) || (homeEmail.invalid && Personal.submitted)">Home
+                                                Email-Id
                                                 is required </small>
                                         </div>
                                     </div>
@@ -528,8 +603,7 @@
                                                 aria-label=" emailId" pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                                                 #emailId="ngModel" [(ngModel)]="empdata. emailId" required />
                                             <small
-                                                *ngIf="( emailId.touched &&  emailId.invalid) || ( emailId.invalid && Personal.submitted)">Email
-                                                Id
+                                                *ngIf="( emailId.touched &&  emailId.invalid) || ( emailId.invalid && Personal.submitted)">Email-Id
                                                 is required </small>
                                         </div>
                                         <div class="col">
