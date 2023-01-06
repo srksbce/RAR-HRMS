@@ -14,7 +14,7 @@ import { HttpService } from 'src/app/services/http.service';
 export class SuperuserinfoComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   subscription !: Subscription;
-  educationData = [] as any;
+  educationData = {} as any;
 
   visaData = [] as any;
   PERSONAL = {} as Ipersonaldata;
