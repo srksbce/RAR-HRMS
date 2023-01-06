@@ -20,9 +20,9 @@
                     <div class="form-outline mb-2">
                         <label class="form-label" for="form2Example1"></label><i class="bi bi-person-circle"
                             style="position: relative;right: -44%;top: 28px;"></i>
-                        <input type="email" id="email" name="email" placeholder="Enter User Id" #email="ngModel"
-                            [(ngModel)]="SIGNIN.email" class="form-control" required />
-                        <small *ngIf="(email.touched && email.invalid) || (email.invalid && LOGIN.submitted)">
+                        <input type="email" id="userName" name="userName" placeholder="Enter User Id" #userName="ngModel"
+                            [(ngModel)]="SIGNIN.userName" class="form-control" required />
+                        <small *ngIf="(userName.touched && userName.invalid) || (userName.invalid && LOGIN.submitted)">
                             User id is
                             required</small>
                     </div>

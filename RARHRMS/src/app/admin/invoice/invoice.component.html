@@ -19,13 +19,13 @@
         <hr>
         <div class="row  ">
             <div class="col-sm ">
-                <h4>Name: Ramu Srirangam </h4>
+                <h4>Name: {{invoicebills.firstname +" "+invoicebills.lastname}}   </h4>
             </div>
             <div class="col-sm full">
-                <h4>Employee ID: 1012 </h4>
+                <h4>Employee ID:{{invoicebills.employeeid}} </h4>
             </div>
             <div class="col rt">
-                <h4> Total Amount $840</h4>
+                <h4> Total Amount : {{ invoicebills.amount}}</h4>
             </div>
         </div>
     </div>
@@ -40,64 +40,22 @@
                     <th>no</th>
                     <th>Invoice no</th>
                     <th>Invoice Date</th>
-
                     <th>Invoice Type</th>
-                    <th>Amount</th>
+                    <th>amount</th>
                     <th>Attachment</th> 
                     <th>Status</th>
-
-                </tr>
-               <tr>
-                <td>1</td>
-                <td>104</td>
-                <td>2/12/2021</td>
-                <td>Maintenance</td>
-                <td>$350</td>
-                <td><a href="\assets\invoice-pdf-white.webp"><i class="bi bi-paperclip"></i>View</a></td>  
-                <td><span class="badge bg-primary">In Review</span></td>
-               </tr>
-
-               <tr>
-                <td>2</td>
-                <td>103</td>
-                <td>11/08/2021</td>
-                <td>Transport</td>
-                <td>$490</td>
-                <td><a  href="\assets\tax-invoice.jpg"><i class="bi bi-paperclip"></i>View</a></td>  
-                <td><span class="badge bg-danger">Rejected</span></td>
-               </tr>
-
-               <tr>
-                <td>3</td>
-                <td>102</td>
-                <td>02/07/2021</td>
-                <td>Event</td>
-                <td>$50</td>
-                <td><a href="\assets\classic-white-750px.png"><i class="bi bi-paperclip"></i>View</a></td>  
-                <td><span class="badge bg-success">Approved</span></td>
-               </tr>
-
-               <tr>
-                <td>4</td>
-                <td>101</td>
-                <td>04/05/2021</td>
-                <td>Event</td>
-                <td>$90</td>
-                <td><a href="\assets\1669449398.webp"><i class="bi bi-paperclip"></i>View</a></td>  
-                <!-- <td><span class="dotjky"></span> Draft</td> -->
-                <td><span class="badge bg-dark">Draft</span></td>
-               </tr>
+                </tr>               
             </thead>
 
-            <!-- <tbody>
-              <tr *ngFor="let emp of Expensedata let i=index;">
-                <td>{{ i+1 }}</td>
-                <td>{{emp.expensedate}}</td>
-                <td>{{emp.expenses}}</td>
-                <td>{{emp.amount}}</td>
-               
-                <td><a href="https://www.freshbooks.com/wp-content/uploads/invoice-template-pdf-white.png">Click Here</a></td>
-            </tbody> -->
+            <tbody>
+              <tr *ngFor="let inv of IDATA let i=index;">
+                <td>{{inv.Invoicenumber}}</td>
+                <td>{{inv.Invoicedate}}</td>
+                <td>{{inv.Invoicetype}}</td>
+                <td>{{inv.amount}}</td>
+                <td>{{inv.Attachment}}</td>
+                <td>{{inv.status}}</td>
+            </tbody>
 
         </table>
     </div>

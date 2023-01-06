@@ -45,7 +45,7 @@ export class SuperuserinfoComponent implements OnInit {
       "employeeId": parseInt(this.empdata.employeeId)
     }
     console.log(sdata)
-    this.subscription = this.http.postdata("EducationDatum", sdata).subscribe({
+    this.subscription = this.http.getData("Educationdatum").subscribe({
       next: (data: any) => {
         console.log(data);
         this.educationData = data
@@ -54,10 +54,10 @@ export class SuperuserinfoComponent implements OnInit {
   }
   getvisainformation() {
     let sdata = {
-      "employeeid": parseInt(this.empdata.employeeid)
+      "employeeId": parseInt(this.empdata.employeeId)
     }
     console.log(sdata)
-    this.subscription = this.http.postdata("getvisainformation", sdata).subscribe({
+    this.subscription = this.http.getData("Visa").subscribe({
       next: (data: any) => {
         console.log(data);
         this.visaData = data
@@ -187,7 +187,7 @@ export class SuperuserinfoComponent implements OnInit {
       "employeeid": parseInt(this.empdata.employeeid)
     }
     console.log(sdata)
-    this.subscription = this.http.postdata("getcompensation", sdata).subscribe({
+    this.subscription = this.http.getData("Compensation").subscribe({
       next:(data:any)=>{
         console.log(data);
         this.compensationData= data
@@ -199,7 +199,7 @@ export class SuperuserinfoComponent implements OnInit {
       "employeeid": parseInt(this.empdata.employeeid)
     }
     console.log(sdata)
-    this.subscription = this.http.postdata("getjobinformation", sdata).subscribe({
+    this.subscription = this.http.getData("Job").subscribe({
       next:(data:any)=>{
         console.log(data);
         this.jobData= data
