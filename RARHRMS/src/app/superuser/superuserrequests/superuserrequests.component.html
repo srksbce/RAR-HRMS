@@ -341,7 +341,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <!-- <tr>
                                     <td>1</td>
                                     <td>12/11/21</td>
                                     <td>Travel</td>
@@ -386,7 +386,19 @@
                                     <td><button type="button" class="btn btn-success m-2"
                                             style="color: white ">Approve</button><button type="button"
                                             class="btn btn-danger">Reject</button></td>
-                                </tr>
+                                </tr> -->
+                                
+                                    <tr *ngFor="let emp of Expensedata let i=index;">
+                                      <td>{{ i+1 }}</td>
+                                      <td>{{emp.Expensedata}}</td>
+                                      <td>{{emp.ExpenseType}}</td>
+                                      <td>{{emp.amount}}</td>
+                                      <td>{{emp.invoice}}</td>
+                                      <td>{{emp.status}}</td>
+                                     
+                                      <td><a href="https://www.freshbooks.com/wp-content/uploads/invoice-template-pdf-white.png">Click Here</a></td>
+                                  
+                                
                             </tbody>
                         </table>
 
