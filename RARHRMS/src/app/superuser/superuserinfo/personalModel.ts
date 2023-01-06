@@ -96,7 +96,8 @@ export interface Ipersonal {
     userName: string,
     visaStatus: string,
     visaTypeIssuingCountry: string,
-    
+    degreeStartDate:any,
+    degreeEndDate:any,
     workEmail: string,
     workPhone: number,
     zipCode: number,

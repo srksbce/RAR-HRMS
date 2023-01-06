@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { IExpensedata } from './superuser-model';
+import { IExpensedata, Iinvoices } from './superuser-model';
 import { HttpService } from 'src/app/services/http.service';
 import { Router, Routes } from '@angular/router';
 
@@ -10,25 +10,43 @@ import { Router, Routes } from '@angular/router';
   styleUrls: ['./superuserrequests.component.css']
 })
 export class SuperuserrequestsComponent implements OnInit {
-  Expensedata = [] as IExpensedata [];
-  employeeeexpense= {} as any;
-  empids ={} as any;
+  Expensedata = {} as IExpensedata[];
+  Invoice = {} as Iinvoices[];
+  employeeeexpense = {} as any;
+  empids = {} as any;
   subscription!: Subscription;
   superuserrequests: any;
 
-  constructor(private http:HttpService,private router:Router) { }
+  constructor(private http: HttpService, private router: Router) { }
 
   ngOnInit(): void {
-    this.employeeeexpense=JSON.parse(localStorage.getItem('superuserrequests')||'{}');
-    console.log(this.employeeeexpense)
-    this.empids={
-      empid: parseInt(this.employeeeexpense.employeeid) 
-    }
-    console.log(this.empids)
-    this.superuserrequests();
+    this.expenses();
+    this.invoices();
+  }
+
+  expenses() {
+    this.subscription = this.http.getData("MyExpenses").subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.Expensedata = data as IExpensedata[];
+      },
+      error: reason => console.log(reason)
+    });
+  }
+
+  invoices() {
+    this.subscription = this.http.getData("Invoice").subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.Invoice = data as Iinvoices[];
+      },
+      error: reason => console.log(reason)
+    });
+
   }
   ngOnDestroy(): void {
-    if(this.subscription)
-    this.subscription.unsubscribe();
+    if (this.subscription)
+      this.subscription.unsubscribe();
   }
+
 }
