@@ -51,16 +51,17 @@ export class JobdetailsComponent implements OnInit {
     // console.log(this.JOB)
 
 
-    this.subscription = this.http.empPostData("empdata/", this.JOB, parseInt(this.empdata.id)).subscribe({
+    this.subscription = this.http.postdata("Job", this.JOB).subscribe({
       next: (data: any) => {
         console.log(data)
         if(data.statuscode==200){
-          alert(data.message)
-          this.router.navigate(["/admin/jobdata"])
+          alert("Data insertd Sucessfully")
+          this.router.navigate(["/superuser/superuserinfo"])
         }
       },
       error: (reason: any) => {
-        console.log(reason);
+        //console.log(reason);
+        alert("Insertion of data is failed")
       }
     });
   }
