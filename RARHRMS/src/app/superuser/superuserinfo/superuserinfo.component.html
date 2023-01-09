@@ -54,20 +54,19 @@
 
             <!-- Personal tab -->
 
+            <form name="Personal" #Personal="ngForm" (ngSubmit)="Personal.valid && personal(Personal)">
+                <div class="tab-content pt-2" id="myTabContent">
+                    <div class="tab-pane fade show active" id="Personal" role="tabpanel" aria-labelledby="home-tab">
+                        <link rel="stylesheet" type="text/css"
+                            href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+                        <section class="vh-200 gradient-custom">
 
-            <div class="tab-content pt-2" id="myTabContent">
-                <div class="tab-pane fade show active" id="Personal" role="tabpanel" aria-labelledby="home-tab">
-                    <link rel="stylesheet" type="text/css"
-                        href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
-                    <section class="vh-200 gradient-custom">
 
+                            <div class="card-body p-4 p-md-4">
 
-                        <div class="card-body p-4 p-md-4">
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h5>
+                                <div class="fixTableHead">
 
-                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h5>
-                            <div class="fixTableHead">
-                                <form name="Personal" #Personal="ngForm"
-                                    (ngSubmit)="Personal.valid && personal(Personal)">
                                     <div class="row">
 
                                         <div class="col">
@@ -623,7 +622,7 @@
                                                 <option di>Select</option>
                                                 <option>Father</option>
                                                 <option>Mother</option>
-                                                <option>Brother</option>
+                                                <option>Bro</option>
                                                 <option>Sister</option>
                                                 <option>Husband</option>
                                                 <option>Wife</option>
@@ -637,192 +636,148 @@
                                     <br>
                                     <br>
 
-                                </form>
-                            </div>
-                            <hr>
-                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h5>
 
-                            <a [routerLink]="['/superuser/addeducation']" class=" ml-auto"
-                                routerLinkActive="router-link-active" role="button"
-                                style="position: relative;left: 83%;top: -49px;">
-                                <h5>+Add New</h5>
-                            </a>
-
-                            <div class="table-bordered">
-
-                                <table class="table ">
-                                    <thead class="bg-light">
-                                        <tr>
-                                            <th>Degree</th>
-                                            <th>University</th>
-                                            <th>Specialization</th>
-                                            <th>GPA</th>
-                                            <th>Degree StartDate</th>
-                                            <th>Degree EndDate</th>
-                                        </tr>
-                                    </thead>
-                                    <tr *ngFor="let ed of educationData">
-                                        <td>{{ed.degree}}</td>
-                                        <td>{{ed.university}}</td>
-
-                                        <td>{{ed.specialization}}</td>
-                                        <td>{{ed.gpa}}</td>
-
-                                        <td>{{ed.degreeStartDate}}</td>
-                                        <td>{{ed.degreeEndDate}}</td>
-                                    </tr>
-
-                                </table>
-                            </div>
-                            <hr>
-                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h5>
-
-                            <a [routerLink]="['/superuser/visaupdate']" class=" ml-auto"
-                                routerLinkActive="router-link-active" role="button"
-                                style="position: relative;left: 83%;top: -49px;">
-                                <h5>+Add New</h5>
-                            </a>
-
-                            <div class="table-bordered">
-
-                                <table class="table ">
-                                    <thead class="bg-light">
-                                        <tr>
-
-                                            <th>Visa Type</th>
-                                            <th>Issued Country</th>
-                                            <th>Issued Date</th>
-                                            <th>Expiry Date</th>
-                                            <th>Status</th>
-                                            <th>Notes</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tr *ngFor="let vi of visaData">
-                                        <td>{{vi.visatype}}</td>
-                                        <td>{{vi.issuedcountry}}</td>
-                                        <td>{{vi.issueddate}}</td>
-                                        <td>{{vi.expirydate}}</td>
-                                        <td>{{vi.status}}</td>
-                                        <td>{{vi.notes}}</td>
-                                    </tr>
-
-                                </table>
-                            </div>
-                            <hr>
-                            <br>
-                            <hr>
-                            <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h5>
-
-                            <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
-                                role="button" style="position: relative;left: 83%;top: -49px;">
-                                <h5><i class=" bi-pencil-fill"></i>&nbsp;Update</h5>
-                            </a>
-
-                            <div class="table-bordered">
-
-                                <table class="table ">
-                                    <thead class="bg-light">
-                                        <tr>
-                                            <th>Bank Name</th>
-                                            <th>IFSC Code</th>
-                                            <th>Account Number</th>
-                                            <th>Account Name</th>
-                                            <th>Proof</th>
-
-                                        </tr>
-                                    </thead>
-
-                                    <tr>
-                                        <td>{{empdata.bankName}}</td>
-                                        <td>{{empdata.ifscCode}}
-                                        <td>{{empdata.accountNumber}}</td>
-
-                                        <td>{{empdata.userName}}</td>
-
-                                        <td>{{empdata.proof}}</td>
-
-                                    </tr>
-
-                                </table>
-                            </div>
-                            <hr>
-
-                        </div>
-
-
-                    </section>
-
-                </div>
-
-
-                <!-- JOB TAB -->
-
-
-
-                <div class="tab-pane fade" id="Job" role="tabpanel" aria-labelledby="profile-tab">
-                    <link rel="stylesheet" type="text/css"
-                        href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
-                    <form name="Personal" #Personal="ngForm" (ngSubmit)="Personal.valid && personal(Personal)">
-                        <section class="vh-200 gradient-custom">
-
-                            <br>
-                            <div class="card-body p-4 p-md-4">
-
-                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
-                                    role="button" style="position: relative;left: 83%;top: -45px;">
-
-                                    <h6><i class="bi bi-sliders"></i> Customize fields</h6>
-
-                                </a>
-
+                                </div>
                                 <hr>
-                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Details</h5>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Education</h5>
 
-                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
-                                    role="button" style="position: relative;left: 83%;top: -45px;">
-
-
-                                    <h5> <i class="bi bi-pencil"></i>Update</h5>
+                                <a [routerLink]="['/superuser/addeducation']" class=" ml-auto"
+                                    routerLinkActive="router-link-active" role="button"
+                                    style="position: relative;left: 83%;top: -49px;">
+                                    <h5>+Add New</h5>
                                 </a>
+
                                 <div class="table-bordered">
 
-                                    <table class="table">
+                                    <table class="table ">
                                         <thead class="bg-light">
                                             <tr>
-                                                <th>Date of joining</th>
-                                                <th>Probation end date</th>
-                                                <th>Probation status</th>
-                                                <th>Notice period</th>
-                                                <th>Background status</th>
-                                                <th>Comments</th>
+                                                <th>Degree</th>
+                                                <th>University</th>
+                                                <th>Specialization</th>
+                                                <th>GPA</th>
+                                                <th>Degree StartDate</th>
+                                                <th>Degree EndDate</th>
+                                            </tr>
+                                        </thead>
+                                        <tr *ngFor="let ed of educationData">
+                                            <td>{{ed.degree}}</td>
+                                            <td>{{ed.university}}</td>
+
+                                            <td>{{ed.specialization}}</td>
+                                            <td>{{ed.gpa}}</td>
+
+                                            <td>{{ed.degreeStartDate | date:'shortDate' }}</td>
+                                            <td>{{ed.degreeEndDate | date:'shortDate'}}</td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                                <hr>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h5>
+
+                                <a [routerLink]="['/superuser/visaupdate']" class=" ml-auto"
+                                    routerLinkActive="router-link-active" role="button"
+                                    style="position: relative;left: 83%;top: -49px;">
+                                    <h5>+Add New</h5>
+                                </a>
+
+                                <div class="table-bordered">
+
+                                    <table class="table ">
+                                        <thead class="bg-light">
+                                            <tr>
+
+                                                <th>Visa Type</th>
+                                                <th>Issued Country</th>
+                                                <th>Issued Date</th>
+                                                <th>Expiry Date</th>
+                                                <th>Status</th>
+                                                <th>Notes</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tr *ngFor="let vi of visaData">
+                                            <td>{{vi.visatype}}</td>
+                                            <td>{{vi.issuedcountry}}</td>
+                                            <td>{{vi.issueddate  | date:'shortDate'}}</td>
+                                            <td>{{vi.expirydate | date:'shortDate'}}</td>
+                                            <td>{{vi.status}}</td>
+                                            <td>{{vi.notes}}</td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                                <hr>
+                                <br>
+                                <hr>
+                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Bank Details</h5>
+
+                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
+                                    role="button" style="position: relative;left: 83%;top: -49px;">
+                                    <h5><i class=" bi-pencil-fill"></i>&nbsp;Update</h5>
+                                </a>
+
+                                <div class="table-bordered">
+
+                                    <table class="table ">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th>Bank Name</th>
+                                                <th>IFSC Code</th>
+                                                <th>Account Number</th>
+                                                <th>Account Name</th>
+                                                <th>Proof</th>
+
                                             </tr>
                                         </thead>
 
                                         <tr>
-                                            <td>{{empdata.dateOfJoining}}</td>
-                                            <td>{{empdata.probationEndDate}}</td>
+                                            <td>{{empdata.bankName}}</td>
+                                            <td>{{empdata.ifscCode}}
+                                            <td>{{empdata.accountNumber}}</td>
 
-                                            <td>{{empdata.probationStatus}}</td>
+                                            <td>{{empdata.userName}}</td>
 
-                                            <td>{{empdata.noticePeriod}}</td>
-
-                                            <td>{{empdata.backgroundCheckStatus}}</td>
-                                            <td>{{empdata.comments}}</td>
-
+                                            <td>{{empdata.proof}}</td>
 
                                         </tr>
 
-
-
                                     </table>
-
-
                                 </div>
                                 <hr>
-                                <div>
-                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Offboarding Details
-                                    </h5>
+
+                            </div>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <!-- JOB TAB -->
+
+
+
+                    <div class="tab-pane fade" id="Job" role="tabpanel" aria-labelledby="profile-tab">
+                        <link rel="stylesheet" type="text/css"
+                            href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+                        <!-- <form name="Personal" #Personal="ngForm" (ngSubmit)="Personal.valid && personal(Personal)"> -->
+                            <section class="vh-200 gradient-custom">
+
+                                <br>
+                                <div class="card-body p-4 p-md-4">
+
+                                    <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                        routerLinkActive="router-link-active" role="button"
+                                        style="position: relative;left: 83%;top: -45px;">
+
+                                        <h6><i class="bi bi-sliders"></i> Customize fields</h6>
+
+                                    </a>
+
+                                    <hr>
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Onboarding Details</h5>
 
                                     <a [routerLink]="['/visaupdate']" class=" ml-auto"
                                         routerLinkActive="router-link-active" role="button"
@@ -836,21 +791,25 @@
                                         <table class="table">
                                             <thead class="bg-light">
                                                 <tr>
-                                                   
-                                                    <th>Termination Reason</th>
-                                                    <th>Eligible For Rehire</th>
-                                                    <th>Last Working Day</th>
-
+                                                    <th>Date of joining</th>
+                                                    <th>Probation end date</th>
+                                                    <th>Probation status</th>
+                                                    <th>Notice period</th>
+                                                    <th>Background status</th>
+                                                    <th>Comments</th>
                                                 </tr>
                                             </thead>
 
                                             <tr>
-                                                
-                                                <td>{{empdata. termreasonoffboard}}</td>
+                                                <td>{{empdata.dateOfJoining  | date:'shortDate'}}</td>
+                                                <td>{{empdata.probationEndDate | date:'shortDate'}}</td>
 
-                                                <td>{{empdata.eligibleforrehire}}</td>
+                                                <td>{{empdata.probationStatus}}</td>
 
-                                                <td>{{empdata.lastworkingday}}</td>
+                                                <td>{{empdata.noticePeriod}}</td>
+
+                                                <td>{{empdata.backgroundCheckStatus}}</td>
+                                                <td>{{empdata.comments}}</td>
 
 
                                             </tr>
@@ -861,368 +820,415 @@
 
 
                                     </div>
-
-                                </div>
-                                <hr>
-                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Type</h5>
-
-                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
-                                    role="button" style="position: relative;left: 83%;top: -45px;">
-
-
-                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
-
-
-                                </a>
-                                <div class="table-bordered">
-
-                                    <table class="table ">
-                                        <thead class="bg-light">
-                                            <tr>
-                                                <th>Job Type</th>
-                                                <th>Effective Date</th>
-
-                                                <th>Comments</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tr>
-                                            <td>{{empdata.jobRole}}</td>
-                                            <td>{{empdata.effectivedate}}</td>
-
-                                            <td>{{empdata.comments}}</td>
-
-
-                                        </tr>
-
-
-
-                                    </table>
-
-
-                                </div>
-                                <hr>
-                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Job details</h5>
-
-                                <a [routerLink]="['/superuser/jobdetails']" class=" ml-auto"
-                                    routerLinkActive="router-link-active" role="button"
-                                    style="position: relative;left: 83%;top: -45px;">
-
-
-                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
-
-
-                                </a>
-                                <div class="table-bordered">
-
-                                    <table class="table ">
-                                        <thead class="bg-light">
-                                            <tr>
-                                                <th>Effective Date</th>
-                                                <th>Job Role</th>
-                                                <th>Reports to</th>
-                                                <th>Department</th>
-                                                <th>Business Area</th>
-                                                <th>Location</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tr *ngFor="let jb of JOB">
-                                            <td>{{jb.effectiveDate}}</td>
-                                            <td>{{jb.jobrole}}</td>
-
-                                            <td>{{jb.reportsto}}</td>
-
-                                            <td>{{jb.department}}</td>
-
-                                            <td>{{jb.businessArea}}</td>
-                                            <td>{{jb.lopcation}}</td>
-
-
-                                        </tr>
-
-
-
-                                    </table>
-
-
-                                </div>
-                                <hr>
-                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h5>
-
-                                <a [routerLink]="['/superuser/addnewcomp']" class=" ml-auto"
-                                    routerLinkActive="router-link-active" role="button"
-                                    style="position: relative;left: 83%;top: -45px;">
-
-
-                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
-
-
-                                </a>
-                                <div class="table-bordered">
-
-                                    <table class="table ">
-                                        <thead class="bg-light">
-                                            <tr>
-                                                <th>Effective Date</th>
-                                                <th>Overtime Eligibility</th>
-                                                <th>Reason</th>
-                                                <th>Comments</th>
-                                                <th>Frequency</th>
-                                                <th>Pay Type</th>
-                                                <th>Amount</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tr *ngFor="let cp of compensationData">
-                                            <td>{{cp.compeffectivedate}}</td>
-                                            <td>{{cp.overtimeeligibility}}</td>
-
-                                            <td>{{cp.reason}}</td>
-
-                                            <td>{{cp.comments}}</td>
-
-                                            <td>{{cp.frequency}}</td>
-                                            <td>{{cp.paytype}}</td>
-                                            <td>{{cp.compamount}}</td>
-
-
-                                        </tr>
-
-
-
-                                    </table>
-
-
-
-                                </div>
-
-                                <hr>
-                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">My Assignments</h5>
-
-                                <a [routerLink]="['/visaupdate']" class=" ml-auto" routerLinkActive="router-link-active"
-                                    role="button" style="position: relative;left: 83%;top: -45px;">
-
-
-                                    <h5> <i class="bi bi-pencil"></i> Update</h5>
-
-
-                                </a>
-                                <div class="table-bordered">
-
-                                    <table class="table ">
-                                        <thead class="bg-light">
-                                            <tr>
-                                                <th>Project Name</th>
-                                                <th>Client Name</th>
-                                                <th>Project Start Date</th>
-                                                <th>Project End Date</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tr>
-                                            <td>{{empdata.projectName}}</td>
-                                            <td>{{empdata.clientName}}</td>
-
-                                            <td>{{empdata.projectStartDate}}</td>
-
-                                            <td>{{empdata.projectEndDate}}</td>
-                                        </tr>
-
-                                    </table>
-
-                                </div>
-                                <hr>
-                                <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Direct
-                                    Reports</h5>
-
-                            </div>
-
-
-                        </section>
-                    </form>
-                </div>
-                <!-- Document Tab -->
-
-                <div class="tab-pane fade" id="Document" role="tabpanel" aria-labelledby="contact-tab">
-                    <div class="container-fluid col-md-10">
-
-                        <!DOCTYPE html>
-                        <html lang="en">
-
-                        <head>
-                            <meta charset="utf-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1">
-                            <title>Folder - Creation</title>
-
-                            <link rel="stylesheet"
-                                href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-                            <link rel="stylesheet"
-                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-                            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-                            <script
-                                src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-
-                        </head>
-
-                        <body>
-                            <br>
-                            <br>
-                            <section class="document">
-                                <div class="container">
-                                    <div class="row pt-3 ">
-                                        <div class="col-md-6">
-                                            <div class="head-left">
-                                                <h1>Documents</h1>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="head-right">
-                                                <!-- <img class="img-fluid " height="30" src="img/download.jpg"> -->
-                                                <i class="fa fa-download" aria-hidden="true"></i>
-                                                <a class="pl-2 mt-2" href="#">Download All Folders</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container">
                                     <hr>
-                                </div>
-                                <section>
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="main">
+                                    <div>
+                                        <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Offboarding Details
+                                        </h5>
 
-                                                            <div class="search-bar">
-                                                                <form class="search-form d-flex align-items-center"
-                                                                    method="POST" action="#">
-                                                                    <input type="text" name="query" placeholder="Search"
-                                                                        title="Enter search keyword">
-                                                                    <button type="submit" title="Search"><i
-                                                                            class="bi bi-search"></i></button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                        <br>
-                                                        <br>
+                                        <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                            routerLinkActive="router-link-active" role="button"
+                                            style="position: relative;left: 83%;top: -45px;">
 
-                                                    </div>
-                                                    <form>
-                                                        <input type="file" id="myFile" name="filename">
-                                                        <input type="submit">
-                                                    </form>
-                                                </div>
-                                                <div class="folder-gallery">
-                                                    <h4>Folders</h4>
-                                                </div>
-                                                <div class="content pt-3 pb-3 text-center">
-                                                    <div class="container">
-                                                        <h3 class="text-center pb-3"></h3>
-                                                        <div class="row">
-                                                            <div class="col-md-3">
-                                                                <div class="card p-5 mb-3">
-                                                                    <a href="https://snaddevelopers.sharepoint.com/sites/SNADKnowledgeRepository/Client%20Side/Forms/AllItems.aspx?newTargetListUrl=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side&viewpath=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side%2FForms%2FAllItems%2Easpx&OR=Teams%2DHL&CT=1670391816396&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjExMzAwNDEwMCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&id=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side%2FEmployee%20Documents&viewid=10cbb50b%2Dcf52%2D43c3%2D8550%2D1e927b60e2b5"
-                                                                        target="_blank">
-                                                                        <img class="card-img-top"
-                                                                            src="assets/folder.png"
-                                                                            alt="Card image cap"></a>
-                                                                    <h5 class="text-center pt-3">Employee Documents
-                                                                    </h5>
 
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="card p-5 mb-3">
-                                                                    <a href="https://www.w3schools.com/"
-                                                                        target="_blank">
-                                                                        <img class="card-img-top"
-                                                                            src="assets/folder.png"
-                                                                            alt="Card image cap"></a>
-                                                                    <h5 class="text-center pt-3">Employee Expenses
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="card p-5 mb-3">
-                                                                    <a href="https://www.w3schools.com/"
-                                                                        target="_blank"><img class="card-img-top"
-                                                                            src="assets/folder.png"
-                                                                            alt="Card image cap"></a>
-                                                                    <h5 class="text-center pt-3">Employee Uploads
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="card p-5 mb-3">
-                                                                    <a href="https://www.w3schools.com/"
-                                                                        target="_blank"><img class="card-img-top"
-                                                                            src="assets/folder.png"
-                                                                            alt="Card image cap"></a>
-                                                                    <h5 class="text-center pt-3">Invoices</h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="card p-5 mb-3">
-                                                                    <a href="https://www.w3schools.com/"
-                                                                        target="_blank"><img class="card-img-top"
-                                                                            src="assets/folder.png"
-                                                                            alt="Card image cap"></a>
-                                                                    <h5 class="text-center pt-3">Resumes and
-                                                                        Applications</h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="card p-5 mb-3">
-                                                                    <a href="https://www.w3schools.com/"
-                                                                        target="_blank"><img class="card-img-top"
-                                                                            src="assets/folder.png"
-                                                                            alt="Card image cap"></a>
-                                                                    <h5 class="text-center pt-3">Signed Documents
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="card p-5 mb-3">
-                                                                    <a href="https://www.w3schools.com/"
-                                                                        target="_blank"><img class="card-img-top"
-                                                                            src="assets/folder.png"
-                                                                            alt="Card image cap"></a>
-                                                                    <h5 class="text-center pt-3">Tasklist
-                                                                        Attachments
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="card p-5 mb-3">
-                                                                    <a href="https://www.w3schools.com/"
-                                                                        target="_blank"><img class="card-img-top"
-                                                                            src="assets/folder.png"
-                                                                            alt="Card image cap"></a>
-                                                                    <h5 class="text-center pt-3">Workflow
-                                                                        Attachments
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <h5> <i class="bi bi-pencil"></i>Update</h5>
+                                        </a>
+                                        <div class="table-bordered">
+
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr>
+
+                                                        <th>Termination Reason</th>
+                                                        <th>Eligible For Rehire</th>
+                                                        <th>Last Working Day</th>
+
+                                                    </tr>
+                                                </thead>
+
+                                                <tr>
+
+                                                    <td>{{empdata. termreasonoffboard}}</td>
+
+                                                    <td>{{empdata.eligibleforrehire}}</td>
+
+                                                    <td>{{empdata.lastworkingday  | date:'shortDate'}}</td>
+
+
+                                                </tr>
+
+
+
+                                            </table>
+
+
                                         </div>
+
                                     </div>
-                                </section>
+                                    <hr>
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Type</h5>
+
+                                    <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                        routerLinkActive="router-link-active" role="button"
+                                        style="position: relative;left: 83%;top: -45px;">
+
+
+                                        <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                    </a>
+                                    <div class="table-bordered">
+
+                                        <table class="table ">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th>Job Type</th>
+                                                    <th>Effective Date</th>
+
+                                                    <th>Comments</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tr>
+                                                <td>{{empdata.jobRole}}</td>
+                                                <td>{{empdata.effectivedate | date:'shortDate'}}</td>
+
+                                                <td>{{empdata.comments}}</td>
+
+
+                                            </tr>
+
+
+
+                                        </table>
+
+
+                                    </div>
+                                    <hr>
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Job details</h5>
+
+                                    <a [routerLink]="['/superuser/jobdetails']" class=" ml-auto"
+                                        routerLinkActive="router-link-active" role="button"
+                                        style="position: relative;left: 83%;top: -45px;">
+
+
+                                        <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                    </a>
+                                    <div class="table-bordered">
+
+                                        <table class="table ">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th>Effective Date</th>
+                                                    <th>Job Role</th>
+                                                    <th>Reports to</th>
+                                                    <th>Department</th>
+                                                    <th>Business Area</th>
+                                                    <th>Location</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tr *ngFor="let jb of JOB">
+                                                <td>{{jb.effectiveDate | date:'shortDate'}}</td>
+                                                <td>{{jb.jobrole}}</td>
+
+                                                <td>{{jb.reportsto}}</td>
+
+                                                <td>{{jb.department}}</td>
+
+                                                <td>{{jb.bussinessArea}}</td>
+                                                <td>{{jb.lopcation}}</td>
+
+
+                                            </tr>
+
+
+
+                                        </table>
+
+
+                                    </div>
+                                    <hr>
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h5>
+
+                                    <a [routerLink]="['/superuser/addnewcomp']" class=" ml-auto"
+                                        routerLinkActive="router-link-active" role="button"
+                                        style="position: relative;left: 83%;top: -45px;">
+
+
+                                        <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                    </a>
+                                    <div class="table-bordered">
+
+                                        <table class="table ">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th>Effective Date</th>
+                                                    <th>Overtime Eligibility</th>
+                                                    <th>Reason</th>
+                                                    <th>Comments</th>
+                                                    <th>Frequency</th>
+                                                    <th>Pay Type</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tr *ngFor="let cp of compensationData">
+                                                <td>{{cp.compeffectivedate | date:'shortDate'}}</td>
+                                                <td>{{cp.overtimeeligibility}}</td>
+
+                                                <td>{{cp.reason}}</td>
+
+                                                <td>{{cp.comments}}</td>
+
+                                                <td>{{cp.frequency}}</td>
+                                                <td>{{cp.paytype}}</td>
+                                                <td>{{cp.compensationamount}}</td>
+
+
+                                            </tr>
+
+
+
+                                        </table>
+
+
+
+                                    </div>
+
+                                    <hr>
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">My Assignments</h5>
+
+                                    <a [routerLink]="['/visaupdate']" class=" ml-auto"
+                                        routerLinkActive="router-link-active" role="button"
+                                        style="position: relative;left: 83%;top: -45px;">
+
+
+                                        <h5> <i class="bi bi-pencil"></i> Update</h5>
+
+
+                                    </a>
+                                    <div class="table-bordered">
+
+                                        <table class="table ">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th>Project Name</th>
+                                                    <th>Client Name</th>
+                                                    <th>Project Start Date</th>
+                                                    <th>Project End Date</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tr>
+                                                <td>{{empdata.projectName}}</td>
+                                                <td>{{empdata.clientName}}</td>
+
+                                                <td>{{empdata.projectStartDate | date:'shortDate'}}</td>
+
+                                                <td>{{empdata.projectEndDate | date:'shortDate'}}</td>
+                                            </tr>
+
+                                        </table>
+
+                                    </div>
+                                    <hr>
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-3">Direct
+                                        Reports</h5>
+
+                                </div>
+
 
                             </section>
-                        </body>
+                        <!-- </form> -->
+                    </div>
+                    <!-- Document Tab -->
 
-                        </html>
+                    <div class="tab-pane fade" id="Document" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="container-fluid col-md-10">
 
+                            <!DOCTYPE html>
+                            <html lang="en">
+
+                            <head>
+                                <meta charset="utf-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <title>Folder - Creation</title>
+
+                                <link rel="stylesheet"
+                                    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+                                <link rel="stylesheet"
+                                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+                            </head>
+
+                            <body>
+                                <br>
+                                <br>
+                                <section class="document">
+                                    <div class="container">
+                                        <div class="row pt-3 ">
+                                            <div class="col-md-6">
+                                                <div class="head-left">
+                                                    <h1>Documents</h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="head-right">
+                                                    <!-- <img class="img-fluid " height="30" src="img/download.jpg"> -->
+                                                    <i class="fa fa-download" aria-hidden="true"></i>
+                                                    <a class="pl-2 mt-2" href="#">Download All Folders</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <hr>
+                                    </div>
+                                    <section>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="main">
+
+                                                                <div class="search-bar">
+                                                                    <form class="search-form d-flex align-items-center"
+                                                                        method="POST" action="#">
+                                                                        <input type="text" name="query"
+                                                                            placeholder="Search"
+                                                                            title="Enter search keyword">
+                                                                        <button type="submit" title="Search"><i
+                                                                                class="bi bi-search"></i></button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <br>
+
+                                                        </div>
+                                                        <form>
+                                                            <input type="file" id="myFile" name="filename">
+                                                            <input type="submit">
+                                                        </form>
+                                                    </div>
+                                                    <div class="folder-gallery">
+                                                        <h4>Folders</h4>
+                                                    </div>
+                                                    <div class="content pt-3 pb-3 text-center">
+                                                        <div class="container">
+                                                            <h3 class="text-center pb-3"></h3>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="card p-5 mb-3">
+                                                                        <a href="https://snaddevelopers.sharepoint.com/sites/SNADKnowledgeRepository/Client%20Side/Forms/AllItems.aspx?newTargetListUrl=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side&viewpath=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side%2FForms%2FAllItems%2Easpx&OR=Teams%2DHL&CT=1670391816396&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjExMzAwNDEwMCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&id=%2Fsites%2FSNADKnowledgeRepository%2FClient%20Side%2FEmployee%20Documents&viewid=10cbb50b%2Dcf52%2D43c3%2D8550%2D1e927b60e2b5"
+                                                                            target="_blank">
+                                                                            <img class="card-img-top"
+                                                                                src="assets/folder.png"
+                                                                                alt="Card image cap"></a>
+                                                                        <h5 class="text-center pt-3">Employee Documents
+                                                                        </h5>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="card p-5 mb-3">
+                                                                        <a href="https://www.w3schools.com/"
+                                                                            target="_blank">
+                                                                            <img class="card-img-top"
+                                                                                src="assets/folder.png"
+                                                                                alt="Card image cap"></a>
+                                                                        <h5 class="text-center pt-3">Employee Expenses
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="card p-5 mb-3">
+                                                                        <a href="https://www.w3schools.com/"
+                                                                            target="_blank"><img class="card-img-top"
+                                                                                src="assets/folder.png"
+                                                                                alt="Card image cap"></a>
+                                                                        <h5 class="text-center pt-3">Employee Uploads
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="card p-5 mb-3">
+                                                                        <a href="https://www.w3schools.com/"
+                                                                            target="_blank"><img class="card-img-top"
+                                                                                src="assets/folder.png"
+                                                                                alt="Card image cap"></a>
+                                                                        <h5 class="text-center pt-3">Invoices</h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="card p-5 mb-3">
+                                                                        <a href="https://www.w3schools.com/"
+                                                                            target="_blank"><img class="card-img-top"
+                                                                                src="assets/folder.png"
+                                                                                alt="Card image cap"></a>
+                                                                        <h5 class="text-center pt-3">Resumes and
+                                                                            Applications</h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="card p-5 mb-3">
+                                                                        <a href="https://www.w3schools.com/"
+                                                                            target="_blank"><img class="card-img-top"
+                                                                                src="assets/folder.png"
+                                                                                alt="Card image cap"></a>
+                                                                        <h5 class="text-center pt-3">Signed Documents
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="card p-5 mb-3">
+                                                                        <a href="https://www.w3schools.com/"
+                                                                            target="_blank"><img class="card-img-top"
+                                                                                src="assets/folder.png"
+                                                                                alt="Card image cap"></a>
+                                                                        <h5 class="text-center pt-3">Tasklist
+                                                                            Attachments
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="card p-5 mb-3">
+                                                                        <a href="https://www.w3schools.com/"
+                                                                            target="_blank"><img class="card-img-top"
+                                                                                src="assets/folder.png"
+                                                                                alt="Card image cap"></a>
+                                                                        <h5 class="text-center pt-3">Workflow
+                                                                            Attachments
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                </section>
+                            </body>
+
+                            </html>
+
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
             <br>
             <br>
             <br>
