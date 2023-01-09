@@ -10,6 +10,7 @@ import { Router, Routes } from '@angular/router';
   styleUrls: ['./superuserrequests.component.css']
 })
 export class SuperuserrequestsComponent implements OnInit {
+  LOGIN:any;
   Expensedata = {} as IExpensedata[];
   Invoice = {} as Iinvoices[];
   employeeeexpense = {} as any;
@@ -20,6 +21,7 @@ export class SuperuserrequestsComponent implements OnInit {
   constructor(private http: HttpService, private router: Router) { }
 
   ngOnInit(): void {
+    this.LOGIN = JSON.parse(localStorage.getItem('personaldata') || '{}');
     this.expenses();
     this.invoices();
   }

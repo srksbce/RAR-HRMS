@@ -102,3 +102,14 @@ export interface Ipersonal {
     workPhone: number,
     zipCode: number,
 }
+
+export interface Ijob
+{
+   employeeId:number,
+   effectiveDate:any,
+   jobrole:string,
+   reportsto:string,
+   department:string,
+   bussinessArea:string,
+   lopcation:string
+} 
