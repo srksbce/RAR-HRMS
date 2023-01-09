@@ -1,12 +1,13 @@
 export interface Icompdetails
 {
+  employeeId: number;
    
-        OvertimeEligibility:string,
-        Amount:number,
-        EffectiveDate:number,
-        Comments:string,
-       Reason:string,
-       Frequency:String,
-       Paytype:String
+        overtimeeligibility:string,
+        compensationamount:number,
+        compeffectivedate:number,
+        comments:string,
+       reason:string,
+       frequency:String,
+       paytype:String
     
     }

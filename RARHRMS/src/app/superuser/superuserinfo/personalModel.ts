@@ -55,8 +55,7 @@ export interface Ipersonal {
     issuedDate: any,
     jobEffectiveDate: any,
     jobRole: string,
-    degreeStartDate:any ,
-    degreeEndDate: any
+    
     lastworkingday: any,
     location: string,
     
@@ -103,3 +102,18 @@ export interface Ipersonal {
     workPhone: number,
     zipCode: number,
 }
+
+export interface Ijob
+{
+   
+     effectiveDate:string;
+     jobrole:string;
+     reportsto:string;
+     department:string;
+     businessArea:string;
+     lopcation:string;
+      
+       
+       
+   
+} 

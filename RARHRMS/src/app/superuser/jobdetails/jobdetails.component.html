@@ -15,9 +15,9 @@
 
             <div class="col-md-6 mb-4">
                         <label for="Date" class="form-label">Job Effective Date</label><span style="color: red;right: -3px;position: relative;">*</span>
-                        <input type="date" class="form-control"  id="effectivedate" name="effectivedate" placeholder="Date"
-                        #effectivedate="ngModel" placeholder="Effective Date" [(ngModel)]=" JOB.effectivedate" required/>
-                        <small *ngIf="(effectivedate.touched && effectivedate.invalid) || (effectivedate.invalid &&  job.submitted)">*Job Effective Date is required </small>
+                        <input type="date" class="form-control"  id="effectiveDate" name="effectiveDate" placeholder="Date"
+                        #effectiveDate="ngModel" placeholder="Effective Date" [(ngModel)]=" JOB.effectiveDate" required/>
+                        <small *ngIf="(effectiveDate.touched && effectiveDate.invalid) || (effectiveDate.invalid &&  job.submitted)">*Job Effective Date is required </small>
             </div>
         
             
@@ -40,9 +40,9 @@
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
                         <label for="Date" class="form-label">Reporting To</label><span style="color: red;right: -3px;position: relative;">*</span>
-                        <input type="text" class="form-control"  id="reportingto" name="reportingto" 
-                        #reportingto="ngModel" placeholder="Reporting To" [(ngModel)]="JOB.reportingto" required/>
-                        <small *ngIf="(reportingto.touched && reportingto.invalid) || (reportingto.invalid && job.submitted)">*Reporting To is required </small>
+                        <input type="text" class="form-control"  id="reportsto" name="reportsto" 
+                        #reportsto="ngModel" placeholder="Reporting To" [(ngModel)]="JOB.reportsto" required/>
+                        <small *ngIf="(reportsto.touched && reportsto.invalid) || (reportsto.invalid && job.submitted)">*Reporting To is required </small>
                     </div>
                 </div>
                     <div class="col-md-6 mb-4">
@@ -67,17 +67,17 @@
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label for="text" class="form-label">Business Area</label><span style="color: red;right: -3px;position: relative;">*</span>
-                            <input type="text" class="form-control" id="businessarea" name="businessarea"
-                            #businessarea="ngModel" placeholder="Business Area" [(ngModel)]="JOB.businessarea" required/>
-                            <small *ngIf="(businessarea.touched && businessarea.invalid) || (businessarea.invalid && job.submitted)">* Business Area  is required </small>
+                            <input type="text" class="form-control" id="businessArea" name="businessArea"
+                            #businessArea="ngModel" placeholder="Business Area" [(ngModel)]="JOB.businessArea" required/>
+                            <small *ngIf="(businessArea.touched && businessArea.invalid) || (businessArea.invalid && job.submitted)">* Business Area  is required </small>
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label for="text" class="form-label">Location</label><span style="color: red;right: -3px;position: relative;">*</span>
-                            <input type="text" class="form-control" id="department" name="location"
-                            #location="ngModel" placeholder="Location" [(ngModel)]="JOB.location" required/>
-                            <small *ngIf="(location.touched && location.invalid) || (location.invalid && job.submitted)">* Location  is required </small>
+                            <input type="text" class="form-control" id="lopcation" name="lopcation"
+                            #lopcation="ngModel" placeholder="Location" [(ngModel)]="JOB.lopcation" required/>
+                            <small *ngIf="(lopcation.touched && lopcation.invalid) || (lopcation.invalid && job.submitted)">* Location  is required </small>
                         </div>
                     </div>
                     <div class="mt-4 pt-2">

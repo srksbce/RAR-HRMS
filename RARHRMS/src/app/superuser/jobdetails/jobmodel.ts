@@ -1,11 +1,11 @@
 export interface IJobdetails
 {
- effectivedate:string;
+ effectiveDate:string;
  jobrole:string;
- reportingto:string;
+ reportsto:string;
  department:string;
- businessarea:string;
- location:string;
+ businessArea:string;
+ lopcation:string;
   
    
    

@@ -1,13 +1,13 @@
 export interface IExpensedata
 {
     id:any,
-    employeeID: number,
+    employeeId: number,
     expensedate: string,
     expenseType:string,
     amount: number,
     invoice:string,
     status:string,
-    
+    firstName:string,
     attchment:any,
 
 
@@ -17,6 +17,7 @@ export interface IExpensedata
 export interface Iinvoices
 {
     id:number,
+    employeeId: number,
     invoicenumber:number,
     invoicedate:string,
     invoiceType:string,

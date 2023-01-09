@@ -3,33 +3,31 @@
     <div class="container" style="display:flex ">
         <div class="card-body ">
             <img src="/assets/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <h5>Kevin</h5>
-            <h5>Web Designer</h5>
-        </div>
-        <div class="row" style="    display: contents;">
-            <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative">
-                <!-- <i class="fas fa-cubes fa-3x text-primary mb-4"></i> -->
-                <label class="form-label" for="emailaddress"><b>Job Type</b></label><br>
-                <h6>Full Time</h6><br>
-                <label class="form-label" for="emailaddress"><b>Location</b></label><br><label>Hyderabad</label><br>
+            <h4>{{LOGIN.firstName}}</h4>
+        </div><br>
+        <div class="row" style="display: contents;">
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative"><br>
+
+                <h5>Job Type</h5>
+                <h6>{{LOGIN.jobRole}}</h6>
+                <h5>Location</h5>
+                <h6>{{LOGIN.location}}</h6>
                 <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
             </div>
 
-            <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative">
-                <!-- <i class="fas fa-layer-group fa-3x text-primary mb-4"></i> -->
-                <label class="form-label" for="emailaddress"><b>Phone</b></label><br><label>907239865</label><br>
-                <label class="form-label"
-                    for="emailaddress"><b>Email-Id</b></label><br><label>User@snaddevelopers.com</label><br>
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative"><br>
+
+                <h5>Phone</h5>
+                <h6>{{LOGIN.contactnumber}}</h6>
+                <h5>Email-Id</h5>
+                <h6>{{LOGIN.emailId}}</h6>
                 <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
             </div>
 
-            <div class="col-lg-3 col-md-6 mb-5 mb-md-0 position-relative">
-                <!-- <i class="fas fa-image fa-3x text-primary mb-4"></i> -->
-                <label class="form-label" for="emailaddress"><b>Reporting To</b></label><br><label>Satya
-                    Kishore</label><br><label>Manager</label><br>
-
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-0 position-relative"><br>
+                <h5>Reporting To</h5>
+                <h6>{{LOGIN.reportingTo}}</h6>
             </div>
-
         </div>
     </div>
 
@@ -671,7 +669,7 @@
                                         <td>{{ed.gpa}}</td>
 
                                         <td>{{ed.degreeStartDate}}</td>
-                                        <td>{{ed.degreeEnddate}}</td>
+                                        <td>{{ed.degreeEndDate}}</td>
                                     </tr>
 
                                 </table>
@@ -701,10 +699,10 @@
                                     </thead>
 
                                     <tr *ngFor="let vi of visaData">
-                                        <td>{{vi.visaStatus}}</td>
-                                        <td>{{vi.visaTypeIssuingCountry}}</td>
-                                        <td>{{vi.issuedDate}}</td>
-                                        <td>{{vi.expirationdate}}</td>
+                                        <td>{{vi.visatype}}</td>
+                                        <td>{{vi.issuedcountry}}</td>
+                                        <td>{{vi.issueddate}}</td>
+                                        <td>{{vi.expirydate}}</td>
                                         <td>{{vi.status}}</td>
                                         <td>{{vi.notes}}</td>
                                     </tr>
@@ -838,9 +836,8 @@
                                         <table class="table">
                                             <thead class="bg-light">
                                                 <tr>
-                                                    <th>Termination Type</th>
+                                                   
                                                     <th>Termination Reason</th>
-
                                                     <th>Eligible For Rehire</th>
                                                     <th>Last Working Day</th>
 
@@ -848,7 +845,7 @@
                                             </thead>
 
                                             <tr>
-                                                <td>{{empdata. termtypeoffboard}}</td>
+                                                
                                                 <td>{{empdata. termreasonoffboard}}</td>
 
                                                 <td>{{empdata.eligibleforrehire}}</td>
@@ -930,16 +927,16 @@
                                             </tr>
                                         </thead>
 
-                                        <tr *ngFor="let ed of educationData">
-                                            <td>{{ed.jobEffectiveDate}}</td>
-                                            <td>{{ed.jobRole}}</td>
+                                        <tr *ngFor="let jb of JOB">
+                                            <td>{{jb.effectiveDate}}</td>
+                                            <td>{{jb.jobrole}}</td>
 
-                                            <td>{{ed.reportingTo}}</td>
+                                            <td>{{jb.reportsto}}</td>
 
-                                            <td>{{ed.department}}</td>
+                                            <td>{{jb.department}}</td>
 
-                                            <td>{{ed.businessArea}}</td>
-                                            <td>{{ed.location}}</td>
+                                            <td>{{jb.businessArea}}</td>
+                                            <td>{{jb.lopcation}}</td>
 
 
                                         </tr>
@@ -977,17 +974,17 @@
                                             </tr>
                                         </thead>
 
-                                        <tr *ngFor="let ed of educationData">
-                                            <td>{{ed.compensationEffectiveDate}}</td>
-                                            <td>{{ed.overtimeEligibility}}</td>
+                                        <tr *ngFor="let cp of compensationData">
+                                            <td>{{cp.compeffectivedate}}</td>
+                                            <td>{{cp.overtimeeligibility}}</td>
 
-                                            <td>{{ed.reason}}</td>
+                                            <td>{{cp.reason}}</td>
 
-                                            <td>{{ed.compensationComments}}</td>
+                                            <td>{{cp.comments}}</td>
 
-                                            <td>{{ed.frequency}}</td>
-                                            <td>{{ed.payType}}</td>
-                                            <td>{{ed.amount}}</td>
+                                            <td>{{cp.frequency}}</td>
+                                            <td>{{cp.paytype}}</td>
+                                            <td>{{cp.compamount}}</td>
 
 
                                         </tr>

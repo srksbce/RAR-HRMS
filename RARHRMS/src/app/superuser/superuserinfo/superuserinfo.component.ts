@@ -5,6 +5,7 @@ import * as moment from 'moment';
 import { Subscription } from 'rxjs';
 import { Ipersonaldata } from 'src/app/admin/personaldata/personal-model';
 import { HttpService } from 'src/app/services/http.service';
+import { Ijob } from './personalModel';
 
 @Component({
   selector: 'app-superuserinfo',
@@ -15,14 +16,13 @@ export class SuperuserinfoComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   subscription !: Subscription;
   educationData = {} as any;
-
+  JOB = {} as any;
+  getjob= {} as Ijob;
   visaData = [] as any;
   PERSONAL = {} as Ipersonaldata;
-
   empdata = {} as any;
- 
-  jobData=[] as any;
-  compensationData=[] as any;
+  LOGIN:any;
+  compensationData={} as any;
   BankData = [] as any;
 
 
@@ -31,10 +31,13 @@ export class SuperuserinfoComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.LOGIN = JSON.parse(localStorage.getItem('personaldata') || '{}');
     this.empdata = JSON.parse(localStorage.getItem("personaldata") || '{}')
     console.log(this.empdata);
     this.getEducationData();
     this.getvisainformation();
+    this.compensationData();
+    this.getjobData();
 
   }
 
@@ -165,7 +168,7 @@ export class SuperuserinfoComponent implements OnInit {
         "jobRole": this.empdata.jobRole,
             }
 
-    this.subscription = this.http.updatedata("empdata/", parseInt(this.empdata.employeeid),sdata).subscribe({
+    this.subscription = this.http.updatedata("Register", parseInt(this.empdata.employeeId),sdata).subscribe({
       next: (data: any) => {
         console.log(data);
 
@@ -173,14 +176,7 @@ export class SuperuserinfoComponent implements OnInit {
     })
   }
   ngOnDestroy(): void {
-    this.empdata = JSON.parse(localStorage.getItem("personaldata") || '{}')
-    console.log(this.empdata)
-
-    this.getjobData();
-    this.getcompensationData();
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    
   }
   getcompensationData(){
     let sdata = {
@@ -196,13 +192,13 @@ export class SuperuserinfoComponent implements OnInit {
   }
   getjobData(){
     let sdata = {
-      "employeeid": parseInt(this.empdata.employeeid)
+      "employeeId": parseInt(this.empdata.employeeId)
     }
     console.log(sdata)
     this.subscription = this.http.getData("Job").subscribe({
       next:(data:any)=>{
         console.log(data);
-        this.jobData= data
+        this.JOB = data
       }
     })
 

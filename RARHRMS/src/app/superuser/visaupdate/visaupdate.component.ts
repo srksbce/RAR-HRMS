@@ -50,16 +50,16 @@ export class VisaupdateComponent implements OnInit {
     console.log(this.VISA)
 
 
-    this.subscription = this.http.empPostData("empdata/", this.VISA, parseInt(this.empdata.id)).subscribe({
+    this.subscription = this.http.postdata("Visa", this.VISA).subscribe({
       next: (data: any) => {
         console.log(data)
         if(data.statuscode==200){
-          alert(data.message)
-          this.router.navigate(["/admin/personaldata"])
+          alert("Data insertd Sucessfully")
+          this.router.navigate(["/superuser/superuserinfo"])
         }
       },
       error: (reason: any) => {
-        console.log(reason);
+        alert("Insertion of data is failed")
       }
     });
   }

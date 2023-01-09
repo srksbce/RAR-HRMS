@@ -27,9 +27,12 @@
 
                     <div class="form-outline">
                         <label for="form2Example4" class="form-label">Compensation Effective Date </label><span>*</span>
-                        <input type="date" class="form-control" name="EffectiveDate" aria-label="EffectiveDate"
-                            #Datetime="ngModel" [(ngModel)]="COMPDETAILS.EffectiveDate" required>
-                        <small *ngIf="Datetime.touched &&Datetime.invalid">Effective Date is required</small>
+                        <input type="date" class="form-control" name="compeffectivedate" aria-label="EffectiveDate"
+                            #compeffectivedate="ngModel" [(ngModel)]="COMPDETAILS.compeffectivedate" required>
+                            <small
+                            *ngIf="(compeffectivedate.touched && compeffectivedate.invalid) || (compeffectivedate.invalid && compdetails.submitted)">
+                            Effective Date
+                            is required </small>
 
 
                     </div>
@@ -40,15 +43,15 @@
 
                     <div class="form-outline">
                         <label for="form2Example3" class="form-label">Overtime Eligibility</label><span>*</span>
-                        <select class="form-select" name="Overtime" #Overtime="ngModel"
-                            aria-label="Default select example" [(ngModel)]="COMPDETAILS.OvertimeEligibility" required>
+                        <select class="form-select" name="overtimeeligibility" #overtimeeligibility="ngModel"
+                            aria-label="Default select example" [(ngModel)]="COMPDETAILS.overtimeeligibility" required>
                             <option>Yes</option>
                             <option>No</option>
 
 
                         </select>
                         <small
-                            *ngIf="(Overtime.touched && Overtime.invalid) || (Overtime.invalid && compdetails.submitted)">Overtime
+                            *ngIf="(overtimeeligibility.touched && overtimeeligibility.invalid) || (overtimeeligibility.invalid && compdetails.submitted)">Overtime
                             Eligibility
                             is required </small>
                     </div>
@@ -60,8 +63,8 @@
 
                     <div class="form-outline">
                         <label for="form2Example3" class="form-label">Reason</label><span>*</span>
-                        <select class="form-select" name="Reason" #Reason="ngModel" aria-label="Default select example"
-                            [(ngModel)]="COMPDETAILS. Reason" required>
+                        <select class="form-select" name="reason" #reason="ngModel" aria-label="Default select example"
+                            [(ngModel)]="COMPDETAILS.reason" required>
 
                             <option>Pay Increase</option>
                             <option>Annual Pay Increase</option>
@@ -73,7 +76,7 @@
                         </select>
 
                         <small
-                            *ngIf="( Reason.touched &&  Reason.invalid) || ( Reason.invalid && compdetails.submitted)">Reason
+                            *ngIf="(reason.touched &&  reason.invalid) || ( reason.invalid && compdetails.submitted)">Reason
                             is required </small>
 
                     </div>
@@ -87,11 +90,13 @@
                         </div>
                         <div class="form-outline">
                             <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
-                                name="Comments" #Comments="ngModel" aria-label="Default select example"
-                                [(ngModel)]="COMPDETAILS.Comments" required></textarea>
+                                name="comments" #comments="ngModel" aria-label="Default select example"
+                                [(ngModel)]="COMPDETAILS.comments" required></textarea>
                             <label class="form-label" for="textAreaExample"></label>
 
-                            <small *ngIf="Comments.touched &&Comments.invalid">Comment is required</small>
+                            <small
+                            *ngIf="(comments.touched &&  comments.invalid) || ( comments.invalid && compdetails.submitted)">Comments
+                            is required </small>
                         </div>
                     </div>
 
@@ -99,31 +104,33 @@
 
                         <div class="form-outline">
                             <label for="form2Example3" class="form-label">Frequency</label><span>*</span>
-                            <select class="form-select" name="Frequency" #Frequency="ngModel"
-                                aria-label="Default select example" [(ngModel)]="COMPDETAILS. Frequency" required>
+                            <select class="form-select" name="frequency" #frequency="ngModel"
+                                aria-label="Default select example" [(ngModel)]="COMPDETAILS.frequency" required>
 
                                 <option>Weekly</option>
                                 <option>Monthly</option>
                                 <option>Daily</option>
 
                             </select>
-                            <small *ngIf=" Frequency.touched &&compdetails.invalid">Frequency is required
-                            </small>
+                            <small
+                            *ngIf="(frequency.touched &&  frequency.invalid) || ( frequency.invalid && compdetails.submitted)">Frequency
+                            is required </small>
                         </div>
                     </div>
 
                     <div class="col-md-3 mb-8">
                         <div class="form-outline">
                             <label for="form2Example3" class="form-label">Pay Type</label><span>*</span>
-                            <select class="form-select" name="Frequency" #Paytype="ngModel"
-                                aria-label="Default select example" [(ngModel)]="COMPDETAILS.Paytype" required>
+                            <select class="form-select" name="paytype" #paytype="ngModel"
+                                aria-label="Default select example" [(ngModel)]="COMPDETAILS.paytype" required>
 
                                 <option>Hourly</option>
                                 <option>Salary</option>
                                 <option>Commission</option>
                             </select>
-                            <small *ngIf="Paytype.touched &&compdetails.invalid">Pay Type is required
-                            </small>
+                            <small
+                            *ngIf="(paytype.touched &&  paytype.invalid) || ( paytype.invalid && compdetails.submitted)">Paytype
+                            is required </small>
                         </div>
                     </div>
                     <br>
@@ -132,10 +139,10 @@
                         <div class="form-outline">
                             <label for="Amount" class="form-label">Amount</label><span>*</span>
 
-                            <input type="text" class="form-control" name="Amount" aria-label="Amount" #Amount="ngModel"
-                                [(ngModel)]="COMPDETAILS.Amount" required>
+                            <input type="text" class="form-control" name="compensationamount" aria-label="compensationamount" #compensationamount="ngModel"
+                                [(ngModel)]="COMPDETAILS.compensationamount" required>
                             <small
-                                *ngIf="(Amount.touched && Amount.invalid) || (Amount.invalid && compdetails.submitted)">Amount
+                                *ngIf="(compensationamount.touched && compensationamount.invalid) || (compensationamount.invalid && compdetails.submitted)">Amount
                                 is required </small>
                         </div>
                         <br>
