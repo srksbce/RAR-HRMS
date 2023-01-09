@@ -24,6 +24,7 @@ export class ActiveemployeedataComponent implements OnInit {
       next: (data: any) => {
         console.log(data);
         this.actemployees = data as IActive[];
+        
       },
       error: reason => console.log(reason)
     });

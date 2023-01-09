@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { disableDebugTools } from '@angular/platform-browser';
 import Chart from 'chart.js/auto';
-import { Subscription } from 'rxjs';
+import { ObservableLike, Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -16,13 +16,17 @@ export class SuperuserComponent implements OnInit, OnDestroy  {
 
   subscription!: Subscription;
   dashBoardData = {} as any;
+  activeEmpDataCount!:number
 
   constructor(private http: HttpService) {}
 
   ngOnInit(): void {
     this.loginuser = JSON.parse(localStorage.getItem('logindetails') || '{}');
+    let empdata = JSON.parse(localStorage.getItem('personal') || '{}');
+
     this.getDashBoardData();
     this.getOperationalcostData();
+    this.getEmpData()
   }
 
   getDashBoardData() {
@@ -54,6 +58,31 @@ export class SuperuserComponent implements OnInit, OnDestroy  {
       },
       error: (reason) => console.log(reason),
     });
+  }
+  getEmpData() {
+    this.subscription = this.http.getData("Register").subscribe({
+      next: (data: any) => {
+        console.log(data);
+        let actEmpData = data.filter((ele:any)=>{
+          // ele['empstatus'] == 'Active'
+          // console.log(ele);
+          if(ele.status === "Active"){
+            return ele
+          }
+          
+        })
+        console.log(actEmpData);
+        
+        this.activeEmpDataCount = actEmpData.length
+        console.log(this.activeEmpDataCount);
+        
+
+        
+        
+      },
+      error: reason => console.log(reason)
+    });
+
   }
 
   createChart() {

@@ -836,9 +836,8 @@
                                         <table class="table">
                                             <thead class="bg-light">
                                                 <tr>
-                                                    <th>Termination Type</th>
+                                                   
                                                     <th>Termination Reason</th>
-
                                                     <th>Eligible For Rehire</th>
                                                     <th>Last Working Day</th>
 
@@ -846,7 +845,7 @@
                                             </thead>
 
                                             <tr>
-                                                <td>{{empdata. termtypeoffboard}}</td>
+                                                
                                                 <td>{{empdata. termreasonoffboard}}</td>
 
                                                 <td>{{empdata.eligibleforrehire}}</td>
@@ -975,17 +974,17 @@
                                             </tr>
                                         </thead>
 
-                                        <tr *ngFor="let ed of educationData">
-                                            <td>{{ed.compensationEffectiveDate}}</td>
-                                            <td>{{ed.overtimeEligibility}}</td>
+                                        <tr *ngFor="let cp of compensationData">
+                                            <td>{{cp.compeffectivedate}}</td>
+                                            <td>{{cp.overtimeeligibility}}</td>
 
-                                            <td>{{ed.reason}}</td>
+                                            <td>{{cp.reason}}</td>
 
-                                            <td>{{ed.compensationComments}}</td>
+                                            <td>{{cp.comments}}</td>
 
-                                            <td>{{ed.frequency}}</td>
-                                            <td>{{ed.payType}}</td>
-                                            <td>{{ed.amount}}</td>
+                                            <td>{{cp.frequency}}</td>
+                                            <td>{{cp.paytype}}</td>
+                                            <td>{{cp.compamount}}</td>
 
 
                                         </tr>

@@ -105,11 +105,15 @@ export interface Ipersonal {
 
 export interface Ijob
 {
-   employeeId:number,
-   effectiveDate:any,
-   jobrole:string,
-   reportsto:string,
-   department:string,
-   bussinessArea:string,
-   lopcation:string
+   
+     effectiveDate:string;
+     jobrole:string;
+     reportsto:string;
+     department:string;
+     businessArea:string;
+     lopcation:string;
+      
+       
+       
+   
 } 

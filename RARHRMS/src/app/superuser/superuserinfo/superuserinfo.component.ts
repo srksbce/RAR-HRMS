@@ -20,7 +20,6 @@ export class SuperuserinfoComponent implements OnInit {
   getjob= {} as Ijob;
   visaData = [] as any;
   PERSONAL = {} as Ipersonaldata;
- 
   empdata = {} as any;
   LOGIN:any;
   compensationData={} as any;
@@ -169,7 +168,7 @@ export class SuperuserinfoComponent implements OnInit {
         "jobRole": this.empdata.jobRole,
             }
 
-    this.subscription = this.http.updatedata("empdata/", parseInt(this.empdata.employeeid),sdata).subscribe({
+    this.subscription = this.http.updatedata("Register", parseInt(this.empdata.employeeId),sdata).subscribe({
       next: (data: any) => {
         console.log(data);
 
