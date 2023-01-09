@@ -28,7 +28,7 @@ export class AddeducationComponent implements OnInit {
   
    console.log(this.educationupdate)
 
-  this.subscription=this.http.empPostData("Educationdatum/",this.educationupdate, parseInt(this.empdata.Id)).subscribe({
+  this.subscription=this.http.empPostData("Register/",this.educationupdate, parseInt(this.empdata.id)).subscribe({
     next: (data: any) => {
       console.log(data)
       if(data.statuscode==200){
