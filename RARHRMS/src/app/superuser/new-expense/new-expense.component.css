@@ -1,30 +1,27 @@
-h3{
-  position: relative;bottom: -53px;
+h3 {
+  position: relative;
+  bottom: -53px;
 }
 
-  .card{
-    padding-top: 10px;
-   
+small {
+  color: red;
 }
 
-.mb-3{
-    padding-bottom: 55px;
-    width: 55px;
-    
-    }
-
-    .mb-3{
-        width: 350px;
-        padding-bottom: 2px;
-    }
-    
-    small{
-      color: red;
-  }
-.ml-auto{
-  position: relative;left: 20%;bottom: -45px;
+.ml-auto {
+  position: relative;
+  left: 20%;
+  bottom: -45px;
 }
-.newexp{
-  margin-left:24%;
-  
+
+.newexp {
+  margin-left: 24%;
+
+}
+
+.btn-primary {
+  margin-top: -3%;
+  margin-left: 5%;
+}
+.card{
+  margin-left: auto;
 }
