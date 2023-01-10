@@ -1,4 +1,3 @@
-
 <form name="newinvoices" #newinvoices="ngForm" (ngSubmit)="newinvoices.valid &&  NewINVOICES(newinvoices)"><br>
     <h3 class="text-center">Add Invoice</h3>
     <a [routerLink]="['/superuser/superuserrequests']" class="ml-auto" routerLinkActive="router-link-active"
@@ -6,13 +5,14 @@
         <h5><i class="bi bi-arrow-left-short"></i>Back</h5>
     </a>
     <br>
-    <div class="addnewinv px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" >
+    <div class="addnewinv px-4 py-2 px-md-5 col-md-6 text-center text-lg-start">
         <div class=" shadow-lg p-4
          mb-2 bg-white rounded">
             <div class="card-body py-3 px-md-2">
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                        <label for="form2Example3" class="form-label">Invoice type</label><span style="color: red;"> *</span>
+                        <label for="form2Example3" class="form-label">Invoice type</label><span style="color: red;">
+                            *</span>
                         <select class="form-select" name="Invoicetype" #Invoicetype="ngModel"
                             aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicetype" required>
                             <a class="dropdown-item disabled" href="#">Disabled link</a>
@@ -28,7 +28,8 @@
 
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                        <label for="form2Example3" class="form-label">Invoice Number</label><span style="color: red;"> *</span>
+                        <label for="form2Example3" class="form-label">Invoice Number</label><span style="color: red;">
+                            *</span>
                         <input type="text" class="form-control" name=" Invoicenumber" #Invoicenumber="ngModel"
                             aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicenumber" required>
                         <small *ngIf="Invoicenumber.touched && Invoicenumber.invalid">Invoice Number is
@@ -37,7 +38,8 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                        <label for="form2Example4" class="form-label">Invoice Date </label><span style="color: red;"> *</span>
+                        <label for="form2Example4" class="form-label">Invoice Date </label><span style="color: red;">
+                            *</span>
                         <input type="date" class="form-control" name="Invoicedate" #Invoicedate="ngModel"
                             aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicedate" required>
                         <small *ngIf="Invoicedate.touched && Invoicedate.invalid">Invoice Date is Mandatory</small>
@@ -45,7 +47,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                        <label for="form2Example3" class="form-label" >Amount</label><span style="color: red;"> *</span>
+                        <label for="form2Example3" class="form-label">Amount</label><span style="color: red;"> *</span>
                         <input type="text" class="form-control" name="Amount" #Amount="ngModel"
                             aria-label="Default select example" [(ngModel)]="NEWINVOICES.Amount" required>
                         <small *ngIf="Amount.touched && Amount.invalid">Amount is Mandatory</small>
@@ -53,7 +55,8 @@
                 </div>
                 <div class="col-md-7 mb-4">
                     <div class="form-outline">
-                        <label for="Description" class="form-label">Description</label><span style="color: red;"> *</span>
+                        <label for="Description" class="form-label">Description</label><span style="color: red;">
+                            *</span>
                     </div>
                     <div class="form-outline">
                         <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
@@ -64,14 +67,16 @@
                     </div>
                 </div>
                 <input type="file" class="form-control" name="Amount" #file="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.File" required>
+                    aria-label="Default select example" [(ngModel)]="NEWINVOICES.File" required>
 
-                    <!-- <angular-file-uploader [config]="afuConfig"[(ngModel)]="NEWINVOICES.File" #File="ngModel" ></angular-file-uploader> -->
-                    <div class="mt-4 pt-2 text-center">
-                        <input class="btn btn-primary " type="submit" value="Save"  />
-                        <button type="submit" class="btn btn-success" style="margin-left:5%; margin-top: -3%;">Submit</button>
-                        <button type="button" input type="reset" class="btn btn-secondary" style="margin-left:5%; margin-top: -3%;">Reset</button>
-                       
+                <!-- <angular-file-uploader [config]="afuConfig"[(ngModel)]="NEWINVOICES.File" #File="ngModel" ></angular-file-uploader> -->
+                <div class="mt-4 pt-2 text-center">
+                    <input class="btn btn-primary " type="submit" value="Save" />
+                    <button type="submit" class="btn btn-success"
+                        style="margin-left:5%; margin-top: -3%;">Submit</button>
+                    <button type="button" input type="reset" class="btn btn-secondary"
+                        style="margin-left:5%; margin-top: -3%;">Reset</button>
+
                 </div>
             </div>
         </div>

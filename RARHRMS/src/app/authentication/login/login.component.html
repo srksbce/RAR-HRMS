@@ -21,39 +21,46 @@
                                 <h3><b>Login</b></h3>
 
                                 <div class="form-outline mb-2">
-                                    <label class="form-label" for="form2Example1"></label><i class="bi bi-person-circle" style="position: relative;right: -44%;top: 28px;"></i>
+                                    <label class="form-label" for="form2Example1"></label><i class="bi bi-person-circle"
+                                        style="position: relative;right: -44%;top: 28px;"></i>
                                     <input type="email" id="email" name="email" placeholder="Enter User Id"
-                                        #email="ngModel" [(ngModel)]="Login.email" class="form-control"
-                                        required />
+                                        #email="ngModel" [(ngModel)]="Login.email" class="form-control" required />
                                     <small
                                         *ngIf="(email.touched && email.invalid) || (email.invalid && LOGIN.submitted)">
                                         User id is
                                         required</small>
                                 </div>
-                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                <link rel="stylesheet"
+                                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="form2Example2"></label>
-                                    <span style="position: relative;right: -44%;top: 30px;" class="eyeicon"  (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye-fill':'bi bi-eye-slash-fill'"></i>
+                                    <span style="position: relative;right: -44%;top: 30px;" class="eyeicon"
+                                        (click)="viewpass()"><i
+                                            [ngClass]="visible?'bi bi-eye-fill':'bi bi-eye-slash-fill'"></i>
                                     </span>
-                                    <input [type]="changetype?'password':'text'"id="password" placeholder="Enter Password" name="password" #password="ngModel"
-                                    [(ngModel)]="Login.password" 
-                                        class="form-control" required />
-                                       
-                                       
-                                        <small
+                                    <input [type]="changetype?'password':'text'" id="password"
+                                        placeholder="Enter Password" name="password" #password="ngModel"
+                                        [(ngModel)]="Login.password" class="form-control" required />
+
+
+                                    <small
                                         *ngIf="(password.touched && password.invalid) || (password.invalid && LOGIN.submitted)">Password
                                         is
                                         required</small>
                                 </div>
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="form2Example3"></label>
-                                    <select class="form-select" id="entity" name="entity" aria-label="Default select example" #entity="ngModel" [(ngModel)]="Login.entity" required>
-                                        <option >Select Entity</option>
+                                    <select class="form-select" id="entity" name="entity"
+                                        aria-label="Default select example" #entity="ngModel" [(ngModel)]="Login.entity"
+                                        required>
+                                        <option>Select Entity</option>
                                         <option *ngFor="let item of entities"> {{item.entity}} </option>
-                                       
+
                                     </select>
-                                    <small *ngIf="(entity.touched && entity.invalid) || (entity.invalid && LOGIN.submitted)">Entity is required </small>
+                                    <small
+                                        *ngIf="(entity.touched && entity.invalid) || (entity.invalid && LOGIN.submitted)">Entity
+                                        is required </small>
                                 </div>
                                 <br>
                                 <div class="row mb-2">
@@ -88,10 +95,7 @@
     <div class="container">
         <h1> uploaad Profile Picture</h1>
         <img class="rounded-circle" [src]="urllink">
-        <input type="file" class="btn btn-success btn-sm" (change) = "selectFiles($event)">  <input type="button"  value="Upload" onclick="upload()">
+        <input type="file" class="btn btn-success btn-sm" (change)="selectFiles($event)"> <input type="button"
+            value="Upload" onclick="upload()">
     </div>
 </section>
-
-
-
-
