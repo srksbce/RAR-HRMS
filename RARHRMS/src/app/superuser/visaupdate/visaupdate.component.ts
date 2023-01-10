@@ -22,10 +22,12 @@ export class VisaupdateComponent implements OnInit {
   subscription!: Subscription;
 
   VISA = {} as Ivisaupdate;
-
+  visa =[] as any;
+  
   ngOnInit(): void {
     this.empdata = JSON.parse(localStorage.getItem("personaldata") || '{}')
     console.log(this.empdata)
+    this.getvisadata();
   }
 
   visaupdate(f: NgForm) {
@@ -62,6 +64,15 @@ export class VisaupdateComponent implements OnInit {
         alert("Insertion of data is failed")
       }
     });
+  }
+
+  getvisadata(){
+    this.subscription=this.http.getData("Visatype").subscribe({
+      next: data  => {
+          this.visa=data
+      }
+    })
+    console.log(this.visa)
   }
   ngOnDestroy(): void {
     if(this.subscription)
