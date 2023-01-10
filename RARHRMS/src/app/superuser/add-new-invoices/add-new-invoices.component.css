@@ -1,15 +1,19 @@
-h3{
-    position: relative;bottom: -53px;
+h3 {
+    position: relative;
+    bottom: -53px;
 }
-.ml-auto{
-    position: relative;left: 20%;bottom: -45px;
+
+.ml-auto {
+    position: relative;
+    left: 20%;
+    bottom: -45px;
 }
-.addnewinv{
-    margin-left:24%;
+
+.addnewinv {
+    margin-left: 24%;
 }
 
 .btn-primary {
     margin-top: -3%;
     margin-left: 5%;
 }
-

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, NgForm, Validators } from '@angular/forms';
 import { Inewexpense } from './new-expense-model';
-import { AngularFileUploaderModule } from "angular-file-uploader";
+
 
 @Component({
   selector: 'app-new-expense',
@@ -24,10 +24,10 @@ export class NewExpenseComponent implements OnInit {
 };
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
-  Newexp(f:NgForm){
-    
+  NewEXPENSE(f:NgForm){
+    console.log(this.NEWEXPENSE );
   }
 
   }
