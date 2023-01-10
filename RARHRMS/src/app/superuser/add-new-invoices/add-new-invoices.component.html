@@ -29,26 +29,26 @@
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
                         <label for="form2Example3" class="form-label">Invoice Number</label><span style="color: red;"> *</span>
-                        <input type="text" class="form-control" name=" Invoicenumber" #Invoicenumber="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicenumber" required>
-                        <small *ngIf="Invoicenumber.touched && Invoicenumber.invalid">Invoice Number is
+                        <input type="text" class="form-control" name=" invoicenumber" #invoicenumber="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.invoicenumber" required>
+                        <small *ngIf="invoicenumber.touched && invoicenumber.invalid">Invoice Number is
                             Mandatory</small>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
                         <label for="form2Example4" class="form-label">Invoice Date </label><span style="color: red;"> *</span>
-                        <input type="date" class="form-control" name="Invoicedate" #Invoicedate="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Invoicedate" required>
-                        <small *ngIf="Invoicedate.touched && Invoicedate.invalid">Invoice Date is Mandatory</small>
+                        <input type="date" class="form-control" name="invoicedate" #invoicedate="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.invoicedate" required>
+                        <small *ngIf="invoicedate.touched && invoicedate.invalid">Invoice Date is Mandatory</small>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
                         <label for="form2Example3" class="form-label" >Amount</label><span style="color: red;"> *</span>
-                        <input type="text" class="form-control" name="Amount" #Amount="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.Amount" required>
-                        <small *ngIf="Amount.touched && Amount.invalid">Amount is Mandatory</small>
+                        <input type="number" class="form-control" name="amount" #amount="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.amount" required>
+                        <small *ngIf="amount.touched && amount.invalid">Amount is Mandatory</small>
                     </div>
                 </div>
                 <div class="col-md-7 mb-4">
@@ -57,19 +57,19 @@
                     </div>
                     <div class="form-outline">
                         <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
-                            name="Description" #Description="ngModel" aria-label="Default select example"
-                            [(ngModel)]="NEWINVOICES.Description" required></textarea>
+                            name="Description" aria-label="Default select example"
+                           ></textarea>
                         <label class="form-label" for="textAreaExample"></label>
-                        <small *ngIf="Description.touched &&Description.invalid">Description is Mandatory</small>
+                       
                     </div>
                 </div>
-                <input type="file" class="form-control" name="Amount" #file="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.File" required>
+                <!-- <input type="file" class="form-control" name="Amount" #File="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.File" required> -->
 
                     <!-- <angular-file-uploader [config]="afuConfig"[(ngModel)]="NEWINVOICES.File" #File="ngModel" ></angular-file-uploader> -->
                     <div class="mt-4 pt-2 text-center">
-                        <input class="btn btn-primary " type="submit" value="Save"  />
-                        <button type="submit" class="btn btn-success" style="margin-left:5%; margin-top: -3%;">Submit</button>
+                        <button class="btn btn-primary " type="button" (click)="PostSavedInvoice()" >Save</button>
+                        <input type="submit" class="btn btn-success" style="margin-left:5%; margin-top: -3%;" value="Submit">
                         <button type="button" input type="reset" class="btn btn-secondary" style="margin-left:5%; margin-top: -3%;">Reset</button>
                        
                 </div>
