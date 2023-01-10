@@ -14,18 +14,14 @@
                 
                 <div class="col-md-6">
                     <label class="form-label">Visa Type</label><span style="color: red;right: -3px;position: relative;">*</span>
-                    <select class="form-select" id="visastatus" name="visastatus" aria-label="Default select example" #visastatus="ngModel" [(ngModel)]="VISA.visastatus" required>
-                        <option>Choose Option</option>
-                        <option value="B1">B1</option>
-                        <option value="B2">B2</option>
-                        <option value="H1B">H1B</option>
-                        <option value="H2B">H2B</option>
-                        <option value="L1A">L1A</option>
-                        <option value="L2A">L2A</option>
-                        <option value="permanent">Permanent Resident </option>
-                        <option value="L2A">TN1</option>
-                    </select>
-                    <small *ngIf="(visastatus.touched && visastatus.invalid) || (visastatus.invalid && Visa.submitted)">*Visa Type is required </small>
+                    <select class="form-select" id="visatype" name="entity"
+                                        aria-label="Default select example" #visatype1="ngModel" [(ngModel)]="VISA.visatype1"
+                                        required>
+                                        <option>Select</option>
+                                        <option *ngFor="let item of visa"> {{item.visatype1}} </option>
+
+                                    </select>
+                    <small *ngIf="(visatype1.touched && visatype1.invalid) || (visatype1.invalid && Visa.submitted)">*Visa Type is required </small>
                 </div>
                 <div class="col-md-6 mb-4">
                     <label class="form-label">Issuing Country</label><span style="color: red;right: -3px;position: relative;">*</span>

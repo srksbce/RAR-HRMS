@@ -16,7 +16,7 @@ export class SuperuserinfoComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   subscription !: Subscription;
   educationData = {} as any;
-  JOB = {} as any;
+  JOB = [] as any;
   getjob= {} as Ijob;
   visaData = [] as any;
   PERSONAL = {} as Ipersonaldata;
@@ -36,7 +36,7 @@ export class SuperuserinfoComponent implements OnInit {
     console.log(this.empdata);
     this.getEducationData();
     this.getvisainformation();
-    this.compensationData();
+    this.getcompensationData();
     this.getjobData();
 
   }

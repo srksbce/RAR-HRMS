@@ -3,6 +3,6 @@ export interface Inewexpense{
     Amount:number,
     Datetime:number,
     Description:string,
-    file:string
+    File:string
 
 }

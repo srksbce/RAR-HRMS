@@ -4,7 +4,7 @@ export interface IJobdetails
  jobrole:string;
  reportsto:string;
  department:string;
- businessArea:string;
+ bussinessArea:string;
  lopcation:string;
   
    

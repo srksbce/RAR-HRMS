@@ -97,7 +97,7 @@ export interface Ipersonal {
     visaStatus: string,
     visaTypeIssuingCountry: string,
     degreeStartDate:any,
-    degreeEndDate:any,
+    degreeEndDate:Date,
     workEmail: string,
     workPhone: number,
     zipCode: number,
@@ -110,7 +110,7 @@ export interface Ijob
      jobrole:string;
      reportsto:string;
      department:string;
-     businessArea:string;
+     bussinessArea:string;
      lopcation:string;
       
        
