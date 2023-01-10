@@ -667,8 +667,8 @@
                                             <td>{{ed.specialization}}</td>
                                             <td>{{ed.gpa}}</td>
 
-                                            <td>{{ed.degreeStartDate | date:'shortDate' }}</td>
-                                            <td>{{ed.degreeEndDate | date:'shortDate'}}</td>
+                                            <td>{{ed.degreeStartDate | date:'mediumDate' }}</td>
+                                            <td>{{ed.degreeEndDate | date:'mediumDate'}}</td>
                                         </tr>
 
                                     </table>
@@ -700,8 +700,8 @@
                                         <tr *ngFor="let vi of visaData">
                                             <td>{{vi.visatype}}</td>
                                             <td>{{vi.issuedcountry}}</td>
-                                            <td>{{vi.issueddate  | date:'shortDate'}}</td>
-                                            <td>{{vi.expirydate | date:'shortDate'}}</td>
+                                            <td>{{vi.issueddate  | date:'mediumDate'}}</td>
+                                            <td>{{vi.expirydate| date:'mediumDate'}}</td>
                                             <td>{{vi.status}}</td>
                                             <td>{{vi.notes}}</td>
                                         </tr>
@@ -801,8 +801,8 @@
                                             </thead>
 
                                             <tr>
-                                                <td>{{empdata.dateOfJoining  | date:'shortDate'}}</td>
-                                                <td>{{empdata.probationEndDate | date:'shortDate'}}</td>
+                                                <td>{{empdata.dateOfJoining  | date:'mediumDate'}}</td>
+                                                <td>{{empdata.probationEndDate | date:'mediumDate'}}</td>
 
                                                 <td>{{empdata.probationStatus}}</td>
 
@@ -851,7 +851,7 @@
 
                                                     <td>{{empdata.eligibleforrehire}}</td>
 
-                                                    <td>{{empdata.lastworkingday  | date:'shortDate'}}</td>
+                                                    <td>{{empdata.lastworkingday  | date:'mediumDate'}}</td>
 
 
                                                 </tr>
@@ -890,7 +890,7 @@
 
                                             <tr>
                                                 <td>{{empdata.jobRole}}</td>
-                                                <td>{{empdata.effectivedate | date:'shortDate'}}</td>
+                                                <td>{{empdata.effectivedate | date:'mediumDate'}}</td>
 
                                                 <td>{{empdata.comments}}</td>
 
@@ -930,7 +930,7 @@
                                             </thead>
 
                                             <tr *ngFor="let jb of JOB">
-                                                <td>{{jb.effectiveDate | date:'shortDate'}}</td>
+                                                <td>{{jb.effectiveDate | date:'mediumDate'}}</td>
                                                 <td>{{jb.jobrole}}</td>
 
                                                 <td>{{jb.reportsto}}</td>
@@ -977,7 +977,7 @@
                                             </thead>
 
                                             <tr *ngFor="let cp of compensationData">
-                                                <td>{{cp.compeffectivedate | date:'shortDate'}}</td>
+                                                <td>{{cp.compeffectivedate | date:'mediumDate'}}</td>
                                                 <td>{{cp.overtimeeligibility}}</td>
 
                                                 <td>{{cp.reason}}</td>
@@ -1027,9 +1027,9 @@
                                                 <td>{{empdata.projectName}}</td>
                                                 <td>{{empdata.clientName}}</td>
 
-                                                <td>{{empdata.projectStartDate | date:'shortDate'}}</td>
+                                                <td>{{empdata.projectStartDate | date:'mediumDate'}}</td>
 
-                                                <td>{{empdata.projectEndDate | date:'shortDate'}}</td>
+                                                <td>{{empdata.projectEndDate | date:'mediumDate'}}</td>
                                             </tr>
 
                                         </table>
