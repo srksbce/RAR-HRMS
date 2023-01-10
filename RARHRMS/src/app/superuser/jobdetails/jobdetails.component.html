@@ -1,120 +1,91 @@
 <form name="job" #job="ngForm" (ngSubmit)=" job.valid &&  Job( job)">
     <br>
     <h2 class="text-center" style="position: relative;bottom: -55px;">Update Job Details</h2>
-    <a [routerLink]="['/superuser/superuserinfo']" class=" ml-auto" routerLinkActive="router-link-active" role="button"
-        style="position: relative;left: 20%;bottom: -45px;">
-        <h5><i class="bi bi-arrow-left-short"></i>Back</h5>
-    </a>
-    <br>
-    <br>
+    <a [routerLink]="['/superuser/superuserinfo']" class=" ml-auto"
+    routerLinkActive="router-link-active" role="button"
+    style="position: relative;left: 20%;bottom: -45px;">
+    <h5><i class="bi bi-arrow-left-short"></i>Back</h5>
+ </a>
+ <br>
+ <br>
     <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
         <div class=" shadow-lg p-4
          mb-2 bg-white rounded">
-            <div class="card-body py-3 px-md-2">
+         <div class="card-body py-3 px-md-2">
+
+            <div class="col-md-6 mb-4">
+                        <label for="Date" class="form-label">Job Effective Date</label><span style="color: red;right: -3px;position: relative;">*</span>
+                        <input type="date" class="form-control"  id="effectiveDate" name="effectiveDate" placeholder="Date"
+                        #effectiveDate="ngModel" placeholder="Effective Date" [(ngModel)]=" JOB.effectiveDate" required/>
+                        <small *ngIf="(effectiveDate.touched && effectiveDate.invalid) || (effectiveDate.invalid &&  job.submitted)">*Job Effective Date is required </small>
+            </div>
+        
+            
+                
 
                 <div class="col-md-6 mb-4">
-                    <label for="Date" class="form-label">Job Effective Date</label><span
-                        style="color: red;right: -3px;position: relative;">*</span>
-                    <input type="date" class="form-control" id="effectiveDate" name="effectiveDate" placeholder="Date"
-                        #effectiveDate="ngModel" placeholder="Effective Date" [(ngModel)]=" JOB.effectiveDate"
-                        required />
-                    <small
-                        *ngIf="(effectiveDate.touched && effectiveDate.invalid) || (effectiveDate.invalid &&  job.submitted)">*Job
-                        Effective Date is required </small>
-                </div>
-
-
-
-
-                <div class="col-md-6 mb-4">
-                    <label class="form-label">Job role</label><span
-                        style="color: red;right: -3px;position: relative;">*</span>
+                    <label class="form-label">Job role</label><span style="color: red;right: -3px;position: relative;">*</span>
                     <!-- <input type="text" class="form-control"  id="jobrole" name="jobrole" placeholder="Job Role"
                     #jobrole="ngModel"  [(ngModel)]=" JOB.jobrole" required/> -->
-                    <select class="form-select" id="jobrole" name="jobrole" aria-label="Default select example"
-                        #jobrole="ngModel" [(ngModel)]="JOB.jobrole" required>
-
+                    <select class="form-select" id="jobrole" name="jobrole" aria-label="Default select example" #jobrole="ngModel" [(ngModel)]="JOB.jobrole" required>
+                       
                         <option>Software Developer</option>
                         <option>Business Analyst</option>
                         <option>FullStack Developer</option>
                         <option>Human Resource</option>
-
+                       
                     </select>
-                    <small *ngIf="(jobrole.touched && jobrole.invalid) || (jobrole.invalid && job.submitted)">*Job Role
-                        is required </small>
+                    <small *ngIf="(jobrole.touched && jobrole.invalid) || (jobrole.invalid && job.submitted)">*Job Role is required </small>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                        <label for="Date" class="form-label">Reporting To</label><span
-                            style="color: red;right: -3px;position: relative;">*</span>
-                        <input type="text" class="form-control" id="reportsto" name="reportsto" #reportsto="ngModel"
-                            placeholder="Reporting To" [(ngModel)]="JOB.reportsto" required />
-                        <small
-                            *ngIf="(reportsto.touched && reportsto.invalid) || (reportsto.invalid && job.submitted)">*Reporting
-                            To is required </small>
+                        <label for="Date" class="form-label">Reporting To</label><span style="color: red;right: -3px;position: relative;">*</span>
+                        <input type="text" class="form-control"  id="reportsto" name="reportsto" 
+                        #reportsto="ngModel" placeholder="Reporting To" [(ngModel)]="JOB.reportsto" required/>
+                        <small *ngIf="(reportsto.touched && reportsto.invalid) || (reportsto.invalid && job.submitted)">*Reporting To is required </small>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                        <label for="Date" class="form-label">Department</label><span
-                            style="color: red;right: -3px;position: relative;">*</span>
-                        <!-- <input type="date" class="form-control" id="department" name="department"
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label for="Date" class="form-label">Department</label><span style="color: red;right: -3px;position: relative;">*</span>
+                            <!-- <input type="date" class="form-control" id="department" name="department"
                             #department="ngModel" placeholder="department" [(ngModel)]="JOB.department" required/> -->
-                        <select class="form-select" id="department" name="department"
-                            aria-label="Default select example" #department="ngModel" [(ngModel)]="JOB.department"
-                            required>
-
-                            <option>Customer Success</option>
-                            <option>Finance</option>
-                            <option>Human Resources</option>
-                            <option>IT</option>
-                            <option>Marketing</option>
-                            <option>Operations</option>
-                            <option>Product</option>
-                            <option>sales</option>
-                        </select>
-                        <small
-                            *ngIf="(department.touched && department.invalid) || (department.invalid && job.submitted)">*
-                            Department is required </small>
+                            <select class="form-select" id="department" name="department" aria-label="Default select example" #department="ngModel" [(ngModel)]="JOB.department" required>
+                              
+                                <option>Payroll</option>
+                                <option >Admin</option>
+                                <option>HR</option>
+                                <!-- <option value="H2B">H2B</option>
+                                <option value="L1A">L1A</option>
+                                <option value="L2A">L2A</option>
+                                <option value="permanent">Permanent Resident </option>
+                                <option value="L2A">TN1</option> -->
+                            </select>
+                            <small *ngIf="(department.touched && department.invalid) || (department.invalid && job.submitted)">* Department  is required </small>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                        <label for="text" class="form-label">Business Area</label><span
-                            style="color: red;right: -3px;position: relative;">*</span>
-                        <!-- <input type="text" class="form-control" id="businessArea" name="businessArea"
-                            #businessArea="ngModel" placeholder="Business Area" [(ngModel)]="JOB.businessArea" required/> -->
-                        <select class="form-select" id="businessArea" name="businessArea"
-                            aria-label="Default select example" #businessArea="ngModel" [(ngModel)]="JOB.businessArea"
-                            required>
-
-                            <option>Asia-Pacific</option>
-                            <option>Europe</option>
-                            <option>South America</option>
-                            <option>North America</option>
-
-                        </select>
-                        <small
-                            *ngIf="(businessArea.touched && businessArea.invalid) || (businessArea.invalid && job.submitted)">*
-                            Business Area is required </small>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label for="text" class="form-label">Business Area</label><span style="color: red;right: -3px;position: relative;">*</span>
+                            <input type="text" class="form-control" id="bussinessArea" name="bussinessArea"
+                            #bussinessArea="ngModel" placeholder="Business Area" [(ngModel)]="JOB.bussinessArea" required/>
+                            <small *ngIf="(bussinessArea.touched && bussinessArea.invalid) || (bussinessArea.invalid && job.submitted)">* Business Area  is required </small>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                        <label for="text" class="form-label">Location</label><span
-                            style="color: red;right: -3px;position: relative;">*</span>
-                        <input type="text" class="form-control" id="lopcation" name="lopcation" #lopcation="ngModel"
-                            placeholder="Location" [(ngModel)]="JOB.lopcation" required />
-                        <small
-                            *ngIf="(lopcation.touched && lopcation.invalid) || (lopcation.invalid && job.submitted)">*
-                            Location is required </small>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label for="text" class="form-label">Location</label><span style="color: red;right: -3px;position: relative;">*</span>
+                            <input type="text" class="form-control" id="lopcation" name="lopcation"
+                            #lopcation="ngModel" placeholder="Location" [(ngModel)]="JOB.lopcation" required/>
+                            <small *ngIf="(lopcation.touched && lopcation.invalid) || (lopcation.invalid && job.submitted)">* Location  is required </small>
+                        </div>
                     </div>
-                </div>
-                <div class="mt-4 pt-2">
+                    <div class="mt-4 pt-2">
 
-                    <button type="submit" class="btn btn-primary" style="margin-left:45%;">Update Details</button><br>
-                </div>
+                        <button  type="submit" class="btn btn-primary" style="margin-left:45%;">Update Details</button><br>
+                    </div>    
             </div>
         </div>
     </div>
 </form>
+

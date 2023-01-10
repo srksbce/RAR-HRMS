@@ -44,7 +44,7 @@
                                     <h5>Employee ID: {{LOGIN.employeeId}} </h5>
                                 </div>
                                 <div class="col-sm">
-                                    <h5> Total Amount $840</h5>
+                                    <h5> Total Amount </h5>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                                 <tbody>
                                     <tr *ngFor="let exp of Expensedata">
                                             <td>{{exp.id}}</td>
-                                            <td>{{exp.expensedate}}</td>
+                                            <td>{{exp.expensedate| date:'mediumDate'}}</td>
                                             <td>{{exp.expenseType}}</td>
                                             <td>{{exp.amount}}</td>
                                             <td>{{exp.invoice}}</td>
@@ -127,7 +127,7 @@
                                     <tr *ngFor="let inv of Invoice">
                                         <td>{{inv.id}}</td>
                                         <td>{{inv.invoicenumber}}</td>
-                                        <td>{{inv.invoicedate}}</td>
+                                        <td>{{inv.invoicedate| date:'mediumDate'}}</td>
                                         <td>{{inv.invoiceType}}</td>
                                         <td>{{inv.amount}}</td>
                                         <td>{{inv.attchment}}</td>
