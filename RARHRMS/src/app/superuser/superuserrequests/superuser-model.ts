@@ -21,7 +21,7 @@ export interface Iinvoices
     invoicenumber:number,
     invoicedate:string,
     invoiceType:string,
-    attchment:null,
+    attchment:string,
     amount: number,
     status:string,
 

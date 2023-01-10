@@ -17,6 +17,10 @@ export class SuperuserrequestsComponent implements OnInit {
   empids = {} as any;
   subscription!: Subscription;
   superuserrequests: any;
+  totalInvoicesAmount:number = 0
+  totalExpAmount:number = 0
+
+
 
   constructor(private http: HttpService, private router: Router) { }
 
@@ -31,6 +35,9 @@ export class SuperuserrequestsComponent implements OnInit {
       next: (data: any) => {
         console.log(data);
         this.Expensedata = data as IExpensedata[];
+        this.Expensedata.forEach((el:IExpensedata)=>{
+          this.totalExpAmount = this.totalExpAmount + el.amount
+        })
       },
       error: reason => console.log(reason)
     });
@@ -41,6 +48,9 @@ export class SuperuserrequestsComponent implements OnInit {
       next: (data: any) => {
         console.log(data);
         this.Invoice = data as Iinvoices[];
+        this.Invoice.forEach((el:Iinvoices)=>{
+          this.totalInvoicesAmount = this.totalInvoicesAmount + el.amount
+        })
       },
       error: reason => console.log(reason)
     });
