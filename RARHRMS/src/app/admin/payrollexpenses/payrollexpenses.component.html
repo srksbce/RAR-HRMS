@@ -9,19 +9,18 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th> Employee Id</th>
-              <th> First Name</th>
-              <th> Last Name</th>
-              <th> Total Payroll Expenses</th>
+              <th>Employee Id</th>
+              <th>Employee Name</th>
+              
+              <th>Total Payroll Expenses</th>
             </tr>
           </thead>
 
           <tbody>
-            <tr *ngFor="let emp of payrollexpense">
-              <td>{{emp.employeeid}}</td>
-              <td>{{emp.firstname}}</td>
-              <td>{{emp.lastname}}</td>
-              <td>{{emp.sum |currency}}</td>
+            <tr *ngFor="let pay of payrollexpense">
+              <td>{{pay.employeeid}}</td>
+              <td>{{pay. employeename}}</td>
+              <td>{{pay.totalpayrollexpenses}}</td>
             </tr>
           </tbody>
 
