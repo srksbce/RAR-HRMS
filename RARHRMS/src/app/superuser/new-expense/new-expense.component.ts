@@ -6,6 +6,8 @@ import { HttpService } from 'src/app/services/http.service';
 import { Inewexpense } from './new-expense-model';
 
 
+
+
 @Component({
   selector: 'app-new-expense',
   templateUrl: './new-expense.component.html',
@@ -40,7 +42,7 @@ constructor(private http: HttpService, private router: Router) { }
       this.NEWEXPENSE.employeeId = empdata.employeeId
       console.log(this.NEWEXPENSE);
   
-      this.subscription = this.http.postdata("Invoice", this.NEWEXPENSE).subscribe({
+      this.subscription = this.http.postdata("MyExpenses", this.NEWEXPENSE).subscribe({
         next: (data: any) => {
           console.log(data);
           if (data) {
@@ -55,12 +57,12 @@ constructor(private http: HttpService, private router: Router) { }
   }
 
 
-  PostSavedInvoice() {
+  PostSavedExpense() {
     this.NEWEXPENSE.status = "Draft"
     let empdata = JSON.parse(localStorage.getItem('personaldata') || '{}')
     this.NEWEXPENSE.employeeId = empdata.employeeId
     console.log(this.NEWEXPENSE);
-    this.subscription = this.http.postdata("Invoice", this.NEWEXPENSE).subscribe({
+    this.subscription = this.http.postdata("MyExpenses", this.NEWEXPENSE).subscribe({
       next: (data: any) => {
         console.log(data);
         if (data) {
