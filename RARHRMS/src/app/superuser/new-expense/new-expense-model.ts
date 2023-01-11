@@ -1,8 +1,10 @@
 export interface Inewexpense{
+    employeeId: any;
     Expensetype:string,
     Amount:number,
-    Datetime:number,
+    expensedate:number,
     Description:string,
-    file:string
+    File:string,
+    status:string
 
 }

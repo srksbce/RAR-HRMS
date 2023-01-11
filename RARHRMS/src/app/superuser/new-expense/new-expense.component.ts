@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs/internal/Subscription';
+import { HttpService } from 'src/app/services/http.service';
 import { Inewexpense } from './new-expense-model';
-import { AngularFileUploaderModule } from "angular-file-uploader";
+
+
+
 
 @Component({
   selector: 'app-new-expense',
@@ -22,12 +27,52 @@ export class NewExpenseComponent implements OnInit {
       url:"https://example-file-upload-api"
     }
 };
-  constructor() { }
+  
+ 
+empids = {} as any;
+subscription!: Subscription;
+constructor(private http: HttpService, private router: Router) { }
 
-  ngOnInit() {
+
+  ngOnInit(): void {
   }
-  Newexp(f:NgForm){
-    
+  NewEXPENSE(f:NgForm){
+      this.NEWEXPENSE.status = "In Review"
+      let empdata = JSON.parse(localStorage.getItem('personaldata') || '{}')
+      this.NEWEXPENSE.employeeId = empdata.employeeId
+      console.log(this.NEWEXPENSE);
+  
+      this.subscription = this.http.postdata("MyExpenses", this.NEWEXPENSE).subscribe({
+        next: (data: any) => {
+          console.log(data);
+          if (data) {
+            alert("Data Updated Successfully")
+            this.router.navigate(['/superuser/superuserrequests'])
+            f.resetForm()
+          }
+  
+  
+        },
+      });
+  }
+
+
+  PostSavedExpense() {
+    this.NEWEXPENSE.status = "Draft"
+    let empdata = JSON.parse(localStorage.getItem('personaldata') || '{}')
+    this.NEWEXPENSE.employeeId = empdata.employeeId
+    console.log(this.NEWEXPENSE);
+    this.subscription = this.http.postdata("MyExpenses", this.NEWEXPENSE).subscribe({
+      next: (data: any) => {
+        console.log(data);
+        if (data) {
+          alert("Data Updated Successfully")
+          this.router.navigate(['/superuser/superuserrequests'])
+
+        }
+
+      },
+    });
   }
 
   }

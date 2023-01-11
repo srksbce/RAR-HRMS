@@ -52,5 +52,7 @@ export interface Ivisaupdate
     employementstatus: string,
     jobeffectivedate:string,
     compensationeffectivedate: string,
+    id:number;
+    visatype1:string
    
 }

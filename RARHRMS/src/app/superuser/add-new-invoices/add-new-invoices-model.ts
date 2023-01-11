@@ -1,8 +1,9 @@
-export interface Inewinvoices{
-    Invoicetype:string,
-    Invoicenumber:number,
-    Invoicedate:number,
-    Amount:number,
-    Description:string,
+export interface Inewinv{
+    invoiceType:string,
+    invoicenumber:number,
+    Invoicedate:any,
+    amount:number,
     File:any
+    status:string,
+    attchment:string,
 }
