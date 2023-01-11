@@ -1,7 +1,5 @@
 export interface  Ipayrollexpenses{
     employeeid:number;
-    firstname:string;
-    lastname:string;
-    sum:number;
-   
+    employeename:string;
+    totalpayrollexpenses:number;
 }

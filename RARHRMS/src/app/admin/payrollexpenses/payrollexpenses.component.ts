@@ -11,14 +11,8 @@ import { Ipayrollexpenses } from './payrollexpenses';
 })
 export class PayrollexpensesComponent implements OnInit,OnDestroy{
  
-  payrollexpense = [] as Ipayrollexpenses[];
+  payrollexpense = {} as Ipayrollexpenses[];
   
-  
-  
-  
-
- 
-   
   subscription!: Subscription;
 
   constructor(private http:HttpService) { }
@@ -27,9 +21,9 @@ export class PayrollexpensesComponent implements OnInit,OnDestroy{
     this.payrollexpenses();
   }
   payrollexpenses() {
-    this.subscription = this.http.getData("payrollaccess").subscribe({
+    this.subscription = this.http.getData("PayRoll").subscribe({
       next: (data: any) => {
-        this.payrollexpense = data.result as Ipayrollexpenses[];
+        this.payrollexpense = data as Ipayrollexpenses[];
       },
       error: reason => console.log(reason)
     });
