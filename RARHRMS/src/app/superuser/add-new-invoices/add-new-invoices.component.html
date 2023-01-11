@@ -19,10 +19,10 @@
                             <option>Travel Expense</option>
                             <option>Food Expense</option>
                             <option>Health Expense</option>
-                            <option>shopping Expense</option>
+                            <option>Shopping Expense</option>
 
                         </select>
-                        <small *ngIf="Invoicetype.touched &&Invoicetype.invalid">Invoice Type is Mandatory</small>
+                        <small *ngIf="Invoicetype.touched && Invoicetype.invalid">Invoice Type is Mandatory</small>
                     </div>
                 </div>
 
@@ -59,15 +59,15 @@
                             *</span>
                     </div>
                     <div class="form-outline">
-                        <textarea class="form-control" id="textAreaExample" rows="7" placeholder="type here"
+                        <textarea class="form-control" id="textAreaExample" rows="7" placeholder="ype here"
                             name="Description" #Description="ngModel" aria-label="Default select example"
                             [(ngModel)]="NEWINVOICES.Description" required></textarea>
                         <label class="form-label" for="textAreaExample"></label>
-                        <small *ngIf="Description.touched &&Description.invalid">Description is Mandatory</small>
+                        <small *ngIf="Description.touched && Description.invalid">Description is Mandatory</small>
                     </div>
                 </div>
-                <!-- <input type="file" class="form-control" name="Amount" #File="ngModel"
-                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.File" required> -->
+                <input type="file" class="form-control" name="Amount" #File="ngModel"
+                            aria-label="Default select example" [(ngModel)]="NEWINVOICES.File" required>
 
                 <!-- <angular-file-uploader [config]="afuConfig"[(ngModel)]="NEWINVOICES.File" #File="ngModel" ></angular-file-uploader> -->
                 <div class="mt-4 pt-2 text-center">
