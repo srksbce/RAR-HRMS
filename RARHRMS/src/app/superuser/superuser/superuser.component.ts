@@ -2,7 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { disableDebugTools } from '@angular/platform-browser';
 import Chart from 'chart.js/auto';
 import { ObservableLike, Subscription } from 'rxjs';
+import { Ipayrollexpenses } from 'src/app/admin/payrollexpenses/payrollexpenses';
 import { HttpService } from 'src/app/services/http.service';
+import { Iinvoices } from '../superuserrequests/superuser-model';
 
 @Component({
   selector: 'app-superuser',
@@ -13,10 +15,14 @@ export class SuperuserComponent implements OnInit, OnDestroy  {
 
   loginuser: any;
   public chart: any;
-
+  Invoice = {} as Ipayrollexpenses[];
   subscription!: Subscription;
   dashBoardData = {} as any;
   activeEmpDataCount!:number
+  payadata!:number
+  totalInvoicesAmount:number = 0
+  totalExpAmount:number = 0
+
 
   constructor(private http: HttpService) {}
 
@@ -26,7 +32,8 @@ export class SuperuserComponent implements OnInit, OnDestroy  {
 
     this.getDashBoardData();
     this.getOperationalcostData();
-    this.getEmpData()
+    this.getEmpData();
+    this.invoices();
   }
 
   getDashBoardData() {
@@ -79,6 +86,20 @@ export class SuperuserComponent implements OnInit, OnDestroy  {
 
         
         
+      },
+      error: reason => console.log(reason)
+    });
+
+  }
+
+  invoices() {
+    this.subscription = this.http.getData("PayRoll").subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.Invoice = data as Ipayrollexpenses[];
+        this.Invoice.forEach((el:Ipayrollexpenses)=>{
+          this.totalInvoicesAmount = this.totalInvoicesAmount + el.totalpayrollexpenses
+        })
       },
       error: reason => console.log(reason)
     });
