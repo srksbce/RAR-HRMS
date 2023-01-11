@@ -11,6 +11,9 @@ import { IEmployeeExpensedata } from './employee-expensedatamodel';
 })
 export class EmployeeExpensedataComponent implements OnInit {
   EmployeeExpensedata = [] as IEmployeeExpensedata[];
+  searchValue: any;
+  subscription!: Subscription;
+  constructor(private http:HttpService,private router:Router) { }
   // constructor() { }
 
   // ngOnInit(): void {
@@ -29,17 +32,16 @@ export class EmployeeExpensedataComponent implements OnInit {
   //     {EmployeeId:103, FirstName:'rohini', LastName:'chinnu', TotalEmployeeExpenses : '$12723' },
   //     {EmployeeId:104, FirstName:'mounika', LastName:'boinapally', TotalEmployeeExpenses : '$18423' },
   //   ]
-  subscription!: Subscription;
+  
 
-  constructor(private http:HttpService,
-    private router:Router) { }
+  
 
   ngOnInit(): void {
     this.employeeaccess();
   }
 
   employeeaccess() {
-    this.subscription = this.http.getData("employeeaccessdata").subscribe({
+    this.subscription = this.http.getData("Register").subscribe({
       next: (data: any) => {
         this.EmployeeExpensedata = data.result as IEmployeeExpensedata[];
         console.log (this.EmployeeExpensedata)
