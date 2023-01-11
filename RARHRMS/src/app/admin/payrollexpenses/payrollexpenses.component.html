@@ -1,17 +1,21 @@
+<app-navbar></app-navbar>
 <div class="container">
-  <h1>Payroll Expenses</h1>
-  <input [routerLink]="['/admin/launchpage']" type="submit" class="btn btn-primary" id="expense" value="Back"
-    name="payroll"><br><br>
-  <div class="container-fluid col-md-10">
-    <div class="card">
-      <div class="card-body">
+  <div class="container" style="position: relative;top: 67px;left: 13%;">
 
-        <table class="table table-hover">
+    <br>
+    <a [routerLink]="['/admin/myorga']" routerLinkActive="router-link-active"> <span><i
+          class="bi bi-arrow-left"></i></span></a>
+    Dashboard<i class="bi bi-chevron-double-right"></i>
+    <h2 class="d-flex ">Payroll Employees</h2>
+    <br>
+    <div class="card">
+      <div class="card-body"><br>
+        <table class="table auto-index table-hover flex-wrap tabledes">
+
           <thead>
             <tr>
               <th>Employee Id</th>
               <th>Employee Name</th>
-              
               <th>Total Payroll Expenses</th>
             </tr>
           </thead>
@@ -23,7 +27,6 @@
               <td>{{pay.totalpayrollexpenses}}</td>
             </tr>
           </tbody>
-
         </table>
       </div>
     </div>
