@@ -14,6 +14,7 @@ import { JobdetailsComponent } from './jobdetails/jobdetails.component';
 
 
 import { AddeducationComponent } from './addeducation/addeducation.component';
+import { MyworkComponent } from './mywork/mywork.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AddeducationComponent } from './addeducation/addeducation.component';
     AddnewcompdetailsComponent,
 
     SuperuserrequestsComponent,
-    AddeducationComponent
+    AddeducationComponent,
+    MyworkComponent
 
   ],
   imports: [
